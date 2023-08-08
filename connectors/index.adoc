@@ -10,7 +10,7 @@
 :page-upkeep-status: orange
 :page-upkeep-note: better intro, explain what is in "connectors" and what is in "resources".
 
-This section of the site contains documents regarding identity connectors and connector framework. TEST 8
+This section of the site contains documents regarding identity connectors and connector framework. TEST 9
 
 ++++
 {% children %}
