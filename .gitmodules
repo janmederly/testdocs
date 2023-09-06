@@ -1,0 +1,4 @@
+[submodule "midpoint/reference"]
+	path = midpoint/reference
+	url = https://github.com/Evolveum/midpoint.git
+	branch = docs-versioning
