@@ -1,6 +1,0 @@
----
-visibility: hidden
----
-= Query API
-
-All the content was moved to the xref:/midpoint/reference/v2/concepts/query[main Query page].
