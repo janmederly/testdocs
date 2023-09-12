@@ -7,7 +7,6 @@
 :page-wiki-metadata-modify-date: 2015-09-30T12:34:09.959+02:00
 :page-since: "3.3"
 :page-midpoint-feature: true
-:page-alias: { "parent" : "/midpoint/features/current/" }
 :page-upkeep-status: green
 
 Sequences are persistent objects in midPoint repository that maintain counters.

@@ -7,7 +7,6 @@
 :page-wiki-metadata-modify-date: 2019-10-08T15:34:15.645+02:00
 :page-since: "4.0"
 :page-midpoint-feature: true
-:page-alias: { "parent" : "/midpoint/features/current/" }
 :page-upkeep-status: yellow
 
 MidPoint 3.x and earlier were shipped with xref:workflow-3/[integrated Activiti workflow engine]. That is no longer the case.

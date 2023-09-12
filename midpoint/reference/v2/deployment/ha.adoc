@@ -6,7 +6,6 @@
 :page-wiki-metadata-modify-user: martin.lizner
 :page-wiki-metadata-modify-date: 2016-07-19T15:04:43.344+02:00
 :page-midpoint-feature: true
-:page-alias: { "parent" : "/midpoint/features/current/" }
 :page-upkeep-status: orange
 :page-upkeep-note: Merge with clustering-ha?
 

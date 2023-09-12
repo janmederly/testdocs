@@ -7,7 +7,6 @@
 :page-wiki-metadata-modify-date: 2020-06-18T07:37:54.090+02:00
 :page-toc: top
 :page-midpoint-feature: true
-:page-alias: { "parent" : "/midpoint/features/current/" }
 :page-upkeep-status: orange
 
 

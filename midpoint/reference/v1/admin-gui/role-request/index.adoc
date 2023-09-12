@@ -8,7 +8,6 @@
 :page-since: "3.5"
 :page-since-improved: [ "3.6" ]
 :page-midpoint-feature: true
-:page-alias: [ { "parent" : "/midpoint/features/current/" }, { "parent" : "/midpoint/reference/v1/cases/" } ]
 :page-upkeep-status: yellow
 :page-deprecated-since: "4.6"
 :page-replaced-by: ../request-access

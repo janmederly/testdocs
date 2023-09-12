@@ -7,7 +7,6 @@
 :page-wiki-metadata-modify-date: 2019-04-03T14:06:39.695+02:00
 :page-since: "3.9"
 :page-upkeep-status: yellow
-:page-alias: { "parent" : "/midpoint/guides/" }
 
 There are scenarios, when it is needed to limit the number of objects that users see.
 This would normally be done by using xref:/midpoint/reference/v1/security/authorization/[authorizations]. But authorizations have their limits.

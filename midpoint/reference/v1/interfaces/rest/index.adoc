@@ -6,7 +6,6 @@
 :page-wiki-metadata-modify-user: slavek
 :page-wiki-metadata-modify-date: 2021-02-16T10:07:40.669+01:00
 :page-midpoint-feature: true
-:page-alias: { "parent" : "/midpoint/features/current/" }
 :page-upkeep-status: orange
 :page-toc: top
 

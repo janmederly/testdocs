@@ -8,7 +8,6 @@
 :page-since: "4.2"
 :page-toc: top
 :page-midpoint-feature: true
-:page-alias: { "parent" : "/midpoint/features/current/" }
 :page-upkeep-status: yellow
 
 == Introduction

@@ -7,7 +7,6 @@
 :page-wiki-metadata-modify-user: mederly
 :page-wiki-metadata-modify-date: 2016-02-09T08:31:14.273+01:00
 :page-upkeep-status: red
-:page-alias: { "parent" : "/midpoint/reference/v1/misc/reports/", "slug" : "certification",  "title" : "Access Certification" }
 
 There are currently four certification-related reports available:
 

@@ -7,7 +7,6 @@
 :page-wiki-metadata-modify-date: 2017-05-04T16:22:20.009+02:00
 :page-since: "3.6"
 :page-midpoint-feature: true
-:page-alias: { "parent" : "/midpoint/features/current/" }
 :page-upkeep-status: yellow
 :page-toc: top
 

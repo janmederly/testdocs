@@ -8,7 +8,6 @@
 :page-tag: guide
 :page-toc: top
 :page-upkeep-status: green
-:page-alias: { "parent" : "/midpoint/guides/" }
 
 == Introduction
 

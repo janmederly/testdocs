@@ -8,7 +8,6 @@
 :page-nav-title: Expressions and Mappings
 :page-display-order: 200
 :page-upkeep-status: green
-:page-alias: { "parent" : "/midpoint/features/current/", "slug" : "expressions",  "title" : "Mappings and Expressions", "display-order" : 100 }
 :page-moved-from: /midpoint/reference/v2/expressions/introduction/
 :page-midpoint-feature: true
 

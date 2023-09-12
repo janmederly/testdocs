@@ -7,7 +7,6 @@
 :page-wiki-metadata-modify-date: 2020-02-28T12:26:18.029+01:00
 :page-upkeep-status: red
 :page-upkeep-note: Need to update, also for midScale and DB migration
-:page-alias: { "parent" : "/midpoint/tools/" }
 :page-toc: top
 
 Ninja is a command line tool bundled with midPoint.

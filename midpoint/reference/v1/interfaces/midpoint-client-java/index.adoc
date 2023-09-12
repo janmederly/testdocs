@@ -5,7 +5,6 @@
 :page-wiki-metadata-create-date: 2017-09-13T10:41:55.941+02:00
 :page-wiki-metadata-modify-user: semancik
 :page-wiki-metadata-modify-date: 2020-04-20T12:43:12.719+02:00
-:page-alias: { "parent" : "/midpoint/devel/" }
 :page-upkeep-status: yellow
 :page-toc: top
 

@@ -6,7 +6,6 @@
 :page-wiki-metadata-modify-user: semancik
 :page-wiki-metadata-modify-date: 2019-08-16T18:30:53.218+02:00
 :page-upkeep-status: orange
-:page-alias: { "parent" : "/midpoint/devel/guides/" }
 
 == Log Levels
 

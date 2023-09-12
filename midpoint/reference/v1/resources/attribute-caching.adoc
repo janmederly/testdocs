@@ -8,7 +8,6 @@
 :page-since: "3.5"
 :page-experimental: true
 :page-midpoint-feature: true
-:page-alias: { "parent" : "/midpoint/features/current/" }
 :page-upkeep-status: yellow
 
 MidPoint usually works with fresh data.

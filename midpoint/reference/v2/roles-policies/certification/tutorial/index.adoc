@@ -6,7 +6,6 @@
 :page-wiki-metadata-modify-user: mmacik
 :page-wiki-metadata-modify-date: 2020-01-07T14:22:32.194+01:00
 :page-since: "3.4"
-:page-alias: { "parent" : "/midpoint/guides/" }
 :page-upkeep-status: yellow
 
 You should see the Certification menu item in the main menu:

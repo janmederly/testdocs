@@ -6,7 +6,6 @@
 :page-wiki-metadata-modify-user: petr.gasparik
 :page-wiki-metadata-modify-date: 2020-01-06T10:31:33.277+01:00
 :page-midpoint-feature: true
-:page-alias: { "parent" : "/midpoint/features/current/" }
 :page-upkeep-status: yellow
 :page-toc: top
 

@@ -7,7 +7,6 @@
 :page-wiki-metadata-modify-date: 2018-10-08T10:36:09.083+02:00
 :page-toc: top
 :page-midpoint-feature: true
-:page-alias: { "parent" : "/midpoint/features/current/" }
 :page-keywords: [ 'multi-tenant', 'multitenant', 'multi-tenancy', 'multitenancy' ]
 :page-upkeep-status: yellow
 

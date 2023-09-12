@@ -7,7 +7,6 @@
 :page-wiki-metadata-modify-date: 2019-04-08T14:36:26.158+02:00
 :page-since: "4.0"
 :page-midpoint-feature: true
-:page-alias: [ { "parent" : "/midpoint/features/current/" }, { "parent" : "/midpoint/reference/v1/security/" } ]
 :page-upkeep-status: yellow
 
 [NOTE]

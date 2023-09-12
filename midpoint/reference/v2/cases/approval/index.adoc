@@ -6,7 +6,6 @@
 :page-wiki-metadata-modify-user: vera
 :page-wiki-metadata-modify-date: 2020-03-31T15:04:51.194+02:00
 :page-midpoint-feature: true
-:page-alias: { "parent" : "/midpoint/features/current/" }
 :page-upkeep-status: red
 :page-upkeep-note: Old approvals vs new approvals
 

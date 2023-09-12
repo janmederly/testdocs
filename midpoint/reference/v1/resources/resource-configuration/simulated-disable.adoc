@@ -6,7 +6,6 @@
 :page-wiki-metadata-modify-user: semancik
 :page-wiki-metadata-modify-date: 2014-03-25T10:34:34.785+01:00
 :page-keywords: [ 'activation', 'capabilities' ]
-:page-alias: { "parent" : "/midpoint/guides/" }
 :page-upkeep-status: yellow
 
 There are resources that natively support `administrativeStatus`xref:/midpoint/reference/v1/concepts/activation/[activation property]. These resources can natively do enable/disable of accounts.

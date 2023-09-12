@@ -6,7 +6,6 @@
 :page-wiki-metadata-modify-user: semancik
 :page-wiki-metadata-modify-date: 2019-07-09T08:34:41.528+02:00
 :page-midpoint-feature: true
-:page-alias: { "parent" : "/midpoint/features/current/" }
 :page-keywords: [ 'metarole', 'meta-role', 'metaroles', 'meta-roles', 'meta' ]
 :page-upkeep-status: yellow
 :page-toc: top

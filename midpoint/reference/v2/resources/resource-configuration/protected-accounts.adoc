@@ -6,7 +6,6 @@
 :page-wiki-metadata-modify-user: semancik
 :page-wiki-metadata-modify-date: 2019-08-27T15:11:47.967+02:00
 :page-midpoint-feature: true
-:page-alias: { "parent" : "/midpoint/features/current/" }
 
 MidPoint can protect specific accounts against any change.
 Such accounts cannot be modified or deleted from midPoint, they will not appear in searches (imports), they will not be reconciled or otherwise synchronized and midPoint will even not be able to read them.
