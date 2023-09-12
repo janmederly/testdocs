@@ -90,6 +90,6 @@ Please see xref:/midpoint/features/planned/complete-relativity/[Complete Relativ
 
 * xref:/midpoint/architecture/concepts/consistency-model/[Consistency Model]
 
-* xref:/midpoint/reference/expressions/mappings/mapping-relativity/[Mapping Relativity]
+* xref:/midpoint/reference/v2/expressions/mappings/mapping-relativity/[Mapping Relativity]
 
 * xref:/midpoint/features/planned/complete-relativity/[Complete Relativity]

@@ -14,7 +14,7 @@
 
 _Mapping_ is a mechanism that is used at many places through midPoint to map value of a source property (or properties) to a target property.
 It is a very flexible mechanism that allows to use expressions (including scripting), direct variable references, value generators and other _evaluators_ for the value.
-It is used for example in xref:/midpoint/reference/expressions/mappings/outbound-mapping/[outbound mapping], xref:/midpoint/reference/expressions/mappings/inbound-mapping/[inbound mapping], xref:/midpoint/reference/roles-policies/assignment/[assignments], xref:/midpoint/reference/roles-policies/rbac/[roles] and so on.
+It is used for example in xref:/midpoint/reference/v2/expressions/mappings/outbound-mapping/[outbound mapping], xref:/midpoint/reference/v2/expressions/mappings/inbound-mapping/[inbound mapping], xref:/midpoint/reference/v2/roles-policies/assignment/[assignments], xref:/midpoint/reference/v2/roles-policies/rbac/[roles] and so on.
 
 .Reference documentation
 NOTE: This is a reference documentation, explaining all the details and complexities.
@@ -35,7 +35,7 @@ Source defines where mapping gets its data from.
 * *Expression*, *condition* control data transformation.
 This part controls the way data are transformed or generated.
 This is usually the most flexible part of the mapping, employing short scripts.
-There is a broad variety of possibilities that are described in the xref:/midpoint/reference/expressions/expressions/[Expression] page.
+There is a broad variety of possibilities that are described in the xref:/midpoint/reference/v2/expressions/expressions/[Expression] page.
 
 * *Condition*, *constraints* and some other settings control data flow.
 This part influences whether the data will flow at all, when they will flow, at what time, under which conditions.
@@ -122,8 +122,8 @@ Sources form primary inputs for a mapping.
 Mapping source definitions point to data items that the mapping works with.
 The mapping will react to changes of source data, triggering re-evaluation of the mapping.
 
-The most important part of mapping source definitions is specification of the xref:/midpoint/reference/concepts/item-path/[item path].
-The path refers to an item in an object, which is part of xref:/midpoint/reference/concepts/clockwork/clockwork-and-projector/[clockwork/project] computation, which is usually a _focus_ or a _projection_.
+The most important part of mapping source definitions is specification of the xref:/midpoint/reference/v2/concepts/item-path/[item path].
+The path refers to an item in an object, which is part of xref:/midpoint/reference/v2/concepts/clockwork/clockwork-and-projector/[clockwork/project] computation, which is usually a _focus_ or a _projection_.
 
 .Mapping source definition
 [source,json]
@@ -191,7 +191,7 @@ All the values of all the sources are taken into consideration when a mapping is
 
 === Source Name
 
-Mapping sources are specified using xref:/midpoint/reference/concepts/item-path/[item path], which may be quite long and complex.
+Mapping sources are specified using xref:/midpoint/reference/v2/concepts/item-path/[item path], which may be quite long and complex.
 Yet, almost all the scripting languages require simple strings to denote variables, parameters and inputs.
 Therefore, each source has assigned a simple name.
 The name is derived from the last segment of item path of the source.
@@ -278,7 +278,7 @@ Domain is also useful if we want to provide output values only for some input va
 This cannot be easily achieved by using mapping condition, as the condition will activate or deactivate entire mapping, it applies to all the values processed by a mapping.
 The condition does not work for individual values.
 
-The domain is very useful especially for automatic xref:/midpoint/reference/roles-policies/assignment/[assignment] expressions in xref:/midpoint/reference/expressions/object-template/[object template].
+The domain is very useful especially for automatic xref:/midpoint/reference/v2/roles-policies/assignment/[assignment] expressions in xref:/midpoint/reference/v2/expressions/object-template/[object template].
 
 
 == Target
@@ -330,7 +330,7 @@ If the target item contains values that belong to the mapping range, it is assum
 I.e. if the mapping contains any values that belong to the mapping range, and the mapping does not produce such values as its output, the values are removed.
 
 The range defines what are the possible outputs of the mapping.
-The xref:/midpoint/reference/concepts/clockwork/clockwork-and-projector/[projector] can use this information to determine what values to remove when the mapping is authoritative.
+The xref:/midpoint/reference/v2/concepts/clockwork/clockwork-and-projector/[projector] can use this information to determine what values to remove when the mapping is authoritative.
 
 The range definition does *not* influence mapping inputs or expression.
 The range is used when the mapping outputs are processed.
@@ -339,7 +339,7 @@ Please see xref:range/[] for detailed explanation of mapping range concepts.
 
 == Default Sources and Targets
 
-Mappings are used heavily during midPoint computation (in xref:/midpoint/reference/concepts/clockwork/clockwork-and-projector/[projector]).
+Mappings are used heavily during midPoint computation (in xref:/midpoint/reference/v2/concepts/clockwork/clockwork-and-projector/[projector]).
 Mappings are used in individual stages of computation (such as _inbound_, _object template_, _assignments_ and _outbound_).
 In each of the stages, mappings are used slightly differently.
 E.g. _inbound_ mapping has account attribute as its input, whereas the _outbound_ mapping has account attribute as its output.
@@ -438,7 +438,7 @@ Do not try to do anything expensive in expressions.
 Also, do not try to execute anything what would involve a long time, such as executing a network operation.
 Expressions are executed often, any computationally-intensive or high-latency operation in an expression would have a severe negative impact on system performance.
 
-Expressions are documented in a dedicated xref:/midpoint/reference/expressions/expressions/[Expression] page.
+Expressions are documented in a dedicated xref:/midpoint/reference/v2/expressions/expressions/[Expression] page.
 
 == Constraints and Condition
 
@@ -459,10 +459,10 @@ In other situations the mapping will be ignored, the system will pretend that th
 
 === Channel Constraints
 
-Channel constraint limits application of a mapping to a specific xref:/midpoint/reference/concepts/channel/[channel].
+Channel constraint limits application of a mapping to a specific xref:/midpoint/reference/v2/concepts/channel/[channel].
 If the evaluation is done in the context of that channel, the mapping will be applied.
 If the channel is different, the system will ignore the mapping.
-This constraint is usually used in xref:/midpoint/reference/expressions/mappings/inbound-mapping/[inbound mappings] to limit them to the import channel and therefore use them only for initial import.
+This constraint is usually used in xref:/midpoint/reference/v2/expressions/mappings/inbound-mapping/[inbound mappings] to limit them to the import channel and therefore use them only for initial import.
 
 .Channel constraint example
 [source,xml]
@@ -648,7 +648,7 @@ Please see xref:condition/[] page for more details on mapping conditions.
 
 == Examples
 
-Following example provides xref:/midpoint/reference/expressions/mappings/outbound-mapping/[outbound] mapping that is using xref:/midpoint/reference/expressions/expressions/script/[script expression] written in Groovy language.
+Following example provides xref:/midpoint/reference/v2/expressions/mappings/outbound-mapping/[outbound] mapping that is using xref:/midpoint/reference/v2/expressions/expressions/script/[script expression] written in Groovy language.
 The expression concatenates two string literals and the value of `name` property from the `focus` variable.
 The mapping is _weak_ which means it will only be applied if there is no value already present (it constructs _default_ value).
 
@@ -756,7 +756,7 @@ It is used to create a `fullName` from `givenName` and `familyName`.
 
 // TODO: conditional mapping example
 
-See also xref:/midpoint/reference/expressions/mappings/mapping-evaluation-examples/[Mapping Evaluation Examples] page.
+See also xref:/midpoint/reference/v2/expressions/mappings/mapping-evaluation-examples/[Mapping Evaluation Examples] page.
 
 
 == Mapping State Properties
@@ -970,7 +970,7 @@ The _absolute_ evaluation mode can be used in this case.
 The absolute evaluation mode means that that list of all values is passed to the expression as input.
 In this case the expression is supposed to produce a list of all output values.
 
-NOTE: The description above mostly applies to xref:/midpoint/reference/expressions/expressions/script/[script expressions] that have to process input values one-by-one.
+NOTE: The description above mostly applies to xref:/midpoint/reference/v2/expressions/expressions/script/[script expressions] that have to process input values one-by-one.
 Some expression types can deal with multi-value properties in a very natural way.
 Such as `asIs` expressions that simply copy the input to the output regardless of the number of values.
 However, even non-script expressions have behavior similar to the mechanism described above.
@@ -985,7 +985,7 @@ For example `assignmentTargetSearch` expressions will handle multi-valued input 
 
 Evaluation of each value separately is a very convenient from a configuration and customization point of view.
 However, there is even a much deeper reason for this approach.
-Evaluation of each value individually supports midPoint's xref:/midpoint/reference/concepts/relativity/[relativity principle].
+Evaluation of each value individually supports midPoint's xref:/midpoint/reference/v2/concepts/relativity/[relativity principle].
 This is best explained using an example.
 Let's have a mapping that transforms all input values to upper case:
 
@@ -1040,7 +1040,7 @@ This may seem obvious when we know complete state of all objects, and we are abs
 Unfortunately, that is not always the case.
 MidPoint often works with resources that do not support transactions or any kind of locking.
 Therefore, what we know for sure is what has been changed (xref:/midpoint/devel/prism/concepts/deltas/[delta]).
-However, we are not that sure about the values that are present in target resource when we are about to apply the change (which may be several days later, due to xref:/midpoint/reference/cases/approval/[approval process]).
+However, we are not that sure about the values that are present in target resource when we are about to apply the change (which may be several days later, due to xref:/midpoint/reference/v2/cases/approval/[approval process]).
 The good news is that this algorithm works also in these cases.
 What the algorithm does is that it transforms the input delta of [-`c`, +`d`, +`e`] to output delta [-`C`, +`D`, +`E`].
 This output delta can be applied even to a changed target value.
@@ -1052,7 +1052,7 @@ You may think that a situation like this does not happen very often.
 But it does.
 In identity management we have a lot of properties that behave exactly like this: groups, privileges, projects, tags, ...
 
-Again, the description above mostly applies to xref:/midpoint/reference/expressions/expressions/script/[script expressions].
+Again, the description above mostly applies to xref:/midpoint/reference/v2/expressions/expressions/script/[script expressions].
 Expressions such as `asIs` have natural way how to deal with deltas and no value-by-value transformation is needed.
 But again, non-script expressions such as `assignmentTargetSearch` will follow the same relativity principle: the search will get executed even for the removed valued so midPoint will know which assignment has to be removed.
 
@@ -1061,7 +1061,7 @@ Please see xref:mapping-relativity/[] page for more details.
 
 === Why are the expressions and conditions evaluated several times?
 
-The short answer is: because of xref:/midpoint/reference/concepts/relativity/[relativity].
+The short answer is: because of xref:/midpoint/reference/v2/concepts/relativity/[relativity].
 The long answer is indeed quite long, and it is perhaps best explained using an example.
 Let's have the same mapping as above that transforms lowercase characters to uppercase.
 Now consider a situation when invar was changed from `a` to `b`.
@@ -1111,7 +1111,7 @@ Let us complicate our mapping a bit by adding a condition:
 Now, the mapping is not supposed to produce any value if property gate does not have value `open`.
 Simple thinking would suggest that midPoint will evaluate the condition once, and if the result is false then the mapping is ignored.
 That would not work well in all cases.
-E.g. if this is an xref:/midpoint/reference/expressions/mappings/outbound-mapping/[outbound mapping] to a tolerant resource attribute.
+E.g. if this is an xref:/midpoint/reference/v2/expressions/mappings/outbound-mapping/[outbound mapping] to a tolerant resource attribute.
 During the previous operation the inputs were invar=[ `b`, `c` ], gate=`open` and the target property already contained value [ `A` ].
 After that operation, the target property has values [ `A`, `B`, `C` ].
 Now, what happens if we change gate from `open` to `closed`?
@@ -1136,7 +1136,7 @@ Once that delta is applied to the target property value [ `A`, `B`, `C` ] the re
 Thanks to the relativity mapping conditions can be used to conditionally add values, but they work equally well for removing values.
 This may seem overly complicated at the first sight.
 Yet, it has enormous benefits.
-For example, this approach allows easy automatic assignment of roles in xref:/midpoint/reference/expressions/object-template/[object template].
+For example, this approach allows easy automatic assignment of roles in xref:/midpoint/reference/v2/expressions/object-template/[object template].
 In that case the role assignment is the expression, and the condition tells _when_ the role should be assigned.
 When that condition becomes `false` then the role is unassigned.
 No special mechanism was needed to implement this.
@@ -1162,7 +1162,7 @@ The `tolerant` setting was removed in midPoint 4.0.
 
 ==  See Also
 
-* xref:/midpoint/reference/expressions/[Mappings and Expressions]
+* xref:/midpoint/reference/v2/expressions/[Mappings and Expressions]
 
 * xref:../variables/[]
 
@@ -1172,4 +1172,4 @@ The `tolerant` setting was removed in midPoint 4.0.
 
 * xref:../practices/removing-values/[]
 
-* xref:/midpoint/reference/expressions/mappings/mapping-evaluation-examples/[Mapping Evaluation Examples]
+* xref:/midpoint/reference/v2/expressions/mappings/mapping-evaluation-examples/[Mapping Evaluation Examples]

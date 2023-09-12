@@ -23,11 +23,11 @@ If you are midPoint Platform subscriber and this feature is within the goals of 
 
 == Introduction
 
-See xref:/midpoint/reference/expressions/expressions/profiles/[Expression Profiles] page for a generic introduction to expression profile concepts.
+See xref:/midpoint/reference/v1/expressions/expressions/profiles/[Expression Profiles] page for a generic introduction to expression profile concepts.
 
 == Expression Profile Specification
 
-Expression profiles are defined in xref:/midpoint/reference/concepts/system-configuration-object/[system configuration]:
+Expression profiles are defined in xref:/midpoint/reference/v1/concepts/system-configuration-object/[system configuration]:
 
 .Listing 1. Definition of a sample expression profile with related permission profile
 [source,xml]
@@ -246,7 +246,7 @@ In the following example, we create a profile that would allow running all bulk 
 <3> The `generate-value` action is denied.
 
 As for the action names, either legacy (dash-based) or modern (camel-cased) ones can be used.
-Please see the xref:/midpoint/reference/misc/bulk/index.adoc#_actions[list of all actions].
+Please see the xref:/midpoint/reference/v1/misc/bulk/index.adoc#_actions[list of all actions].
 
 NOTE: The bulk actions are generally considered more-or-less safe, meaning that mere access to them should not provide a security hazard.
 For instance, if the access to `script` expression evaluator is forbidden, the `execute-script` bulk action does not need to be disabled, as it would not execute any script.
@@ -260,7 +260,7 @@ On the other hand, the profiles are experimental in 4.0-4.7 anyway, so maybe we 
 
 === Privilege Elevation Settings
 
-There is an option to evaluate an expression either with elevated privileges, or under a different identity (see xref:/midpoint/reference/security/privilege-elevation.adoc[]).
+There is an option to evaluate an expression either with elevated privileges, or under a different identity (see xref:/midpoint/reference/v1/security/privilege-elevation.adoc[]).
 It can be dangerous if it's misused.
 Hence, the expression profile can disable this option by setting `privilegeElevation` property to `deny`:
 
@@ -289,7 +289,7 @@ Note that if not explicitly specified, the privilege elevation feature is enable
 {% include since.html since="4.8" %}
 ++++
 
-The primary usage pattern for expression profiles is in conjunction with xref:/midpoint/reference/schema/archetypes/[archetypes].
+The primary usage pattern for expression profiles is in conjunction with xref:/midpoint/reference/v1/schema/archetypes/[archetypes].
 The idea is that archetype policy will identify expression profiles that should be applied to all the expressions in archetyped objects.
 (In the future, midPoint may allow to specify different expression profiles for different parts of an object.)
 
@@ -308,11 +308,11 @@ This is how an expression profile is specified for an archetype:
 ----
 <1> ID of the expression profile to be used.
 
-For more comprehensive example, please see xref:/midpoint/reference/security/trusted-actions/index.adoc[].
+For more comprehensive example, please see xref:/midpoint/reference/v1/security/trusted-actions/index.adoc[].
 
 === Default Object Policy Configuration
 
-If archetype(s) for a given object do not point to an expression profile, midPoint looks at `defaultObjectPolicyConfiguration` in xref:/midpoint/reference/concepts/system-configuration-object/[system configuration].
+If archetype(s) for a given object do not point to an expression profile, midPoint looks at `defaultObjectPolicyConfiguration` in xref:/midpoint/reference/v1/concepts/system-configuration-object/[system configuration].
 
 An example:
 
@@ -395,7 +395,7 @@ Yet another dangerous thing is a dynamic invocation based on Java Reflection fra
 This may even be tightly integrated into some scripting languages.
 Therefore be very careful and analyse the situation properly.
 Do not rely on default configuration that comes with midPoint.
-This configuration is xref:/midpoint/reference/security/security-guide/[not meant to be completely secure].
+This configuration is xref:/midpoint/reference/v1/security/security-guide/[not meant to be completely secure].
 The setup may vary in various environments, some scripts need to be less powerful, some must be more powerful, some environments are more tolerant to risk and would prefer more flexibility while other environments will heavily constrain flexibility to eliminate the risk.
 One size does not fit all.
 
@@ -460,8 +460,8 @@ See xref:/midpoint/features/planned/expression-profiles/[Expression Profiles: Fu
 
 == See Also
 
-* xref:/midpoint/reference/expressions/expressions/profiles/[Expression Profiles]
+* xref:/midpoint/reference/v1/expressions/expressions/profiles/[Expression Profiles]
 
-* xref:/midpoint/reference/security/security-guide/[Security Guide]
+* xref:/midpoint/reference/v1/security/security-guide/[Security Guide]
 
 * xref:/midpoint/features/planned/expression-profiles/[Expression Profiles: Full Implementation]

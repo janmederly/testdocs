@@ -3,7 +3,7 @@
 == Activities
 
 Activities are a new way of structuring the work executed within tasks. Please see
-xref:/midpoint/reference/tasks/activities/[here] for in-depth description.
+xref:/midpoint/reference/v1/tasks/activities/[here] for in-depth description.
 
 == Cluster Auto-Scaling Capability
 
@@ -14,7 +14,7 @@ or decreased. It should be done also when the cluster configuration changes, e.g
 This up/down-scaling was present in midPoint since 3.8 (as an experimental feature) in the form of _workers
 reconciliation_ process. In 4.4 the following changes were done:
 
-1. New xref:/midpoint/reference/tasks/auto-scaling/[auto-scaling activity] was created.
+1. New xref:/midpoint/reference/v1/tasks/auto-scaling/[auto-scaling activity] was created.
 It periodically scans for tasks that are autoscaling-enabled
 and invokes workers reconciliation process on them, if the cluster state has changed in the meanwhile.
 (Note that we currently do not support auto-scaling triggered by changes in activity distribution
@@ -32,7 +32,7 @@ the results should be more predictable.
 
 == Cluster-wide Thresholds
 
-The xref:/midpoint/reference/tasks/thresholds/[threshold mechanism] before 4.4 was limited to a single node.
+The xref:/midpoint/reference/v1/tasks/thresholds/[threshold mechanism] before 4.4 was limited to a single node.
 Moreover, the related policy rules counters were transient, so they did not survive midPoint node restarts.
 There were other limitations as well.
 

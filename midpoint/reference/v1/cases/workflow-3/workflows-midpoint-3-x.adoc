@@ -12,7 +12,7 @@
 .MidPoint 3.9 or earlier
 ====
 This page applies to midPoint 3.9 or earlier.
-Embedded workflow engine was removed in midPoint 4.0 and midPoint is now completely xref:/midpoint/reference/cases/workflowless/[workflowless]. If you still need manual processes as part of IDM interactions please see xref:/midpoint/reference/cases/approval/policy-based-approvals/[Policy-based approvals] and xref:/midpoint/features/planned/external-workflow-integration/[Workflow Integration].
+Embedded workflow engine was removed in midPoint 4.0 and midPoint is now completely xref:/midpoint/reference/v1/cases/workflowless/[workflowless]. If you still need manual processes as part of IDM interactions please see xref:/midpoint/reference/v1/cases/approval/policy-based-approvals/[Policy-based approvals] and xref:/midpoint/features/planned/external-workflow-integration/[Workflow Integration].
 ====
 
 MidPoint is able to postpone selected actions (for example, role assignment) until they are approved by appropriate authority or authorities.
@@ -36,9 +36,9 @@ So he opens it, reads it through, and clicks on "Approve" button.
 The operation is executed, and Bob is assigned the requested role.
 Optionally, Alice and/or Bob may be notified by mail about the result.
 
-The workflows are usually used to implement xref:/midpoint/reference/cases/approval/[approval] processes.
+The workflows are usually used to implement xref:/midpoint/reference/v1/cases/approval/[approval] processes.
 This usage is so frequent that midPoint has a special mechanisms to make approval implementation easy.
-See the xref:/midpoint/reference/cases/approval/[Approval] page for more details.
+See the xref:/midpoint/reference/v1/cases/approval/[Approval] page for more details.
 
 
 == Notes
@@ -69,15 +69,15 @@ However, this option should be needed to use in only rare situations.
 
 == For more information
 
-. xref:/midpoint/reference/cases/approval/examples/[Approval examples]
+. xref:/midpoint/reference/v1/cases/approval/examples/[Approval examples]
 
-. xref:/midpoint/reference/cases/workflow-3/legacy-approvals-examples/[Approvals examples (legacy)]
+. xref:/midpoint/reference/v1/cases/workflow-3/legacy-approvals-examples/[Approvals examples (legacy)]
 
 . xref:/midpoint/architecture/archive/subsystems/model/workflow-3/[Architectural description of the Workflow component]
 
 .. xref:/midpoint/architecture/archive/subsystems/model/workflow-3/workflow-auditing/[Workflow auditing]
 
-. xref:/midpoint/reference/cases/workflow-3/legacy-pre-3-5-workflow-configuration/[System manager's view on workflows (i.e. workflow configuration)]
+. xref:/midpoint/reference/v1/cases/workflow-3/legacy-pre-3-5-workflow-configuration/[System manager's view on workflows (i.e. workflow configuration)]
 
 . Notes
 
@@ -85,4 +85,4 @@ However, this option should be needed to use in only rare situations.
 
 == See Also
 
-* xref:/midpoint/reference/cases/approval/[Approval]
+* xref:/midpoint/reference/v1/cases/approval/[Approval]

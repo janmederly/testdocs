@@ -182,12 +182,12 @@ By default the same folder as where csv file resides.
 |===
 
 Configuration samples for CSV resources were updated to the new CSV connector.
-The xref:/midpoint/reference/samples/[Configuration Samples] are located at the usual places.
+The xref:/midpoint/reference/v1/samples/[Configuration Samples] are located at the usual places.
 
 
 === Shadows
 
-The xref:/midpoint/reference/resources/shadow/[shadows] in the old connector looked like this:
+The xref:/midpoint/reference/v1/resources/shadow/[shadows] in the old connector looked like this:
 
 .Shadow: Legacy CSVFile connector
 [source]

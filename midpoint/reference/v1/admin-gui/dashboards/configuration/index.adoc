@@ -11,7 +11,7 @@
 
 Documentation about dashboards can be found at multiple places in docs. To avoid confusion, please see
 
-- xref:/midpoint/reference/admin-gui/dashboards/[Customizable Dashboards] page provides basic information about this feature.
+- xref:/midpoint/reference/v1/admin-gui/dashboards/[Customizable Dashboards] page provides basic information about this feature.
 - Guide for initial configuration, together with example, is provided in xref:/midpoint/guides/dashboards-howto[Dashboards HOWTO].
 - Samples are at link:https://github.com/Evolveum/midpoint-samples/tree/master/samples/dashboard[samples/dashboard] on Github.
 - Design notes for development of dashboards and reports can be found xref:/midpoint/devel/design/dashboards-widgets-and-reports-design-notes/[here].
@@ -370,7 +370,7 @@ Example of `presentation`:
 
 === Object Collection
 
-You can see basic configuration for objectCollection on xref:/midpoint/reference/admin-gui/collections-views/configuration/#object-collection[Object Collection].
+You can see basic configuration for objectCollection on xref:/midpoint/reference/v1/admin-gui/collections-views/configuration/#object-collection[Object Collection].
 For dashboard, we can use policyRule with policyTreshold for define some policySituation.
 Example of object collection for resource, which have status UP:
 

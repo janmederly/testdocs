@@ -12,7 +12,7 @@
 
 Mapping inputs are provided by sources and variables, which both are represented as regular variables in mapping expressions.
 Every programmer knows what a variable is.
-However, variables are usually too simple to handle the xref:/midpoint/reference/concepts/relativity/[relative change model] used in midPoint.
+However, variables are usually too simple to handle the xref:/midpoint/reference/v2/concepts/relativity/[relative change model] used in midPoint.
 In midPoint we do not just need to know that user property `organization` has a values `foo` and `bar`. What we need to know is that before the operation there was a value of `foo`.
 Even more important is to know the currently processed operation is adding the value of `bar`.
 Why do we need that?
@@ -59,7 +59,7 @@ MidPoint will execute the expression as many times as necessary.
 MidPoint will keep track which values are added and which are removed so the expression code does not need to care.
 The expression will simply transform each value.
 MidPoint will do all the other complex stuff.
-This is the functionality of midPoint xref:/midpoint/reference/expressions/mappings/[mappings].
+This is the functionality of midPoint xref:/midpoint/reference/v2/expressions/mappings/[mappings].
 
 
 == Relativity Mechanism
@@ -68,7 +68,7 @@ This is the functionality of midPoint xref:/midpoint/reference/expressions/mappi
 // However, it is not easy to merge them.
 // Maybe it is good that there are two descriptions of the mechanism, the other is much shorter, this one is longer with pictures.
 
-MidPoint mappings are designed to work correctly with the xref:/midpoint/reference/concepts/relativity/[relative change model] that is a fundamental principle of midPoint operation.
+MidPoint mappings are designed to work correctly with the xref:/midpoint/reference/v2/concepts/relativity/[relative change model] that is a fundamental principle of midPoint operation.
 Simply speaking the mapping does not just maps the source values to the target values.
 It also maps the corresponding deltas.
 
@@ -271,7 +271,7 @@ This means that the script will be executed with non-null values only in case th
 If there are several mapping sources then the script still may get executed with `null` inputs, e.g. in case that one source is `null` while the others are non-null.
 In such a case, this setting will make the script execution more efficient (skipping some executions) however proper checking for null values is still needed.
 
-There is also a convenient xref:/midpoint/reference/expressions/expressions/script/functions/[script function]`basic.isEmpty()` that can provide null-safe check for empty value:
+There is also a convenient xref:/midpoint/reference/v2/expressions/expressions/script/functions/[script function]`basic.isEmpty()` that can provide null-safe check for empty value:
 
 .Null-safe check for empty value
 [source,xml]
@@ -325,7 +325,7 @@ Please see xref:../condition/[] page for the details.
 
 == Delta Set Triples
 
-Mapping output is used to create output deltas, which are applied to output properties in the final steps of xref:/midpoint/reference/concepts/clockwork/clockwork-and-projector/[clockwork processing].
+Mapping output is used to create output deltas, which are applied to output properties in the final steps of xref:/midpoint/reference/v2/concepts/clockwork/clockwork-and-projector/[clockwork processing].
 However, mapping output is not used to create deltas directly.
 There is one quite important intermediary step.
 Output of mappings that target the same property has to be merged, before the deltas can be created.
@@ -375,7 +375,7 @@ E.g. values of target item are considered (if available) to avoid redundant delt
 Merging of the triples may be a complex process on its own.
 For example, a _zero_ set produced by a mapping in a role that was just assigned has to be handled in a similar way than a _plus_ set.
 Even though the mapping is not indicating the value as new, the mapping itself is new, therefore the value has to be added (if not already present).
-This means that there are often _triples of triples_ in xref:/midpoint/reference/concepts/clockwork/clockwork-and-projector/[projector computation].
+This means that there are often _triples of triples_ in xref:/midpoint/reference/v2/concepts/clockwork/clockwork-and-projector/[projector computation].
 E.g. the outer triple indicates which assignments were added, removed or left unchanged.
 The inner triple contains results of mappings in that assignment.
 
@@ -394,7 +394,7 @@ This may result in an empty delta, in which case the delta is not executed at al
 Mapping may need to remove values that are not present in the _minus_ set of the triple.
 Any existing values of the target items that are not part present in either _zero_ or _plus_ set of the triple has to be removed.
 
-As a principle, existing values of target property are processed by xref:/midpoint/reference/concepts/clockwork/clockwork-and-projector/[projector] only if they are available, only if they were already fetched.
+As a principle, existing values of target property are processed by xref:/midpoint/reference/v2/concepts/clockwork/clockwork-and-projector/[projector] only if they are available, only if they were already fetched.
 In that case processing of the values is very cheap, and there is no significant obstacle to process them.
 However, there are few cases when read of the target value is forced:
 
@@ -412,7 +412,7 @@ MidPoint reads the existing values in order to compare them.
 
 == Limitations
 
-While midPoint is built with xref:/midpoint/reference/concepts/relativity/[Relativity] in mind, this relativity is not complete.
+While midPoint is built with xref:/midpoint/reference/v2/concepts/relativity/[Relativity] in mind, this relativity is not complete.
 MidPoint evolution, and especially financial and scheduling constraints, forced us to make compromises during midPoint development.
 This does not affect correctness of midPoint computation, but it may affect performance.
 The deployments that rely on a lightweight processing of large number of small changes may be affected.
@@ -437,10 +437,10 @@ See also xref:../proposed-improvements/[].
 
 == See Also
 
-* xref:/midpoint/reference/concepts/relativity/[Relativity]
+* xref:/midpoint/reference/v2/concepts/relativity/[Relativity]
 
 * xref:../condition/[]
 
-* xref:/midpoint/reference/expressions/[Mappings and Expressions]
+* xref:/midpoint/reference/v2/expressions/[Mappings and Expressions]
 
 * xref:/midpoint/features/planned/complete-relativity/[Complete Relativity]

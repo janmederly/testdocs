@@ -65,7 +65,7 @@ This is `true` for the new Native repository by default unless `jdbcUrl` is also
 It is easier to match the size of the repository connection pools on the cluster nodes with the
 connection limit of the databese this way.
 The total number of the connections in all the pools should not go above the database limit.
-For details see related section in https://docs.evolveum.com/midpoint/reference/repository/native-postgresql/postgresql-configuration/#connections[PostgreSQL Configuration].
+For details see related section in https://docs.evolveum.com/midpoint/reference/v1/repository/native-postgresql/postgresql-configuration/#connections[PostgreSQL Configuration].
 
 Setting it to `false` creates dedicated connection pool for the scheduler which always uses
 10 additional connections for every node.
@@ -76,7 +76,7 @@ and in some cases causes problems because of transaction isolation levels.
 
 |===
 
-For more information how to set up task manager for a cluster, please see xref:/midpoint/reference/deployment/clustering-ha/[this article].
+For more information how to set up task manager for a cluster, please see xref:/midpoint/reference/v1/deployment/clustering-ha/[this article].
 
 == JDBC scheduler job store
 

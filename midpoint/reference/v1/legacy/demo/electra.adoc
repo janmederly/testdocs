@@ -221,14 +221,14 @@ If you need to downgrade VMWare hardware you can do it with link:https://my.vmwa
 
 .. after apt-get update check Provisioning self test & fix "Illegal key size" if java is upgraded
 
-. export virtual machine from Virtual box to `pass:[*.ova]`, see xref:/midpoint/reference/legacy/demo/electra/#how-to-export-to-esx-from-virtualbox-ova[How to export to ESX from VirtualBox (*.ova)] chapter
+. export virtual machine from Virtual box to `pass:[*.ova]`, see xref:/midpoint/reference/v1/legacy/demo/electra/#how-to-export-to-esx-from-virtualbox-ova[How to export to ESX from VirtualBox (*.ova)] chapter
 
-. convert `pass:[*.ova]` to `pass:[*.vmx]`, open `pass:[*.ova]` in VMware player, see xref:/midpoint/reference/legacy/demo/electra/#how-to-start-virtual-machine-in-localhost-from-ova-ovf-file-in-virtualbox[How to start virtual machine in localhost from pass:[*.ova/*.ovf] file in VMware Player] chapter and 5.7. points
+. convert `pass:[*.ova]` to `pass:[*.vmx]`, open `pass:[*.ova]` in VMware player, see xref:/midpoint/reference/v1/legacy/demo/electra/#how-to-start-virtual-machine-in-localhost-from-ova-ovf-file-in-virtualbox[How to start virtual machine in localhost from pass:[*.ova/*.ovf] file in VMware Player] chapter and 5.7. points
 
-. created `pass:[*.vmx]` downgrade with vCenter converter, see: xref:/midpoint/reference/legacy/demo/electra/#how-to-downgrade-vmware-version-vmx[How to downgrade VMWare version (*.vmx)] chapter
+. created `pass:[*.vmx]` downgrade with vCenter converter, see: xref:/midpoint/reference/v1/legacy/demo/electra/#how-to-downgrade-vmware-version-vmx[How to downgrade VMWare version (*.vmx)] chapter
 
 .. run it to check if it's OK - boot loader is OK?
 
-. convert downgraded `pass:[*.vmx]` to `pass:[*.ova]`, see: xref:/midpoint/reference/legacy/demo/electra/#how-to-export-to-esx-from-vmware-player-converting-vmx-to-ovf-ova[How to export to ESX from VMWare player (converting *.vmx to *.ovf/*.ova)] chapter
+. convert downgraded `pass:[*.vmx]` to `pass:[*.ova]`, see: xref:/midpoint/reference/v1/legacy/demo/electra/#how-to-export-to-esx-from-vmware-player-converting-vmx-to-ovf-ova[How to export to ESX from VMWare player (converting *.vmx to *.ovf/*.ova)] chapter
 
 . upload `pass:[*.ova]` result to FTP

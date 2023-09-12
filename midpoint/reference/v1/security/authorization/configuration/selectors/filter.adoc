@@ -39,7 +39,7 @@ The same can be achieved using midPoint Query Language.
 {% include since.html since="3.7" %}
 ++++
 
-xref:/midpoint/reference/expressions/expressions/[Expressions] can be used in authorization search filters:
+xref:/midpoint/reference/v1/expressions/expressions/[Expressions] can be used in authorization search filters:
 
 [source,xml]
 ----
@@ -81,6 +81,6 @@ Expressions that use the `path` evaluator (as the one above) are usually very fa
 Even simple script expressions usually do not create any major issue.
 However, try to avoid placing complex or slow expressions into authorizations.
 Those are almost certain to have a severe negative impact on system performance.
-If you need complex computation, it is perhaps better to compute the value in xref:/midpoint/reference/expressions/object-template/[object template] and place it into property of the object (e.g. user extension property).
+If you need complex computation, it is perhaps better to compute the value in xref:/midpoint/reference/v1/expressions/object-template/[object template] and place it into property of the object (e.g. user extension property).
 Then use only the result of the computation stored in that property in authorization expressions.
 ====

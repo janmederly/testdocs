@@ -71,7 +71,7 @@ Low severity issues (CVSS rating: low) may not even get backported to support br
 MidPoint team will publish security advisory at the appropriate time after a security issue is discovered and addressed.
 Security advisories are listed on a dedicated page.
 
-See xref:/midpoint/reference/security/advisories/[Security Advisories] page for details.
+See xref:/midpoint/reference/v1/security/advisories/[Security Advisories] page for details.
 
 
 == Default Configuration
@@ -134,7 +134,7 @@ MidPoint supports both methods, as both may be needed in practice.
 And then, of course, there is an option for midPoint not to manage passwords at all.
 
 This pages is giving only a high-level overview of the mechanisms.
-Please see xref:/midpoint/reference/security/credentials/password-storage-configuration/[Password Storage Configuration] page for the details.
+Please see xref:/midpoint/reference/v1/security/credentials/password-storage-configuration/[Password Storage Configuration] page for the details.
 
 
 === Storing Encrypted Passwords
@@ -218,7 +218,7 @@ MidPoint is a very flexible system.
 Being an identity management system, all the flexibility is needed to allow practical and efficient deployments.
 However, with great power comes great responsibility.
 
-One of the most powerful parts of midPoint are xref:/midpoint/reference/expressions/[mappings and expressions]. Expressions allow to customize midPoint behavior and they are essential for the success of midPoint deployments.
+One of the most powerful parts of midPoint are xref:/midpoint/reference/v1/expressions/[mappings and expressions]. Expressions allow to customize midPoint behavior and they are essential for the success of midPoint deployments.
 However, the expressions are very powerful and they may even be too powerful for some use cases.
 The expressions can use general-purpose scripting languages such as Groovy or JavaScript.
 Therefore such expressions have almost unlimited capabilities.
@@ -226,20 +226,20 @@ Which means that the expressions can damage the system or compromise security of
 *Use the expressions with utmost care.*
 
 Currently, there are very little restraints for expression execution.
-The xref:/midpoint/reference/expressions/expressions/script/functions/[expression functions] provided by midPoint usually check for proper authorizations.
+The xref:/midpoint/reference/v1/expressions/expressions/script/functions/[expression functions] provided by midPoint usually check for proper authorizations.
 But as the expressions can use general-purpose languages, there is no obligation for the expressions to use those libraries.
 The expression can easily circumvent those weak protections.
 Therefore do not let any unauthorized user to set up any kind of expression in midPoint.
 *Allowing the right to edit any expression may lead to compromise of system security.*
 
-Some expression security can be achieved by using xref:/midpoint/reference/expressions/expressions/profiles/[expression profiles]. However, the usefulness of this feature is currently limited.
-See xref:/midpoint/reference/expressions/expressions/profiles/configuration/[Expression Profile Configuration] page for details.
+Some expression security can be achieved by using xref:/midpoint/reference/v1/expressions/expressions/profiles/[expression profiles]. However, the usefulness of this feature is currently limited.
+See xref:/midpoint/reference/v1/expressions/expressions/profiles/configuration/[Expression Profile Configuration] page for details.
 Please consider using xref:/support/subscription-sponsoring/[platform subscription] to  fund xref:/midpoint/features/planned/expression-profiles/[full implementation of expression profiles.]
 
 
 == Networking
 
-xref:/midpoint/reference/deployment/stand-alone-deployment/[Stand-alone deployment] of midPoint is supposed to expose only HTTP port 8080 by default.
+xref:/midpoint/reference/v1/deployment/stand-alone-deployment/[Stand-alone deployment] of midPoint is supposed to expose only HTTP port 8080 by default.
 Other ports (e.g. H2 database port) may be exposed as well, depending on midPoint configuration and customization.
 
 MidPoint is not supposed to be directly exposed to unprotected network.
@@ -251,7 +251,7 @@ Due to operating system security reasons and limitations of the Java platform, m
 This is usually not the desired solution, as ports 80 and 443 are usually expected.
 Therefore this is yet another reason for using a network security component in front of midPoint.
 
-See also xref:/midpoint/reference/deployment/ports-80-and-443/[Ports 80 and 443].
+See also xref:/midpoint/reference/v1/deployment/ports-80-and-443/[Ports 80 and 443].
 
 MidPoint deployment that are explicitly deployed into existing web container environment (Apache Tomcat) should adhere to the recommended security practices of the web container.
 As such web container is not under the control of midPoint, midPoint is not responsible for any security issues of such web container.
@@ -259,14 +259,14 @@ As such web container is not under the control of midPoint, midPoint is not resp
 
 == Security of MidPoint Services
 
-MidPoint is exposing remote services, such as xref:/midpoint/reference/interfaces/rest/[RESTful API]. Those services provide access to a significant part of midPoint functionality.
+MidPoint is exposing remote services, such as xref:/midpoint/reference/v1/interfaces/rest/[RESTful API]. Those services provide access to a significant part of midPoint functionality.
 The services allow "raw" access to midPoint data, which means access that is not protected by the mechanisms of user interface.
 Significant harm can be done by using those services, as there are almost no safeguards with respect to robustness.
 E.g. the services will not ask for confirmation dialog, they will allow to delete objects that are in use and so on.
 Significant care should be employed when using those services.
 
 MidPoint remote services are using the same authentication credentials as ordinary midPoint users.
-However, special xref:/midpoint/reference/security/authorization/[authorization] is required to access those services.
+However, special xref:/midpoint/reference/v1/security/authorization/[authorization] is required to access those services.
 Both _service_ authorization and _object_ authorization are required to access the service and execute operations.
 Therefore even a user that has very broad privileges in midPoint user interface cannot use those privileges in the context of remote services unless special service authorization is in place.
 
@@ -334,6 +334,6 @@ The bug bounty program was very successful, resulting in discovery and mitigatio
 
 == See Also
 
-* xref:/midpoint/reference/security/advisories/[Security Advisories]
+* xref:/midpoint/reference/v1/security/advisories/[Security Advisories]
 
-* xref:/midpoint/reference/deployment/ports-80-and-443/[Ports 80 and 443]
+* xref:/midpoint/reference/v1/deployment/ports-80-and-443/[Ports 80 and 443]

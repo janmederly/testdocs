@@ -12,14 +12,14 @@
 
 MidPoint repository contains data about users, roles, resources, workflows, password policies and other midPoint state and configuration.
 MidPoint repository is midPoints own database, it is not directly shared with other systems.
-However, the entire point of midPoint is to (indirectly) xref:/midpoint/reference/synchronization/introduction/[synchronize] the data in the midPoint database to other systems.
+However, the entire point of midPoint is to (indirectly) xref:/midpoint/reference/v1/synchronization/introduction/[synchronize] the data in the midPoint database to other systems.
 The way how the synchronization is done, how mappings and policies and applied and what is synchronized and what is not is determined by the relations of individual objects in the midPoint repository.
 This page describes how the repository is structured and explains the meaning of the most important repository concepts.
 
 [TIP]
 ====
 The description of a data model presented here is simplified.
-For the full description of the model please see xref:/midpoint/reference/schema/[Data Model] page and the documentation inside the schema files (XSD).
+For the full description of the model please see xref:/midpoint/reference/v1/schema/[Data Model] page and the documentation inside the schema files (XSD).
 ====
 
 == Objects
@@ -173,7 +173,7 @@ Connector in midPoint is any method of connection to the resource.
 
 | Role
 | RoleType
-| A role that implements xref:/midpoint/reference/roles-policies/rbac/[Role-Based Access Control (RBAC)] mechanisms.
+| A role that implements xref:/midpoint/reference/v1/roles-policies/rbac/[Role-Based Access Control (RBAC)] mechanisms.
 
 
 | User Template
@@ -260,7 +260,7 @@ However identifiers are essential for midPoint functionality as they are used to
 Accounts are stored in the resource and are *not* in the midPoint repository.
 Therefore it is very difficult to maintain a link between user (which is a midPoint object) and an account (which is not).
 
-MidPoint resolves this difficulty by using xref:/midpoint/reference/resources/shadow/[shadow objects] or "shadows" for short.
+MidPoint resolves this difficulty by using xref:/midpoint/reference/v1/resources/shadow/[shadow objects] or "shadows" for short.
 Shadows are ordinary objects in midPoint repository that mirror some of the account characteristics.
 The most important piece of information stored in the shadow is an identifier (or identifiers) of an account that it mirrors.
 
@@ -321,7 +321,7 @@ image::schemas-datamodel-resource.png[]
 
 
 Resource definition is perhaps the most important object from a point of view of midPoint administration and configuration.
-Significant part of midPoint functionality is controlled by xref:/midpoint/reference/resources/resource-configuration/[configuration of the resource definition].
+Significant part of midPoint functionality is controlled by xref:/midpoint/reference/v1/resources/resource-configuration/[configuration of the resource definition].
 
 == Connector
 
@@ -343,7 +343,7 @@ TODO: Remote connector, connector upgrade
 
 == Role
 
-Main article: xref:/midpoint/reference/roles-policies/rbac/[midPoint RBAC]
+Main article: xref:/midpoint/reference/v1/roles-policies/rbac/[midPoint RBAC]
 
 TODO
 
@@ -351,14 +351,14 @@ For more details see xref:/midpoint/architecture/archive/data-model/midpoint-com
 
 == More Documentation
 
-The xref:/midpoint/reference/schema/[Data Model] page provides in-depth description of the data model design principles and purpose (although it may be slightly outdated).
+The xref:/midpoint/reference/v1/schema/[Data Model] page provides in-depth description of the data model design principles and purpose (although it may be slightly outdated).
 
-The xref:/midpoint/reference/schema/schemadoc/[SchemaDoc] page contains links to data model documentation that is automatically generated from schema files.
+The xref:/midpoint/reference/v1/schema/schemadoc/[SchemaDoc] page contains links to data model documentation that is automatically generated from schema files.
 
 == See Also
 
-* xref:/midpoint/reference/schema/[Data Model]
+* xref:/midpoint/reference/v1/schema/[Data Model]
 
-* xref:/midpoint/reference/resources/shadow/[Shadow Objects]
+* xref:/midpoint/reference/v1/resources/shadow/[Shadow Objects]
 
-* xref:/midpoint/reference/schema/schemadoc/[SchemaDoc]
+* xref:/midpoint/reference/v1/schema/schemadoc/[SchemaDoc]

@@ -6,15 +6,15 @@
 
 [IMPORTANT]
 This page documents the audit trail based on the old Generic SQL Repository.
-For the new Native PostgreSQL audit trail see xref:/midpoint/reference/repository/native-audit/[this page].
+For the new Native PostgreSQL audit trail see xref:/midpoint/reference/v2/repository/native-audit/[this page].
 
 == Configuration overview
 
 SQL auditing is configured in `config.xml` inside
-xref:/midpoint/reference/deployment/midpoint-home-directory/[midPoint home directory],
+xref:/midpoint/reference/v2/deployment/midpoint-home-directory/[midPoint home directory],
 also known as `midpoint.home`.
 
-See xref:/midpoint/reference/security/audit/[Auditing] for more general information about auditing
+See xref:/midpoint/reference/v2/security/audit/[Auditing] for more general information about auditing
 and some other configuration options, not specific for the SQL trail implementation.
 These options, often realized via *SystemConfiguration* object customizations, are not covered in this document.
 
@@ -420,7 +420,7 @@ If *auditService* for *SqlAuditServiceFactory* does not contain any other config
 {% include since.html since="4.2" %}
 ++++
 
-Configuration element *auditService* for *SqlAuditServiceFactory* can contain any element from *repository* configuration - see xref:/midpoint/reference/repository/generic/configuration/[Repository Configuration] for more.
+Configuration element *auditService* for *SqlAuditServiceFactory* can contain any element from *repository* configuration - see xref:/midpoint/reference/v2/repository/generic/configuration/[Repository Configuration] for more.
 
 * One of *jdbcUrl* or *dataSource* must be used - otherwise any repository configuration in *auditService* is ignored and only main *repository* configuration is used.
 
@@ -436,7 +436,7 @@ Use only production-like settings.
 It is however possible to use other database for audit while main repository is set to embedded H2, mostly for development/testing purposes.
 
 * Separate database must be prepared in a similar way to the main database with tables, indexes and foreing keys containing "audit" created.
-For PostgreSQL example, see xref:/midpoint/reference/repository/generic/postgresql/[PostgreSQL] page, section *Separate audit database*.
+For PostgreSQL example, see xref:/midpoint/reference/v2/repository/generic/postgresql/[PostgreSQL] page, section *Separate audit database*.
 
 Example configuration with default H2 for main repository and PostgreSQL on localhost for audit:
 

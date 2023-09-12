@@ -25,8 +25,8 @@ unavailable connection as serious error.
 
 One midPoint node with the default configuration is not a problem.
 The main DB connection pool is set for up to 40 connections and these connections are shared
-also for xref:/midpoint/reference/repository/native-audit/[SQL Audit] and
-xref:/midpoint/reference/tasks/task-manager/configuration/[Task Manager] duties.
+also for xref:/midpoint/reference/v2/repository/native-audit/[SQL Audit] and
+xref:/midpoint/reference/v2/tasks/task-manager/configuration/[Task Manager] duties.
 Even two such nodes easily fit into the connection limit set on the DB.
 
 If configured differently, it is essential to add up all the pools and their maximum sizes.
@@ -116,7 +116,7 @@ Always leave a few connections for maintenance.
 
 [TIP]
 If you're solving this kind of problems and at least some load is audit related, you can try to
-configure xref:/midpoint/reference/security/audit/#separate-repository-configuration-for-audit[separate audit repository].
+configure xref:/midpoint/reference/v2/security/audit/#separate-repository-configuration-for-audit[separate audit repository].
 
 Multiple midPoint nodes are not used to make the DB faster, it gives more power to midPoint (Java application)
 to process the results, do its logic, provide the GUI, etc.

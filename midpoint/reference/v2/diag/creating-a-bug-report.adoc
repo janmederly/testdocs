@@ -23,7 +23,7 @@ This page describes how to create a bug report that does not waste anyone's time
 
 == Troubleshooting
 
-First of all please make sure you go through xref:/midpoint/reference/diag/troubleshooting/usual-troubleshooting-steps/[Usual Troubleshooting Steps] to understand what is going on.
+First of all please make sure you go through xref:/midpoint/reference/v2/diag/troubleshooting/usual-troubleshooting-steps/[Usual Troubleshooting Steps] to understand what is going on.
 MidPoint is very flexible and a simple misconfiguration may easily look like a bug.
 We invest a huge amount of time to make the error messages and log entries understandable.
 But nothing is perfect and what seems like a perfectly understandable message for us may look like a gibberish to you.
@@ -91,7 +91,7 @@ We prefer if you replicate the problem with one of our link:https://github.com/E
 
 * If there is an exception in the log files please make sure that you include full *stack trace of the exception*. The exception stack trace is usually a very efficient pointer to likely cause of the problem.
 
-* Relevant part of the *log files*. You may want to have a look at xref:/midpoint/reference/diag/logging/useful-loggers/[Useful Loggers] to correctly set up your logging to get the most useful data in the logs.
+* Relevant part of the *log files*. You may want to have a look at xref:/midpoint/reference/v2/diag/logging/useful-loggers/[Useful Loggers] to correctly set up your logging to get the most useful data in the logs.
 
 * Your *environment*: operating system, J2EE application server and its version, Java version, target system version.
 You do not need to bother with this if the bug is obviously not environment-specific.
@@ -121,12 +121,12 @@ But sometimes too much non-relevant information may obscure the tiny problem tha
 
 == See Also
 
-* xref:/midpoint/reference/diag/troubleshooting/usual-troubleshooting-steps/[Usual Troubleshooting Steps]
+* xref:/midpoint/reference/v2/diag/troubleshooting/usual-troubleshooting-steps/[Usual Troubleshooting Steps]
 
 * xref:/midpoint/devel/bugfixing/[Bugfixing and Support]
 
 * xref:/support/bug-tracking-system/[]
 
-* xref:/midpoint/reference/diag/troubleshooting/[]
+* xref:/midpoint/reference/v2/diag/troubleshooting/[]
 
 // TODO: configuration samples link?

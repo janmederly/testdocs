@@ -38,7 +38,7 @@ image::image2016-9-3-0-1-6.png[]
 image::plugin-chyba.jpg[]
 
 It is related to SSL/TLS and server certificates.
-If you see the exception above, please use the guide to xref:/midpoint/reference/legacy/eclipse-plugin/certificate-problems/[Solving Certificate Problems].
+If you see the exception above, please use the guide to xref:/midpoint/reference/v2/legacy/eclipse-plugin/certificate-problems/[Solving Certificate Problems].
 
 . Now select "MidPoint Development Tools" from the list of available software.
 Then click *Next...*
@@ -75,7 +75,7 @@ cd midpoint-ide-plugins\com.evolveum.midpoint.eclipse.parent
 mvn clean install
 ----
 
-The result is then in the file _com.evolveum.midpoint.eclipse.update/target/com.evolveum.midpoint.eclipse.update-x.x.x-SNAPSHOT.zip_. This is the file to be used as archive when adding new software sites (see xref:/midpoint/reference/legacy/eclipse-plugin/certificate-problems/[here]).
+The result is then in the file _com.evolveum.midpoint.eclipse.update/target/com.evolveum.midpoint.eclipse.update-x.x.x-SNAPSHOT.zip_. This is the file to be used as archive when adding new software sites (see xref:/midpoint/reference/v2/legacy/eclipse-plugin/certificate-problems/[here]).
 
 
 === Eclipse Groovy plugin instalation

@@ -24,7 +24,7 @@ In practice inconsistencies happen all the time.
 Therefore a mechanism to handle them is an essential part of any IDM solution.
 
 Please see the xref:/iam/idm-consistency/[IDM Consistency] page for short introduction to one of the consistency issues
-and xref:/midpoint/reference/synchronization/consistency/theory/[Consistency Theory] for
+and xref:/midpoint/reference/v2/synchronization/consistency/theory/[Consistency Theory] for
 a theoretical introduction to the consistency problem.
 
 == Consistency in midPoint
@@ -55,7 +55,7 @@ and what need to be done to finish the operation successfully.
 === Pending Operations
 
 Operations that cannot be executed immediately (synchronously) are stored in
-xref:/midpoint/reference/resources/shadow/[shadow objects] in a form of _pending operations_.
+xref:/midpoint/reference/v2/resources/shadow/[shadow objects] in a form of _pending operations_.
 Pending operation is a data structure that contains details about unfinished operation.
 This data structure contains:
 
@@ -70,19 +70,19 @@ Simply speaking the status indicates whether the operation is executing or wheth
 
 If an operation fails due to a communication issue, midPoint remembers that operation in _pending operations_ data structure and returns immediately.
 MidPoint will continue with other operations on other resources that could still be executed - unless there are
-xref:/midpoint/reference/resources/provisioning-dependencies/[provisioning dependencies] prohibiting that.
+xref:/midpoint/reference/v2/resources/provisioning-dependencies/[provisioning dependencies] prohibiting that.
 MidPoint will re-try the failed operation later.
 
 [TIP]
 ====
 The same data structure is used for all asynchronous operations in midPoint, such as operations on
-xref:/midpoint/reference/resources/manual/[manual resources].
+xref:/midpoint/reference/v2/resources/manual/[manual resources].
 This is an example of xref:/midpoint/features/synergy/[synergy] of several midPoint features.
 ====
 
 === Configuration
 
-Operation retries can be configured in xref:/midpoint/reference/resources/resource-configuration/[resource definition]
+Operation retries can be configured in xref:/midpoint/reference/v2/resources/resource-configuration/[resource definition]
 in the `consistency` section.
 However, it is often not necessary to provide any explicit configuration as midPoint has reasonable default settings.
 If a configuration is needed, it can be specified like this:
@@ -161,12 +161,12 @@ This may be also explicitly invoked by a refresh task (see below).
 
 === Refresh Task
 
-Main page: xref:/midpoint/reference/tasks/shadow-refresh-task/[Shadow Refresh Task]
+Main page: xref:/midpoint/reference/v2/tasks/shadow-refresh-task/[Shadow Refresh Task]
 
 If the shadow refresh operation is left entirely to a chance then strange things may happen.
 Some shadows may not get refreshed for a long time.
 Therefore it is always a good idea to make sure that the shadows are refreshed periodically.
-This is often achieved by the means of a xref:/midpoint/reference/synchronization/introduction/[reconciliation process].
+This is often achieved by the means of a xref:/midpoint/reference/v2/synchronization/introduction/[reconciliation process].
 Reconciliation is forcing refresh of all shadows to make sure that all data in midPoint are up-to-date.
 However, reconciliation is quite a heavy-weight process.
 It may be an overkill to run reconciliation just to make sure pending operations are retried.
@@ -194,10 +194,10 @@ Therefore it can usually be scheduled for quite a frequent execution, usually ex
 
 [TIP]
 ====
-This is the same refresh task that is used for xref:/midpoint/reference/resources/manual/configuration/[manual resources].
+This is the same refresh task that is used for xref:/midpoint/reference/v2/resources/manual/configuration/[manual resources].
 In fact the mechanism of _pending operations_ is the same for both consistency mechanism and manual resources, therefore also the same refresh task is used.
 
-See xref:/midpoint/reference/tasks/shadow-refresh-task/[Shadow Refresh Task] page for more details.
+See xref:/midpoint/reference/v2/tasks/shadow-refresh-task/[Shadow Refresh Task] page for more details.
 
 ====
 
@@ -248,11 +248,11 @@ If the account was created directly (not using assignment), the shadow is delete
 === Configuration
 
 For the discovery mechanism we do not need any additional settings.
-As discovery is yet another way how midPoint detects changes, all what you need is to have configured xref:/midpoint/reference/synchronization/introduction/[synchronization] part in the resource description.
+As discovery is yet another way how midPoint detects changes, all what you need is to have configured xref:/midpoint/reference/v2/synchronization/introduction/[synchronization] part in the resource description.
 
 == Reconciliation
 
-xref:/midpoint/reference/synchronization/introduction/[Reconciliation process] (also called synchronization)
+xref:/midpoint/reference/v2/synchronization/introduction/[Reconciliation process] (also called synchronization)
 is a standard way how identity management systems solve possible inconsistencies.
 It is used to scan external resource and find out changes that have been not applied yet because of some reason,
 e.g. when administrator made changes on external resource, synchronization was suspended.
@@ -267,18 +267,18 @@ and if the one with additional information is found, we try to process it and co
 This page describes consistency mechanism used in midPoint 3.9 and later versions.
 MidPoint has consistency mechanism since almost the beginning.
 However, the mechanism was revised and significantly updated in midPoint 3.9.
-For information about the earlier versions please see xref:/midpoint/reference/synchronization/consistency/leagacy/[Consistency mechanism (3.8 and earlier)] page.
+For information about the earlier versions please see xref:/midpoint/reference/v2/synchronization/consistency/leagacy/[Consistency mechanism (3.8 and earlier)] page.
 
 == See Also
 
 * xref:/iam/idm-consistency/[IDM Consistency]
 
-* xref:/midpoint/reference/synchronization/consistency/theory/[Consistency Theory]
+* xref:/midpoint/reference/v2/synchronization/consistency/theory/[Consistency Theory]
 
-* xref:/midpoint/reference/concepts/relativity/[Relativity]
+* xref:/midpoint/reference/v2/concepts/relativity/[Relativity]
 
-* xref:/midpoint/reference/synchronization/introduction/[Reconciliation process]
+* xref:/midpoint/reference/v2/synchronization/introduction/[Reconciliation process]
 
-* xref:/midpoint/reference/tasks/shadow-refresh-task/[Shadow Refresh Task]
+* xref:/midpoint/reference/v2/tasks/shadow-refresh-task/[Shadow Refresh Task]
 
 * xref:/connectors/connid/1.x/connector-development-guide/[Connector Development Guide - DiscoverySupport]

@@ -185,7 +185,7 @@ The classification means determining the object type (i.e. kind and intent) for 
 NOTE: The normal course of action is that the first time an object is seen, it is classified.
 There are special cases, however, when classification criteria are being developed.
 It is common to do objects classification and re-classification, until the criteria are stabilized.
-See also xref:/midpoint/reference/simulation/tutorial/[] (since 4.7).
+See also xref:/midpoint/reference/v1/simulation/tutorial/[] (since 4.7).
 
 The overall classification algorithm is the following:
 
@@ -407,7 +407,7 @@ Generally speaking, it is safer to set the focus archetype explicitly (e.g. by p
 
 Correlation is the process of finding a focus object (or determining there is none yet) for given resource object.
 In 4.6, it was significantly reworked.
-It is described in a xref:/midpoint/reference/correlation/[separate document].
+It is described in a xref:/midpoint/reference/v1/correlation/[separate document].
 
 === Synchronization
 
@@ -473,7 +473,7 @@ An example:
 ==== Synchronization Reactions
 
 This part is the core of the `synchronization` configuration.
-For each xref:/midpoint/reference/synchronization/situations/[synchronization situation] there is a synchronization action specified.
+For each xref:/midpoint/reference/v1/synchronization/situations/[synchronization situation] there is a synchronization action specified.
 (In theory, there can be more of them, but usually there is exactly one action defined for each situation.)
 
 Each reaction may have the following configuration items:
@@ -654,7 +654,7 @@ The reason is that it is not connected to any specific object type.
 === Object Type Inheritance
 
 An object type can inherit parts of its definition from so-called _supertype_.
-This feature is new in 4.6, and is described in a xref:/midpoint/reference/resources/resource-configuration/inheritance/[separate document].
+This feature is new in 4.6, and is described in a xref:/midpoint/reference/v1/resources/resource-configuration/inheritance/[separate document].
 
 == Object Class Definition Adaptation
 
@@ -709,7 +709,7 @@ When searching for resource objects _without providing object class name_, the f
 . _kind_ must be specified;
 . if _intent_ is not specified, the "default for kind" intent is assumed - for the given kind.
 
-See also xref:/midpoint/reference/tasks/activities/resource-object-set-specification/[].
+See also xref:/midpoint/reference/v1/tasks/activities/resource-object-set-specification/[].
 
 ==== An Example
 

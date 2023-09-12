@@ -110,7 +110,7 @@ More on reviewer specification below.
 
 == Very quick tutorial
 
-It is advisable to go through a xref:/midpoint/reference/roles-policies/certification/tutorial/[very quick tutorial] at this point in order to see how certification works.
+It is advisable to go through a xref:/midpoint/reference/v1/roles-policies/certification/tutorial/[very quick tutorial] at this point in order to see how certification works.
 
 == Campaign definition options
 
@@ -188,7 +188,7 @@ This selects user-role assignments for users that belong under GovernorOffice an
 
 === Stage definitions
 
-This is described in xref:/midpoint/reference/roles-policies/certification/stages/[a separate document].
+This is described in xref:/midpoint/reference/v1/roles-policies/certification/stages/[a separate document].
 
 === Automated scheduling of campaigns
 
@@ -260,14 +260,14 @@ As for statistics, we currently list all 6 of responses.
 == Reporting
 
 There are four types of reports available: certification definitions, campaigns, campaign cases and campaign decisions.
-They are described on xref:/midpoint/reference/roles-policies/certification/reports/[Access Certification Reports] page.
+They are described on xref:/midpoint/reference/v1/roles-policies/certification/reports/[Access Certification Reports] page.
 
 == Notifications
 
 Certification module provides notifications for certification campaign owner as well as for individual reviewers.
-More information can be found on xref:/midpoint/reference/roles-policies/certification/notifications/[Access Certification Notifications] page.
+More information can be found on xref:/midpoint/reference/v1/roles-policies/certification/notifications/[Access Certification Notifications] page.
 
 == Security
 
 Individual operations are authorized in a specific way.
-For detailed information, please see xref:/midpoint/reference/roles-policies/certification/authorization/[Access Certification Security] page.
+For detailed information, please see xref:/midpoint/reference/v1/roles-policies/certification/authorization/[Access Certification Security] page.

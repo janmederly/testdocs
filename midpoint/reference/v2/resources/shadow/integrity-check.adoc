@@ -33,7 +33,7 @@ Just import the following task:
 |===
 | Parameter | Description | Default
 | `shadows`
-| What xref:/midpoint/reference/tasks/activities/object-set-specification/[shadows] to analyze.
+| What xref:/midpoint/reference/v2/tasks/activities/object-set-specification/[shadows] to analyze.
 | All shadows.
 | `aspectsToDiagnose`
 | Aspects that should be diagnosed.

@@ -6,7 +6,7 @@
 :page-wiki-metadata-modify-user: mederly
 :page-wiki-metadata-modify-date: 2020-03-03T13:35:28.883+01:00
 :page-upkeep-status: yellow
-:page-alias: { "parent" : "/midpoint/reference/tasks/", "slug" : "bulk",  "title" : "Scripting Tasks (Bulk Actions)" }
+:page-alias: { "parent" : "/midpoint/reference/v2/tasks/", "slug" : "bulk",  "title" : "Scripting Tasks (Bulk Actions)" }
 
 There are two ways of executing scripts within tasks:
 

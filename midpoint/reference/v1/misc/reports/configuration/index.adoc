@@ -332,15 +332,15 @@ If subreports are used to multiply rows (see below), this object contains the sa
 If no `path` was specified for the column, it has the same value as `object` variable.
 
 | `report`
-| xref:/midpoint/reference/misc/reports/report-functions/[Report Script Library]
+| xref:/midpoint/reference/v1/misc/reports/report-functions/[Report Script Library]
 provides functions supporting report processing.
 
 | `basic`
-| xref:/midpoint/reference/expressions/expressions/script/functions/#basic-library[Basic Library].
+| xref:/midpoint/reference/v1/expressions/expressions/script/functions/#basic-library[Basic Library].
 Part of standard script evaluator variable set.
 
 | `midpoint`
-| xref:/midpoint/reference/expressions/expressions/script/functions/midpoint/[midPoint Script Library].
+| xref:/midpoint/reference/v1/expressions/expressions/script/functions/midpoint/[midPoint Script Library].
 Part of standard script evaluator variable set.
 
 | `prismContext`
@@ -352,7 +352,7 @@ Part of standard script evaluator variable set.
 Part of standard script evaluator variable set.
 
 | `log`
-| xref:/midpoint/reference/expressions/expressions/script/functions/#midpoint-library[Logging Library].
+| xref:/midpoint/reference/v1/expressions/expressions/script/functions/#midpoint-library[Logging Library].
 Part of standard script evaluator variable set.
 
 | subreport variables
@@ -521,15 +521,15 @@ This is a single object from the collection, e.g. one result from a query.
 If subreports are used to multiply rows (see below), this object contains the same object for all such rows.
 
 | `report`
-| xref:/midpoint/reference/misc/reports/report-functions/[Report Script Library]
+| xref:/midpoint/reference/v1/misc/reports/report-functions/[Report Script Library]
 provides functions supporting report processing.
 
 | `basic`
-| xref:/midpoint/reference/expressions/expressions/script/functions/#basic-library[Basic Library].
+| xref:/midpoint/reference/v1/expressions/expressions/script/functions/#basic-library[Basic Library].
 Part of standard script evaluator variable set.
 
 | `midpoint`
-| xref:/midpoint/reference/expressions/expressions/script/functions/midpoint/[midPoint Script Library].
+| xref:/midpoint/reference/v1/expressions/expressions/script/functions/midpoint/[midPoint Script Library].
 Part of standard script evaluator variable set.
 
 | `prismContext`
@@ -541,7 +541,7 @@ Part of standard script evaluator variable set.
 Part of standard script evaluator variable set.
 
 | `log`
-| xref:/midpoint/reference/expressions/expressions/script/functions/#midpoint-library[Logging Library].
+| xref:/midpoint/reference/v1/expressions/expressions/script/functions/#midpoint-library[Logging Library].
 Part of standard script evaluator variable set.
 
 | subreport variables
@@ -563,7 +563,7 @@ Sometimes we want to produce multiple rows for one search result.
 For example, we want separate row for each assignment even though we used object search
 (there is an alternative, you can search for assignments directly).
 It is possible to generate rows for values of any other multi-value property.
-Another example would be xref:/midpoint/reference/misc/reports/examples/reference-search-based-report/[Reference search based report]
+Another example would be xref:/midpoint/reference/v1/misc/reports/examples/reference-search-based-report/[Reference search based report]
 which further splits its rows depending on the value metadata stored in each reference.
 
 Let's start with a simple example:
@@ -770,7 +770,7 @@ image::collection-example.png[]
 Dashboard engine generates reports by dashboard object.
 Dashboard object can be shown in GUI.
 Dashboard contains widgets, which showed actual state of midpoint.
-Documentation for dashboard configuration can be found in xref:/midpoint/reference/admin-gui/dashboards/configuration/[Dashboard configuration].
+Documentation for dashboard configuration can be found in xref:/midpoint/reference/v1/admin-gui/dashboards/configuration/[Dashboard configuration].
 
 Dashboards support both currently supported file formats, but there is a difference.
 CSV contains only table of widget with basic message and status, unlike HTML, which as default showing table for widgets and one table for every widget with objects which meet the condition in widget.
@@ -807,7 +807,7 @@ Also, we can use attribute `useOnlyReportView` for using only view defined by re
 
 When we don't use view, report will be contained default columns.
 In expression of column you can use variable 'object' which represent searched object or object defined in tag _path_.
-For more information about view configuration please see xref:/midpoint/reference/admin-gui/collections-views/configuration/#views[Views].
+For more information about view configuration please see xref:/midpoint/reference/v1/admin-gui/collections-views/configuration/#views[Views].
 
 .Example of view for RoleType
 [source,xml]
@@ -1512,7 +1512,7 @@ Variables _valid_from_ and _valid_to_ define property _activation/validFrom_ and
 
 == Security Of Report Expressions
 
-Reports often use xref:/midpoint/reference/expressions/[expressions].
+Reports often use xref:/midpoint/reference/v1/expressions/[expressions].
 Expressions allow to customize midPoint behavior and they are essential for the success of midPoint deployments.
 However, the expressions are very powerful and they may even be too powerful for some use cases.
 The expressions can use general-purpose scripting languages such as Groovy or JavaScript.
@@ -1521,17 +1521,17 @@ Which means that the expressions can damage the system or compromise security of
 *Use the expressions with utmost care.*
 
 Currently, there are very little restraints for expression execution.
-The xref:/midpoint/reference/expressions/expressions/script/functions/[expression functions] provided by midPoint usually check for proper authorizations.
+The xref:/midpoint/reference/v1/expressions/expressions/script/functions/[expression functions] provided by midPoint usually check for proper authorizations.
 But as the expressions can use general-purpose languages, there is no obligation for the expressions to use those libraries.
 The expression can easily circumvent those weak protections.
 Therefore do not let any unauthorized user to set up any kind of expression in midPoint.
 *Allowing the right to edit any expression may lead to compromise of system security.*
 
-Some expression security can be achieved by using xref:/midpoint/reference/expressions/expressions/profiles/[expression profiles].
+Some expression security can be achieved by using xref:/midpoint/reference/v1/expressions/expressions/profiles/[expression profiles].
 Expression profiles can be used to limit the capabilities of report expressions, e.g. to limit them to safe operations that just manipulate strings and basic data structures.
 This seems to work reasonably well for ordinary object-based reports.
 However, when it comes to audit reports, this solution may not be sufficient.
-xref:/midpoint/reference/security/audit/[Audit records] are *not*  midPoint objects, they are just rows in ordinary relational table.
+xref:/midpoint/reference/v1/security/audit/[Audit records] are *not*  midPoint objects, they are just rows in ordinary relational table.
 Therefore the usual midPoint mechanisms do not apply to them.
 E.g. they cannot be queries by using midPoint query mechanisms.
 There is a way how a "safe" expression can construct a string query for audit table.
@@ -1545,16 +1545,16 @@ There are no guarantees.
 Use at your own risk.
 
 In case that a secure audit reports are needed, the current recommendation is to make such reports outside of midPoint.
-The xref:/midpoint/reference/security/audit/[structure of an audit table is documented] and it can be used for integration with data warehouse and/or SIEM systems.
+The xref:/midpoint/reference/v1/security/audit/[structure of an audit table is documented] and it can be used for integration with data warehouse and/or SIEM systems.
 MidPoint is neither of those systems and it has no ambition to become one.
 Therefore such integration is likely to be required anyway to construct a complete information security solution.
 
-See xref:/midpoint/reference/security/security-guide/[Security Guide] for more detail regarding security-related functionality of midPoint.
+See xref:/midpoint/reference/v1/security/security-guide/[Security Guide] for more detail regarding security-related functionality of midPoint.
 
 == See Also
 
-* xref:/midpoint/reference/misc/reports/examples/[Report Examples]
+* xref:/midpoint/reference/v1/misc/reports/examples/[Report Examples]
 
-* xref:/midpoint/reference/expressions/expressions/profiles/[Expression Profiles]
+* xref:/midpoint/reference/v1/expressions/expressions/profiles/[Expression Profiles]
 
-* xref:/midpoint/reference/security/security-guide/[Security Guide]
+* xref:/midpoint/reference/v1/security/security-guide/[Security Guide]

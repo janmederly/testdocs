@@ -133,4 +133,4 @@ one space, otherwise it will not parse with quite an obscure error.
 
 == See Also
 
-* xref:/midpoint/reference/expressions/expressions/[Expressions] in general
+* xref:/midpoint/reference/v1/expressions/expressions/[Expressions] in general

@@ -6,16 +6,16 @@
 ++++
 
 Please note that this example requires reference search functionality that is available only with the
-xref:/midpoint/reference/repository/native-postgresql/[Native repository] with midPoint 4.7 or newer.
+xref:/midpoint/reference/v1/repository/native-postgresql/[Native repository] with midPoint 4.7 or newer.
 
 This report demonstrates the following features:
 
-* xref:/midpoint/reference/concepts/query/#reference-query[Reference search] - we directly search for `roleMembershipRef` references.
-* xref:/midpoint/reference/misc/value-metadata/[Value metadata] - we work with extended assignment information stored inside value metadata in the reference values.
-* xref:/midpoint/reference/misc/reports/configuration/#subreports-generating-rows[Row generation] - we generate new rows depending on the number of value metadata values.
+* xref:/midpoint/reference/v1/concepts/query/#reference-query[Reference search] - we directly search for `roleMembershipRef` references.
+* xref:/midpoint/reference/v1/misc/value-metadata/[Value metadata] - we work with extended assignment information stored inside value metadata in the reference values.
+* xref:/midpoint/reference/v1/misc/reports/configuration/#subreports-generating-rows[Row generation] - we generate new rows depending on the number of value metadata values.
 * The report also shows a few interesting
-xref:/midpoint/reference/expressions/expressions/script/[script expressions]
-with the xref:/midpoint/reference/expressions/expressions/script/groovy/[Groovy Expressions].
+xref:/midpoint/reference/v1/expressions/expressions/script/[script expressions]
+with the xref:/midpoint/reference/v1/expressions/expressions/script/groovy/[Groovy Expressions].
 
 The key points are marked with numbers and explained below the example.
 
@@ -260,7 +260,7 @@ The key points are marked with numbers and explained below the example.
 </report>
 ----
 
-<1> The report is based on a xref:/midpoint/reference/concepts/query/#reference-query[Reference query]
+<1> The report is based on a xref:/midpoint/reference/v1/concepts/query/#reference-query[Reference query]
 with the mandatory owned-by filter inside the `collection` element pointing to the `roleMembershipRef`.
 There are some parameter values used inside the filter.
 <2> The result type of the search is specified with `type` inside the `view` element.
@@ -269,8 +269,8 @@ There are some parameter values used inside the filter.
 Polystring name is represented by the `string` type.
 // TODO PolyStringType doesn't work properly in the preview/run report dialog.
 <4> Subreport `data` with `splitParentRow` behavior to ensure that each value metadata value
-has xref:/midpoint/reference/misc/reports/configuration/#subreports-generating-rows[its own row].
-xref:/midpoint/reference/misc/reports/report-functions/[Report function] `generateAssignmentPathRows`
+has xref:/midpoint/reference/v1/misc/reports/configuration/#subreports-generating-rows[its own row].
+xref:/midpoint/reference/v1/misc/reports/report-functions/[Report function] `generateAssignmentPathRows`
 returns collection of plain objects with various fields extracted from the value metadata
 which will be used in the column expressions.
 The object is named `data` and can be null if no value metadata are found on the reference.
@@ -327,6 +327,6 @@ com.evolveum.midpoint.util.exception.ObjectNotFoundException: ...
 
 == See Also
 
-* xref:/midpoint/reference/misc/reports/configuration/[Report configuration]
+* xref:/midpoint/reference/v1/misc/reports/configuration/[Report configuration]
 
-* xref:/midpoint/reference/concepts/query/#reference-query[Reference Query]
+* xref:/midpoint/reference/v1/concepts/query/#reference-query[Reference Query]

@@ -14,7 +14,7 @@ The definition here has a potencial to be improved but it is working as it is.
 The goal is not just to provide simple example but mainly to describe it.
 And if you can read this example as well as understand it, the goal is met.
 
-Basic information about the notification is available on a xref:/midpoint/reference/misc/notifications/[dedicated page].
+Basic information about the notification is available on a xref:/midpoint/reference/v1/misc/notifications/[dedicated page].
 
 
 == The notification requirements

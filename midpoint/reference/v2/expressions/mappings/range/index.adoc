@@ -11,7 +11,7 @@ If the target item contains values that belong to the mapping range, it is assum
 I.e. if the mapping contains any values that belong to the mapping range, and the mapping does not produce such values as its output, the values are removed.
 
 The range defines what are the possible outputs of the mapping.
-The xref:/midpoint/reference/concepts/clockwork/clockwork-and-projector/[projector] can use this information to determine what values to remove when the mapping is authoritative.
+The xref:/midpoint/reference/v2/concepts/clockwork/clockwork-and-projector/[projector] can use this information to determine what values to remove when the mapping is authoritative.
 
 == Range Definition
 
@@ -74,7 +74,7 @@ Therefore, if there is any manager assignment that is not result of this mapping
 
 == Single Mapping
 
-The usual way for automatic assignment of roles is use of xref:/midpoint/reference/expressions/mappings/inbound-mapping/[inbound mapping] with xref:/midpoint/reference/expressions/expressions/#assignment-target-search[assignmentTargetSearch] expression evaluator.
+The usual way for automatic assignment of roles is use of xref:/midpoint/reference/v2/expressions/mappings/inbound-mapping/[inbound mapping] with xref:/midpoint/reference/v2/expressions/expressions/#assignment-target-search[assignmentTargetSearch] expression evaluator.
 The mapping takes `jobCode` attribute from the HR system.
 It transforms the `jobCode` to an assignment of midPoint role using the `assignmentTargetSearch` expression.
 The new assignment value is then store in user's `assignment` container, thus assigning the role.
@@ -196,7 +196,7 @@ The other is a mapping from a project management system.
 Its purpose is automatic management membership in project teams.
 Authoritative information about project teams is stored in the project management system.
 The `project` attribute of user accounts contains a multi-valued list of project identifiers that a user belongs to.
-The mapping is processing the values of `project` attribute, creating assignments to appropriate xref:/midpoint/reference/org/[orgs].
+The mapping is processing the values of `project` attribute, creating assignments to appropriate xref:/midpoint/reference/v2/org/[orgs].
 
 image::mapping-range-multiple-1.png[Multiple mappings with ranges part 1]
 
@@ -289,7 +289,7 @@ When using mappings with overlapping ranges, *it is absolutely crucial to make s
 Two inbound mappings for the same resource will work, as they are evaluated together.
 Inbound mappings for _different_ resources are *not* guaranteed to work, as there may be a reconciliation process that is limited to one of the resources, not evaluating the other mapping.
 An inbound mapping and object template mapping with overlapping ranges will *not* work either.
-Such mappings are evaluated in different phases of xref:/midpoint/reference/concepts/clockwork/clockwork-and-projector/[projector computation], which may lead to incorrect results.
+Such mappings are evaluated in different phases of xref:/midpoint/reference/v2/concepts/clockwork/clockwork-and-projector/[projector computation], which may lead to incorrect results.
 Moreover, user may be recomputed without re-evaluating inbound mappings.
 Simply speaking, it is not straightforward to determine whether evaluation of mappings with overlapping changes is safe or note safe.
 
@@ -381,6 +381,6 @@ However, this is not a significant difference for the purpose of this explanatio
 
 == See Also
 
-* xref:/midpoint/reference/expressions/mappings/[]
+* xref:/midpoint/reference/v2/expressions/mappings/[]
 
 * xref:../../practices/removing-values/[]

@@ -126,7 +126,7 @@ This newly created user is disabled and doesn't have any roles assigned until he
 Confirmation of registration is configurable using additionalAuthenticationSequence attribute.
 After user successfully confirms the registration, default roles are assigned to him/her - default roles are configured using defaultRole attribute.
 
-More information about lifecycle configuration, please, see xref:/midpoint/reference/security/authentication/post-authentication-configuration/#configure-lifecycle-activation[Configure lifecycle activation]
+More information about lifecycle configuration, please, see xref:/midpoint/reference/v2/security/authentication/post-authentication-configuration/#configure-lifecycle-activation[Configure lifecycle activation]
 
 As an example let's see on the use case when the user is created by the administrator and the invitation link is sent to the user.
 
@@ -216,7 +216,7 @@ Max age is the time how long is the nonce valid and valuePolicyRef is reference 
 == Self-Registration And Custom Form
 
 It is possible to define a custom form for self-registration process.
-With introducing xref:/midpoint/reference/admin-gui/custom-forms/[custom forms] in midPoint they can be also used with the self-registration.
+With introducing xref:/midpoint/reference/v2/admin-gui/custom-forms/[custom forms] in midPoint they can be also used with the self-registration.
 All what is needed is to reference to the concrete form in the self-registration configuration as in the example below
 
 .Self registration with custom form
@@ -354,7 +354,7 @@ Configuration looks as follows:
 The important setting for the notifier is attribute <confirmationMethod>.
 According to the value for the confirmation method, confirmation link/pin is generated to verify user.
 Other parts of configuration are same as for other notifiers.
-Details for notification configuration are described xref:/midpoint/reference/misc/notifications/configuration/[here].
+Details for notification configuration are described xref:/midpoint/reference/v2/misc/notifications/configuration/[here].
 
 
 == How it works
@@ -392,8 +392,8 @@ image::confirmation-success.png[]
 
 == See also
 
-* xref:/midpoint/reference/admin-gui/custom-forms/[Custom Forms]
+* xref:/midpoint/reference/v2/admin-gui/custom-forms/[Custom Forms]
 
-* xref:/midpoint/reference/security/credentials/password-policy/[Password Policy]
+* xref:/midpoint/reference/v2/security/credentials/password-policy/[Password Policy]
 
-* xref:/midpoint/reference/security/authentication/flexible-authentication/configuration/[Flexible Authentication]
+* xref:/midpoint/reference/v2/security/authentication/flexible-authentication/configuration/[Flexible Authentication]

@@ -19,7 +19,7 @@ Some examples:
 </task>
 ----
 
-This causes the creation of a simulation result using xref:/midpoint/reference/simulation/results/definition.adoc#_library[the default definition].
+This causes the creation of a simulation result using xref:/midpoint/reference/v1/simulation/results/definition.adoc#_library[the default definition].
 
 .Listing 2: Creating a simulation result using a specified global definition
 [source, xml]
@@ -59,4 +59,4 @@ It can be customized by providing further properties within the `definition` ite
 
 This creates a custom definition of the simulation result that will be used.
 
-See also xref:/midpoint/reference/simulation/results/definition.adoc[] for more information.
+See also xref:/midpoint/reference/v1/simulation/results/definition.adoc[] for more information.

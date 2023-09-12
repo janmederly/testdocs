@@ -31,7 +31,7 @@ Basic role structure is illustrated in a following diagram.
 image::rbac-1.png[]
 
 The diagram illustrates the basic mechanism of roles.
-Users are assigned to the roles using a mechanism called xref:/midpoint/reference/roles-policies/assignment/[assignment] (see below).
+Users are assigned to the roles using a mechanism called xref:/midpoint/reference/v1/roles-policies/assignment/[assignment] (see below).
 Roles define access rights on a specific set of resources.
 The figure illustrates a situation that can be described as:
 
@@ -115,9 +115,9 @@ The mugs of all captains should come with owner's name on it, so no scurvy seado
 
 ****
 
-xref:/midpoint/reference/expressions/[Mappings and expressions] are used to define dynamic implied account attributes.
-xref:/midpoint/reference/concepts/item-path/[Simple paths] are perhaps the most easy to use and most useful in common situations.
-There are also xref:/midpoint/reference/expressions/expressions/script/[scripting expressions] for more complex cases.
+xref:/midpoint/reference/v1/expressions/[Mappings and expressions] are used to define dynamic implied account attributes.
+xref:/midpoint/reference/v1/concepts/item-path/[Simple paths] are perhaps the most easy to use and most useful in common situations.
+There are also xref:/midpoint/reference/v1/expressions/expressions/script/[scripting expressions] for more complex cases.
 The default expression language is Groovy, chosen for its similarity to Java.
 However, the expression model is extensible, there are several supported languages and even more expression languages may be added in the future.
 
@@ -157,10 +157,10 @@ The role is implying account on `Rum Supply System` resource.
 It is also implying that the attribute `mugSize` of such account should be set to value `BIG` and the attribute `mugName` should be set to the value of user property `givenName`. The figure above illustrate how the attribute values "flow" through the definitions.
 
 The figure above is somehow simplified.
-In fact the role definitions are using xref:/midpoint/reference/expressions/mappings/[mappings] to determine attribute values.
-It is the same mechanism that is used in xref:/midpoint/reference/roles-policies/assignment/[assignments] and xref:/midpoint/reference/resources/resource-configuration/schema-handling/[resource schema handling section] therefore the same features and limitations apply here.
+In fact the role definitions are using xref:/midpoint/reference/v1/expressions/mappings/[mappings] to determine attribute values.
+It is the same mechanism that is used in xref:/midpoint/reference/v1/roles-policies/assignment/[assignments] and xref:/midpoint/reference/v1/resources/resource-configuration/schema-handling/[resource schema handling section] therefore the same features and limitations apply here.
 Following diagram provides more detailed illustration of use of mappings in the roles.
-Each mapping has three parts: source, value constructor and target (see xref:/midpoint/reference/expressions/mappings/[Mapping]). However some of these parts can be determined by the context in which the mapping is used.
+Each mapping has three parts: source, value constructor and target (see xref:/midpoint/reference/v1/expressions/mappings/[Mapping]). However some of these parts can be determined by the context in which the mapping is used.
 Therefore not all parts of the mapping needs to be present when constructing the roles.
 This is illustrated in the following diagram where the implicit parts of the mappings are marked by dashed outlines.
 The first mapping in the following diagram determines target the value of account `mugSize` attribute.
@@ -174,11 +174,11 @@ Mapping target is also determined implicitly by the context.
 
 image::rbac-5.png[]
 
-Please see the xref:/midpoint/reference/expressions/[Mappings and Expressions] page for explanation of basic principles of mapping mechanism.
+Please see the xref:/midpoint/reference/v1/expressions/[Mappings and Expressions] page for explanation of basic principles of mapping mechanism.
 
 Implied account attributes usually do not need to define the entire set of account attributes.
 There may be other roles that may assign different attributes to the same account, more values to the same attributes of the account and even conflicting values.
-The account may also have existing attributes that are managed by "native" tools (outside IDM) or there may be exceptions from the RBAC policy specified for that account using attribute specification in xref:/midpoint/reference/roles-policies/assignment/[assignments].
+The account may also have existing attributes that are managed by "native" tools (outside IDM) or there may be exceptions from the RBAC policy specified for that account using attribute specification in xref:/midpoint/reference/v1/roles-policies/assignment/[assignments].
 
 === Implied Account Entitlements
 
@@ -228,11 +228,11 @@ The XML role definition is as follows:
 ----
 
 This approach requires a `group` entitlement to be defined in a Maritime Information System resource, with appropriate association definition for the accounts.
-Please see xref:/midpoint/reference/resources/entitlements/[] page for the details.
+Please see xref:/midpoint/reference/v1/resources/entitlements/[] page for the details.
 
 == Assignments
 
-Main article: xref:/midpoint/reference/roles-policies/assignment/[Assignment], xref:/midpoint/reference/roles-policies/assignment/configuration/[Assignment Configuration]
+Main article: xref:/midpoint/reference/v1/roles-policies/assignment/[Assignment], xref:/midpoint/reference/v1/roles-policies/assignment/configuration/[Assignment Configuration]
 
 Assignment is a generic concept of associating user with the things that he should have or belong to.
 Assignment may associate user with a role, organizational unit or any other kind of object.
@@ -257,11 +257,11 @@ Roles are associated to to users using assignment as illustrated by the followin
 Although most assignments are as simple as the one above the assignments may be much more complex if needed.
 Assignments may be conditional, limited to a specific time period or provide parameters for the roles.
 
-See xref:/midpoint/reference/roles-policies/assignment/[Assignment] and xref:/midpoint/reference/roles-policies/assignment/configuration/[Assignment Configuration] pages for more details about assignments.
+See xref:/midpoint/reference/v1/roles-policies/assignment/[Assignment] and xref:/midpoint/reference/v1/roles-policies/assignment/configuration/[Assignment Configuration] pages for more details about assignments.
 
 == Inducements
 
-Main article: xref:/midpoint/reference/roles-policies/assignment/assignment-vs-inducement/[Assignment vs Inducement]
+Main article: xref:/midpoint/reference/v1/roles-policies/assignment/assignment-vs-inducement/[Assignment vs Inducement]
 
 Simply speaking inducements are indirect assignments.
 Unlike assignments inducements do *not* apply to the object in which they are specified.
@@ -277,7 +277,7 @@ Unless you are creating a very complex setup there is a simple rule of the thumb
 
 * Roles have _inducements_
 
-See xref:/midpoint/reference/roles-policies/assignment/assignment-vs-inducement/[Assignment vs Inducement] for more details.
+See xref:/midpoint/reference/v1/roles-policies/assignment/assignment-vs-inducement/[Assignment vs Inducement] for more details.
 
 == Role Hierarchy
 
@@ -290,11 +290,11 @@ image::rbac-6.png[]
 
 == Roles and Organizational Structure
 
-See xref:/midpoint/reference/roles-policies/roles-services-and-orgs/['Roles, Services and Orgs']
+See xref:/midpoint/reference/v1/roles-policies/roles-services-and-orgs/['Roles, Services and Orgs']
 
 == Meta-Roles
 
-See xref:/midpoint/reference/roles-policies/metaroles/gensync/['Roles, Metaroles and Generic Synchronization']
+See xref:/midpoint/reference/v1/roles-policies/metaroles/gensync/['Roles, Metaroles and Generic Synchronization']
 
 == Idempotent Roles
 
@@ -358,18 +358,18 @@ If those conditions depend only on the environment or properties of the focus th
 
 == See Also
 
-* xref:/midpoint/reference/roles-policies/rbac/[Advanced Hybrid RBAC]
+* xref:/midpoint/reference/v1/roles-policies/rbac/[Advanced Hybrid RBAC]
 
-* xref:/midpoint/reference/roles-policies/assignment/[Assignment]
+* xref:/midpoint/reference/v1/roles-policies/assignment/[Assignment]
 
-* xref:/midpoint/reference/roles-policies/assignment/configuration/[Assignment Configuration]
+* xref:/midpoint/reference/v1/roles-policies/assignment/configuration/[Assignment Configuration]
 
-* xref:/midpoint/reference/roles-policies/assignment/assignment-vs-inducement/[Assignment vs Inducement]
+* xref:/midpoint/reference/v1/roles-policies/assignment/assignment-vs-inducement/[Assignment vs Inducement]
 
-* xref:/midpoint/reference/roles-policies/roles-services-and-orgs/['Roles, Services and Orgs']
+* xref:/midpoint/reference/v1/roles-policies/roles-services-and-orgs/['Roles, Services and Orgs']
 
-* xref:/midpoint/reference/roles-policies/rbac/best-practice/[RBAC Best Practice]
+* xref:/midpoint/reference/v1/roles-policies/rbac/best-practice/[RBAC Best Practice]
 
-* xref:/midpoint/reference/roles-policies/metaroles/gensync/['Roles, Metaroles and Generic Synchronization']
+* xref:/midpoint/reference/v1/roles-policies/metaroles/gensync/['Roles, Metaroles and Generic Synchronization']
 
-* xref:/midpoint/reference/expressions/[Mappings and Expressions]
+* xref:/midpoint/reference/v1/expressions/[Mappings and Expressions]

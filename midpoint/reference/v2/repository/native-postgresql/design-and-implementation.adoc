@@ -33,7 +33,7 @@ There are other related tables, typically for containers and other multi-value p
 Not all values are by default searchable/indexable in this way and it must be possible to specify
 what other properties are indexed.
 These can be properties from the default schema but also from
-xref:/midpoint/reference/schema/custom-schema-extension/[schema extensions].
+xref:/midpoint/reference/v2/schema/custom-schema-extension/[schema extensions].
 * _Each object is a separate "aggregate" and any inter-object references are soft, not constraints
 on the database level._
 For example, multi-value container `roleMembershipRef` is stored in `m_ref_role_membership` table
@@ -122,7 +122,7 @@ Sometimes we use the results for reporting, but sometimes we call modify object 
 
 [NOTE]
 .Relativity and deltas
-In theory, xref:/midpoint/reference/concepts/relativity/[relativity of midPoint] means that modifications
+In theory, xref:/midpoint/reference/v2/concepts/relativity/[relativity of midPoint] means that modifications
 do not rely on locking that much, but the single modify operation still needs to be atomic.
 When multiple xref:/midpoint/devel/prism/concepts/deltas/[deltas] are applied to a single object,
 even if we don't know or care what order they are applied, they must all be applied.

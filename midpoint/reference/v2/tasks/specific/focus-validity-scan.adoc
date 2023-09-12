@@ -2,7 +2,7 @@
 
 This activity executes validity scan on focal objects.
 
-It looks for objects whose xref:/midpoint/reference/concepts/activation/[validity] is assumed to be changed
+It looks for objects whose xref:/midpoint/reference/v2/concepts/activation/[validity] is assumed to be changed
 (for example because they crossed their `validTo` timestamp, causing switching the object from _enabled_ to
 _disabled_ effective activation state), and recomputes them. The recomputation applies the changes stemming
 from the new activation state.
@@ -39,7 +39,7 @@ Note that this is an xref:/midpoint/versioning/experimental/[experimental functi
 [%autowidth]
 |===
 | Parameter | Description | Default value
-| `objects` | What xref:/midpoint/reference/tasks/activities/object-set-specification/[objects] to scan. Normally, there is no need to specify the query. If it is present, the filter computed
+| `objects` | What xref:/midpoint/reference/v2/tasks/activities/object-set-specification/[objects] to scan. Normally, there is no need to specify the query. If it is present, the filter computed
 by the activity (e.g. filtering on `validFrom` and `validTo` properties) is added to it as a conjunction. | All of `FocusType`.
 | `queryStyle` | How to find the objects. See Performance Considerations below. | `singleQuery`
 | `validityConstraint` | Custom validity constraint. | None.
@@ -59,7 +59,7 @@ Therefore, there is an option to execute this activity in two sub-activities: th
 that have their `validFrom` and `validTo` properties falling into specified time interval, and the second one
 looking for objects that have their assignments' `validFrom` and `validTo` values falling there. These sub-activities
 can be run in a single task (the default setup) or in different task, based on the
-xref:/midpoint/reference/tasks/activities/distribution/[`distribution/subtasks`] value.
+xref:/midpoint/reference/v2/tasks/activities/distribution/[`distribution/subtasks`] value.
 
 == Examples
 

@@ -20,7 +20,7 @@ As of midPoint 4.4, the following items are supported (MT means "Supports multi-
 | What options to use.
 | `reconcile`
 
-| xref:/midpoint/reference/tasks/synchronization-tasks/import-and-reconciliation/[`import`]
+| xref:/midpoint/reference/v2/tasks/synchronization-tasks/import-and-reconciliation/[`import`]
 | Imports specified resource objects.
 | Simple
 | Y
@@ -29,7 +29,7 @@ As of midPoint 4.4, the following items are supported (MT means "Supports multi-
 | What xref:../resource-object-set-specification/[resource objects] to import.
 | This is obligatory parameter.
 
-| xref:/midpoint/reference/tasks/synchronization-tasks/import-and-reconciliation/[`reconciliation`]
+| xref:/midpoint/reference/v2/tasks/synchronization-tasks/import-and-reconciliation/[`reconciliation`]
 | Reconciles specified resource objects.
 | Predefined composite
 | Y
@@ -38,7 +38,7 @@ As of midPoint 4.4, the following items are supported (MT means "Supports multi-
 | What xref:../resource-object-set-specification/[resource objects] to reconcile.
 | This is obligatory parameter.
 
-| xref:/midpoint/reference/tasks/synchronization-tasks/asynchronous-update/[`asynchronousUpdate`]
+| xref:/midpoint/reference/v2/tasks/synchronization-tasks/asynchronous-update/[`asynchronousUpdate`]
 | Processes asynchronous updates for given resource objects (EXPERIMENTAL).
 | Simple
 | Y
@@ -47,7 +47,7 @@ As of midPoint 4.4, the following items are supported (MT means "Supports multi-
 | What xref:../resource-object-set-specification/[resource objects] to receive updates for. (Not all configuration items are supported - TODO.)
 | This is obligatory parameter.
 
-.3+| xref:/midpoint/reference/tasks/synchronization-tasks/live-synchronization/[`liveSynchronization`]
+.3+| xref:/midpoint/reference/v2/tasks/synchronization-tasks/live-synchronization/[`liveSynchronization`]
 .3+| Processes live synchronization events for give resource objects.
 .3+| Simple
 .3+| Y
@@ -56,10 +56,10 @@ As of midPoint 4.4, the following items are supported (MT means "Supports multi-
 | What xref:../resource-object-set-specification/[resource objects] to synchronize.
 | This is obligatory parameter.
 | `batchSize`
-| See xref:/midpoint/reference/tasks/synchronization-tasks/live-synchronization/[].
+| See xref:/midpoint/reference/v2/tasks/synchronization-tasks/live-synchronization/[].
 | 0
 | `updateLiveSyncTokenInDryRun`
-| See xref:/midpoint/reference/tasks/synchronization-tasks/live-synchronization/[].
+| See xref:/midpoint/reference/v2/tasks/synchronization-tasks/live-synchronization/[].
 | `false`
 
 | `cleanup`
@@ -133,7 +133,7 @@ but it is ignored.
 | Script to execute (`ExecuteScriptType`). Contains scripting expression, `input`, options`, and `variables`.
 | Obligatory.
 
-.3+| xref:/midpoint/reference/tasks/specific/focus-validity-scan/[`focusValidityScan`]
+.3+| xref:/midpoint/reference/v2/tasks/specific/focus-validity-scan/[`focusValidityScan`]
 .3+| Executes validity scan on focal objects.
 .3+| Predefined composite
 .3+| Y
@@ -159,7 +159,7 @@ but it is ignored.
 by the activity is added to it (as a conjunction).
 | All of `ObjectType`.
 
-| link:https://docs.evolveum.com/midpoint/reference/tasks/shadow-refresh-task/[`shadowRefresh`]
+| link:https://docs.evolveum.com/midpoint/reference/v2/tasks/shadow-refresh-task/[`shadowRefresh`]
 | Looks for pending operations in shadows and updates their status.
 | Simple
 | Y
@@ -219,7 +219,7 @@ However, currently its only function is to display information about objects siz
 | Number of columns in the histograms of object sizes.
 | 80
 
-.5+| xref:/midpoint/reference/resources/shadow/integrity-check/[`shadowIntegrityCheck`]
+.5+| xref:/midpoint/reference/v2/resources/shadow/integrity-check/[`shadowIntegrityCheck`]
 .5+| The purpose of this activity is to detect and optionally anomalies in resource object shadows
 stored in the repository.
 .5+| Simple
@@ -241,7 +241,7 @@ stored in the repository.
 | Whether to check uniqueness on primary identifiers (or on secondary ones as well).
 | `false` (meaning all identifiers)
 
-.4+| xref:/midpoint/reference/tasks/auto-scaling/[`activityAutoScaling`]
+.4+| xref:/midpoint/reference/v2/tasks/auto-scaling/[`activityAutoScaling`]
 .4+| Adapts running activities to the current cluster configuration by executing "reconcile workers" operation
 when the cluster state changes (i.e. a node goes up or down).
 .4+| Simple
@@ -261,7 +261,7 @@ when the cluster state changes (i.e. a node goes up or down).
 | Whether to skip initial reconciliation of the workers on the activity start.
 | `false`
 
-| xref:/midpoint/reference/resources/propagation/configuration/[`propagation`]
+| xref:/midpoint/reference/v2/resources/propagation/configuration/[`propagation`]
 | Executes eligible pending operations on a resource.
 | Simple
 | Y
@@ -270,7 +270,7 @@ when the cluster state changes (i.e. a node goes up or down).
 | Resource on which the operation propagation should be done.
 | Obligatory.
 
-| xref:/midpoint/reference/resources/propagation/configuration/[`multiPropagation`]
+| xref:/midpoint/reference/v2/resources/propagation/configuration/[`multiPropagation`]
 | Executes eligible pending operations on set of resources.
 | Simple
 | Y

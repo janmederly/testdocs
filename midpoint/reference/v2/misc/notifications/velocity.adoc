@@ -5,7 +5,7 @@
 :page-toc: top
 
 Starting with midPoint 3.4.1 it is possible to use Apache Velocity templates for writing notifications
-or xref:/midpoint/reference/misc/notifications/message-templates/[message templates].
+or xref:/midpoint/reference/v2/misc/notifications/message-templates/[message templates].
 
 == Using Velocity
 
@@ -109,7 +109,7 @@ Channel: $!event.channel</code>
         </handler>
 ----
 
-Note that since midPoint 4.5 you can use xref:/midpoint/reference/misc/notifications/message-templates/[message templates]
+Note that since midPoint 4.5 you can use xref:/midpoint/reference/v2/misc/notifications/message-templates/[message templates]
 and just reference those from your configured notifiers.
 
 // TODO more detailed explanation

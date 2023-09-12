@@ -80,7 +80,7 @@ E.g. Groovy has a nice safe navigation operator (`?.`) that comes really handy h
 focus?.getActivation()?.getAdministrativeStatus()
 ----
 
-However, there is a special language that is used to reference items inside prism objects: xref:/midpoint/reference/concepts/item-path/[item path]. This language is designed to process the paths in a very efficient way, and it is used at many places in midPoint.
+However, there is a special language that is used to reference items inside prism objects: xref:/midpoint/reference/v2/concepts/item-path/[item path]. This language is designed to process the paths in a very efficient way, and it is used at many places in midPoint.
 The item path has a natural way how to reference the items inside a variable:
 
 .Item path
@@ -159,14 +159,14 @@ In other expressions that have a single source this variable has the same value 
 | subclasses of `FocusType`
 | inbound, outbound, object template, assignments
 | `user` (deprecated)
-| Represents xref:/midpoint/reference/schema/focus-and-projections/[focal object] which is usually a user.
+| Represents xref:/midpoint/reference/v2/schema/focus-and-projections/[focal object] which is usually a user.
 
 
 | `projection`
 | `ShadowType`
 | inbound, outbound, assigments (construction)
 | `account`, `shadow` (deprecated)
-| Represents xref:/midpoint/reference/schema/focus-and-projections/[projection] in a form of xref:/midpoint/reference/resources/shadow/[shadow].
+| Represents xref:/midpoint/reference/v2/schema/focus-and-projections/[projection] in a form of xref:/midpoint/reference/v2/resources/shadow/[shadow].
 This is usually the account.
 
 
@@ -197,14 +197,14 @@ It may be currently logged-in user (for synchronous operations) or owner of the 
 | everywhere
 |
 | Contains system configuration object.
-The xref:/midpoint/reference/schema/custom-schema-extension/[extension] of system configuration may be used to hold system-wide configuration and constants.
+The xref:/midpoint/reference/v2/schema/custom-schema-extension/[extension] of system configuration may be used to hold system-wide configuration and constants.
 
 
 | `iteration`
 | `integer`
 | object template, outbound
 |
-| Numeric value describing the current xref:/midpoint/reference/concepts/iteration/[iteration].
+| Numeric value describing the current xref:/midpoint/reference/v2/concepts/iteration/[iteration].
 It starts with 0 and increments on every iteration.
 
 
@@ -212,7 +212,7 @@ It starts with 0 and increments on every iteration.
 | `string`
 | object template, outbound
 |
-| String value describing the current xref:/midpoint/reference/concepts/iteration/[iteration].
+| String value describing the current xref:/midpoint/reference/v2/concepts/iteration/[iteration].
 It is usually suffix that is appended to the username or a similar "extension" of the value.
 It should have different value for every iteration.
 The actual value is determined by the iteration settings.
@@ -223,8 +223,8 @@ The actual value is determined by the iteration settings.
 | activation mappings
 |
 | Set to true if the processed projection is legal, i.e. when it should exist.
-The projection is usually legal if there is an xref:/midpoint/reference/roles-policies/assignment/[assignment] for it.
-But the projection may also be legal without an assignment, e.g. if xref:/midpoint/reference/synchronization/projection-policy/[assignment policy enforcement] is set to NONE.
+The projection is usually legal if there is an xref:/midpoint/reference/v2/roles-policies/assignment/[assignment] for it.
+But the projection may also be legal without an assignment, e.g. if xref:/midpoint/reference/v2/synchronization/projection-policy/[assignment policy enforcement] is set to NONE.
 
 
 | `assigned`
@@ -257,7 +257,7 @@ This is especially important for add and delete operations.
 | RefinedObjectClassDefinition
 | outbound
 |
-| Contains a definition of the association target (xref:/midpoint/reference/resources/entitlements/[entitlement]). Used in expressions that need to do advanced logic on associations and entitlements.
+| Contains a definition of the association target (xref:/midpoint/reference/v2/resources/entitlements/[entitlement]). Used in expressions that need to do advanced logic on associations and entitlements.
 
 
 | `entitlement`
@@ -271,7 +271,7 @@ Used in the inbound script expression when there is a need to manage group membe
 
 In addition to these variables there are other special purpose variables.
 These are documented on a separate pages that document the mechanism.
-E.g. the variables specific to assignment processing are described in the xref:/midpoint/reference/roles-policies/assignment/configuration/[Assignment Configuration] page.
+E.g. the variables specific to assignment processing are described in the xref:/midpoint/reference/v2/roles-policies/assignment/configuration/[Assignment Configuration] page.
 
 
 == Alternative Variable Names and Missing Variables
@@ -282,20 +282,20 @@ And also the expression and mapping code is evolving.
 
 Some variable names have alternatives.
 E.g. the `focus` variable can be often referred to as `user`. This is legacy of the humble beginnings of midPoint when midPoint can only process users and accounts.
-This is a long time ago and midPoint is now very xref:/midpoint/reference/synchronization/generic-synchronization/[generic].
+This is a long time ago and midPoint is now very xref:/midpoint/reference/v2/synchronization/generic-synchronization/[generic].
 Therefore, also the variable names refer to generic concepts.
 *Alternative variable names are now considered DEPRECATED*.
 Please, if you can try to avoid the use of the alternative names.
 
 Due to midPoint history all the variables that are supposed to be universally available to all expressions may not be actually available in some cases.
 If you expect a variable to be available, and it is not, then you have probably found a bug.
-Please xref:/midpoint/reference/diag/creating-a-bug-report/[report the bug].
+Please xref:/midpoint/reference/v2/diag/creating-a-bug-report/[report the bug].
 We will fix that.
 
 == See Also
 
-* xref:/midpoint/reference/expressions/expressions/[Expression]
+* xref:/midpoint/reference/v2/expressions/expressions/[Expression]
 
-* xref:/midpoint/reference/expressions/mappings/[Mapping]
+* xref:/midpoint/reference/v2/expressions/mappings/[Mapping]
 
-* xref:/midpoint/reference/diag/troubleshooting/mappings/[Troubleshooting Mappings]
+* xref:/midpoint/reference/v2/diag/troubleshooting/mappings/[Troubleshooting Mappings]

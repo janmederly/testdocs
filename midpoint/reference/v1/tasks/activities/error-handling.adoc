@@ -2,7 +2,7 @@
 :page-since: "4.4"
 :page-toc: top
 :page-keywords: task, error, failure, error handling, error recovery
-:page-moved-from: /midpoint/reference/tasks/task-error-handling/
+:page-moved-from: /midpoint/reference/v1/tasks/task-error-handling/
 
 == Overview
 

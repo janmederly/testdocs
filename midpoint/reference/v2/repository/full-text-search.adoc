@@ -139,6 +139,6 @@ These limitations apply at least up to version 4.4 and to both repository implem
 
 == See also
 
-* xref:/midpoint/reference/repository/native-postgresql/[Native PostgreSQL repository]
+* xref:/midpoint/reference/v2/repository/native-postgresql/[Native PostgreSQL repository]
 
-* xref:/midpoint/reference/repository/generic/[Generic repository implementation] - not recommended from 4.4 on
+* xref:/midpoint/reference/v2/repository/generic/[Generic repository implementation] - not recommended from 4.4 on

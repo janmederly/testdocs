@@ -10,7 +10,7 @@
 
 == Introduction
 
-xref:/midpoint/reference/tasks/task-manager/[Clustering / high availability] can be achieved by setting up several midPoint nodes working against common midPoint repository.
+xref:/midpoint/reference/v1/tasks/task-manager/[Clustering / high availability] can be achieved by setting up several midPoint nodes working against common midPoint repository.
 
 image::failover.png[]
 
@@ -62,7 +62,7 @@ Also, ensure your *system time is synchronized* across all node members (using N
 The main difference between 4.0 and previous versions is that since midPoint 4.0 the main mechanism for clusterwide task management is REST instead of JMX.
 
 You can use `config.xml` configuration parameters placed directly under the `<midpoint>` element (*Configuration parameter* in the table below).
-Alternatively, you can use the xref:/midpoint/reference/deployment/midpoint-home-directory/overriding-config-xml-parameters.adoc[command line options] `-Dkey=value` to set these parameters (*Command-line parameter* in the table below).
+Alternatively, you can use the xref:/midpoint/reference/v1/deployment/midpoint-home-directory/overriding-config-xml-parameters.adoc[command line options] `-Dkey=value` to set these parameters (*Command-line parameter* in the table below).
 
 Configuration items are:
 
@@ -331,7 +331,7 @@ As a result, Quartz tables will be stored in the same database instance as midPo
 // TODO remove when 4.4 support ends
 | dataSource
 | Uses specified data source to obtain DB connections.
-(See xref:/midpoint/reference/repository/configuration/[Repository Configuration]).
+(See xref:/midpoint/reference/v1/repository/configuration/[Repository Configuration]).
 
 
 |===

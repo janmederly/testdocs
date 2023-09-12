@@ -12,7 +12,7 @@
 :page-upkeep-status: yellow
 
 
-MidPoint supports _partial multi-tenancy_. In fact, midPoint multi-tenancy is mostly just an extension of xref:/midpoint/reference/org/organizational-structure/[organizational structure] features.
+MidPoint supports _partial multi-tenancy_. In fact, midPoint multi-tenancy is mostly just an extension of xref:/midpoint/reference/v1/org/organizational-structure/[organizational structure] features.
 
 [TIP]
 .Partial multi-tenancy
@@ -139,7 +139,7 @@ From the technical point of view such authorization apply only if `tenantRef` of
 This authorization works only if both subject and object are multi-tenant.
 I.e. it will not work if subject does not have tenant (no `tenantRef`) or in case that the object does not have tenant.
 Ordinary (non-tenant) authorizations should be used for those cases.
-See xref:/midpoint/reference/security/authorization/configuration/[Authorization Configuration] page for more details.
+See xref:/midpoint/reference/v1/security/authorization/configuration/[Authorization Configuration] page for more details.
 
 
 == Limitations and Future Improvements
@@ -160,7 +160,7 @@ Support for the concept of assignment for resources and tasks may be one of poss
 * Objects created by a tenant user could be automatically part of that tenant.
 E.g. tasks started by user or new resources created by that user might be automatically assigned to the same tenant.
 This is not implemented yet.
-This is partially related to planned xref:/midpoint/reference/schema/archetypes/[Archetypes] feature.
+This is partially related to planned xref:/midpoint/reference/v1/schema/archetypes/[Archetypes] feature.
 
 * The concept of multi-tenancy has almost no support in midPoint user interface.
 Ideally, the tenant administrators should be constrained to their tenants, global administrators should be able to switch between tenant and global views and so on.
@@ -173,8 +173,8 @@ In case that you are interested in any of those improvements you can use xref:/s
 
 == See Also
 
-* xref:/midpoint/reference/org/organizational-structure/[Organizational Structure]
+* xref:/midpoint/reference/v1/org/organizational-structure/[Organizational Structure]
 
-* xref:/midpoint/reference/security/authorization/[Authorization]
+* xref:/midpoint/reference/v1/security/authorization/[Authorization]
 
-* xref:/midpoint/reference/security/authorization/configuration/[Authorization Configuration]
+* xref:/midpoint/reference/v1/security/authorization/configuration/[Authorization Configuration]

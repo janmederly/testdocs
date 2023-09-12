@@ -120,4 +120,4 @@ This illustrates how the test works.
 
 == See Also
 
-* xref:/midpoint/reference/samples/[Configuration Samples]
+* xref:/midpoint/reference/v1/samples/[Configuration Samples]

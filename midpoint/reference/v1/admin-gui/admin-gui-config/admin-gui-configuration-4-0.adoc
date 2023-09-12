@@ -9,7 +9,7 @@
 :page-upkeep-status: yellow
 :page-toc: top
 
-Admin GUI configuration is a specialized data structure that is present in xref:/midpoint/reference/concepts/system-configuration-object/[system configuration object],
+Admin GUI configuration is a specialized data structure that is present in xref:/midpoint/reference/v1/concepts/system-configuration-object/[system configuration object],
 in all the role-like objects (roles, orgs, services) and also in the xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/usertype/[user objects].
 The admin GUI configuration structure influences how to user interface is displayed.
 Despite its name it applies both to the self-service part and administration part of the user interface.
@@ -41,12 +41,12 @@ However the compatibility will be maintained and this setting will also remain h
 
 == How It Works
 
-The same admin GUI configuration structure may be specified in xref:/midpoint/reference/concepts/system-configuration-object/[system configuration object], in all the role-like objects (roles, orgs, services) and also in the xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/usertype/[user objects] (starting from midPoint v 4.1: in all AssignmentHolderType objects).
+The same admin GUI configuration structure may be specified in xref:/midpoint/reference/v1/concepts/system-configuration-object/[system configuration object], in all the role-like objects (roles, orgs, services) and also in the xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/usertype/[user objects] (starting from midPoint v 4.1: in all AssignmentHolderType objects).
 When a specific user logs in, midPoint will process all of user's roles to check for applicable authorizations.
 At the same time midPoint also compiles the effective admin GUI configuration.
 Following algorithm is used:
 
-* Admin GUI configuration in the xref:/midpoint/reference/concepts/system-configuration-object/[system configuration object] is applied first (if present).
+* Admin GUI configuration in the xref:/midpoint/reference/v1/concepts/system-configuration-object/[system configuration object] is applied first (if present).
 
 * Admin GUI configuration from all of the active roles, orgs and services is applied on top of that.
 
@@ -527,7 +527,7 @@ Xml for the task template object you can find by the link:https://github.com/Evo
 == Admin GUI Configuration and Authorizations
 
 At the first sight the use of admin GUI configuration to define object forms and dashboard widgets may seem to be redundant.
-It may look that xref:/midpoint/reference/security/authorization/[authorization] mechanism provides the same services.
+It may look that xref:/midpoint/reference/v1/security/authorization/[authorization] mechanism provides the same services.
 But there are subtle differences.
 
 * The authorization mechanism is designed to answer one very specific question: _can subject S do action A with object O?_ However, in user interface it is often desired to hide information that the user is entitled to see.
@@ -646,14 +646,14 @@ To see changes made in this part of configuration, user needs to do logout/login
 
 == Security
 
-Some parts of admin GUI configuration may contain xref:/midpoint/reference/expressions/expressions/[expressions]. Expressions are pieces of code that are executed inside midPoint server.
+Some parts of admin GUI configuration may contain xref:/midpoint/reference/v1/expressions/expressions/[expressions]. Expressions are pieces of code that are executed inside midPoint server.
 As such expressions has to be inherently trusted.
 Therefore do not allow untrusted users to define sensitive parts of admin GUI configuration.
 
 == See Also
 
-* xref:/midpoint/reference/concepts/system-configuration-object/[System Configuration Object]
+* xref:/midpoint/reference/v1/concepts/system-configuration-object/[System Configuration Object]
 
-* xref:/midpoint/reference/security/authorization/[Authorization]
+* xref:/midpoint/reference/v1/security/authorization/[Authorization]
 
-* xref:/midpoint/reference/admin-gui/collections-views/show-only-active-users/[Show Only Active Users HOWTO]
+* xref:/midpoint/reference/v1/admin-gui/collections-views/show-only-active-users/[Show Only Active Users HOWTO]

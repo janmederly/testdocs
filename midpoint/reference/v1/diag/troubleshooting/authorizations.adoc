@@ -6,14 +6,14 @@
 :page-wiki-metadata-create-date: 2017-01-23T14:37:47.131+01:00
 :page-wiki-metadata-modify-user: semancik
 :page-wiki-metadata-modify-date: 2019-08-19T17:12:59.127+02:00
-:page-alias: { "parent" : "/midpoint/reference/security/authorization/", "title" : "Troubleshooting", "display-order" : 800 }
+:page-alias: { "parent" : "/midpoint/reference/v1/security/authorization/", "title" : "Troubleshooting", "display-order" : 800 }
 :page-tag: guide
 :page-toc: top
 :page-upkeep-status: green
 
-MidPoint xref:/midpoint/reference/security/authorization/[authorizations] provide a very powerful mechanism for a fine-grained access control.
+MidPoint xref:/midpoint/reference/v1/security/authorization/[authorizations] provide a very powerful mechanism for a fine-grained access control.
 This mechanism is quite simple in principle.
-But the configuration can get very complex especially if a sophisticated xref:/midpoint/reference/roles-policies/rbac/[RBAC] structure is in place.
+But the configuration can get very complex especially if a sophisticated xref:/midpoint/reference/v1/roles-policies/rbac/[RBAC] structure is in place.
 Setting the authorization up is not entirely easy task.
 It is often quite difficult to tell why the user is not authorized for a specific action or why the user can access more than he is supposed to.
 Therefore this page describes basic mechanisms how to troubleshoot authorizations.
@@ -261,6 +261,6 @@ The default end user role is a good example for this:
 
 == See Also
 
-* xref:/midpoint/reference/security/authorization/[]
+* xref:/midpoint/reference/v1/security/authorization/[]
 
-* xref:/midpoint/reference/security/authorization/configuration/[Authorization Configuration]
+* xref:/midpoint/reference/v1/security/authorization/configuration/[Authorization Configuration]

@@ -91,7 +91,7 @@ Deltas contain detailed information about the operation.
 
 | Channel
 | `ch`
-| The xref:/midpoint/reference/concepts/channel/[channel] that was the source of the operation that this record describes
+| The xref:/midpoint/reference/v2/concepts/channel/[channel] that was the source of the operation that this record describes
 
 | Outcome
 | `o`
@@ -105,8 +105,8 @@ Event type defines the kind of operation that was executed.
 Currently, defined event types are shown in the table below.
 
 [NOTE]
-Column *Event DB ID* is relevant only for the older xref:/midpoint/reference/repository/generic/generic-audit/[Generic Repository].
-The new xref:/midpoint/reference/repository/native-audit/[Native PostgreSQL Repository] uses custom types displaying the name in the first column.
+Column *Event DB ID* is relevant only for the older xref:/midpoint/reference/v2/repository/generic/generic-audit/[Generic Repository].
+The new xref:/midpoint/reference/v2/repository/native-audit/[Native PostgreSQL Repository] uses custom types displaying the name in the first column.
 
 [%autowidth]
 |===
@@ -182,13 +182,13 @@ Other event types may be added in the future (including custom event types).
 === Event Stages
 
 Operations in midPoint may be subject to quite complex processing before they get executed.
-This may include processing xref:/midpoint/reference/roles-policies/rbac/[RBAC], expressions, workflows or other "plugin" hooks.
+This may include processing xref:/midpoint/reference/v2/roles-policies/rbac/[RBAC], expressions, workflows or other "plugin" hooks.
 Therefore, the details of the operation may considerably differ at the beginning of the operation and at the end.
 Event stages are defined to denote this difference and to record events at various stages through the operation lifecycle.
 
 [NOTE]
-Column *Event DB ID* is relevant only for the older xref:/midpoint/reference/repository/generic/generic-audit/[Generic Repository].
-The new xref:/midpoint/reference/repository/native-audit/[Native PostgreSQL Repository] uses custom types displaying the name in the first column.
+Column *Event DB ID* is relevant only for the older xref:/midpoint/reference/v2/repository/generic/generic-audit/[Generic Repository].
+The new xref:/midpoint/reference/v2/repository/native-audit/[Native PostgreSQL Repository] uses custom types displaying the name in the first column.
 
 [%autowidth]
 |===
@@ -232,8 +232,8 @@ The result of the executed operation.
 All the possible values are described in the following table.
 
 [NOTE]
-Column *Event DB ID* is relevant only for the older xref:/midpoint/reference/repository/generic/generic-audit/[Generic Repository].
-The new xref:/midpoint/reference/repository/native-audit/[Native PostgreSQL Repository] uses custom types displaying the name in the first column.
+Column *Event DB ID* is relevant only for the older xref:/midpoint/reference/v2/repository/generic/generic-audit/[Generic Repository].
+The new xref:/midpoint/reference/v2/repository/native-audit/[Native PostgreSQL Repository] uses custom types displaying the name in the first column.
 
 [%autowidth]
 |===
@@ -317,7 +317,7 @@ There are currently two auditing implementations:
 * auditing to log files;
 * auditing to database tables.
 
-To enable the audit implementation, `auditService` section must be added to the `audit` element of the xref:/midpoint/reference/deployment/midpoint-home-directory/#configuration-file[config.xml].
+To enable the audit implementation, `auditService` section must be added to the `audit` element of the xref:/midpoint/reference/v2/deployment/midpoint-home-directory/#configuration-file[config.xml].
 Inside the added `auditService` element, the implementation is chosen by the value of the `auditServiceFactory` element.
 
 === Logfile Auditing
@@ -345,7 +345,7 @@ To enable this logger:
 </auditService>
 ----
 
-. Enable it in the xref:/midpoint/reference/concepts/system-configuration-object/[System Configuration]
+. Enable it in the xref:/midpoint/reference/v2/concepts/system-configuration-object/[System Configuration]
 under _logging->auditing_ like this:
 +
 [source,xml]
@@ -368,14 +368,14 @@ will NOT work, because the level is explicitly overridden based on the System co
 
 === Database Table Auditing
 
-Audit service writing to database tables is closely related to the xref:/midpoint/reference/repository/[repository] implementation:
+Audit service writing to database tables is closely related to the xref:/midpoint/reference/v2/repository/[repository] implementation:
 
-* If the xref:/midpoint/reference/repository/native-postgresql/[Native PostgreSQL Repository] is used,
-see xref:/midpoint/reference/repository/native-audit/[Native PostgreSQL Audit Trail]
+* If the xref:/midpoint/reference/v2/repository/native-postgresql/[Native PostgreSQL Repository] is used,
+see xref:/midpoint/reference/v2/repository/native-audit/[Native PostgreSQL Audit Trail]
 for more details, including how to configure it.
 
-* If the deprcated xref:/midpoint/reference/repository/generic/[Generic SQL Repository] is used,
-see xref:/midpoint/reference/repository/generic/generic-audit/[Generic SQL Audit Trail].
+* If the deprcated xref:/midpoint/reference/v2/repository/generic/[Generic SQL Repository] is used,
+see xref:/midpoint/reference/v2/repository/generic/generic-audit/[Generic SQL Audit Trail].
 
 == XDAS
 
@@ -434,7 +434,7 @@ This feature is available only in midPoint 4.2 and later.
 ====
 
 If we need work with resource oid in reporting, we can allow store resource oid for audit record to database.
-For that we need to add the next snippet of code to the xref:/midpoint/reference/concepts/system-configuration-object/[System Configuration object].
+For that we need to add the next snippet of code to the xref:/midpoint/reference/v2/concepts/system-configuration-object/[System Configuration object].
 
 [source,xml]
 ----
@@ -450,9 +450,9 @@ For that we need to add the next snippet of code to the xref:/midpoint/reference
 ----
 
 Native repository stores the information directly in `ma_audit_event` table in column `resourceOid`,
-see xref:/midpoint/reference/repository/native-audit/#audit-tables[audit tables] for more details.
+see xref:/midpoint/reference/v2/repository/native-audit/#audit-tables[audit tables] for more details.
 Generic repository uses `m_audit_resource` to store the information, see
-xref:/midpoint/reference/repository/generic/generic-audit/#audit-tables[audit tables] for more details.
+xref:/midpoint/reference/v2/repository/generic/generic-audit/#audit-tables[audit tables] for more details.
 
 == Custom column
 
@@ -478,11 +478,11 @@ This feature is available only in midPoint 4.2 and later.
 When we need some other information in the audit table, we can store custom properties in additional custom columns in the database.
 This configuration is useful only when SQL audit trail is used.
 
-* If the xref:/midpoint/reference/repository/native-postgresql/[Native PostgreSQL Repository] is used,
-see xref:/midpoint/reference/repository/native-audit/#custom-column[Custom Column] in Native SQL Audit Trail.
+* If the xref:/midpoint/reference/v2/repository/native-postgresql/[Native PostgreSQL Repository] is used,
+see xref:/midpoint/reference/v2/repository/native-audit/#custom-column[Custom Column] in Native SQL Audit Trail.
 
-* If the deprcated xref:/midpoint/reference/repository/generic/[Generic SQL Repository] is used,
-see xref:/midpoint/reference/repository/generic/generic-audit/#custom-column[Custom Column] in Generic SQL Audit Trail.
+* If the deprcated xref:/midpoint/reference/v2/repository/generic/[Generic SQL Repository] is used,
+see xref:/midpoint/reference/v2/repository/generic/generic-audit/#custom-column[Custom Column] in Generic SQL Audit Trail.
 
 == Auditing of create/termination session event for channels rest and actuator
 
@@ -506,25 +506,25 @@ This feature is available only in midPoint 4.2 and later.
 By default, audit uses the same data source like the main repository.
 From version 4.2 it is possible to set up audit in different database.
 
-* If the xref:/midpoint/reference/repository/native-postgresql/[Native PostgreSQL Repository] is used,
-see xref:/midpoint/reference/repository/native-audit/#sql-audit-using-its-own-database[Audit to separate database] in the Native SQL Audit Trail.
+* If the xref:/midpoint/reference/v2/repository/native-postgresql/[Native PostgreSQL Repository] is used,
+see xref:/midpoint/reference/v2/repository/native-audit/#sql-audit-using-its-own-database[Audit to separate database] in the Native SQL Audit Trail.
 
-* If the deprcated xref:/midpoint/reference/repository/generic/[Generic SQL Repository] is used,
-see xref:/midpoint/reference/repository/generic/generic-audit/#audit-to-separate-database[Audit to separate database] in the Generic SQL Audit Trail.
+* If the deprcated xref:/midpoint/reference/v2/repository/generic/[Generic SQL Repository] is used,
+see xref:/midpoint/reference/v2/repository/generic/generic-audit/#audit-to-separate-database[Audit to separate database] in the Generic SQL Audit Trail.
 
 == Configuration examples
 
 It is unlikely that only audit to a logfile is used, audit to a database is typically used as well.
 Because there are two different repository implementations, the examples are available on these pages:
 
-* If the xref:/midpoint/reference/repository/native-postgresql/[Native PostgreSQL Repository] is used,
-see the xref:/midpoint/reference/repository/native-audit/#configuration-examples[examples for the Native SQL Audit Trail].
+* If the xref:/midpoint/reference/v2/repository/native-postgresql/[Native PostgreSQL Repository] is used,
+see the xref:/midpoint/reference/v2/repository/native-audit/#configuration-examples[examples for the Native SQL Audit Trail].
 
-* If the deprcated xref:/midpoint/reference/repository/generic/[Generic SQL Repository] is used,
-see the xref:/midpoint/reference/repository/generic/generic-audit/#configuration-examples[examples for the Generic SQL Audit Trail].
+* If the deprcated xref:/midpoint/reference/v2/repository/generic/[Generic SQL Repository] is used,
+see the xref:/midpoint/reference/v2/repository/generic/generic-audit/#configuration-examples[examples for the Generic SQL Audit Trail].
 
 == See Also
 
-* xref:/midpoint/reference/repository/native-audit/[Native PostgreSQL Audit Trail]
+* xref:/midpoint/reference/v2/repository/native-audit/[Native PostgreSQL Audit Trail]
 
-* xref:/midpoint/reference/repository/generic/generic-audit/[Generic SQL Audit Trail]
+* xref:/midpoint/reference/v2/repository/generic/generic-audit/[Generic SQL Audit Trail]

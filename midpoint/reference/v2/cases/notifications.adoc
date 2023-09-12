@@ -74,6 +74,6 @@ So, for example, each `workItemAllocationEvent` is also a `workItemEvent` and `w
 
 This documentation is not complete yet.
 
-For more information about notifications in general, please see xref:/midpoint/reference/misc/notifications/configuration.adoc[].
+For more information about notifications in general, please see xref:/midpoint/reference/v2/misc/notifications/configuration.adoc[].
 
 For more information about approval notifications - that may or may not be applicable in the current version of midPoint - please see (now obsolete) xref:workflow-3/workflow-notifications.adoc[].

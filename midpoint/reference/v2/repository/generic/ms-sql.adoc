@@ -116,7 +116,7 @@ MS SQL Server driver is *not* provided as a part of midPoint distribution and mu
 * Download the driver from here: https://docs.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server
 * The archive (ZIP or tar.gz, you can choose your favorite format) contains the driver JAR files under `sqljdbc_10.2\enu` directory.
 Extract the driver for the JDK you use, or the lowest supported JDK for your midPoint version (e.g. JDK 11 containing `jre11` for 4.4 LTS).
-* Place the JAR into `lib` directory under xref:/midpoint/reference/deployment/midpoint-home-directory/[midPoint Home directory].
+* Place the JAR into `lib` directory under xref:/midpoint/reference/v2/deployment/midpoint-home-directory/[midPoint Home directory].
 
 Now you can start midPoint with SQL Server configured in the `config.xml` (see example above) and check the logs.
 If the driver is not found, midPoint will complain about it and will not start.

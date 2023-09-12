@@ -32,4 +32,4 @@
 
 == See Also
 
-* xref:/midpoint/reference/admin-gui/collections-views/[Object Collections and Views]
+* xref:/midpoint/reference/v2/admin-gui/collections-views/[Object Collections and Views]

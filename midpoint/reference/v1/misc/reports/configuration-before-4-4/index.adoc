@@ -10,7 +10,7 @@
 
 This guide is only for small customization which can be done directly in midPoint.
 In the case you need more complex customization it is maybe better to create new report template or customize existing one with Jaspersoft Studio.
-How to work with Jaspersoft Studio using live midPoint can be found xref:/midpoint/reference/legacy/jaspersoft-studio/[here].
+How to work with Jaspersoft Studio using live midPoint can be found xref:/midpoint/reference/v1/legacy/jaspersoft-studio/[here].
 
 == Report customization using midPoint
 
@@ -59,7 +59,7 @@ E.g. you can add filter to search only enabled user or user in some organization
 The query language is 'mql' which is a shortcut for MidPoint Query Language.
 You can use the same query syntax as everywhere else (e.g. correlation rule).
 It is also possible to define script instead of query.
-All the existing midPoint function are available (xref:/midpoint/reference/expressions/expressions/script/functions/['Basic, midpoint, report']).
+All the existing midPoint function are available (xref:/midpoint/reference/v1/expressions/expressions/script/functions/['Basic, midpoint, report']).
 
 ** Queries must be wrapped in <filter> element
 
@@ -202,7 +202,7 @@ Example:
 
 == Security Of Report Expressions
 
-Reports often use xref:/midpoint/reference/expressions/[expressions].
+Reports often use xref:/midpoint/reference/v1/expressions/[expressions].
 Expressions allow to customize midPoint behavior and they are essential for the success of midPoint deployments.
 However, the expressions are very powerful and they may even be too powerful for some use cases.
 The expressions can use general-purpose scripting languages such as Groovy or JavaScript.
@@ -211,16 +211,16 @@ Which means that the expressions can damage the system or compromise security of
 *Use the expressions with utmost care.*
 
 Currently, there are very little restraints for expression execution.
-The xref:/midpoint/reference/expressions/expressions/script/functions/[expression functions] provided by midPoint usually check for proper authorizations.
+The xref:/midpoint/reference/v1/expressions/expressions/script/functions/[expression functions] provided by midPoint usually check for proper authorizations.
 But as the expressions can use general-purpose languages, there is no obligation for the expressions to use those libraries.
 The expression can easily circumvent those weak protections.
 Therefore do not let any unauthorized user to set up any kind of expression in midPoint.
 *Allowing the right to edit any expression may lead to compromise of system security.*
 
-Some expression security can be achieved by using xref:/midpoint/reference/expressions/expressions/profiles/[expression profiles].  Expression profiles can be used to limit the capabilities of report expressions, e.g. to limit them to safe operations that just manipulate strings and basic data structures.
+Some expression security can be achieved by using xref:/midpoint/reference/v1/expressions/expressions/profiles/[expression profiles].  Expression profiles can be used to limit the capabilities of report expressions, e.g. to limit them to safe operations that just manipulate strings and basic data structures.
 This seems to work reasonably well for ordinary object-based reports.
 However, when it comes to audit reports, this solution may not be sufficient.
-xref:/midpoint/reference/security/audit/[Audit records] are *not*  midPoint objects, they are just rows in ordinary relational table.
+xref:/midpoint/reference/v1/security/audit/[Audit records] are *not*  midPoint objects, they are just rows in ordinary relational table.
 Therefore the usual midPoint mechanisms do not apply to them.
 E.g. they cannot be queries by using midPoint query mechanisms.
 There is a way how a "safe" expression can construct a string query for audit table.
@@ -234,11 +234,11 @@ There are no guarantees.
 Use at your own risk.
 
 In case that a secure audit reports are needed, the current recommendation is to make such reports outside of midPoint.
-The xref:/midpoint/reference/security/audit/[structure of an audit table is documented] and it can be used for integration with data warehouse and/or SIEM systems.
+The xref:/midpoint/reference/v1/security/audit/[structure of an audit table is documented] and it can be used for integration with data warehouse and/or SIEM systems.
 MidPoint is neither of those systems and it has no ambition to become one.
 Therefore such integration is likely to be required anyway to construct a complete information security solution.
 
-See xref:/midpoint/reference/security/security-guide/[Security Guide] for more detail regarding security-related functionality of midPoint.
+See xref:/midpoint/reference/v1/security/security-guide/[Security Guide] for more detail regarding security-related functionality of midPoint.
 
 == New report
 
@@ -464,7 +464,7 @@ For report is important _view_ variable in widget presentation.
 Specifies a view for report of an object collection that is the result of the widget.
 Defines columns of table in report.
 When we don't use view, report will be contained default columns.
-In expression of column you can use variable 'object' which represent searched object or object defined in tag _path_. For more information about view configuration please see xref:/midpoint/reference/admin-gui/collections-views/configuration/#views[Views].
+In expression of column you can use variable 'object' which represent searched object or object defined in tag _path_. For more information about view configuration please see xref:/midpoint/reference/v1/admin-gui/collections-views/configuration/#views[Views].
 
 [WARNING]
 ====
@@ -1319,6 +1319,6 @@ Target of assignment define via name of role variable _role_name_.  Variables _v
 
 == See Also
 
-* xref:/midpoint/reference/expressions/expressions/profiles/[Expression Profiles]
+* xref:/midpoint/reference/v1/expressions/expressions/profiles/[Expression Profiles]
 
-* xref:/midpoint/reference/security/security-guide/[Security Guide]
+* xref:/midpoint/reference/v1/security/security-guide/[Security Guide]

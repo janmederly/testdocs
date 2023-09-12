@@ -20,7 +20,7 @@ Self Services section contains now the following pages: Home, Profile, Credentia
 Home page consists of different configurable widgets. For now, there are two types of widgets, link widgets and preview widgets.
 Link widgets can be configured and used for better and quicker navigation to desired pages (even external links are supported).
 Preview widgets show concrete data, and it is also possible to define custom navigation actions.
-The example of such action is _Request access_ button in _My accesses_ preview widget, which will take a user to the xref:/midpoint/reference/admin-gui/request-access[access request] process.
+The example of such action is _Request access_ button in _My accesses_ preview widget, which will take a user to the xref:/midpoint/reference/v1/admin-gui/request-access[access request] process.
 
 image::dasboard-home.png[Home dashboard,100%]
 
@@ -28,7 +28,7 @@ image::dasboard-home.png[Home dashboard,100%]
 
 All widgets shown on Home dashboard are configurable.
 Configuration is based on `PreviewContainerPanelConfigurationType` type allowing to configure widget name, icon used for the widget, the size of the widget, data shown for the widget and more.
-It is also possible to use midPoint's standard xref:/midpoint/reference/admin-gui/admin-gui-config/#how-it-works[merging mechanism] to override widgets visibility, actions, etc. with configuration in roles, archetypes or user's profile.
+It is also possible to use midPoint's standard xref:/midpoint/reference/v1/admin-gui/admin-gui-config/#how-it-works[merging mechanism] to override widgets visibility, actions, etc. with configuration in roles, archetypes or user's profile.
 Therefore, be aware to fill in `identifier` attribute all the time, so it can be correctly used by the merging mechanism.
 The configuration details are explained using the following example of the preview widget used to show _My accesses_ on Home dashboard with default midPoint installation.
 
@@ -76,7 +76,7 @@ The configuration details are explained using the following example of the previ
 <5> Defines ordering of the widgets. Widgets are sorted according to the display order. After sorted, they are shown in this order.
 <6> Defines action(s) for the widget. For now, supported are redirection actions (e.g. redirect from the widget to another page with more detailed information)
 <7> Defines the name and icon fo the action. `label` and `icon/cssClass` are used as a text on the button.
-<8> Defines actual action which is performed after clicking on the button. In this concrete example, user will be redirected to the xref:/midpoint/reference/admin-gui/request-access[Request access] process.
+<8> Defines actual action which is performed after clicking on the button. In this concrete example, user will be redirected to the xref:/midpoint/reference/v1/admin-gui/request-access[Request access] process.
 <9> Defines panel with data which is used for preview.
 <10> Defines the number of records when the preview widget shows a list of records.
 
@@ -199,7 +199,7 @@ However, there might be situations when the information presented to the logged-
 This was the main motivation to separate customization of self-service profile and user's details.
 For example, since 4.6 it is possible to set, that the logged-in user when looking into their profile they will see theirs assignments, but after opening details of another user, no assignments will be shown.
 
-To configure self-service profile, the same rules and same panels can be used as described in xref:/midpoint/reference/admin-gui/admin-gui-config/#object-details[object details] page.
+To configure self-service profile, the same rules and same panels can be used as described in xref:/midpoint/reference/v1/admin-gui/admin-gui-config/#object-details[object details] page.
 The only different is the place, where it is configured.
 So it is not configured in `adminGuiConfiguration/objectDetails/*DetailsPage`, but in `adminGuiConfiguration/selfProfilePage`.
 The example of the configuration is listed below:

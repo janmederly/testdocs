@@ -12,7 +12,7 @@
 :page-toc: top
 
 [NOTE]
-This page discusses deprecated repository implementation that was replaced with xref:/midpoint/reference/repository/native-postgresql/[Native PostgreSQL reposit].
+This page discusses deprecated repository implementation that was replaced with xref:/midpoint/reference/v2/repository/native-postgresql/[Native PostgreSQL reposit].
 
 SQL repository implements both repository and audit API.
 It facilitates Hibernate 5 as persistence framework, and for connection pooling link:https://brettwooldridge.github.io/HikariCP/[HikariCP] (previously c3p0).
@@ -38,7 +38,7 @@ It will use embedded H2 database which will be placed in `midpoint.home` folder.
 </configuration>
 ----
 
-For more complex configurations using different DB vendors see xref:/midpoint/reference/repository/generic/configuration/[Repository Configuration].
+For more complex configurations using different DB vendors see xref:/midpoint/reference/v2/repository/generic/configuration/[Repository Configuration].
 
 == DB tables, structures
 
@@ -107,7 +107,7 @@ Default configurations are defined in `SqlRepositoryConfiguration`.
 
 == Querying
 
-See the relevant section in xref:/midpoint/reference/concepts/query/#differences-in-filter-interpretation[Query API]
+See the relevant section in xref:/midpoint/reference/v2/concepts/query/#differences-in-filter-interpretation[Query API]
 documentation for details about what is or is not supported from our Query API in the repository.
 
 Query processing is implemented in `QueryInterpreter` which uses `QueryDefinitionRegistry`

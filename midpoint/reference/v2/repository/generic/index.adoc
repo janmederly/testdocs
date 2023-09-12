@@ -3,7 +3,7 @@
 :page-deprecated: true
 :page-deprecated-since: "4.4"
 :page-replaced-by: ../native-postgresql/
-:page-moved-from: /midpoint/reference/repository/db/*
+:page-moved-from: /midpoint/reference/v2/repository/db/*
 :page-display-order: 50
 :page-deprecated-since: "4.4"
 :page-toc: top
@@ -40,7 +40,7 @@ Please see following pages for details:
 
 == See also
 
-* xref:/midpoint/reference/repository/repository-database-support/[Repository Database Support]
+* xref:/midpoint/reference/v2/repository/repository-database-support/[Repository Database Support]
 discusses old and new repository and our support strategy.
 
 * xref:../native-postgresql/[Native PostgreSQL repository]

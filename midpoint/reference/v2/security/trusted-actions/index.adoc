@@ -10,7 +10,7 @@ This caused some problems regarding custom GUI actions and scripting (bulk actio
 == Custom GUI Actions
 
 === Problem
-The xref:/midpoint/reference/admin-gui/admin-gui-config/#custom-actions-for-object-lists[custom GUI actions for object lists] are currently implemented using task templates.
+The xref:/midpoint/reference/v2/admin-gui/admin-gui-config/#custom-actions-for-object-lists[custom GUI actions for object lists] are currently implemented using task templates.
 Such a template often invokes a bulk action that calls a Groovy script that does the work needed.
 For example, the action in question may be "Reset AD password" (for a given user).
 The Groovy script takes a user, determines their account on specific resource (AD), and then prepares and executes a credentials change for that account.
@@ -421,8 +421,8 @@ Of course, in the future we plan to support safe definition of roles by less tru
 
 == See Also
 
-* xref:/midpoint/reference/expressions/expressions/profiles/[Expression Profiles]
+* xref:/midpoint/reference/v2/expressions/expressions/profiles/[Expression Profiles]
 
-* xref:/midpoint/reference/expressions/expressions/profiles/configuration/[Expression Profile Configuration]
+* xref:/midpoint/reference/v2/expressions/expressions/profiles/configuration/[Expression Profile Configuration]
 
-* xref:/midpoint/reference/security/security-guide/[Security Guide]
+* xref:/midpoint/reference/v2/security/security-guide/[Security Guide]

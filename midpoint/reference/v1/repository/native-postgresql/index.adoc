@@ -38,16 +38,16 @@ Native repository:
 * serialized objects (`fullObject`, `delta`) are stored as JSON by default (saves space)
 and compression options are not available (left for the DB);
 * has some filter interpretation improvements, e.g. support for `NOT EXISTS`, better multi-value support;
-the differences are mentioned in the xref:/midpoint/reference/concepts/query/[midPoint Query] document;
+the differences are mentioned in the xref:/midpoint/reference/v1/concepts/query/[midPoint Query] document;
 * uses subqueries (`EXISTS`) instead of `JOIN`, common cases where `DISTINCT` was previously necessary are extremly rare now;
 * uses single iterative search method, is strictly sequential, `iterationMethod` is ignored;
 * extensions are stored in `JSONB` columns inline with the rows;
-* supports xref:/midpoint/reference/repository/native-audit/#partitioning[audit table partitioning];
+* supports xref:/midpoint/reference/v1/repository/native-audit/#partitioning[audit table partitioning];
 * finally, new repository *requires that OIDs are correct UUIDs*!
 
 == See also
 
-* xref:/midpoint/reference/repository/repository-database-support/[Repository Database Support]
+* xref:/midpoint/reference/v1/repository/repository-database-support/[Repository Database Support]
 discusses old and new repository and our support strategy.
 
 * https://youtu.be/5ld4U7AqCck[Native Repository webinar]

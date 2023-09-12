@@ -100,7 +100,7 @@ Let's say it is GUI for this example, so request is redirect to users page in GU
 
 == Basic configuration
 
-Flexible authentication is configured in xref:/midpoint/reference/security/security-policy[Security Policy], which is used as global security policy in System Configuration.
+Flexible authentication is configured in xref:/midpoint/reference/v1/security/security-policy[Security Policy], which is used as global security policy in System Configuration.
 Base tag is _<authentication>_.  Configuration consists of modules and sequences.
 Element `modules` is basic building block of the configuration.
 Each element has a configuration of a particular authentication module instance such as internal password-based authentication, SAML authentication and so on.
@@ -1086,4 +1086,4 @@ Please see xref:/midpoint/features/planned/flexible-authentication/[Flexible Aut
 
 * xref:..[Flexible Authentication]
 
-* xref:/midpoint/reference/security/security-policy[Security Policy Configuration]
+* xref:/midpoint/reference/v1/security/security-policy[Security Policy Configuration]

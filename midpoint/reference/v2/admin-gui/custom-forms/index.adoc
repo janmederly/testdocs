@@ -162,6 +162,6 @@ image::Screenshot-2017-01-27-10.16.55.png[]
 
 == See also
 
-* xref:/midpoint/reference/misc/self-registration/[Configuring self-registraion]
+* xref:/midpoint/reference/v2/misc/self-registration/[Configuring self-registraion]
 
-* xref:/midpoint/reference/security/credentials/password-reset/[Configuring reset password]
+* xref:/midpoint/reference/v2/security/credentials/password-reset/[Configuring reset password]

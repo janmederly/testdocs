@@ -18,7 +18,7 @@ The model uses authorization statements that can be attached to roles.
 The authorization model can control which parts of GUI can a user access, what operations are allowed, on which objects they are allowed and for which attributes.
 The authorization is enforced on several levels allowing for an unprecedented flexibility while still keeping a clean and secure access control model.
 
-The authorization model is seamlessly integrated with the xref:/midpoint/reference/roles-policies/rbac/[RBAC mechanism]. Therefore it is easy to use even a complex authorization schemas in an IDM solution.
+The authorization model is seamlessly integrated with the xref:/midpoint/reference/v2/roles-policies/rbac/[RBAC mechanism]. Therefore it is easy to use even a complex authorization schemas in an IDM solution.
 As the authorization statements are integrated with RBAC roles then they can be hierarchical (nested), they can be subject to an approval process and so on.
 
 == Authorization Model
@@ -55,13 +55,13 @@ image::security-subject-action-object.png[]
 
 The basic idea of the subject-action-object approach is to create authorization statements that will either allow or deny operations for subject-action-object combinations.
 However it would be quite difficult to maintain large set of authorization statements if they are maintained on just one place.
-Therefore we have decided to integrate midPoint authorization model with the xref:/midpoint/reference/roles-policies/rbac/[RBAC mechanism]. Authorization statements are placed inside RBAC roles.
+Therefore we have decided to integrate midPoint authorization model with the xref:/midpoint/reference/v2/roles-policies/rbac/[RBAC mechanism]. Authorization statements are placed inside RBAC roles.
 These roles are then assigned to users.
 A user that has a role with an authorization statement is automatically considered to be a *subject* of the statements.
 This allows very scalable and maintainable authorization set-up.
 
 The following diagram illustrates an example of practical use of authorization statement in midPoint.
-It combines authorization, xref:/midpoint/reference/roles-policies/rbac/[RBAC] and xref:/midpoint/reference/org/organizational-structure/[organizational structure] feature to create a delegated administration set-up.
+It combines authorization, xref:/midpoint/reference/v2/roles-policies/rbac/[RBAC] and xref:/midpoint/reference/v2/org/organizational-structure/[organizational structure] feature to create a delegated administration set-up.
 There is `CC Operator` role for call center operators.
 This role contains an authorization statement which allows modification of password (action=modify, item=credentials/password).
 This statement applies only to operations for which the object of the operation is a member `Example Inc.` organization.
@@ -109,7 +109,7 @@ Each operation needs to pass all the authorization phases in order to be success
 In a normal case the operation need to pass authorization on three layers:
 
 * *GUI* or *Service* authorization.
-A user needs to have appropriate xref:/midpoint/reference/security/authorization/admin-gui/[GUI authorization] to access the relevant GUI page.
+A user needs to have appropriate xref:/midpoint/reference/v2/security/authorization/admin-gui/[GUI authorization] to access the relevant GUI page.
 Without this authorization the operation cannot be started.
 This similarly applies to service access such as REST or SOAP service.
 An appropriate authorization to access that particular service is needed otherwise the operation will be refused as unauthorized before it even starts.
@@ -118,14 +118,14 @@ They grant access to a particular service or part of user interface.
 These authorizations usually do not have object specification and cannot be constrained to specific items.
 Specification of action URI is usually all that can be applied at this layer.
 
-* *Request* authorization is evaluated for each operation of xref:/midpoint/reference/interfaces/model-java/[IDM Model Interface] before the operation starts.
+* *Request* authorization is evaluated for each operation of xref:/midpoint/reference/v2/interfaces/model-java/[IDM Model Interface] before the operation starts.
 This authorization checks if the user that initiates the operation has the right to request the operation in the first place.
 This is a fine-grained authorization.
 Object and item specifications can be present.
-This authorization is evaluated *before* the object is xref:/midpoint/reference/concepts/clockwork/clockwork-and-projector/[recomputed by the IDM model] (i.e. before all the mappings and policies are applied).
+This authorization is evaluated *before* the object is xref:/midpoint/reference/v2/concepts/clockwork/clockwork-and-projector/[recomputed by the IDM model] (i.e. before all the mappings and policies are applied).
 Properties that are result of the computation are *not* yet present in the object.
 
-* *Execution* authorization is evaluated for each operation of xref:/midpoint/reference/interfaces/model-java/[IDM Model Interface] *after* the object is xref:/midpoint/reference/concepts/clockwork/clockwork-and-projector/[recomputed by the IDM model] and right before the operation is executed.
+* *Execution* authorization is evaluated for each operation of xref:/midpoint/reference/v2/interfaces/model-java/[IDM Model Interface] *after* the object is xref:/midpoint/reference/v2/concepts/clockwork/clockwork-and-projector/[recomputed by the IDM model] and right before the operation is executed.
 This authorization checks if the user that initiates the operation has the right to execute the operation with all the direct and indirect effects that it might have.
 This is a fine-grained authorization.
 Object and item specifications can be present.
@@ -211,24 +211,24 @@ E.g.
     </authorization>
 ----
 
-See the xref:/midpoint/reference/security/authorization/admin-gui/[GUI Authorizations] page for a full list of supported GUI actions.
-See the xref:/midpoint/reference/security/authorization/service/[Service Authorizations] page for similar list of service authorizations.
+See the xref:/midpoint/reference/v2/security/authorization/admin-gui/[GUI Authorizations] page for a full list of supported GUI actions.
+See the xref:/midpoint/reference/v2/security/authorization/service/[Service Authorizations] page for similar list of service authorizations.
 
 == "Core" Authorizations
 
 MidPoint xref:/midpoint/architecture/[architecture] is designed with the xref:/midpoint/architecture/archive/subsystems/model/[IDM Model component] in the centre.
 This was designed with a purpose in mind.
 The IDM Model component is a brain of midPoint.
-It does all the policy processing, evaluates mappings, recomputes objects, xref:/midpoint/reference/concepts/clockwork/clockwork-and-projector/[projects values between objects] and does all the other things of identity management logic.
+It does all the policy processing, evaluates mappings, recomputes objects, xref:/midpoint/reference/v2/concepts/clockwork/clockwork-and-projector/[projects values between objects] and does all the other things of identity management logic.
 Placing all of this in the centre means that we can make reasonably sure that every object will be recomputed and policed as necessary.
 It is also an ideal place for security enforcement and auditing.
 And this is exactly what happens here.
 
 Each operation is authorized when it goes through the IDM Model component.
-This applies to all normal operations which includes operations initiated from GUI and all the remote services (REST, SOAP) as all of these components are using the xref:/midpoint/reference/interfaces/model-java/[IDM Model Interface].
-As this interface is used almost universally in midPoint the action URIs used for authorization are also based on the operation names of the xref:/midpoint/reference/interfaces/model-java/[IDM Model Interface] - with some minor adjustments to make them practical.
+This applies to all normal operations which includes operations initiated from GUI and all the remote services (REST, SOAP) as all of these components are using the xref:/midpoint/reference/v2/interfaces/model-java/[IDM Model Interface].
+As this interface is used almost universally in midPoint the action URIs used for authorization are also based on the operation names of the xref:/midpoint/reference/v2/interfaces/model-java/[IDM Model Interface] - with some minor adjustments to make them practical.
 
-See the xref:/midpoint/reference/security/authorization/model/[IDM Model Authorizations] page for list of action URLs for the "core" authorizations.
+See the xref:/midpoint/reference/v2/security/authorization/model/[IDM Model Authorizations] page for list of action URLs for the "core" authorizations.
 
 === Authorization phases
 
@@ -239,12 +239,12 @@ Each operation is actually authorized twice when it goes through the IDM Model c
 * *execution phase* - when operation leaves the IDM Model component
 
 The important aspect to understand authorization is to understand what happens between these two authorizations.
-The xref:/midpoint/reference/concepts/clockwork/clockwork-and-projector/[Clockwork and Projector] page explains the details.
+The xref:/midpoint/reference/v2/concepts/clockwork/clockwork-and-projector/[Clockwork and Projector] page explains the details.
 But simply speaking the object values are recomputed, mappings are evaluated and policies applied.
 Let's explain that using an example.
 Let's assume we have a user which has one LDAP account.
 User properties `givenName` and `familyName` are mapped to LDAP attributes `givenName` and `sn` respectively.
-This mapping is implemented by simple xref:/midpoint/reference/expressions/mappings/outbound-mapping/[outbound mappings].
+This mapping is implemented by simple xref:/midpoint/reference/v2/expressions/mappings/outbound-mapping/[outbound mappings].
 If the `familyName` of a user is changed in GUI then this change is also mapped to the LDAP `sn` attribute and this is changed as well.
 But how about authorizations?
 We want to give user the ability to change the family name in the user object.
@@ -318,7 +318,7 @@ Secondly this authorization is using an `owner` clause to define object.
 This is necessary because this authorization applies to different object than previous authorizations.
 Previous authorizations applied to a user as an object.
 But this authorization applies to a shadow.
-It is important to realize that change of one object can result in a change of a different object, e.g. as xref:/midpoint/reference/schema/focus-and-projections/[data are mapped between focus and projections].
+It is important to realize that change of one object can result in a change of a different object, e.g. as xref:/midpoint/reference/v2/schema/focus-and-projections/[data are mapped between focus and projections].
 And authorizations needs to be set up accordingly.
 
 === Object Authorization Actions
@@ -360,7 +360,7 @@ But each search result is passing through additional _reduction_ by using get au
 | Using objects.
 This authorization allows to "use" an object according to its typical intention.
 Currently, it is supported for task templates (`TaskType` objects) during their instantiation.
-A typical example of such instantiation is their use for xref:/midpoint/reference/admin-gui/admin-gui-config/#custom-actions-for-object-lists[custom GUI actions for object lists].
+A typical example of such instantiation is their use for xref:/midpoint/reference/v2/admin-gui/admin-gui-config/#custom-actions-for-object-lists[custom GUI actions for object lists].
 (But this authorization is checked any time a task template is instantiated using `midpoint.submitTaskFromTemplate(templateOid, customization)` method.)
 | 4.8
 
@@ -448,7 +448,7 @@ There is a chance of system abuse in case that the users get quite a broad _get_
 The _get_ authorization is a very simple mechanism: if OID is known, then the object is returned.
 The authorization does not care where the OID came from.
 The usual case is that the OID came from a valid object reference.
-But if the user learns the OID from some other channel, the user may trick the system or even abuse xref:/midpoint/reference/interfaces/[midPoint interfaces] to gain access to an object that he should not be accessing.
+But if the user learns the OID from some other channel, the user may trick the system or even abuse xref:/midpoint/reference/v2/interfaces/[midPoint interfaces] to gain access to an object that he should not be accessing.
 Therefore *it is essential not to make `get` authorization too broad.*
 Only use this approach in case when the get authorization returns reasonable and relatively harmless set of properties (e.g. only the name of the object).
 
@@ -594,7 +594,7 @@ In such cases it was really easy to get the authorization statements wrong and g
 Therefore the behavior was changed in midPoint 3.9 and such operations are no longer allowed (but see also below).
 In midPoint 3.9 the zone of control is maintained.
 MidPoint will not allow any operation where modification of an object would result in that object getting out of authorization zone of control.
-This has important implications especially for xref:/midpoint/reference/deployment/multitenancy/[multitenant deployments].
+This has important implications especially for xref:/midpoint/reference/v2/deployment/multitenancy/[multitenant deployments].
 
 Even though the behavior of midPoint 3.9 zone of control is now more intuitive and much more secure, there may be cases when we need to allow operations that are going outside of zone of control.
 In that case there is a new `zoneOfControl` configuration clause for authorizations.
@@ -666,7 +666,7 @@ However, there is a solution.
 
 There are two authorizations that are designed for the purpose of controlling the assignment and unassignment on a fine level.
 These authorizations are designed to be target-aware.
-The target is the object which is assigned or unassigned (role, org, service or xref:/midpoint/reference/misc/deputy/[deputy user]).
+The target is the object which is assigned or unassigned (role, org, service or xref:/midpoint/reference/v2/misc/deputy/[deputy user]).
 This can be used to precisely control which objects may be assigned or unassigned.
 
 However, assign/unassign authorizations make sense only in the request phase.
@@ -700,7 +700,7 @@ There is an authorization clause `orderConstraints` that controls whether author
 
 This authorization applies both to assignments and inducements.
 The differentiator between assignment and inducement is so-called _order_. Order of zero means assignment.
-Order of one or more means inducement (see xref:/midpoint/reference/roles-policies/metaroles/gensync/['Roles, Metaroles and Generic Synchronization'] page for more details).
+Order of one or more means inducement (see xref:/midpoint/reference/v2/roles-policies/metaroles/gensync/['Roles, Metaroles and Generic Synchronization'] page for more details).
 The `orderConstraints` clause can be used to set min/max for order therefore limiting authorization to assignment, inducements or both.
 
 The default behavior of assignment/inducement authorizations is to apply only to assignments.
@@ -839,14 +839,14 @@ If you distribute the authorization to several roles and distribute the roles to
 
 == Troubleshooting
 
-Main article: xref:/midpoint/reference/diag/troubleshooting/authorizations/[Troubleshooting Authorizations]
+Main article: xref:/midpoint/reference/v2/diag/troubleshooting/authorizations/[Troubleshooting Authorizations]
 
 Authorizations can be tricky.
 Especially if there is a large number of them and they are complex.
 And security best practice effectively prohibits to provide any useful error messages to the user in case that the access is denied.
 Therefore, troubleshooting of authorization issues can be quite a demanding task - as any security engineer undoubtedly knows.
 However, we have tried to make this task easier by implementing an authorization trace.
-In this mode midPoint will trace processing of all authorization statements and record that in the xref:/midpoint/reference/diag/logging/[logfiles].
+In this mode midPoint will trace processing of all authorization statements and record that in the xref:/midpoint/reference/v2/diag/logging/[logfiles].
 The trace can be enabled by setting the following log levels:
 
 [%autowidth]
@@ -867,7 +867,7 @@ Please note that enabling the authorization trace has a *severe impact on system
 This trace is not designed to be continually enabled.
 It is just a troubleshooting tool that is supposed to be used mostly in devel/testing environments to set up a proper security policy.
 
-See xref:/midpoint/reference/diag/troubleshooting/authorizations/[Troubleshooting Authorizations] for more details.
+See xref:/midpoint/reference/v2/diag/troubleshooting/authorizations/[Troubleshooting Authorizations] for more details.
 
 == Examples
 
@@ -998,14 +998,14 @@ The bottom line is that the specifics of password change interactions are implem
 
 == See Also
 
-* xref:/midpoint/reference/diag/troubleshooting/authorizations/[Troubleshooting Authorizations]
+* xref:/midpoint/reference/v2/diag/troubleshooting/authorizations/[Troubleshooting Authorizations]
 
-* xref:/midpoint/reference/security/authorization/admin-gui/[GUI Authorizations]
+* xref:/midpoint/reference/v2/security/authorization/admin-gui/[GUI Authorizations]
 
-* xref:/midpoint/reference/security/authorization/service/[Service Authorizations]
+* xref:/midpoint/reference/v2/security/authorization/service/[Service Authorizations]
 
-* xref:/midpoint/reference/security/authorization/model/[IDM Model Authorizations]
+* xref:/midpoint/reference/v2/security/authorization/model/[IDM Model Authorizations]
 
-* xref:/midpoint/reference/roles-policies/rbac/[Advanced Hybrid RBAC]
+* xref:/midpoint/reference/v2/roles-policies/rbac/[Advanced Hybrid RBAC]
 
-* xref:/midpoint/reference/org/organizational-structure/[Organizational Structure]
+* xref:/midpoint/reference/v2/org/organizational-structure/[Organizational Structure]

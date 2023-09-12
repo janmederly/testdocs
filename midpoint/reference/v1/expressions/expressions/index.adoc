@@ -16,7 +16,7 @@
 == Introduction
 
 Expression is a part of midPoint configuration that contains logic.
-It is used in xref:/midpoint/reference/expressions/mappings/[mappings], xref:/midpoint/reference/synchronization/correlation-and-confirmation-expressions/[Correlation and Confirmation Expressions] and may be used in other parts later on.
+It is used in xref:/midpoint/reference/v1/expressions/mappings/[mappings], xref:/midpoint/reference/v1/synchronization/correlation-and-confirmation-expressions/[Correlation and Confirmation Expressions] and may be used in other parts later on.
 Expressions are very flexible.
 They need to be flexible as expressions are the primary tool of customizing midPoint behavior.
 Expressions allow simple and efficient constructions that just pass or generate a value but they also allow invocation of complex scripts.
@@ -37,11 +37,11 @@ The expressions are executed by invoking a specific _expression evaluator_. The 
 There evaluators range from the very simples ("as is" evaluators) to flexible scripting language engines.
 Individual evaluators are described below.
 
-Each expression take a set of xref:/midpoint/reference/expressions/variables/[variables] as input.
+Each expression take a set of xref:/midpoint/reference/v1/expressions/variables/[variables] as input.
 Each variable has a name and values.
 The values may also be "dynamic", not only specifying what the value is but also how it is being changed (delta).
 The expression than recomputes the variables to the output value, which may also be "dynamic".
-MidPoint expressions are designed and built especially to support the model of xref:/midpoint/reference/concepts/relativity/[relative changes].
+MidPoint expressions are designed and built especially to support the model of xref:/midpoint/reference/v1/concepts/relativity/[relative changes].
 
 == Expression Evaluators
 
@@ -130,7 +130,7 @@ The As Is value is functionally almost identical to passing the value of `input`
 </expression>
 ----
 
-The As Is expression evaluator is the default evaluator that will be used if no expression is specified at all (e.g. in xref:/midpoint/reference/expressions/mappings/[mappings]).
+The As Is expression evaluator is the default evaluator that will be used if no expression is specified at all (e.g. in xref:/midpoint/reference/v1/expressions/mappings/[mappings]).
 
 === Path
 
@@ -158,7 +158,7 @@ Therefore as a rule of the thumb the path constructor should always be preferred
 
 Script constructor is the most flexible of all the constructors as it allows to invoke an expression written in an expression or scripting language.
 There are several script languages to choose from.
-The script expressions are described in more details in a xref:/midpoint/reference/expressions/expressions/script/[Script Expression] page.
+The script expressions are described in more details in a xref:/midpoint/reference/v1/expressions/expressions/script/[Script Expression] page.
 This page only provides few examples.
 
 .Expression constructor using Groovy script
@@ -198,12 +198,12 @@ This page only provides few examples.
 </script>
 ----
 
-See xref:/midpoint/reference/expressions/expressions/script/[Script Expression] page for more details.
+See xref:/midpoint/reference/v1/expressions/expressions/script/[Script Expression] page for more details.
 
 === Generate
 
 The _generate_ constructor is used to generate a random value.
-The value is generated according to the xref:/midpoint/reference/security/credentials/password-policy/[value policy]. If there is a value policy already associated with a target property then it is sufficient to specify just plain `<generate/>` element.
+The value is generated according to the xref:/midpoint/reference/v1/security/credentials/password-policy/[value policy]. If there is a value policy already associated with a target property then it is sufficient to specify just plain `<generate/>` element.
 The applicable policy will be automatically determined and used.
 This usually applies to password policies.
 If no implicit policy is applicable to the target property or if a different policy is desired the policy may be overridden using `valuePolicyRef` element as illustrated below.
@@ -236,10 +236,10 @@ In case that you would like to change this behavior please specify the password 
 
 === Assignment Target Search
 
-Mappings and expressions are often used to create xref:/midpoint/reference/roles-policies/assignment/[assignments]. Therefore there is a special-purpose expression evaluator that simplifies the way how assignments are created.
-The evaluator is using a xref:/midpoint/reference/concepts/query/[query] to search for an target object in midPoint repository.
-When such object is found the evaluator creates an xref:/midpoint/reference/roles-policies/assignment/[assignment] for that target.
-This expression is especially useful in xref:/midpoint/reference/expressions/object-template/[object templates.]
+Mappings and expressions are often used to create xref:/midpoint/reference/v1/roles-policies/assignment/[assignments]. Therefore there is a special-purpose expression evaluator that simplifies the way how assignments are created.
+The evaluator is using a xref:/midpoint/reference/v1/concepts/query/[query] to search for an target object in midPoint repository.
+When such object is found the evaluator creates an xref:/midpoint/reference/v1/roles-policies/assignment/[assignment] for that target.
+This expression is especially useful in xref:/midpoint/reference/v1/expressions/object-template/[object templates.]
 
 Following configuration snippet provides an example of assignment evaluator that looks for an xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/orgtype/[OrgType] target:
 
@@ -264,7 +264,7 @@ Following configuration snippet provides an example of assignment evaluator that
 This assignment target search expression will look for objects of type xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/orgtype/[OrgType] in midPoint repository.
 It will look up the objects by `name` property.
 The name of the object should be the same as the value of `organizationalUnit` variable.
-If such an object is found than an appropriate xref:/midpoint/reference/roles-policies/assignment/[assignment] structure is created, the xref:/midpoint/devel/prism/concepts/object-identifier/[OID] of the org object is placed inside it.
+If such an object is found than an appropriate xref:/midpoint/reference/v1/roles-policies/assignment/[assignment] structure is created, the xref:/midpoint/devel/prism/concepts/object-identifier/[OID] of the org object is placed inside it.
 
 [TIP]
 .Search expression evaluators and includeNullInputs
@@ -456,7 +456,7 @@ functionality:
 This sample creates a new xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/orgtype/[org] on demand and such org will be assigned to the user.
 However the new org itself will have an assignment.
 In this case it is an assignment to some kind of "TOP" organizational unit.
-This is usually what is required as we do not want to create new top-level organizational units every time (see xref:/midpoint/reference/org/organizational-structure/[Organizational Structure] for more details).
+This is usually what is required as we do not want to create new top-level organizational units every time (see xref:/midpoint/reference/v1/org/organizational-structure/[Organizational Structure] for more details).
 
 === Association Target Search
 
@@ -472,7 +472,7 @@ TODO
 
 === Sequential Value
 
-See xref:/midpoint/reference/expressions/sequences/configuration/[Using Sequences].
+See xref:/midpoint/reference/v1/expressions/sequences/configuration/[Using Sequences].
 
 === Const
 
@@ -480,18 +480,18 @@ See xref:/midpoint/reference/expressions/sequences/configuration/[Using Sequence
 {% include since.html since="3.6" %}
 ++++
 
-Expression evaluator used to produce value of a xref:/midpoint/reference/misc/bulk/constant/[constant].
+Expression evaluator used to produce value of a xref:/midpoint/reference/v1/misc/bulk/constant/[constant].
 
-See xref:/midpoint/reference/expressions/constants/configuration/[Configuration and Use of Constants] for more details.
+See xref:/midpoint/reference/v1/expressions/constants/configuration/[Configuration and Use of Constants] for more details.
 
 == Expression Variables
 
-See: xref:/midpoint/reference/expressions/variables/[Expression Variables]
+See: xref:/midpoint/reference/v1/expressions/variables/[Expression Variables]
 
 
 === Extra Variables
 
-Expression may define extra variables in addition to those xref:/midpoint/reference/expressions/variables/[provided by midPoint]:
+Expression may define extra variables in addition to those xref:/midpoint/reference/v1/expressions/variables/[provided by midPoint]:
 
 [source,xml]
 ----
@@ -612,7 +612,7 @@ When `runAsRef` is used, the referenced identity is recorded.
 Also, `effectivePrivilegesModification` property is there, indicating whether privileges were modified with regard to the original ones defined in the repository.
 When `runPrivileged` is used, this property has a value of `fullElevation`.
 
-Please see xref:/midpoint/reference/security/privilege-elevation.adoc[] for more information.
+Please see xref:/midpoint/reference/v1/security/privilege-elevation.adoc[] for more information.
 
 === Security of Script Expressions
 
@@ -632,4 +632,4 @@ See xref:/midpoint/features/planned/script-expression-sandboxing/[Script Express
 
 == See Also
 
-* xref:/midpoint/reference/expressions/variables/[Expression Variables]
+* xref:/midpoint/reference/v1/expressions/variables/[Expression Variables]

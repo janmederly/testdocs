@@ -30,7 +30,7 @@ While the static XSD types in midPoint use `Type` suffix in their XSD names, dyn
 This naming distinction avoid confusion between the static parts of midPoint and the dynamic resource schema.
 
 Resource schema works together with another dynamic schema: Connector Schema.
-The xref:/midpoint/reference/resources/resource-schema/explanation/[Resource and Connector Schema Explanation] describes how these two fits together.
+The xref:/midpoint/reference/v2/resources/resource-schema/explanation/[Resource and Connector Schema Explanation] describes how these two fits together.
 
 == Motivation
 
@@ -58,7 +58,7 @@ It will be most likely marked as read-write and optional.
 It does not matter if midPoint is using that attribute or not, it will be in the resource schema.
 
 The details of how the Resource Schema is used by the midPoint is not part of the Resource Schema itself.
-It is defined by the xref:/midpoint/reference/resources/resource-configuration/schema-handling/[Resource Schema Handling] - except for one detail.
+It is defined by the xref:/midpoint/reference/v2/resources/resource-configuration/schema-handling/[Resource Schema Handling] - except for one detail.
 Resource schema can _suggest_ how the object classes and attributes should be used which provides reasonable default settings for midPoint.
 This is expressed in the resource schema by appropriate annotations.
 
@@ -67,7 +67,7 @@ The basic principle is:
 * Specifies *capabilities of the Resource and Connector*.
 If does not direcly define how the schema is used (although it may suggest it).
 
-* xref:/midpoint/reference/resources/resource-configuration/schema-handling/[Resource Schema Handling] specifies the *decisions of IDM administrators*.
+* xref:/midpoint/reference/v2/resources/resource-configuration/schema-handling/[Resource Schema Handling] specifies the *decisions of IDM administrators*.
 It defines how the Resource Schema is used by midPoint to implement parts of IDM logic, present the data to the user, etc.
 
 == Object Class
@@ -124,7 +124,7 @@ We do not consider the lack of the mapping as a drawback.
 The mapping is usually too simplistic to be of any use for real IDM deployments and it only leads to a confusion.
 Therefore we have decided to show the real names through the whole system.
 Note that the attributes can still be transformed and synchronized to other attributes and properties using several midPoint mechanisms, such as inbound and outbound expressions.
-See (xref:/midpoint/reference/resources/resource-configuration/schema-handling/[Resource Schema Handling] for more details).
+See (xref:/midpoint/reference/v2/resources/resource-configuration/schema-handling/[Resource Schema Handling] for more details).
 
 The general rule of thumb is that XSD Object Classes should be as close to the "culture" of the target system (resource) as possible.
 It should use the same or similar names for XSD elements as are the resource attributes.
@@ -243,7 +243,7 @@ There are some aspects of the Resource Schema that cannot be expressed by using 
 Such aspects include designation of identifiers for the Object Class, native object class and attribute names, readable names, etc.
 The midPoint resource schema defines a set of XSD annotations that can be used for this purpose.
 The annotations extend the XSD language to match our needs.
-Some annotations are authoritative information, some are just suggestions (default setting) that can be overridden in the xref:/midpoint/reference/resources/resource-configuration/schema-handling/[Resource Schema Handling].
+Some annotations are authoritative information, some are just suggestions (default setting) that can be overridden in the xref:/midpoint/reference/v2/resources/resource-configuration/schema-handling/[Resource Schema Handling].
 Following sections define the annotations that can be used in the Resource Schema.
 
 [TIP]
@@ -394,12 +394,12 @@ TODO
 
 == See Also
 
-* xref:/midpoint/reference/resources/shadow/[Shadow Objects]
+* xref:/midpoint/reference/v2/resources/shadow/[Shadow Objects]
 
-* xref:/midpoint/reference/schema/[Data Model]
+* xref:/midpoint/reference/v2/schema/[Data Model]
 
-* xref:/midpoint/reference/resources/resource-configuration/schema-handling/[Resource Schema Handling]
+* xref:/midpoint/reference/v2/resources/resource-configuration/schema-handling/[Resource Schema Handling]
 
-* xref:/midpoint/reference/resources/resource-schema/explanation/[Resource and Connector Schema Explanation]
+* xref:/midpoint/reference/v2/resources/resource-schema/explanation/[Resource and Connector Schema Explanation]
 
 * xref:/midpoint/architecture/archive/interactions/resource-schema-mapping/[Resource Schema Mapping]

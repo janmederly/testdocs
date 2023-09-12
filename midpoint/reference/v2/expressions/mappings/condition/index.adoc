@@ -118,7 +118,7 @@ For example:
 </item>
 ----
 
-This xref:/midpoint/reference/expressions/object-template/[object template] mapping will set the organization property of a user to `ACME, Inc.` in case that the cost center code starts with letter A.
+This xref:/midpoint/reference/v2/expressions/object-template/[object template] mapping will set the organization property of a user to `ACME, Inc.` in case that the cost center code starts with letter A.
 In this case, the expression is completely static literal value.
 Yet the mapping is behaving in the usual relativistic way, because there is a condition.
 When the condition becomes `true` then `ACME, Inc.` value is added.
@@ -458,6 +458,6 @@ If you need to "turn off" the mapping completely, the proper way is to set the c
 
 == See Also
 
-* xref:/midpoint/reference/expressions/mappings/[]
+* xref:/midpoint/reference/v2/expressions/mappings/[]
 
 * xref:../range/[]

@@ -12,7 +12,7 @@
 *Status:* Public +
 *Stability:* STABLE +
 *Platform:* Java +
-*Dependencies:* xref:/midpoint/reference/schema/[Data Model], Common schema +
+*Dependencies:* xref:/midpoint/reference/v2/schema/[Data Model], Common schema +
 *Responsible person:* Radovan Semancik
 
 
@@ -27,7 +27,7 @@ Implementation of this interface are enforcing a consistency of access control d
 For general introduction to interface concepts please see xref:/midpoint/architecture/concepts/common-interface-concepts/[Common Interface Concepts] page.
 
 There is also a web service version of this interface.
-See xref:/midpoint/reference/legacy/soap/[IDM Model Web Service Interface] for description.
+See xref:/midpoint/reference/v2/legacy/soap/[IDM Model Web Service Interface] for description.
 
 
 == History
@@ -129,7 +129,7 @@ Update to adapt to midPoint 3.0 changes.
 
 | 0.1
 | September 2011
-| Initial version derived from xref:/midpoint/reference/legacy/soap/[IDM Model Web Service Interface]
+| Initial version derived from xref:/midpoint/reference/v2/legacy/soap/[IDM Model Web Service Interface]
 | Radovan Semancik
 
 
@@ -269,4 +269,4 @@ development)
 
 == See Also
 
-* xref:/midpoint/reference/interfaces/model-java/introduction/[IDM Model Interface Introduction]
+* xref:/midpoint/reference/v2/interfaces/model-java/introduction/[IDM Model Interface Introduction]

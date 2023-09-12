@@ -27,7 +27,7 @@ Here is a first prototype of such a tool: the _midPoint Eclipse plugin_.
 
 == Installation
 
-Installation is done directly into Eclipse using the following update site: *link:https://download.evolveum.com/downloads/midpoint-eclipse-plugin/[https://download.evolveum.com/downloads/midpoint-eclipse-plugin/]*. For more information, please see the xref:/midpoint/reference/legacy/eclipse-plugin/install/install/[installation HOWTO].
+Installation is done directly into Eclipse using the following update site: *link:https://download.evolveum.com/downloads/midpoint-eclipse-plugin/[https://download.evolveum.com/downloads/midpoint-eclipse-plugin/]*. For more information, please see the xref:/midpoint/reference/v2/legacy/eclipse-plugin/install/install/[installation HOWTO].
 
 You can also have a look at simple release notes.
 
@@ -472,7 +472,7 @@ This will be fixed in the future.
 
 . *Server log management*: It is possible to show server log in Console view or in editor pane.
 By opening it in console it allows for continuous updating of the view.
-By opening in editor pane it is possible to employ plugin customized xref:/midpoint/reference/diag/logging/log-viewer/[log viewer].
+By opening in editor pane it is possible to employ plugin customized xref:/midpoint/reference/v2/diag/logging/log-viewer/[log viewer].
 You can also dynamically change logging levels for model, provisioning, repository and web modules.
 
 . XML Catalog content assist - see below

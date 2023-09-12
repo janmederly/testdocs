@@ -157,7 +157,7 @@ This has some negative consequences:
 . Errors are reported in GUI, in audit records (as handled errors in both cases), and in the logfootnote:[Since 4.7, we suppressed the message in the log file, see bug:MID-8366[].].
 . In some cases, the results of such "forced unassignment" can be different from the unassignment done while before role deletion.footnote:[The reason is that when unassigning the role in the regular way, midPoint has complete information about what the role is adding, so it can correctly remove that.
 When first deleting the role and then unassigning it, the deployment must assume that "what is not computed should not exist" (using e.g. non-tolerant attributes and associations, mapping ranges, and so on) in order to ensure that what was provisioned via the role will be de-provisioned.
-This is somewhat similar to the known xref:/midpoint/reference/tasks/specific/focus-validity-scan.adoc#_limitations[limitation of Focus Validity Scan activity].]
+This is somewhat similar to the known xref:/midpoint/reference/v1/tasks/specific/focus-validity-scan.adoc#_limitations[limitation of Focus Validity Scan activity].]
 
 What we'd need is to unassign the members before the role is deleted.
 This would most probably involve implementing some kind of lifecycle state transition for the role, e.g. switching the state to `retired`, then unassigning members, and then (probably automatically) deleting the role object.

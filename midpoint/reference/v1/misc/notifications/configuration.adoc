@@ -15,7 +15,7 @@ For a basic introduction to notifications, please see this xref:..[general overv
 Here we describe detailed information on how to configure the notifications as a system administrator.
 
 Notification and transport configuration is specified with `notificationConfiguration` and `messageTransportConfiguration`
-containers inside xref:/midpoint/reference/concepts/system-configuration-object/[System Configuration Object].
+containers inside xref:/midpoint/reference/v1/concepts/system-configuration-object/[System Configuration Object].
 
 == Configuring transports
 
@@ -542,7 +542,7 @@ Some examples:
 
 == Expressions
 
-Any xref:/midpoint/reference/expressions/expressions/[expressions] supported by midPoint can be used.
+Any xref:/midpoint/reference/v1/expressions/expressions/[expressions] supported by midPoint can be used.
 
 Variables that are available are:
 
@@ -600,7 +600,7 @@ Link any other expression documentation discussing variables?
 
 If the configuration doesn't do what is expected, or seemingly does nothing at all, it may
 be the right time to add some debug log messages for notifications and transport components.
-In the xref:/midpoint/reference/concepts/system-configuration-object/[System Configuration],
+In the xref:/midpoint/reference/v1/concepts/system-configuration-object/[System Configuration],
 add the logers for `NOTIFICATION` and `TRANSPORT` (predefined `LoggingComponentType`-s)
 and set them to the `DEBUG` level.
 This should provide additional information if the notification is skipped and why.

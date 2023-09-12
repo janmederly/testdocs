@@ -12,7 +12,7 @@ To use midPoint with Native PostgreSQL repository you need to:
 you can stop after unpacking the archive and setting up `MIDPOINT_HOME` environment variable.
 . Install and set up the PostgreSQL database - this is the part covered by the bulk of this document.
 . Prepare `config.xml` to configure midPoint for the Native repository.
-Read xref:/midpoint/reference/repository/configuration/[Repository Configuration] for more information,
+Read xref:/midpoint/reference/v1/repository/configuration/[Repository Configuration] for more information,
 including a complete example of `config.xml` for Native repository.
 . Finally, you can run midPoint; this is described in the rest of the xref:/midpoint/install/distribution/[installation document] mentioned in the first step.
 
@@ -136,14 +136,14 @@ http://www.quartz-scheduler.org/[Quartz Schduler]).
 These tables are optional, but it is recommended to create them in case you need them.
 The tables must be created in the main repository schema.
 
-See xref:/midpoint/reference/repository/native-audit[Native PostgreSQL Audit Trail] for details how
-to set it up in a database xref:/midpoint/reference/repository/native-audit/#sql-audit-using-its-own-database[separate from the main repository].
+See xref:/midpoint/reference/v1/repository/native-audit[Native PostgreSQL Audit Trail] for details how
+to set it up in a database xref:/midpoint/reference/v1/repository/native-audit/#sql-audit-using-its-own-database[separate from the main repository].
 Be aware that with new repository *both databases have to be PostgreSQL databases.*
 It is possible to use different versions for each database as long as they are supported (13 or higher).
 
 [IMPORTANT]
 If you want to migrate your old audit records to the new database and keep event record IDs unique,
-set the ID sequence in the new database as described in xref:/midpoint/reference/repository/native-audit/#audit-migration-from-other-database[Audit migration from other database].
+set the ID sequence in the new database as described in xref:/midpoint/reference/v1/repository/native-audit/#audit-migration-from-other-database[Audit migration from other database].
 
 We recommend using `psql` for database initialization like this:
 
@@ -177,7 +177,7 @@ works, but we still recommend using tools that can execute files properly - that
 Quartz scheduler in midPoint can be configured to use a database with `taskManager/jdbcJobStore`
 option in `config.xml` set to `true`.
 This is also the default if `clustered` is set to `true`.
-See xref:/midpoint/reference/tasks/task-manager/configuration/[Task Manager Configuration]
+See xref:/midpoint/reference/v1/tasks/task-manager/configuration/[Task Manager Configuration]
 for further details.
 
 Even if not required, it is best to create these tables in case the scheduler configuration changes later.
@@ -269,7 +269,7 @@ Afterwards, you can run the whole upgrade script as the normal user (`midpoint` 
 At this moment the database is prepared and it's time to configure midPoint appropriately.
 This typically preparing proper repository configuration in `config.xml` file.
 Configuration options related to repository as well as an example of `config.xml` file can be found
-in xref:/midpoint/reference/repository/configuration/[Repository Configuration] article.
+in xref:/midpoint/reference/v1/repository/configuration/[Repository Configuration] article.
 The article references this page, but if you finished the steps above in this document, you can focus just on the config options.
 
 With the database ready and midPoint configuration file referencing the Native repository,
@@ -281,7 +281,7 @@ More details on running midPoint are mentioned in the xref:/midpoint/install/dis
 Long story short, just run the provided `postgres-new-upgrade.sql` anytime, it should be safe.
 It always runs only the missing parts of the upgrade process.
 Be sure you're running the upgrade script provided with the version you're actually using, see
-xref:/midpoint/reference/upgrade/database-schema-upgrade/#upgrading-native-postgresql-repository[database schema upgrade].
+xref:/midpoint/reference/v1/upgrade/database-schema-upgrade/#upgrading-native-postgresql-repository[database schema upgrade].
 
 You can find further details in the source code documentation for `apply_change` procedure at the end of the `postgres-new.sql` script.
 
@@ -290,21 +290,21 @@ You can find further details in the source code documentation for `apply_change`
 If you find a bug or encounter performance problem with the Native repository,
 it is always important to gather more information before reporting the issue.
 
-* In case of error or exception, always include the relevant portion of the xref:/midpoint/reference/diag/logging/[midpoint.log] in the report.
-* Review xref:/midpoint/reference/repository/native-postgresql/db-maintenance/#index-tuning[Index tuning]
+* In case of error or exception, always include the relevant portion of the xref:/midpoint/reference/v1/diag/logging/[midpoint.log] in the report.
+* Review xref:/midpoint/reference/v1/repository/native-postgresql/db-maintenance/#index-tuning[Index tuning]
 tips for performance problems, especially for extension items or shadow attributes.
 * If the performance problem is indeed DB related, identify the slow query, preferably using
-`pg_stat_statements` extension as xref:/midpoint/reference/repository/native-postgresql/db-maintenance/#monitoring-queries[described here].
-* To log issued SQL queries in xref:/midpoint/reference/diag/logging/[midpoint.log],
+`pg_stat_statements` extension as xref:/midpoint/reference/v1/repository/native-postgresql/db-maintenance/#monitoring-queries[described here].
+* To log issued SQL queries in xref:/midpoint/reference/v1/diag/logging/[midpoint.log],
 configure system loggers (*System* in main menu, then *Logging*) so that it contains
 `com.evolveum.midpoint.repo.sqlbase.querydsl.SqlLogger` with level `DEBUG` (shows SQL)
 or `TRACE` (includes parameter values).
 
 == See also
 
-* xref:/midpoint/reference/repository/repository-database-support/[Repository Database Support]
+* xref:/midpoint/reference/v1/repository/repository-database-support/[Repository Database Support]
 discusses old and new repository and our support strategy.
-* xref:/midpoint/reference/repository/native-postgresql/migration/[Migration to Native PostgreSQL Repository]
-* xref:/midpoint/reference/repository/configuration/[Repository Configuration]
-* xref:/midpoint/reference/repository/native-audit/[Native PostgreSQL Audit Trail]
-* xref:/midpoint/reference/tasks/task-manager/configuration/[Task Manager Configuration]
+* xref:/midpoint/reference/v1/repository/native-postgresql/migration/[Migration to Native PostgreSQL Repository]
+* xref:/midpoint/reference/v1/repository/configuration/[Repository Configuration]
+* xref:/midpoint/reference/v1/repository/native-audit/[Native PostgreSQL Audit Trail]
+* xref:/midpoint/reference/v1/tasks/task-manager/configuration/[Task Manager Configuration]

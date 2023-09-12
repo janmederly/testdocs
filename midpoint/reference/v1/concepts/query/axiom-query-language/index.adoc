@@ -10,7 +10,7 @@ It is a universal language used to search for objects in the repository, filter 
 It is used in all the places where we need to look for an object.
 
 The language closely follows midPoint data model.
-Names of the properties, attributes and all the data items are directly taken from midPoint xref:/midpoint/reference/schema/[data model].
+Names of the properties, attributes and all the data items are directly taken from midPoint xref:/midpoint/reference/v1/schema/[data model].
 
 This description is an attempt to provide introduction to the Axiom Query Language for the users.
 Some details are omitted, and there are some simplifications for clarity.
@@ -42,7 +42,7 @@ Some examples of valid filters are:
 
 === Item Path
 
-The item on which data are filtered is specified by xref:/midpoint/reference/concepts/item-path/[item path].
+The item on which data are filtered is specified by xref:/midpoint/reference/v1/concepts/item-path/[item path].
 In its simplest form it is a name of object _property_, or names of items and containers separated by slashes. Such as:
 
 * `fullName`

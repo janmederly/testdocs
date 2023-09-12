@@ -58,5 +58,5 @@ Since midPoint 4.5 one can specify the language with the local part of the langu
 * It is possible to iterate over collections with `#foreach` macro.
 * It is possible to comment out some parts - here the whole iteration is actually commented with `pass:[#*]` ... `pass:[*#]` block.
 
-Of course, it is possible to use xref:/midpoint/reference/expressions/expressions/script/[script expression]
-with any other supported language (e.g. Groovy), or you can use any other xref:/midpoint/reference/expressions/expressions/[expression evaluator].
+Of course, it is possible to use xref:/midpoint/reference/v2/expressions/expressions/script/[script expression]
+with any other supported language (e.g. Groovy), or you can use any other xref:/midpoint/reference/v2/expressions/expressions/[expression evaluator].

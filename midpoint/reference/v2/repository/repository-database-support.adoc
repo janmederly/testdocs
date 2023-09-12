@@ -19,7 +19,7 @@ Do not think much about it, just do it.
 ====
 
 MidPoint has to store its own data in a database, which we call _repository_.
-MidPoint stores all the data there: users, roles, xref:/midpoint/reference/resources/shadow/[shadow objects] representing accounts, configuration, everything.
+MidPoint stores all the data there: users, roles, xref:/midpoint/reference/v2/resources/shadow/[shadow objects] representing accounts, configuration, everything.
 MidPoint needs PostgreSQL database engine to do that.
 PostgreSQL is leading open source relational database engine.
 Since midPoint 4.4, midPoint can use features specific to PostgreSQL to its advantage (using xref:native-postgresql/[native PostgreSQL repository implementation]).
@@ -155,7 +155,7 @@ Please see xref:native-postgresql/migration/[] for details, yet the outline of t
 
 .. Create new PostgreSQL database, apply database schema, reconfigure midPoint to access the database.
 
-.. Import data from the XML export (e.g. using xref:/midpoint/reference/deployment/ninja/[ninja]).
+.. Import data from the XML export (e.g. using xref:/midpoint/reference/v2/deployment/ninja/[ninja]).
 
 .. Start midPoint, test it.
 

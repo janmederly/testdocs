@@ -125,19 +125,19 @@ The comparison ignores XML formatting (whitespaces between elements).
 | PolyString
 .6+| N/A (attributes are never PolyString)
 | yes
-| Strict xref:/midpoint/reference/concepts/polystring/[PolyString] matching.
+| Strict xref:/midpoint/reference/v1/concepts/polystring/[PolyString] matching.
 Both the original part and the normalized parts are compared.
 
 | `polyStringOrig`
 | PolyString
 | yes
-| Non-strict xref:/midpoint/reference/concepts/polystring/[PolyString] matching.
+| Non-strict xref:/midpoint/reference/v1/concepts/polystring/[PolyString] matching.
 Only the original part is compared.
 
 | `polyStringNorm`
 | PolyString
 | yes
-| Non-strict xref:/midpoint/reference/concepts/polystring/[PolyString] matching.
+| Non-strict xref:/midpoint/reference/v1/concepts/polystring/[PolyString] matching.
 Only the normalized part is compared.
 
 | `strictIgnoreCase`

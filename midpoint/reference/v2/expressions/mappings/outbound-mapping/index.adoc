@@ -8,12 +8,12 @@
 :page-wiki-metadata-modify-date: 2017-07-13T15:02:00.069+02:00
 :page-upkeep-status: orange
 
-Outbound mapping define how the data are xref:/midpoint/reference/synchronization/introduction/[synchronized] from the user to accounts or, in other words, when the data *out* of midPoint.
-See xref:/midpoint/reference/synchronization/examples/[Synchronization Examples] for a generic explanation of the synchronization mechanism.
+Outbound mapping define how the data are xref:/midpoint/reference/v2/synchronization/introduction/[synchronized] from the user to accounts or, in other words, when the data *out* of midPoint.
+See xref:/midpoint/reference/v2/synchronization/examples/[Synchronization Examples] for a generic explanation of the synchronization mechanism.
 
 image::synchronization-outbound.png[]
 
-Outbound expressions are defined in the xref:/midpoint/reference/resources/resource-configuration/schema-handling/[schema handling] section of resource definition.
+Outbound expressions are defined in the xref:/midpoint/reference/v2/resources/resource-configuration/schema-handling/[schema handling] section of resource definition.
 The expression definition is inside attribute definition which is inside account type definition:
 
 [source,xml]
@@ -87,14 +87,14 @@ The actual value is determined by the iteration settings.
 
 == See Also
 
-* xref:/midpoint/reference/synchronization/examples/[Synchronization Examples]
+* xref:/midpoint/reference/v2/synchronization/examples/[Synchronization Examples]
 
-* xref:/midpoint/reference/resources/resource-configuration/schema-handling/[Resource Schema Handling]
+* xref:/midpoint/reference/v2/resources/resource-configuration/schema-handling/[Resource Schema Handling]
 
-* xref:/midpoint/reference/expressions/mappings/[Mapping]
+* xref:/midpoint/reference/v2/expressions/mappings/[Mapping]
 
-* xref:/midpoint/reference/expressions/mappings/mapping-evaluation-examples/[Mapping Evaluation Examples]
+* xref:/midpoint/reference/v2/expressions/mappings/mapping-evaluation-examples/[Mapping Evaluation Examples]
 
-* xref:/midpoint/reference/expressions/mappings/inbound-mapping/[Inbound Mapping]
+* xref:/midpoint/reference/v2/expressions/mappings/inbound-mapping/[Inbound Mapping]
 
-* xref:/midpoint/reference/concepts/iteration/unique-account-username/[Unique Account Username HOWTO]
+* xref:/midpoint/reference/v2/concepts/iteration/unique-account-username/[Unique Account Username HOWTO]

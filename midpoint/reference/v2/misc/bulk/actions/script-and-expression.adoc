@@ -122,4 +122,4 @@ Variables available in the script or expression are:
 
 . The script or expression can return only a single value.
 . Before midPoint 4.8, execution of `execute-script` action requires `#all` privileges.
-Starting with 4.8, it is driven by xref:/midpoint/reference/expressions/expressions/profiles/[expression profiles].
+Starting with 4.8, it is driven by xref:/midpoint/reference/v2/expressions/expressions/profiles/[expression profiles].

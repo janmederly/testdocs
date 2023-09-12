@@ -15,7 +15,7 @@ Typical examples are tasks and audit records.
 
 MidPoint provides a feature that automatically cleans-up the repository with respect to these items.
 A system task named *Cleanup* runs (by default) every 24 hours and removes tasks and audit records older than predefined time value.
-This is the default configuration from the xref:/midpoint/reference/concepts/system-configuration-object/[System Configuration object]:
+This is the default configuration from the xref:/midpoint/reference/v2/concepts/system-configuration-object/[System Configuration object]:
 
 [source,xml]
 ----
@@ -57,5 +57,5 @@ There are other clean-up settings, but these are consulted only when the relevan
 
 == See Also
 
-* xref:/midpoint/reference/concepts/system-configuration-object/[System Configuration object]
-* xref:/midpoint/reference/repository/native-audit/#cleanup-task-vs-partitions[Audit cleanup using task vs partitions]
+* xref:/midpoint/reference/v2/concepts/system-configuration-object/[System Configuration object]
+* xref:/midpoint/reference/v2/repository/native-audit/#cleanup-task-vs-partitions[Audit cleanup using task vs partitions]

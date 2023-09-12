@@ -10,7 +10,7 @@
 
 [WARNING]
 ====
-This scenario uses unfinished/experimental xref:/midpoint/reference/synchronization/linked-objects/named-object-links/[named object links] feature.
+This scenario uses unfinished/experimental xref:/midpoint/reference/v1/synchronization/linked-objects/named-object-links/[named object links] feature.
 It is very powerful but even more experimental than linked objects feature as a whole!
 So beware, everything described here can change any time.
 ====

@@ -10,7 +10,7 @@ To keep the wizard interface simple for users, the wizard does not provide all o
 
 So far, midPoint supports only creation of _Application role_, _Business role_. Standard user interface is used for modification of these roles.
 
-Some wizard panels are configurable, for more information see xref:/midpoint/reference/admin-gui/admin-gui-config/#wizard-panels[Wizard panels].
+Some wizard panels are configurable, for more information see xref:/midpoint/reference/v1/admin-gui/admin-gui-config/#wizard-panels[Wizard panels].
 
 == Application role wizard
 In the role wizard for the application role, we can select _Application_, set the new role's basic attributes, add users to the new role, and create inducement for resource with associations and mappings.

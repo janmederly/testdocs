@@ -5,16 +5,16 @@
 :page-wiki-metadata-create-date: 2015-04-16T19:47:06.934+02:00
 :page-wiki-metadata-modify-user: virgo
 :page-wiki-metadata-modify-date: 2020-10-27T17:08:38.510+01:00
-:page-alias: { "parent" : "/midpoint/reference/repository/", "display-order" : 800 }
+:page-alias: { "parent" : "/midpoint/reference/v1/repository/", "display-order" : 800 }
 :page-upkeep-status: orange
 :page-toc: top
 
 == Introduction
 
 New midPoint releases usually bring new features.
-New features usually require the extension of midPoint xref:/midpoint/reference/schema/[data model] to use them.
+New features usually require the extension of midPoint xref:/midpoint/reference/v1/schema/[data model] to use them.
 The changes of data model usually require extension of the schema of the database that stores midPoint objects.
-This is the usual routine for most midPoint xref:/midpoint/reference/upgrade/upgradeability/[upgrades].
+This is the usual routine for most midPoint xref:/midpoint/reference/v1/upgrade/upgradeability/[upgrades].
 
 MidPoint distributions come with the database upgrade scripts.
 These scripts contain a set of SQL commands (usually `ALTER TABLE` commands) that extend the schema of existing database.
@@ -35,24 +35,24 @@ One should know what repo is used.
 But just in case, there is a couple of ways to find out:
 
 * In GUI go to *About* page and check *Repository* panel.
-If *Implementation name* says *Native*, you are using the new xref:/midpoint/reference/repository/native-postgresql/[Native repository] recommended from version 4.4 on.
+If *Implementation name* says *Native*, you are using the new xref:/midpoint/reference/v1/repository/native-postgresql/[Native repository] recommended from version 4.4 on.
 Old Generic repo says *SQL* instead.
 
-* If in your `config.xml` the content of `repository/type` element is `native` (or `sqale`, or `scale`, casing does not matter), you are using the xref:/midpoint/reference/repository/native-postgresql/[Native repository].
+* If in your `config.xml` the content of `repository/type` element is `native` (or `sqale`, or `scale`, casing does not matter), you are using the xref:/midpoint/reference/v1/repository/native-postgresql/[Native repository].
 If there is `generic` (or `sql`) instead, or there is no `type` element under `repository`, but `repositoryServiceFactoryClass`
 is used instead, you are using the old repository.
 
 * If you are connected to the database, there are some differences in tables.
 Try `select * from m_uri limit 1` - if it works without any error (even if it does not return anything),
-you are using the new xref:/midpoint/reference/repository/native-postgresql/[Native repository].
+you are using the new xref:/midpoint/reference/v1/repository/native-postgresql/[Native repository].
 If it doesn't work - and `select * from m_object_text_info limit 1` on the other hand does - then
 you are using the old repository.
 ====
 
 == Upgrading Native PostgreSQL Repository
 
-This section describes how to upgrade the xref:/midpoint/reference/repository/native-postgresql/[Native repository].
-There is no need to "upgrade" to 4.4 - but we encourage you to xref:/midpoint/reference/repository/native-postgresql/migration/[migrate to the new repository].
+This section describes how to upgrade the xref:/midpoint/reference/v1/repository/native-postgresql/[Native repository].
+There is no need to "upgrade" to 4.4 - but we encourage you to xref:/midpoint/reference/v1/repository/native-postgresql/migration/[migrate to the new repository].
 For future releases, the process should be similar to previous upgrades.
 
 === Upgrade Script Location
@@ -85,7 +85,7 @@ The scripts do not contain any version number and are safe to run repeatedly - o
 
 [IMPORTANT]
 ====
-If you created the schema objects as non-superuser as described xref:/midpoint/reference/repository/native-postgresql/usage/#installing-as-non-superuser[here],
+If you created the schema objects as non-superuser as described xref:/midpoint/reference/v1/repository/native-postgresql/usage/#installing-as-non-superuser[here],
 be sure to run all the missing `CREATE EXTENSION` commands as a superuser first!
 This is also a good reason to use `-v ON_ERROR_STOP=1` flag with the `psql` - as shown below.
 This stops the upgrade when the first such problem occurs, but works fine if the extension already exists.
@@ -125,7 +125,7 @@ Please, do not use them to run upgrade scripts!
 
 == Upgrading Generic Repository
 
-This section describes how to upgrade the xref:/midpoint/reference/repository/generic/[Generic repository].
+This section describes how to upgrade the xref:/midpoint/reference/v1/repository/generic/[Generic repository].
 
 === Upgrade Script Location
 
@@ -167,13 +167,13 @@ Strictly speaking, the _version_ term above refers to the _database schema versi
 These are the same for the majority of cases.
 A notable exception is midPoint 4.1 that uses database schema version 4.0.
 So, in that particular case, upgrade scripts are named like `postgresql-upgrade-4.0-4.2.sql`.
-See xref:/midpoint/reference/repository/generic/database-schema-versioning/[Database schema versioning] for more information.
+See xref:/midpoint/reference/v1/repository/generic/database-schema-versioning/[Database schema versioning] for more information.
 ====
 
 == See Also
 
-* xref:/midpoint/reference/upgrade/upgradeability/[Upgradeability]
+* xref:/midpoint/reference/v1/upgrade/upgradeability/[Upgradeability]
 
-* xref:/midpoint/reference/upgrade/upgrade-guide/[Upgrade HOWTO]
+* xref:/midpoint/reference/v1/upgrade/upgrade-guide/[Upgrade HOWTO]
 
-* xref:/midpoint/reference/repository/generic/database-schema-versioning/[Database schema versioning] (Generic repository)
+* xref:/midpoint/reference/v1/repository/generic/database-schema-versioning/[Database schema versioning] (Generic repository)

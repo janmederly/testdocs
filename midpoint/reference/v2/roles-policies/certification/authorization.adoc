@@ -7,7 +7,7 @@
 :page-wiki-metadata-modify-user: mederly
 :page-wiki-metadata-modify-date: 2016-02-01T19:27:02.512+01:00
 :page-upkeep-status: orange
-:page-alias: { "parent" : "/midpoint/reference/security/authorization/", "slug" : "certification",  "title" : "Access Certification" }
+:page-alias: { "parent" : "/midpoint/reference/v2/security/authorization/", "slug" : "certification",  "title" : "Access Certification" }
 
 == Model level
 

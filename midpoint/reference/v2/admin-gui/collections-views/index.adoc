@@ -29,15 +29,15 @@ Collections and views are two concepts that are very related, but still somehow 
 There is a special object type (ObjectCollectionType) that is used to define a collection.
 It is first-class midPoint object.
 Collection defines which objects belong to the collection.
-The plan is that collections can be used in the entire midPoint system, e.g. collections can be used in xref:/midpoint/reference/security/authorization/[authorizations], xref:/midpoint/reference/roles-policies/policy-rules/[policy rules] may be applied to them and so on.
-Some midPoint objects can act as an implicit collections, especially xref:/midpoint/reference/schema/archetypes/[archetypes] and xref:/midpoint/reference/org/organizational-structure/[organizational units]. Object collections are designed to be solid and stable.
+The plan is that collections can be used in the entire midPoint system, e.g. collections can be used in xref:/midpoint/reference/v2/security/authorization/[authorizations], xref:/midpoint/reference/v2/roles-policies/policy-rules/[policy rules] may be applied to them and so on.
+Some midPoint objects can act as an implicit collections, especially xref:/midpoint/reference/v2/schema/archetypes/[archetypes] and xref:/midpoint/reference/v2/org/organizational-structure/[organizational units]. Object collections are designed to be solid and stable.
 Something that midPoint policies can rely on.
 
 * *View* is a user interface concept.
 View specifies how a particular collection should be displayed.
 It defines the columns that should be displayed, default sorting, pre-defined filter properties and so on.
 Views are designed to be flexible, customizable.
-E.g. views can adjusted and overridden in xref:/midpoint/reference/admin-gui/admin-gui-config/[admin GUI configuration].
+E.g. views can adjusted and overridden in xref:/midpoint/reference/v2/admin-gui/admin-gui-config/[admin GUI configuration].
 
 Although collections and view have different purposes and they are based on different mechanisms, they are almost always used together.
 
@@ -54,14 +54,14 @@ See xref:/midpoint/features/planned/object-collections-and-views/[Object Collect
 
 == See Also
 
-* xref:/midpoint/reference/roles-policies/policy-rules/[Policy Rules]
+* xref:/midpoint/reference/v2/roles-policies/policy-rules/[Policy Rules]
 
-* xref:/midpoint/reference/admin-gui/collections-views/configuration/[Object Collections and Views Configuration]
+* xref:/midpoint/reference/v2/admin-gui/collections-views/configuration/[Object Collections and Views Configuration]
 
 * xref:/midpoint/features/planned/object-collections-and-views/[Object Collections and Views Improvements]
 
-* xref:/midpoint/reference/schema/archetypes/[Archetypes]
+* xref:/midpoint/reference/v2/schema/archetypes/[Archetypes]
 
 * xref:/midpoint/features/planned/compliance/[Compliance]
 
-* xref:/midpoint/reference/admin-gui/dashboards/[Customizable Dashboards]
+* xref:/midpoint/reference/v2/admin-gui/dashboards/[Customizable Dashboards]

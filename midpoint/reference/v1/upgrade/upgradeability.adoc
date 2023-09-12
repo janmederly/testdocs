@@ -112,4 +112,4 @@ Such fixes may be included in the next maintenance release.
 
 * xref:/midpoint/versioning/[Release Process]
 
-* xref:/midpoint/reference/upgrade/upgrade-guide/[Upgrade HOWTO]
+* xref:/midpoint/reference/v1/upgrade/upgrade-guide/[Upgrade HOWTO]

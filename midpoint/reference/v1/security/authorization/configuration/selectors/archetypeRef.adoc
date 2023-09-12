@@ -18,4 +18,4 @@ Archetype specification is multivalued.
 If more than one `archetypeRef` is used in the same authorization, then _or_ operation is implied.
 I.e. match of a single archetypes from the list will make the authorization applicable for the object.
 
-See also xref:/midpoint/reference/schema/archetypes/[Archetypes].
+See also xref:/midpoint/reference/v1/schema/archetypes/[Archetypes].

@@ -18,7 +18,7 @@ This way it's possible to diagnose issues with low-level system initialization, 
 
 You can use one of these two options to adjust the initial logging:
 
-* Adding `logback.xml` file in xref:/midpoint/reference/deployment/midpoint-home-directory/[MidPoint Home Directory].
+* Adding `logback.xml` file in xref:/midpoint/reference/v1/deployment/midpoint-home-directory/[MidPoint Home Directory].
 This file will be applied during very early phases of system initialization.
 The default initial logging configuration will be *replaced* with the content of this file.
 * Or adding `logback-extra` inside midPoint home which has the same format, but adds to the default
@@ -92,7 +92,7 @@ All the logging goes to the files, or other outputs, where it would go before.
 
 The files above are useful but may be insufficient on their own if the problem happens after
 the normal logging is initialized.
-This logging is configured in the xref:/midpoint/reference/concepts/system-configuration-object/[system
+This logging is configured in the xref:/midpoint/reference/v1/concepts/system-configuration-object/[system
 configuration object].
 If you can't log in or the GUI is otherwise unavailable, the problem may be reported on the level
 that does not make it to the log - but would with initial logging overridden as shown above!
@@ -147,6 +147,6 @@ Sensitive values in logs are protected in all supported 4.x versions, but the ov
 
 == See Also
 
-* xref:/midpoint/reference/deployment/midpoint-home-directory/[MidPoint Home Directory]
-* xref:/midpoint/reference/diag/logging/[Logging]
-* xref:/midpoint/reference/deployment/syslog-logging/[Syslog Logging]
+* xref:/midpoint/reference/v1/deployment/midpoint-home-directory/[MidPoint Home Directory]
+* xref:/midpoint/reference/v1/diag/logging/[Logging]
+* xref:/midpoint/reference/v1/deployment/syslog-logging/[Syslog Logging]

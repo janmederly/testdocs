@@ -526,7 +526,7 @@ Some examples:
 
 == Expressions
 
-Any xref:/midpoint/reference/expressions/expressions/[expressions] supported by midPoint can be used.
+Any xref:/midpoint/reference/v1/expressions/expressions/[expressions] supported by midPoint can be used.
 
 Variables that are available are:
 

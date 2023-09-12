@@ -76,4 +76,4 @@ Therefore perhaps the only such case in midPoint schemas is the "objects" elemen
 
 == See Also
 
-* xref:/midpoint/reference/schema/[Data Model]
+* xref:/midpoint/reference/v2/schema/[Data Model]
