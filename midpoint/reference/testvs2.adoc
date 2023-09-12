@@ -1,0 +1,4 @@
+= Test versioning page two
+:page-nav-title: Test versioning page two
+:page-wiki-name: Test versioning page two
+:page-display-order: 600
