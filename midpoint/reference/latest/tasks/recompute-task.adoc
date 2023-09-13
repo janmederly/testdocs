@@ -29,7 +29,7 @@ Since midPoint 3.6 a lighter recompute flavors may be set up using the model exe
 
 == Recompute vs Reconciliation
 
-At the first sight recompute does almost the same job as xref:/midpoint/reference/tasks/synchronization-tasks/[reconciliation].
+At the first sight recompute does almost the same job as xref:/midpoint/reference/latest/tasks/synchronization-tasks/[reconciliation].
 But there are important differences:
 
 * Recompute tasks are iterating over focal objects (users, roles, ...). Reconciliation tasks are iterating over resource objects (accounts, groups).
@@ -49,7 +49,7 @@ It is rather a side-effect of updating and re-evaluating focal objects.
 == Recompute Options
 
 MidPoint 3.6 (and later) has an ability to fine-tune the recompute process by specifying the model execution options.
-This can be used to control whether the recompute process triggers reconciliation, what particular parts of the xref:/midpoint/reference/concepts/clockwork/clockwork-and-projector/[clockwork and projector computation] will take place and so on.
+This can be used to control whether the recompute process triggers reconciliation, what particular parts of the xref:/midpoint/reference/latest/concepts/clockwork/clockwork-and-projector/[clockwork and projector computation] will take place and so on.
 
 [NOTE]
 .Handle with care!
@@ -91,6 +91,6 @@ The following example shows configuration for _light recompute_ - recompute proc
 
 == See Also
 
-* xref:/midpoint/reference/tasks/synchronization-tasks/[Synchronization Tasks]
+* xref:/midpoint/reference/latest/tasks/synchronization-tasks/[Synchronization Tasks]
 
 * xref:/connectors/connid/1.x/connector-development-guide/[Connector Development Guide - DiscoverySupport]

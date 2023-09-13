@@ -74,4 +74,4 @@ If the range definition is change to include the old value then such value will 
 
 * xref:../mappings/range/[]
 
-* xref:/midpoint/reference/expressions/mappings/[]
+* xref:/midpoint/reference/latest/expressions/mappings/[]

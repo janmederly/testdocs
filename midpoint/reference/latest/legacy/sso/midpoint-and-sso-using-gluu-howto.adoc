@@ -121,6 +121,6 @@ sudo service tomcat8 restart
 
 == External links
 
-* xref:/midpoint/reference/legacy/sso/[MidPoint and SSO HOWTO]
+* xref:/midpoint/reference/latest/legacy/sso/[MidPoint and SSO HOWTO]
 
 * link:https://gluu.org/docs/ce/latest/integration/openidc-rp/[mod_auth_openidc RP Integration]

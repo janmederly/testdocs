@@ -65,4 +65,4 @@ For that we need to evaluate the condition both for the old value and the new va
 
 ==  See Also
 
-* xref:/midpoint/reference/expressions/mappings/[]
+* xref:/midpoint/reference/latest/expressions/mappings/[]

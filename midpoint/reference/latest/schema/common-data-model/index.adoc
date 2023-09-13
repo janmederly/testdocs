@@ -35,7 +35,7 @@ The User object is also extensible, so custom fields can be easily added to it.
 
 image::synchronization-user.png[]
 
-The User object is one of the objects of midPoint xref:/midpoint/reference/schema/[Data Model] that is built on top of xref:/midpoint/devel/prism/[Prism Objects]. MidPoint data model is a kind of _common denominator_ model.
+The User object is one of the objects of midPoint xref:/midpoint/reference/latest/schema/[Data Model] that is built on top of xref:/midpoint/devel/prism/[Prism Objects]. MidPoint data model is a kind of _common denominator_ model.
 It is designed to suit almost all systems that the midPoint will integrate with - source systems, target systems and even identity repositories.
 The midPoint model is based on multi-valued properties grouped into objects, limited to properties with unordered values.
 This model is sufficient for vast majority of IDM cases, it is rich enough to be able to work with it in midPoint code and yet it is simple enough to be easy to map to other models.
@@ -89,7 +89,7 @@ image::synchronization-user-account.png[]
 
 
 
-See xref:/midpoint/reference/resources/shadow/[Shadow Objects] for more information.
+See xref:/midpoint/reference/latest/resources/shadow/[Shadow Objects] for more information.
 
 == Other Common Models
 
@@ -133,6 +133,6 @@ It was used as a guiding principle while creating a specific midPoint data model
 
 == See Also
 
-* xref:/midpoint/reference/schema/[Data Model]
+* xref:/midpoint/reference/latest/schema/[Data Model]
 
 * xref:/midpoint/architecture/principles/idm-means-integration/[IDM Means Integration]

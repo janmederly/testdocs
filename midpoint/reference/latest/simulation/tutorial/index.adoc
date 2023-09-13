@@ -3,7 +3,7 @@
 :page-since: "4.7"
 :page-upkeep-status: green
 
-This is a simple tutorial describing the new xref:/midpoint/reference/simulation/[simulation] feature.
+This is a simple tutorial describing the new xref:/midpoint/reference/latest/simulation/[simulation] feature.
 
 NOTE: The reader is expected to have reasonable knowledge of midPoint; we don't describe individual steps in much detail here.
 
@@ -862,7 +862,7 @@ After we are satisfied with the results, we can "commit" them by executing the s
 
 Here we could mark some shadows as protected, "do not touch", "decommission later", or "correlate later":
 
-NOTE: For more information about how to mark the shadows, please see xref:/midpoint/reference/mark/#gui-object-marks-and-shadows[Object Marks].
+NOTE: For more information about how to mark the shadows, please see xref:/midpoint/reference/latest/mark/#gui-object-marks-and-shadows[Object Marks].
 
 .Marked shadows
 image::marked-shadows.png[Marked shadows, width=1600]
@@ -995,4 +995,4 @@ After we are satisfied with the result, we can switch the mapping to production 
 
 == Conclusion
 
-In this tutorial, we showed how to use new xref:/midpoint/reference/simulation/[simulations] feature to realize a simple scenario of connecting one source and one target resource.
+In this tutorial, we showed how to use new xref:/midpoint/reference/latest/simulation/[simulations] feature to realize a simple scenario of connecting one source and one target resource.

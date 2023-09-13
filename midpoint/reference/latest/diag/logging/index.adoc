@@ -38,7 +38,7 @@ The `TRACE` level is intended mostly for development-level troubleshooting.
 
 === Log Files
 
-MidPoint log files are located in xref:/midpoint/reference/deployment/midpoint-home-directory/[midPoint home directory].
+MidPoint log files are located in xref:/midpoint/reference/latest/deployment/midpoint-home-directory/[midPoint home directory].
 MidPoint home directory contains sub-directory `logs` and midPoint logfiles are there.
 There are usually several files:
 

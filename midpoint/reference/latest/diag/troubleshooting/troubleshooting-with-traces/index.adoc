@@ -116,7 +116,7 @@ But subsequent visualizations of the same trace (with changed parameters) should
 (Also make sure you get enough heap when opening large traces.
 ☺)
 
-More information about the Trace view is on xref:/midpoint/reference/diag/troubleshooting/troubleshooting-with-traces/trace-visualization/[Trace visualization] page.
+More information about the Trace view is on xref:/midpoint/reference/latest/diag/troubleshooting/troubleshooting-with-traces/trace-visualization/[Trace visualization] page.
 
 == Analyzing traces via IDEA plugin
 

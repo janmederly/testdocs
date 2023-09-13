@@ -9,8 +9,8 @@ scripts: [ 'multi-source.js' ]
 == Introduction
 
 MidPoint works with *objects* of various types, which can be part of the running process (in memory),
-stored persistently in xref:/midpoint/reference/repository/[midPoint Repository], or can represent
-objects on the xref:/midpoint/reference/resources/[Resources].
+stored persistently in xref:/midpoint/reference/latest/repository/[midPoint Repository], or can represent
+objects on the xref:/midpoint/reference/latest/resources/[Resources].
 
 MidPoint *query* allows us to select only the objects that match specified criteria.
 These criteria are formulated as a *filter* and are part of the *query*.
@@ -22,8 +22,8 @@ Query language is defined in Prism project in link:https://github.com/Evolveum/p
 === Prism and Resource objects refresher
 
 MidPoint works with data structures called xref:/midpoint/devel/prism/data-structures/[Prism objects].
-These are used for midPoint internal data, but they can also represent remote objects stored on the xref:/midpoint/reference/resources/[Resources], e.g. accounts and groups.
-Prism objects are stored in the xref:/midpoint/reference/repository/[Repository] to preserve long-term midPoint state.
+These are used for midPoint internal data, but they can also represent remote objects stored on the xref:/midpoint/reference/latest/resources/[Resources], e.g. accounts and groups.
+Prism objects are stored in the xref:/midpoint/reference/latest/repository/[Repository] to preserve long-term midPoint state.
 Collections of Prism objects in memory are worked with frequently too.
 
 Each Prism object is conceptually a tree.
@@ -32,11 +32,11 @@ Each item has one or more values: container values, reference values or property
 See xref:/midpoint/devel/prism/data-structures/[Prism Data Structures] for more.
 Some items are strictly single-valued, others may contain multiple values.
 
-The resource objects are represented as xref:/midpoint/reference/resources/shadow/[Shadow objects] inside midPoint.
+The resource objects are represented as xref:/midpoint/reference/latest/resources/shadow/[Shadow objects] inside midPoint.
 Remote attributes of interests are stored in a single-valued container called `attributes`.
 You can either query Shadow objects, which is a query against the repository, or you can query remote resource objects.
 But resources generally don't understand midPoint Query language, and the query must be translated.
-For instance, when a xref:/midpoint/reference/resources/connid/[ConnId Connector] is used, the Query is translated for the ConnId framework.
+For instance, when a xref:/midpoint/reference/latest/resources/connid/[ConnId Connector] is used, the Query is translated for the ConnId framework.
 Limitations are mentioned in this document later.
 
 == Queries
@@ -46,7 +46,7 @@ container values, or even references - which affects the form of the query resul
 You can also query various subsystems - like repository or provisioning.
 It is possible to narrow down your search with various filters.
 And this all can be specified using various representations, like
-xref:/midpoint/reference/concepts/query/axiom-query-language[Axiom query language] or XML.
+xref:/midpoint/reference/latest/concepts/query/axiom-query-language[Axiom query language] or XML.
 
 To start with an example, here is a simple filter in two very distinct forms:
 
@@ -108,7 +108,7 @@ many thousands of such container values in total.
 We don't want these values, we don't want to load them from the repository and process them to filter them out.
 
 * Also, some containers are standalone and have no parent objects ("owner").
-This is the case of xref:/midpoint/reference/security/audit/[audit records].
+This is the case of xref:/midpoint/reference/latest/security/audit/[audit records].
 
 Reference queries were introduced for similar reasons.
 References can be directly filtered based on the target and/or owner criteria.
@@ -141,11 +141,11 @@ Query can be represented in multiple ways and formats:
 * Many configuration objects contain queries or filters in many places.
 These are typically written in the same format as the object, for instance XML.
 * Some places (advanced GUI filters or query playground mentioned below) allow input in various serialization formats, e.g. XML, YAML or JSON.
-* Filters can be also written in xref:/midpoint/reference/concepts/query/axiom-query-language[Axiom query language]
+* Filters can be also written in xref:/midpoint/reference/latest/concepts/query/axiom-query-language[Axiom query language]
 which can be used on GUI or embedded in other filters via `text` element.
 * Finally, filters and queries can be written using fluent Java-based API, which is useful not only for
-hard-core customizations (e.g. with xref:/midpoint/reference/deployment/maven-overlay-project.adoc[midPoint Overlay] mechanism)
-but also for xref:/midpoint/reference/expressions/expressions/script/[script expressions] written typically in Groovy language.
+hard-core customizations (e.g. with xref:/midpoint/reference/latest/deployment/maven-overlay-project.adoc[midPoint Overlay] mechanism)
+but also for xref:/midpoint/reference/latest/expressions/expressions/script/[script expressions] written typically in Groovy language.
 
 [IMPORTANT]
 Axiom query language is experimentally available since 4.3 and fully supported since 4.5.
@@ -303,7 +303,7 @@ Multi-value items can have various limitations for some operations depending on 
 * A right-side *constant value(s)* or *item path*, used as the other operand for the filter operation.
 Item path on the right side has a limited support only for repository engine.
 
-* Optionally, a xref:/midpoint/reference/concepts/matching-rules/[matching rule].
+* Optionally, a xref:/midpoint/reference/latest/concepts/matching-rules/[matching rule].
 
 // ==== Item paths in filters
 // TODO
@@ -619,7 +619,7 @@ owns (the one pointing to *Org 1-1-1*) has different relation.
 ==== Full-text filter
 
 [NOTE]
-Full-text search must be enabled in the system, see xref:/midpoint/reference/repository/full-text-search.adoc[this document] for more information.
+Full-text search must be enabled in the system, see xref:/midpoint/reference/latest/repository/full-text-search.adoc[this document] for more information.
 
 Full-text filter is applied to the object itself; instead of item path, it uses an internal full-text index.
 The object matches the filter if all the "words" provided as a single string value.
@@ -631,7 +631,7 @@ If "any" semantics is needed, use multiple full-text filters inside an OR filter
 
 ==== Notes about value filters in repository queries
 
-The following notes are based on the xref:/midpoint/reference/repository/native-postgresql/[Native PostgreSQL repository] implementation.
+The following notes are based on the xref:/midpoint/reference/latest/repository/native-postgresql/[Native PostgreSQL repository] implementation.
 
 Repository engine is probably used most for the queries in midPoint, repository also provides the richest filtering support.
 But there are some inherent limitations:
@@ -655,7 +655,7 @@ depending on the type of the stored item.
 Text, numeric and date-time properties support all the operations.
 Enumerations do not support comparison operations, because the meaning is unclear, but EQ works as expected.
 Multi-value poly-strings currently (4.4+) support only EQ operation.
-Check also xref:/midpoint/reference/schema/custom-schema-extension/#data-types-supported[supported data types for extensions]
+Check also xref:/midpoint/reference/latest/schema/custom-schema-extension/#data-types-supported[supported data types for extensions]
 for more information.
 
 === Complex filters
@@ -1311,7 +1311,7 @@ However, this is meaningless, because the same conditions can be applied directl
 ++++
 
 [IMPORTANT]
-This filter is supported only for the xref:/midpoint/reference/repository/native-postgresql/[Native repository].
+This filter is supported only for the xref:/midpoint/reference/latest/repository/native-postgresql/[Native repository].
 
 .ReferencedBy filter reference
 [%autowidth]
@@ -2158,7 +2158,7 @@ Ordering objects by items inside multi-value container have unclear semantics an
 
 [IMPORTANT]
 ====
-* Reference query is only supported with the xref:/midpoint/reference/repository/native-postgresql/[Native repository].
+* Reference query is only supported with the xref:/midpoint/reference/latest/repository/native-postgresql/[Native repository].
 * As of 4.7, only `roleMembershipRef` and `linkRef` is searchable.
 ====
 
@@ -2430,7 +2430,7 @@ This is caused by `LEFT JOIN` used even when traversing to multi-value container
 E.g., filter on `assignment/targetRef` causes each object with multiple assignments to be returned multiple times.
 Using Exists filter (see later) does not fix this in the Generic repository either, as it also uses `LEFT JOIN` internally.
 
-The new xref:/midpoint/reference/repository/native-postgresql/[Native repository] does not suffer
+The new xref:/midpoint/reference/latest/repository/native-postgresql/[Native repository] does not suffer
 by these problems as it always uses SQL `EXISTS` when traversing to multi-value containers and also for Exists filter.
 Native repository actually *ignores distinct* if there is no `JOIN` in the final query, as the returned raws must be distinct.
 Native repository uses `LEFT JOIN` only to traverse across single-valued containers and references and their targets,
@@ -2472,4 +2472,4 @@ Using the expression requires proper imports - depending on the complexity of th
 may need additional imports from packages like `com.evolveum.midpoint.schema`,
 `com.evolveum.midpoint.prism.query` or others.
 
-// TODO mention extensions, xref:/midpoint/reference/schema/custom-schema-extension/
+// TODO mention extensions, xref:/midpoint/reference/latest/schema/custom-schema-extension/

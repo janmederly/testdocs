@@ -145,4 +145,4 @@ However, it may be the only feasible approach when XML normalization is used.
 
 == See Also
 
-* xref:/midpoint/reference/legacy/xpath2/[XPath2 Tutorial]
+* xref:/midpoint/reference/latest/legacy/xpath2/[XPath2 Tutorial]

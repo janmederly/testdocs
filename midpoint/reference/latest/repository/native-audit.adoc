@@ -30,10 +30,10 @@ Only if you don't care about either, you may safely ignore those sections.
 == Configuration overview
 
 SQL auditing is configured in `config.xml` inside
-xref:/midpoint/reference/deployment/midpoint-home-directory/[midPoint home directory],
+xref:/midpoint/reference/latest/deployment/midpoint-home-directory/[midPoint home directory],
 also known as `midpoint.home`.
 
-See xref:/midpoint/reference/security/audit/[Auditing] for more general information about auditing
+See xref:/midpoint/reference/latest/security/audit/[Auditing] for more general information about auditing
 and some other configuration options, not specific for the SQL trail implementation.
 
 SQL audit trail for the Native Repository is enabled in `audit` configuration element by
@@ -182,7 +182,7 @@ or in the distribution packages in the file `doc/config/sql/native-new/postgres-
 image::images/native-tables-audit.png[]
 
 `ma_audit_event` is the main table representing each audit event.
-See xref:/midpoint/reference/security/audit/#audit-record-structure[Audit record structure]
+See xref:/midpoint/reference/latest/security/audit/#audit-record-structure[Audit record structure]
 for detailed logical descritiption of the events.
 
 * Each record can have multiple deltas associated with it, these are stored in `ma_audit_delta`.
@@ -215,7 +215,7 @@ If you don't do this, audit events will be written normally, but non-unique IDs 
 To upgrade the audit database, run the provided `postgres-new-upgrade-audit.sql` anytime, it should be safe.
 It always runs only the missing parts of the upgrade process.
 Be sure you're running the upgrade script provided with the version you're actually using, see
-xref:/midpoint/reference/upgrade/database-schema-upgrade/#upgrading-native-postgresql-repository[database schema upgrade].
+xref:/midpoint/reference/latest/upgrade/database-schema-upgrade/#upgrading-native-postgresql-repository[database schema upgrade].
 
 You can find further details in the source code documentation for `apply_audit_change` procedure in the `postgres-new-audit.sql` script.
 
@@ -328,7 +328,7 @@ Just remember that this way you're changing the granularity for your data cleanu
 === Cleanup task vs partitions
 
 MidPoint already has one mechanism to clean up the audit tables - the precreated *Cleanup* task, executed once a day.
-The task consults the xref:/midpoint/reference/deployment/removing-obsolete-information/[Cleanup policy]
+The task consults the xref:/midpoint/reference/latest/deployment/removing-obsolete-information/[Cleanup policy]
 (part of ) to figure out what to delete.
 If you absolutely require something on day-to-day basis and the audit database can handle deletion
 of a day's work, you may stick to the Cleanup task.
@@ -378,7 +378,7 @@ element in the `cleanupPolicy` empty.
 == Audit migration from other database
 
 [NOTE]
-Audit migration is implemented in xref:/midpoint/reference/deployment/ninja[Ninja] since midPoint 4.4.1.
+Audit migration is implemented in xref:/midpoint/reference/latest/deployment/ninja[Ninja] since midPoint 4.4.1.
 
 If you plan to migrate audit records from the Generic repository, you need to make necessary
 preparations *before* you start using the new audit.
@@ -386,7 +386,7 @@ It is possible to perform the migration later, but it is important to be prepare
 
 === Preparing the new audit database for migration
 
-This is part of the xref:/midpoint/reference/repository/native-postgresql/migration/[Migration to Native PostgreSQL Repository],
+This is part of the xref:/midpoint/reference/latest/repository/native-postgresql/migration/[Migration to Native PostgreSQL Repository],
 If you're not coming from that guide, please, check it now to put these steps in the context of the whole process.
 
 As described in the section about link:#audit-tables[audit tables], Native SQL audit uses
@@ -431,14 +431,14 @@ Don't forget to prepare partitions into the future for production, but also for 
 
 === Executing the migration
 
-Audit migration is performed using the xref:/midpoint/reference/deployment/ninja[Ninja] tool.
+Audit migration is performed using the xref:/midpoint/reference/latest/deployment/ninja[Ninja] tool.
 It does not require the old MidPoint running, it is actually better when it does not.
 That's why it is better to migrate audit data after the objects are migrated already and the new upgraded MidPoint is up and running.
 
 To export the old audit you need the following:
 
 * The old audit database must be accessible by Ninja; JDBC connection is used.
-* xref:/midpoint/reference/deployment/midpoint-home-directory/[MidPoint home directory] with `config.xml` is available.
+* xref:/midpoint/reference/latest/deployment/midpoint-home-directory/[MidPoint home directory] with `config.xml` is available.
 The configuration file is essential, but other parts of MidPoint home are important too - especially the extension schema files.
 
 Now it is time to decide whether you want to export/import the whole audit at once, or do it in smaller slices.
@@ -462,7 +462,7 @@ MIDPOINT_HOME='/var/old-mp-home' bin/ninja.sh -v exportAudit -z -O audit-export.
 ----
 
 [NOTE]
-If you use unbundled JDBC driver, check xref:/midpoint/reference/deployment/ninja[Ninja documentation] how to specify the JDBC JAR.
+If you use unbundled JDBC driver, check xref:/midpoint/reference/latest/deployment/ninja[Ninja documentation] how to specify the JDBC JAR.
 
 You can also use filter to export only some audit events, typically by their timestamp.
 Following example uses Axiom language filter preceded by `%` (different parameter escaping may be needed if you don't use `bash`):
@@ -610,9 +610,9 @@ Custom columns is configured in three steps:
 
 . Creating the `TEXT` columns in `ma_audit_event` table in the database using SQL command.
 
-. Adding the configuration for each custom column to `config.xml` file in the xref:/midpoint/reference/deployment/midpoint-home-directory/[midPoint home directory].
+. Adding the configuration for each custom column to `config.xml` file in the xref:/midpoint/reference/latest/deployment/midpoint-home-directory/[midPoint home directory].
 
-. Adding the configuration how the audit event record property is created to the xref:/midpoint/reference/concepts/system-configuration-object/[system configuration object].
+. Adding the configuration how the audit event record property is created to the xref:/midpoint/reference/latest/concepts/system-configuration-object/[system configuration object].
 
 .1. Creating the column in `ma_audit_event`:
 [source,sql]
@@ -662,7 +662,7 @@ Just add the following line inside the `auditService` element:
 This creates the missing column, but it *does not create the index*.
 It can be useful in experimental environments, but definitely not recommended for production ones, including UAT, etc.
 
-.3. Setting up the custom property initialization - modify the xref:/midpoint/reference/concepts/system-configuration-object/[system configuration object]:
+.3. Setting up the custom property initialization - modify the xref:/midpoint/reference/latest/concepts/system-configuration-object/[system configuration object]:
 [source,xml]
 ----
 <systemConfiguration>
@@ -768,9 +768,9 @@ although the default settings do release unused physical connections.
 
 * xref:../native-postgresql/[Native PostgreSQL Repository]
 * xref:../generic/[Old Generic Repository]
-* xref:/midpoint/reference/deployment/clustering-ha/[Clustering / high availability setup]
-* xref:/midpoint/reference/repository/native-postgresql/migration/[Migration to Native PostgreSQL Repository]
-* xref:/midpoint/reference/tasks/task-manager/configuration/[Task Manager Configuration]
+* xref:/midpoint/reference/latest/deployment/clustering-ha/[Clustering / high availability setup]
+* xref:/midpoint/reference/latest/repository/native-postgresql/migration/[Migration to Native PostgreSQL Repository]
+* xref:/midpoint/reference/latest/tasks/task-manager/configuration/[Task Manager Configuration]
 
 == External links
 

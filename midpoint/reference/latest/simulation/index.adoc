@@ -22,7 +22,7 @@ Let us describe these concepts in more details.
 
 == Persistent-Effects vs Simulation Execution Mode
 
-Any xref:/midpoint/reference/tasks/activities/[activity] in midPoint can execute in two basic modes: _persistent-effects_ or _simulation_.
+Any xref:/midpoint/reference/latest/tasks/activities/[activity] in midPoint can execute in two basic modes: _persistent-effects_ or _simulation_.
 
 === Persistent-Effects Mode
 
@@ -31,7 +31,7 @@ All such changes are also recorded in the system audit log.
 
 [NOTE]
 ====
-There are some specialties like postponing resource operations either because of the resource unavailability (planned - see xref:/midpoint/reference/resources/maintenance-state/[maintenance mode] - or unplanned), or because of xref:/midpoint/reference/resources/propagation/[provisioning propagation].
+There are some specialties like postponing resource operations either because of the resource unavailability (planned - see xref:/midpoint/reference/latest/resources/maintenance-state/[maintenance mode] - or unplanned), or because of xref:/midpoint/reference/latest/resources/propagation/[provisioning propagation].
 But none of these contradict the basic idea that all computed operations are going to be (eventually) applied.
 ====
 
@@ -49,7 +49,7 @@ We are looking for a better one.
 Here, no actions that could have persistent externally visible effects are executed.
 Accordingly, nothing is written to the system audit log.
 
-The changes are computed, just like in <<Persistent-Effects Mode>>, but instead of their application, they are written to so-called xref:/midpoint/reference/simulation/results/[simulation result].
+The changes are computed, just like in <<Persistent-Effects Mode>>, but instead of their application, they are written to so-called xref:/midpoint/reference/latest/simulation/results/[simulation result].
 It is a special kind of object in the midPoint repository, collecting both statistical and detailed information about changes that would be applied.
 
 == Production vs Development Configuration
@@ -179,7 +179,7 @@ But when running a simulation using the development configuration, the users are
 
 This section presents a couple of typical simulation-related scenarios.
 
-NOTE: Please see the xref:/midpoint/reference/simulation/tutorial/[tutorial] where these scenarios are shown in more detail.
+NOTE: Please see the xref:/midpoint/reference/latest/simulation/tutorial/[tutorial] where these scenarios are shown in more detail.
 
 === Introduction of a New Resource Configuration
 
@@ -219,7 +219,7 @@ For more information, please see xref:../admin-gui/simulations.adoc#_running_the
 
 === Running the Simulation on Background
 
-The simulations are typically executed in background tasks that host individual xref:/midpoint/reference/tasks/activities/[activities].
+The simulations are typically executed in background tasks that host individual xref:/midpoint/reference/latest/tasks/activities/[activities].
 There are three aspects that can be defined:
 
 ==== Execution Mode
@@ -240,11 +240,11 @@ Those changes are related to shadow _classification_, i.e., determining its kind
 In modes 1 and 2, such changes are applied automatically because they have no visible effects on the identity data.
 However, we may preview even those changes to make the development of classification and correlation configuration easier.
 This is xref:/midpoint/versioning/experimental/[experimental functionality].
-Please see the xref:/midpoint/reference/simulation/tutorial/[tutorial] for an example.
+Please see the xref:/midpoint/reference/latest/simulation/tutorial/[tutorial] for an example.
 
 This configuration is driven by the `execution/mode` parameter in the activity definition.
 
-For more information, please see the xref:/midpoint/reference/tasks/activities/execution-mode.adoc[activity execution mode specification].
+For more information, please see the xref:/midpoint/reference/latest/tasks/activities/execution-mode.adoc[activity execution mode specification].
 
 ==== Configuration Used
 
@@ -253,7 +253,7 @@ An activity can execute against <<Production Configuration>> or <<Development Co
 
 This configuration is driven by `execution/configurationToUse` parameter in the activity definition.
 
-For more information, please see xref:/midpoint/reference/tasks/activities/execution-mode.adoc[activity execution mode specification].
+For more information, please see xref:/midpoint/reference/latest/tasks/activities/execution-mode.adoc[activity execution mode specification].
 
 ==== Simulation Result
 
@@ -262,7 +262,7 @@ Furthermore, there are various options connected with the result itself, such as
 
 This configuration is driven by the `reporting/simulationResult` parameter in the activity definition.
 
-For more information, please see <<Configuring Simulation Results>> and xref:/midpoint/reference/tasks/activities/reporting/simulation-result.adoc[activity simulation result definition].
+For more information, please see <<Configuring Simulation Results>> and xref:/midpoint/reference/latest/tasks/activities/reporting/simulation-result.adoc[activity simulation result definition].
 
 ==== An Example
 
@@ -316,7 +316,7 @@ Please see xref:results/definition.adoc[] for more information.
 
 === Reporting
 
-Simulation results can be displayed interactively via the midPoint GUI, or their content can be exported using the xref:/midpoint/reference/misc/reports/configuration/[reporting] functionality.
+Simulation results can be displayed interactively via the midPoint GUI, or their content can be exported using the xref:/midpoint/reference/latest/misc/reports/configuration/[reporting] functionality.
 
 There are the following built-in simulation reports.
 
@@ -375,7 +375,7 @@ For shadow management simulation, only synchronization activities (import, recon
 
 When implementing the simulation feature in midPoint 4.7, we chose the following architectural approach:
 
-_Simulated actions are executed using the same xref:/midpoint/reference/concepts/clockwork/clockwork-and-projector/[clockwork] as persistent-effect ones.
+_Simulated actions are executed using the same xref:/midpoint/reference/latest/concepts/clockwork/clockwork-and-projector/[clockwork] as persistent-effect ones.
 The main difference is present when computed operations are to be executed:
 While operations in persistent-effects mode are sent for real execution and audit, those in simulation mode are simply recorded without being executed._
 
@@ -395,7 +395,7 @@ Note that calling methods like `midpoint.addObject`, `midpoint.modifyObject`, or
 The majority of `midpoint.*` functions is safe, except for `midpoint.executeAdHocProvisioningScript`, `midpoint.addRecomputeTrigger`.
 When in doubt, please inspect the method's code.
 
-. xref:/midpoint/reference/expressions/expressions/index.adoc#_create_on_demand[Create-on-demand] scenarios are supported in a very limited way:
+. xref:/midpoint/reference/latest/expressions/expressions/index.adoc#_create_on_demand[Create-on-demand] scenarios are supported in a very limited way:
 The creation of missing assignment target objects is simulated but not remembered across boundaries represented by the processing of individual source items.
 +
 For example, let us assume that there is an import from HR with a department object (referenced by an account attribute) that is created if it does not exist.

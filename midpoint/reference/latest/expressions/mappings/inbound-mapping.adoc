@@ -12,13 +12,13 @@
 
 == Introduction
 
-Inbound mapping is a xref:/midpoint/reference/expressions/mappings/[mapping] that transforms data from a xref:/midpoint/reference/schema/focus-and-projections/[projection] (e.g. an account) on the resource side to a xref:/midpoint/reference/schema/focus-and-projections/[focal object] (e.g. a user) on the midPoint side.
+Inbound mapping is a xref:/midpoint/reference/latest/expressions/mappings/[mapping] that transforms data from a xref:/midpoint/reference/latest/schema/focus-and-projections/[projection] (e.g. an account) on the resource side to a xref:/midpoint/reference/latest/schema/focus-and-projections/[focal object] (e.g. a user) on the midPoint side.
 Therefore it maps data in the direction which points _into_ midPoint.
 Hence _inbound_ mapping.
 Inbound mappings are usually used to copy and transform data from authoritative sources to midPoint.
 E.g. inbound mappings are often used to populate new user object with data from HR system.
 
-Please see the xref:/midpoint/reference/synchronization/introduction/[Synchronization] page for a generic description of the synchronization process and the specific place where inbound mappings are used.
+Please see the xref:/midpoint/reference/latest/synchronization/introduction/[Synchronization] page for a generic description of the synchronization process and the specific place where inbound mappings are used.
 
 
 == Input
@@ -211,7 +211,7 @@ This is more efficient, because it does not require `getObject`  repository call
 Inbound mappings have their range - as all the mappings have.
 Range is a set of possible values that a mapping can produce.
 This is an important tool to control which values are to be replaced by the mapping - or better to say, which values should be replaced.
-See xref:/midpoint/reference/expressions/mappings/[] page for the details.
+See xref:/midpoint/reference/latest/expressions/mappings/[] page for the details.
 
 Inbound mappings in midPoint 3.x were still a bit simplistic.
 At that time midPoint supported mostly mappings of single-value properties.
@@ -267,7 +267,7 @@ For example, midPoint 3.x behavior for assignment mappings could be enabled by s
     </inbound>
 ----
 
-See xref:/midpoint/reference/expressions/mappings/[] page for a detailed discussion of mapping ranges.
+See xref:/midpoint/reference/latest/expressions/mappings/[] page for a detailed discussion of mapping ranges.
 
 [TIP]
 .Motivation
@@ -275,7 +275,7 @@ See xref:/midpoint/reference/expressions/mappings/[] page for a detailed discuss
 The concept of range is not needed that often in other mappings.
 But it makes a lot of issues in inbound mappings.
 The reason for that is that inbound mappings are somehow different.
-They are not completely xref:/midpoint/reference/concepts/relativity/[relativistic].
+They are not completely xref:/midpoint/reference/latest/concepts/relativity/[relativistic].
 
 Typical midPoint mapping is working with a xref:/midpoint/devel/prism/concepts/deltas/[deltas]. The mapping knows what was changed and the mapping takes a full advantage of that.
 Therefore it will normally not change the things that should not be changed.
@@ -296,8 +296,8 @@ Fortunately, such feature is planned: xref:/midpoint/features/planned/data-prove
 
 == See Also
 
-* xref:/midpoint/reference/expressions/mappings/[Mapping]
+* xref:/midpoint/reference/latest/expressions/mappings/[Mapping]
 
-* xref:/midpoint/reference/expressions/mappings/outbound-mapping/[Outbound Mapping]
+* xref:/midpoint/reference/latest/expressions/mappings/outbound-mapping/[Outbound Mapping]
 
-* xref:/midpoint/reference/synchronization/introduction/[Synchronization]
+* xref:/midpoint/reference/latest/synchronization/introduction/[Synchronization]

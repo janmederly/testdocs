@@ -8,7 +8,7 @@
 :page-since: "4.3"
 :page-toc: top
 :page-keywords: task, error, failure, error handling, error recovery
-:page-moved-from: /midpoint/reference/synchronization/live-sync-error-handling-strategy/
+:page-moved-from: /midpoint/reference/latest/synchronization/live-sync-error-handling-strategy/
 
 == Overview
 
@@ -102,7 +102,7 @@ combined with failed object selector, and tries to process them. The errors occu
 this task can be later handled again.
 
 NOTE: For midPoint 4.4 please have look at
-xref:/midpoint/reference/tasks/activities/object-set-specification/#_failed_objects_selector[failed objects selector]
+xref:/midpoint/reference/latest/tasks/activities/object-set-specification/#_failed_objects_selector[failed objects selector]
 in object set specification.
 
 === Triggers

@@ -32,7 +32,7 @@ _Thresholds_ were configured in quite a complex way.
 === New Task Definition Style
 
 Starting from 4.4, the definition of the work and its various execution aspects is concentrated
-in a single place: xref:/midpoint/reference/tasks/activities/#configuring-the-activities[the `<activity>` item].
+in a single place: xref:/midpoint/reference/latest/tasks/activities/#configuring-the-activities[the `<activity>` item].
 
 === Support of the Legacy Task Definition Style
 

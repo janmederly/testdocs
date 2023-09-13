@@ -88,7 +88,7 @@ After confirmation, specified default roles are assigned to the user.
 [WARNING]
 .Deprecated From MidPoint 4.1 and will be removed in 4.5
 ====
-Configuration attribute '_securityPolicy/authentication/mailAuthentication_' is deprecated. Please use _xref:/midpoint/reference/security/authentication/flexible-authentication/configuration/[Flexible Authentication]_ for configuration of authentication sequence for self registration and set name of authentication sequence to _additionalAuthenticationName_.
+Configuration attribute '_securityPolicy/authentication/mailAuthentication_' is deprecated. Please use _xref:/midpoint/reference/latest/security/authentication/flexible-authentication/configuration/[Flexible Authentication]_ for configuration of authentication sequence for self registration and set name of authentication sequence to _additionalAuthenticationName_.
 ====
 
 
@@ -167,7 +167,7 @@ As an example let's see on the use case when the user is created by the administ
 [WARNING]
 .Deprecated From MidPoint 4.1 and will be removed in 4.5
 ====
-Configuration attribute '_securityPolicy/authentication/mailAuthentication_' is deprecated. Please use _xref:/midpoint/reference/security/authentication/flexible-authentication/configuration/[Flexible Authentication]_.
+Configuration attribute '_securityPolicy/authentication/mailAuthentication_' is deprecated. Please use _xref:/midpoint/reference/latest/security/authentication/flexible-authentication/configuration/[Flexible Authentication]_.
 ====
 
 [source, xml]
@@ -240,7 +240,7 @@ Max age is the time how long is the nonce valid and valuePolicyRef is reference 
 == Self-Registration And Custom Form
 
 It is possible to define a custom form for self-registration process.
-With introducing xref:/midpoint/reference/admin-gui/custom-forms/[custom forms] in midPoint they can be also used with the self-registration.
+With introducing xref:/midpoint/reference/latest/admin-gui/custom-forms/[custom forms] in midPoint they can be also used with the self-registration.
 All what is needed is to reference to the concrete form in the self-registration configuration as in the example below
 
 .Self registration with custom form
@@ -378,7 +378,7 @@ Configuration looks as follows:
 The important setting for the notifier is attribute <confirmationMethod>.
 According to the value for the confirmation method, confirmation link/pin is generated to verify user.
 Other parts of configuration are same as for other notifiers.
-Details for notification configuration are described xref:/midpoint/reference/misc/notifications/configuration/[here].
+Details for notification configuration are described xref:/midpoint/reference/latest/misc/notifications/configuration/[here].
 
 
 == How it works
@@ -416,6 +416,6 @@ image::confirmation-success.png[]
 
 == See also
 
-* xref:/midpoint/reference/admin-gui/custom-forms/[Custom Forms]
+* xref:/midpoint/reference/latest/admin-gui/custom-forms/[Custom Forms]
 
-* xref:/midpoint/reference/security/credentials/password-policy/[Password Policy]
+* xref:/midpoint/reference/latest/security/credentials/password-policy/[Password Policy]

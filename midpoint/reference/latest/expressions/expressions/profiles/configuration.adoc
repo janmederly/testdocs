@@ -22,12 +22,12 @@ If you are midPoint Platform subscriber and this feature is within the goals of 
 
 == Introduction
 
-See xref:/midpoint/reference/expressions/expressions/profiles/[Expression Profiles] page for a generic introduction to expression profile concepts.
+See xref:/midpoint/reference/latest/expressions/expressions/profiles/[Expression Profiles] page for a generic introduction to expression profile concepts.
 
 
 == Expression Profile Specification
 
-Expression profiles are defined in xref:/midpoint/reference/concepts/system-configuration-object/[system configuration]:
+Expression profiles are defined in xref:/midpoint/reference/latest/concepts/system-configuration-object/[system configuration]:
 
 [source,xml]
 ----
@@ -107,10 +107,10 @@ Therefore it is expected that this will be reusable.
 
 == Expression Profile Usage
 
-The primary usage pattern for expression profiles is in conjunction with xref:/midpoint/reference/schema/archetypes/[archetypes]. The idea is that archetype policy will identify expression profiles that should be applied to all the expression in archetyped objects.
+The primary usage pattern for expression profiles is in conjunction with xref:/midpoint/reference/latest/schema/archetypes/[archetypes]. The idea is that archetype policy will identify expression profiles that should be applied to all the expression in archetyped objects.
 However, this use is planned for the future and it is not yet supported in midPoint 4.0.
 
-Alternatively, expression profiles may be configured in defaultObjectPolicyConfiguration in xref:/midpoint/reference/concepts/system-configuration-object/[system configuration]:
+Alternatively, expression profiles may be configured in defaultObjectPolicyConfiguration in xref:/midpoint/reference/latest/concepts/system-configuration-object/[system configuration]:
 
 [source,xml]
 ----
@@ -148,7 +148,7 @@ Yet another dangerous thing is a dynamic invocation based on Java Reflection fra
 This may even be tightly integrated into some scripting languages.
 Therefore be very careful and analyse the situation properly.
 Do not rely on default configuration that comes with midPoint.
-This configuration is xref:/midpoint/reference/security/security-guide/[not meant to be completely secure].
+This configuration is xref:/midpoint/reference/latest/security/security-guide/[not meant to be completely secure].
 The setup may vary in various environments, some scripts need to be less poweful, some must be more poweful, some environments are more tolerant to risk and would prefer more flexibility while other environments will heavily constrain flexibility to eliminate the risk.
 One size does not fit all.
 
@@ -200,8 +200,8 @@ See xref:/midpoint/features/planned/expression-profiles/[Expression Profiles: Fu
 
 == See Also
 
-* xref:/midpoint/reference/expressions/expressions/profiles/[Expression Profiles]
+* xref:/midpoint/reference/latest/expressions/expressions/profiles/[Expression Profiles]
 
-* xref:/midpoint/reference/security/security-guide/[Security Guide]
+* xref:/midpoint/reference/latest/security/security-guide/[Security Guide]
 
 * xref:/midpoint/features/planned/expression-profiles/[Expression Profiles: Full Implementation]

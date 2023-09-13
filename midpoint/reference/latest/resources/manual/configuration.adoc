@@ -13,12 +13,12 @@
 
 == Introduction
 
-See xref:/midpoint/reference/resources/manual/[Manual Resource and ITSM Integration] for an introduction to the topic.
+See xref:/midpoint/reference/latest/resources/manual/[Manual Resource and ITSM Integration] for an introduction to the topic.
 
 == Pure Manual Resources
 
 Pure manual resources are configured as (almost) ordinary single-connector resources.
-Internal manual connector implementation or an xref:/midpoint/reference/resources/manual/itsm-plugin/[ITSM Plugin] should be used in place of an ordinary identity connector.
+Internal manual connector implementation or an xref:/midpoint/reference/latest/resources/manual/itsm-plugin/[ITSM Plugin] should be used in place of an ordinary identity connector.
 Following example shows the use of internal manual connector implementation:
 
 [source,xml]
@@ -62,7 +62,7 @@ Outbound mappings in this section will influence the values that will appear in 
 == Semi-Manual Resources
 
 Semi-manual resources are built on the combination of a manual connector and an ordinary connector.
-It is using the xref:/midpoint/reference/resources/multi-connector-resource/[multi-connector resource] mechanism.
+It is using the xref:/midpoint/reference/latest/resources/multi-connector-resource/[multi-connector resource] mechanism.
 The primary connector is the manual connector.
 The ordinary connector is configured as an additional connector.
 However, all the capabilities are disables - except for _read_ and _schema_ capabilities.
@@ -147,7 +147,7 @@ Also please note how the simulated activation capability is configured in the CS
 == Grace Period
 
 The basic principle of the manual and semi-manual connector operation is that midPoint remembers the deltas of operations in progress.
-The deltas are kept in the xref:/midpoint/reference/resources/shadow/[shadow objects]. When the operation is finished (case/ticket is closed) then the operation is applied to the cached values and the delta is not needed any more.
+The deltas are kept in the xref:/midpoint/reference/latest/resources/shadow/[shadow objects]. When the operation is finished (case/ticket is closed) then the operation is applied to the cached values and the delta is not needed any more.
 Therefore such deltas are deleted by default.
 However there are two cases when such deltas may be needed:
 
@@ -176,7 +176,7 @@ And if the changes are not already in the CSV then the reconciliation detects th
 == ITSM Plugin
 
 Both manual and semi-manual resources are often used with ITSM integration plugins.
-See xref:/midpoint/reference/resources/manual/itsm-plugin/[ITSM Plugin] page for more details.
+See xref:/midpoint/reference/latest/resources/manual/itsm-plugin/[ITSM Plugin] page for more details.
 
 == Refresh Task
 
@@ -202,7 +202,7 @@ Shadow refresh task will do that:
 
 The general principle is that all midPoint connectors must be able to read the data.
 But in the (pure) manual case there is no way to read the data from the resource.
-Therefore in that case midPoint relies on xref:/midpoint/reference/resources/attribute-caching/[attribute caching]. Which means that the pending delta corresponding to the closed ticket is applied to the data cached in the shadow.
+Therefore in that case midPoint relies on xref:/midpoint/reference/latest/resources/attribute-caching/[attribute caching]. Which means that the pending delta corresponding to the closed ticket is applied to the data cached in the shadow.
 That is how the resource attributes are supposed to look after the ticket is closed.
 And as the ticket was closed we assume that the operation was executed successfully.
 
@@ -221,8 +221,8 @@ Which means a new ticket will be created.
 
 == See Also
 
-* xref:/midpoint/reference/resources/manual/[Manual Resource and ITSM Integration]
+* xref:/midpoint/reference/latest/resources/manual/[Manual Resource and ITSM Integration]
 
-* xref:/midpoint/reference/resources/multi-connector-resource/[Multi-Connector Resource]
+* xref:/midpoint/reference/latest/resources/multi-connector-resource/[Multi-Connector Resource]
 
-* xref:/midpoint/reference/resources/manual/itsm-plugin/[ITSM Plugin]
+* xref:/midpoint/reference/latest/resources/manual/itsm-plugin/[ITSM Plugin]

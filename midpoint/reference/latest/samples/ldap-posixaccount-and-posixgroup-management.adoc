@@ -73,7 +73,7 @@ Creating midPoint role with "LDAP Unix Group Metarole" assigned will create new 
 In both cases, the name of the group (cn) will be set to the value of "identifier" role attribute.
 This means that "name" of the role can be anything, only "identifier" will be used for provisioning the group.
 
-The metaroles contain also xref:/midpoint/reference/roles-policies/metaroles/gensync/[higher order inducements] so that assigning the newly created roles to the users will create LDAP account and put it to the corresponding group.
+The metaroles contain also xref:/midpoint/reference/latest/roles-policies/metaroles/gensync/[higher order inducements] so that assigning the newly created roles to the users will create LDAP account and put it to the corresponding group.
 The "LDAP Unix Group Metarole" will additionally extend the LDAP account with "posixAccount" auxiliary object class (and its mandatory attributes).
 This means that we can have either standard LDAP accounts with standard group memberships, or extend the standard LDAP accounts with auxiliary objectClass "posixAccount" just by assigning a midPoint role which has "LDAP Unix Group Metarole" assigned! We can also reverse the operation and remove the auxiliary objectClass "posixAccount" (and all its attributes) from the account by unassigning the midPoint role which has "LDAP Unix Group Metarole" assigned.
 At any time, midPoint user has only one projection - LDAP account; just the objectClass and the attributes differ.
@@ -84,7 +84,7 @@ This means, the solution is perfectly managable; and the metaroles work as "role
 
 Another interesting feature is how the uidNumber and gidNumber attributes are generated when creating posixGroup object and posixAccount object in LDAP.
 These attributes are required and must be unique.
-So midPoint xref:/midpoint/reference/expressions/sequences/[Sequences] are used.
+So midPoint xref:/midpoint/reference/latest/expressions/sequences/[Sequences] are used.
 
 TODO more here with fragments?
 
@@ -223,7 +223,7 @@ The following sections describe scenarios prepared for this sample.
 
 . administrator saves the form
 
-. midPoint will generate unique GID number using xref:/midpoint/reference/expressions/sequences/[Sequences] and store it in role's `extension/gidNumber` attribute.
+. midPoint will generate unique GID number using xref:/midpoint/reference/latest/expressions/sequences/[Sequences] and store it in role's `extension/gidNumber` attribute.
 This is done in the metarole's focus mapping named "sequenceGID".
 
 . midPoint will create a new LDAP group in OpenLDAP:
@@ -291,7 +291,7 @@ So all you need is to do is create roles which will have projections - groupOfNa
 
 . administrator saves the form
 
-. midPoint will generate unique UID number using xref:/midpoint/reference/expressions/sequences/[Sequences] and store it in user's `extension/uidNumber` attribute.This is done in the metarole's focus mapping named "sequenceUID" in the higher order inducement (so it will apply to the User, not Role).
+. midPoint will generate unique UID number using xref:/midpoint/reference/latest/expressions/sequences/[Sequences] and store it in user's `extension/uidNumber` attribute.This is done in the metarole's focus mapping named "sequenceUID" in the higher order inducement (so it will apply to the User, not Role).
 
 . midPoint will create a new LDAP account in OpenLDAP if it does not exist yet and posixAccount auxiliary objectClass and its attribute will be computed: +
 
@@ -335,4 +335,4 @@ So all you need is to do is create roles which will have projections - posixGrou
 
 == See Also
 
-* xref:/midpoint/reference/samples/[Configuration Samples]
+* xref:/midpoint/reference/latest/samples/[Configuration Samples]

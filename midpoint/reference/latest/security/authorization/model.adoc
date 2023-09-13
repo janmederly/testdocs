@@ -80,14 +80,14 @@ Each individual created object also needs to pass through authorization for `add
 
 
 | http://midpoint.evolveum.com/xml/ns/public/security/authorization-model-3#assign
-| xref:/midpoint/reference/schema/focus-and-projections/[Focal object] that receives the assignment (e.g. a user)
+| xref:/midpoint/reference/latest/schema/focus-and-projections/[Focal object] that receives the assignment (e.g. a user)
 | Object which is the target of assignment (e.g. Role or Org)
 | Allows to create a new assignment (see note below)
 | Allows to invoke `executeChanges` operation with modify deltas for specified objects that add assignment to specified targets
 
 
 | http://midpoint.evolveum.com/xml/ns/public/security/authorization-model-3#unassign
-| xref:/midpoint/reference/schema/focus-and-projections/[Focal object] from which the assignment is removed (e.g. a user)
+| xref:/midpoint/reference/latest/schema/focus-and-projections/[Focal object] from which the assignment is removed (e.g. a user)
 | Object which is the target of assignment (e.g. Role or Org)
 | Allows to delete existing assignment (see note below)
 | Allows to invoke `executeChanges` operation with modify deltas for specified objects that add assignment to specified targets
@@ -96,7 +96,7 @@ Each individual created object also needs to pass through authorization for `add
 | http://midpoint.evolveum.com/xml/ns/public/security/authorization-model-3#executeScript
 | N/A
 | N/A
-| Allows to execute xref:/midpoint/reference/misc/bulk/[midPoint scripts a.k.a. bulk actions]
+| Allows to execute xref:/midpoint/reference/latest/misc/bulk/[midPoint scripts a.k.a. bulk actions]
 | Authorizes only the possibility to execute the scripts, not individual actions carried out by those scripts.
 footnote:[For example, if you want to create a set of users via a bulk action, you need both `#executeScript` and `#add` authorizations:
 The former to execute the bulk action at all, the latter to allow the bulk action to add the users.

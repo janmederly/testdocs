@@ -11,7 +11,7 @@ for recent changes. Please see a discussion on change token below.
 
 == Basic Configuration
 
-The heart of the configuration is the specification of what xref:/midpoint/reference/tasks/activities/resource-object-set-specification/[resource objects]
+The heart of the configuration is the specification of what xref:/midpoint/reference/latest/tasks/activities/resource-object-set-specification/[resource objects]
 we want to synchronize. The `resourceRef` is obligatory, all the other properties are optional. However, usually
 the object class is specified as well - either directly, or indirectly via the kind-intent pair. The `query` property
 of the object set specification is not applicable for Live synchronization tasks.
@@ -53,7 +53,7 @@ Not all resources are capable of providing unique tokens to individual change ev
 token value to all changes returned from given `sync()` call. This limits the ability to continue at exactly the position
 (in the change event stream) where the processing stopped in case of an error or a task suspension. The ability or inability
 of a resource to provide precise token values is described by the `preciseTokenValue` property of the `liveSync` capability.
-(See xref:/midpoint/reference/resources/resource-configuration/capabilities/[]).
+(See xref:/midpoint/reference/latest/resources/resource-configuration/capabilities/[]).
 
 Currently, e.g. LDAP connector does not generally support precise token values (it does so only in specific cases).
 DB Table or SQL Scripting connectors may be able to do that. That way or another, it is the responsibility of the connector
@@ -88,4 +88,4 @@ with `preciseTokenValue` = `true`, i.e. that it assigns sync tokens to individua
 
 The default behavior of Live synchronization activity is to _stop_ when an error is encountered.
 This is to ensure that no information is lost in such cases. This behavior can be changed via
-custom xref:/midpoint/reference/tasks/task-error-handling/[error handling specification].
+custom xref:/midpoint/reference/latest/tasks/task-error-handling/[error handling specification].

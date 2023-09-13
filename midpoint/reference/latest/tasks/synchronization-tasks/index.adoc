@@ -8,19 +8,19 @@
 :page-upkeep-status: orange
 
 Synchronization tasks are midPoint xref:/midpoint/architecture/concepts/task/[server tasks] that handle bulk
-xref:/midpoint/reference/synchronization/introduction/[synchronization] of midPoint objects.
+xref:/midpoint/reference/latest/synchronization/introduction/[synchronization] of midPoint objects.
 Synchronization tasks typically take care of scheduled user reconciliation or continuous live synchronization.
 But the tasks can be used in an ad-hoc manner to handle migration tasks such as initial user import
 or cleanup and administration tasks such as ad-hoc user recompute.
 
 [TIP]
 ====
-All the synchronization tasks are using the same xref:/midpoint/reference/synchronization/introduction/[synchronization mechanism].
-See the xref:/midpoint/reference/synchronization/introduction/[Synchronization] page for an introduction.
+All the synchronization tasks are using the same xref:/midpoint/reference/latest/synchronization/introduction/[synchronization mechanism].
+See the xref:/midpoint/reference/latest/synchronization/introduction/[Synchronization] page for an introduction.
 
-For all the synchronization tasks to work correctly the xref:/midpoint/reference/resources/resource-configuration/synchronization/[synchronization section]
-of xref:/midpoint/reference/resources/resource-configuration/[resource configuration] must be set up properly.
-See xref:/midpoint/reference/resources/resource-configuration/synchronization/[Synchronization Configuration] page for more details.
+For all the synchronization tasks to work correctly the xref:/midpoint/reference/latest/resources/resource-configuration/synchronization/[synchronization section]
+of xref:/midpoint/reference/latest/resources/resource-configuration/[resource configuration] must be set up properly.
+See xref:/midpoint/reference/latest/resources/resource-configuration/synchronization/[Synchronization Configuration] page for more details.
 ====
 
 == Synchronization Tasks
@@ -38,12 +38,12 @@ The synchronization task needs to know _what_ it has to process:
 * What _resource_ to synchronize.
 * What _objects_ on the resource to synchronize.
 These objects are specified using their
-xref:/midpoint/reference/resources/shadow/kind-intent-objectclass/['object class, kind, and intent']
-using xref:/midpoint/reference/tasks/activities/resource-object-set-specification/[these settings].
+xref:/midpoint/reference/latest/resources/shadow/kind-intent-objectclass/['object class, kind, and intent']
+using xref:/midpoint/reference/latest/tasks/activities/resource-object-set-specification/[these settings].
 
 === MidPoint 4.4 and After
 
-The resource objects are specified using xref:/midpoint/reference/tasks/activities/resource-object-set-specification/[`resourceObjects`]
+The resource objects are specified using xref:/midpoint/reference/latest/tasks/activities/resource-object-set-specification/[`resourceObjects`]
 part of the respective work definition.
 The following properties can be defined:
 
@@ -219,14 +219,14 @@ The synchronization will be running every 10 seconds.
 
 == See Also
 
-* xref:/midpoint/reference/synchronization/introduction/[Synchronization]
+* xref:/midpoint/reference/latest/synchronization/introduction/[Synchronization]
 
-* xref:/midpoint/reference/resources/resource-configuration/synchronization/[Synchronization Configuration]
+* xref:/midpoint/reference/latest/resources/resource-configuration/synchronization/[Synchronization Configuration]
 
 * xref:/midpoint/architecture/concepts/task/[Task]
 
-* xref:/midpoint/reference/tasks/activities/[Activities]
+* xref:/midpoint/reference/latest/tasks/activities/[Activities]
 
-* xref:/midpoint/reference/tasks/recompute-task/[Recompute Task]
+* xref:/midpoint/reference/latest/tasks/recompute-task/[Recompute Task]
 
 * xref:/connectors/connid/1.x/connector-development-guide/[Connector Development Guide - DiscoverySupport]

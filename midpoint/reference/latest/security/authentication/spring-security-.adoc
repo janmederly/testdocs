@@ -16,12 +16,12 @@
 ====
 This functionality requires modification of midPoint build, or even modification of midPoint source code.
 Therefore it is not officially supported - unless the support is explicitly negotiated in xref:/support/subscription-sponsoring/[subscription]. +
-This configuration is unsupported from version 4.1. For the solution to this problem see xref:/midpoint/reference/security/authentication/flexible-authentication/[Flexible Authentication] and xref:/midpoint/reference/security/authentication/flexible-authentication/configuration/[Flexible Authentication Configuration].
+This configuration is unsupported from version 4.1. For the solution to this problem see xref:/midpoint/reference/latest/security/authentication/flexible-authentication/[Flexible Authentication] and xref:/midpoint/reference/latest/security/authentication/flexible-authentication/configuration/[Flexible Authentication Configuration].
 ====
 
 midPoint provides different types of authentication mechanisms.
 You can use default authentication (against local midPoint DB) or LDAP (AD) authentication.
-It can be also configured as a part of your xref:/midpoint/reference/legacy/sso/[SSO] solution.
+It can be also configured as a part of your xref:/midpoint/reference/latest/legacy/sso/[SSO] solution.
 Default authentication mechanism uses midPoint database for authentication and no additional configuration is needed.
 
 midPoint uses link:http://projects.spring.io/spring-security/[Spring Security framework] for authentication.
@@ -109,7 +109,7 @@ In this case "cas" profile needs to be activated using comand-line option:
 
 midPoint provides different types of authentication mechanisms.
 You can use default authentication (against local midPoint DB) or LDAP (AD) authentication.
-It can be also configured as a part of your xref:/midpoint/reference/legacy/sso/[SSO] solution.
+It can be also configured as a part of your xref:/midpoint/reference/latest/legacy/sso/[SSO] solution.
 Default authentication mechanism uses midPoint database for authentication and no additional configuration is needed.
 
 
@@ -122,7 +122,7 @@ In this configuration file you can also find configuration for properties placeh
 The reference to the properties file needs to be change here.
 
 * ctx-web-security.xml - configuration for spring security initialisation, e.g. filters for URLs, default login/logout page configuration etc.
-Unless midPoint is a part of a xref:/midpoint/reference/legacy/sso/midpoint-as-cas-client-java-jasig-cas-client-libraries-/[CAS SSO solution], no modifications are needed to this file.
+Unless midPoint is a part of a xref:/midpoint/reference/latest/legacy/sso/midpoint-as-cas-client-java-jasig-cas-client-libraries-/[CAS SSO solution], no modifications are needed to this file.
 
 * ctx-web-security-basic.xml - configuration for authentication against (local) midPoint database.
 
@@ -154,6 +154,6 @@ Then, in the midpoint-config.properties set up the concrete values, e.g. the hos
 
 == See also
 
-* xref:/midpoint/reference/legacy/sso/midpoint-as-cas-client-apache-cas-agent-method-/[MidPoint as CAS Client (Apache CAS Agent Method)]
+* xref:/midpoint/reference/latest/legacy/sso/midpoint-as-cas-client-apache-cas-agent-method-/[MidPoint as CAS Client (Apache CAS Agent Method)]
 
-* xref:/midpoint/reference/legacy/sso/midpoint-as-cas-client-java-jasig-cas-client-libraries-/[MidPoint as CAS Client (Java Jasig CAS Client libraries)]
+* xref:/midpoint/reference/latest/legacy/sso/midpoint-as-cas-client-java-jasig-cas-client-libraries-/[MidPoint as CAS Client (Java Jasig CAS Client libraries)]

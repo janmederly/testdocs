@@ -171,7 +171,7 @@ use #selfRequestAssignments instead
 |
 
 | http://midpoint.evolveum.com/xml/ns/public/security/authorization-ui-3#usersView
-| Showing menu items for xref:/midpoint/reference/admin-gui/collections-views/[views] that are configured for users.
+| Showing menu items for xref:/midpoint/reference/latest/admin-gui/collections-views/[views] that are configured for users.
 |
 
 | http://midpoint.evolveum.com/xml/ns/public/security/authorization-ui-3#userHistory
@@ -259,7 +259,7 @@ use #selfRequestAssignments instead
 |
 
 | http://midpoint.evolveum.com/xml/ns/public/security/authorization-ui-3#rolesView
-| Showing menu items for xref:/midpoint/reference/admin-gui/collections-views/[views] that are configured for roles.
+| Showing menu items for xref:/midpoint/reference/latest/admin-gui/collections-views/[views] that are configured for roles.
 | Since 4.0.1
 
 | http://midpoint.evolveum.com/xml/ns/public/security/authorization-ui-3#roleHistory
@@ -390,7 +390,7 @@ use #selfRequestAssignments instead
 |
 
 | http://midpoint.evolveum.com/xml/ns/public/security/authorization-ui-3#casesView
-| Showing menu items for xref:/midpoint/reference/admin-gui/collections-views/[views] that are configured for cases.
+| Showing menu items for xref:/midpoint/reference/latest/admin-gui/collections-views/[views] that are configured for cases.
 |
 
 |===
@@ -533,13 +533,13 @@ use #selfRequestAssignments instead
 
 == Access certification actions
 
-Please see xref:/midpoint/reference/roles-policies/certification/authorization/[Access Certification Security] for detailed list.
+Please see xref:/midpoint/reference/latest/roles-policies/certification/authorization/[Access Certification Security] for detailed list.
 
 == Focal object tabs authorizations
 
 Display of object detail tabs is *not* controlled by authorizations.
-xref:/midpoint/reference/admin-gui/admin-gui-config/[Admin GUI Configuration] is used to control this behavior.
+xref:/midpoint/reference/latest/admin-gui/admin-gui-config/[Admin GUI Configuration] is used to control this behavior.
 
 == See also:
 
-* xref:/midpoint/reference/admin-gui/admin-gui-config/[Admin GUI Configuration]
+* xref:/midpoint/reference/latest/admin-gui/admin-gui-config/[Admin GUI Configuration]

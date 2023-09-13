@@ -46,8 +46,8 @@ Therefore an external SQL database is usually needed for most midPoint deploymen
 
 Most of midPoint configuration is stored in the database.
 However for obvious reasons the database configuration needs to be outside the database.
-It is stored in the `config.xml` file in xref:/midpoint/reference/deployment/midpoint-home-directory/[midPoint home directory].
-The xref:/midpoint/reference/repository/configuration/[Repository Configuration] page describes the configuration of database access.
+It is stored in the `config.xml` file in xref:/midpoint/reference/latest/deployment/midpoint-home-directory/[midPoint home directory].
+The xref:/midpoint/reference/latest/repository/configuration/[Repository Configuration] page describes the configuration of database access.
 
 == Connectors
 
@@ -63,7 +63,7 @@ Such connectors may be used inside midPoint by deploying them directly to midPoi
 This is the usual case.
 Some of the frequently-used connectors are also bundled directly with midPoint to ease the deployment process.
 MidPoint has the ability to use several versions of the same connector at once which is useful for slowly testing and rolling out new connector versions.
-See xref:/midpoint/reference/upgrade/connectors/[Connector Upgrade] page for more details.
+See xref:/midpoint/reference/latest/upgrade/connectors/[Connector Upgrade] page for more details.
 
 
 === Remote Connector Server
@@ -116,7 +116,7 @@ TODO
 
 TODO
 
-See also xref:/midpoint/reference/security/crypto/#keystore[here].
+See also xref:/midpoint/reference/latest/security/crypto/#keystore[here].
 
 == Recommendations
 

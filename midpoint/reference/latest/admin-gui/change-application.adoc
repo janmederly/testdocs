@@ -15,7 +15,7 @@ The following changes are applied in this way:
 
 [NOTE]
 ====
-Time-based activations (`validFrom`/`validTo` in users, roles, or assignments) are supported via xref:/midpoint/reference/tasks/specific/focus-validity-scan/[Validity Scanner] task which updates these objects.
+Time-based activations (`validFrom`/`validTo` in users, roles, or assignments) are supported via xref:/midpoint/reference/latest/tasks/specific/focus-validity-scan/[Validity Scanner] task which updates these objects.
 Therefore, time-based activations are not applied immediately on the `validFrom` or `validTo` time, but during the next run of *Validity Scanner*, which runs every 15 minutes by default.
 ====
 

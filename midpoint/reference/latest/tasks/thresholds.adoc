@@ -113,7 +113,7 @@ In this case the action will be applied up until the task reaches the threshold.
 
 === 4.4 and After
 
-In 4.4 we can use the xref:/midpoint/reference/tasks/activities/[activities] to configure
+In 4.4 we can use the xref:/midpoint/reference/latest/tasks/activities/[activities] to configure
 simulation (now called `preview`) and execution stages.
 
 The selection of execution mode is done by setting `executionMode` configuration property.
@@ -216,7 +216,7 @@ tailoring:
 
 == See Also
 
-* xref:/midpoint/reference/roles-policies/policy-rules/[Policy Rules]
+* xref:/midpoint/reference/latest/roles-policies/policy-rules/[Policy Rules]
 
 * xref:/midpoint/architecture/concepts/task/[Task]
 

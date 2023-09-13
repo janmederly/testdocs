@@ -99,7 +99,7 @@ But the backward compatibility is fully ensured: the old way of specifying actio
 | unassign
 | Removes assignment(s) from object(s).
 
-| xref:/midpoint/reference/misc/bulk/actions/recompute/[recompute]
+| xref:/midpoint/reference/latest/misc/bulk/actions/recompute/[recompute]
 | Recomputes object(s) (or schedules the recomputation to the future).
 
 | execute

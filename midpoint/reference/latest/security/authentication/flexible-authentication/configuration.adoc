@@ -104,7 +104,7 @@ Let's say it is GUI for this example, so request is redirect to users page in GU
 
 == Basic configuration
 
-Flexible authentication is configured in xref:/midpoint/reference/security/security-policy[Security Policy]. Security policy can be defined on different levels.
+Flexible authentication is configured in xref:/midpoint/reference/latest/security/security-policy[Security Policy]. Security policy can be defined on different levels.
 There is a global level, when the security policy is defined in System Configuration.
 Since midPoint 4.7 it is also possible to define security policies for organization unit and archetype.
 All security policies applicable for the user are merged together.
@@ -1675,4 +1675,4 @@ Please see xref:/midpoint/features/planned/flexible-authentication/[Flexible Aut
 
 * xref:..[Flexible Authentication]
 
-* xref:/midpoint/reference/security/security-policy[Security Policy Configuration]
+* xref:/midpoint/reference/latest/security/security-policy[Security Policy Configuration]

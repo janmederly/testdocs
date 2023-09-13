@@ -13,7 +13,7 @@
 There is a difference between connector and resource in midPoint.
 Connector is a piece of code that is used to connect to a particular class of systems (e.g. "any LDAP server"). Resource is a specific system (e.g. "OpenLDAP server link:http://ldap.example.com[ldap.example.com]"). Obviously, every resource has to tell which connector it is supposed to use to reach that particular system.
 As both resources and connectors are midPoint objects this is quite easy.
-Resource contains xref:/midpoint/reference/schema/object-references/[object reference] to the connector: `connectorRef`. Therefore when midPoint need to reach a particular resource it will fetch resource object from the repository, look at the connectorRef reference, look up referred connector object in the reposity and that connector object points to the connector code.
+Resource contains xref:/midpoint/reference/latest/schema/object-references/[object reference] to the connector: `connectorRef`. Therefore when midPoint need to reach a particular resource it will fetch resource object from the repository, look at the connectorRef reference, look up referred connector object in the reposity and that connector object points to the connector code.
 
 The trouble is, that connector objects (xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/connectortype/[ConnectorType]) are not entirely ordinary objects.
 These objects refer to the connector code that resides in midPoint servers or xref:/connectors/connid/1.x/connector-server/[connector servers]. Connector objects are usually generated automatically by midPoint servers during server startup.
@@ -39,7 +39,7 @@ Those are the connectors that are almost always used in any midPoint deployment.
 Such as LDAP, Active Directory or CSV connector.
 
 Most of the connectors are _unbundled_. This means they are not distributed with midPoint.
-These connectors must be downloaded separately and installed in xref:/midpoint/reference/deployment/midpoint-home-directory/[midPoint home directory] or in a xref:/connectors/connid/1.x/connector-server/[connector server]. The connectors are not bundled with midPoint for many reasons.
+These connectors must be downloaded separately and installed in xref:/midpoint/reference/latest/deployment/midpoint-home-directory/[midPoint home directory] or in a xref:/connectors/connid/1.x/connector-server/[connector server]. The connectors are not bundled with midPoint for many reasons.
 One of the reason is that many connectors are rarely used or even outright exotic.
 Bundling them all would make midPoint distribution too big.
 There are connectors that require third-party libraries to work and we simply cannot bundle them at all.
@@ -205,6 +205,6 @@ Evolveum offers xref:/support/subscription-sponsoring/[subscription programs] th
 
 == See Also
 
-* xref:/midpoint/reference/resources/connector-setup/[Connector Setup]
+* xref:/midpoint/reference/latest/resources/connector-setup/[Connector Setup]
 
-* xref:/midpoint/reference/resources/resource-schema/explanation/[Resource and Connector Schema Explanation]
+* xref:/midpoint/reference/latest/resources/resource-schema/explanation/[Resource and Connector Schema Explanation]

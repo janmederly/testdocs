@@ -183,7 +183,7 @@ Currently there are the following kinds of expressions:
 |===
 | Name | Meaning
 
-| xref:/midpoint/reference/misc/bulk/search/[search]
+| xref:/midpoint/reference/latest/misc/bulk/search/[search]
 | Retrieves a set of objects via searchObjects model call.
 
 
@@ -192,24 +192,24 @@ Currently there are the following kinds of expressions:
 Typical actions are add, modify, delete, enable, disable, assign, resolve, log, ...
 
 
-| xref:/midpoint/reference/misc/bulk/select/[select]
+| xref:/midpoint/reference/latest/misc/bulk/select/[select]
 | Selects a given item (container, reference, property) from the input data and copies its value(s) into output.
 For example, accepts a list of users and selects only their accounts.
 
 
-| xref:/midpoint/reference/misc/bulk/filter-content/[filterContent]
+| xref:/midpoint/reference/latest/misc/bulk/filter-content/[filterContent]
 | Removes selected items from the input data.
 For example, give a list of users, removes all the data except for names and password values.
 (Since 3.6.)
 
 
-| xref:/midpoint/reference/misc/bulk/pipeline/[pipeline]
+| xref:/midpoint/reference/latest/misc/bulk/pipeline/[pipeline]
 | Chains a set of expression together.
 They are executed one after another; input sent to the pipeline as a whole is sent to the first expression.
 Output of the last expression is considered to be the output of the whole pipeline.
 
 
-| xref:/midpoint/reference/misc/bulk/sequence/[sequence]
+| xref:/midpoint/reference/latest/misc/bulk/sequence/[sequence]
 | Sequence of command expressions.
 They are executed one after another; input sent to the sequence as a whole is then sent individually to each expression.
 Output of the last expression is considered to be the output of the whole sequence.
@@ -353,7 +353,7 @@ Since 3.7.2.
 | -
 
 
-| xref:/midpoint/reference/misc/bulk/actions/generate-value/[generate-value]
+| xref:/midpoint/reference/latest/misc/bulk/actions/generate-value/[generate-value]
 | Generates value(s) for object(s) coming as input.
 | items
 | Description of what and how to generate.

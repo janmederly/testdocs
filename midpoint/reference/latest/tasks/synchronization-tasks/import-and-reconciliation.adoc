@@ -18,10 +18,10 @@ by clicking the "Import" menu item pages displaying resource objects (accounts, 
 == Basic Configuration
 
 The core of the configuration of both import and reconciliation activity is the specification of what
-xref:/midpoint/reference/tasks/activities/resource-object-set-specification/[resource objects] we want to process. We need to know
+xref:/midpoint/reference/latest/tasks/activities/resource-object-set-specification/[resource objects] we want to process. We need to know
 _both_ `resourceRef` and the object class. The latter can be specified either explicitly by the
 object class name, or implicitly by kind-intent pair, or using both, as described
-xref:/midpoint/reference/tasks/activities/resource-object-set-specification/[here].
+xref:/midpoint/reference/latest/tasks/activities/resource-object-set-specification/[here].
 
 == Some Examples
 
@@ -199,7 +199,7 @@ If they do not match, the shadow processing is skipped, so such shadows are visi
 the moment when resource objects processing activity has started.
 
 The returned shadows are then checked if they still do exist on the resource. If a shadow is found to be missing,
-midPoint invokes the reaction defined for the "deleted" xref:/midpoint/reference/synchronization/situations/[situation],
+midPoint invokes the reaction defined for the "deleted" xref:/midpoint/reference/latest/synchronization/situations/[situation],
 e.g. disabling, unlinking, or even deleting the focus object.
 
 [NOTE]

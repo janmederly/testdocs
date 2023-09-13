@@ -16,7 +16,7 @@ ConnId is a framework that does most of the provisioning operations in midPoint.
 Please see xref:/connectors/connid/[] page for introduction to ConnId framework, basic concepts and framework history.
 
 NOTE: This page is targeted at connector developers, or engineers that are using custom connectors.
-For general advice on using stock connectors in midPoint, please see xref:/midpoint/reference/resources/connector-setup/[].
+For general advice on using stock connectors in midPoint, please see xref:/midpoint/reference/latest/resources/connector-setup/[].
 
 == Connector Identification
 
@@ -41,7 +41,7 @@ The configuration can be discovered by the ConnId framework.
 When midPoint detects the connector, it reads the connector configuration schema, transforms it to xref:/midpoint/devel/prism/schema/[Prism schema] format and stores it in midPoint xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/connectortype/[ConnectorType] object.
 The schema is used by midPoint to configure connector instances.
 
-Please see xref:/midpoint/reference/resources/resource-schema/explanation/[Resource and Connector Schema Explanation] for the details.
+Please see xref:/midpoint/reference/latest/resources/resource-schema/explanation/[Resource and Connector Schema Explanation] for the details.
 
 
 == Connectors and Resource Schema
@@ -50,7 +50,7 @@ The `schema` operation of the connector produces connector schema, in a ConnId-s
 MidPoint transforms the result into xref:/midpoint/devel/prism/schema/[Prism schema], and stores it in the resource object.
 Such _resource schema_ describes _object classes_ and _attributes_ that can be handled by the connector.
 
-Please see xref:/midpoint/reference/resources/resource-schema/explanation/[Resource and Connector Schema Explanation] for the details.
+Please see xref:/midpoint/reference/latest/resources/resource-schema/explanation/[Resource and Connector Schema Explanation] for the details.
 
 
 === ConnId pass:[__NAME__] and pass:[__UID__]
@@ -120,7 +120,7 @@ This is still not used by all the connectors.
 Therefore, there still can be `icfs:name` and `icfs:uid` in the schema for some connectors.
 However, there is at least a mechanism that can hide the old mistakes.
 
-TIP: ICF NAME and ICF UID attributes may be "renamed" to a more user-friendly names using `displayName` clause in xref:/midpoint/reference/resources/resource-configuration/schema-handling/[Resource Schema Handling]. This does not change the true nature of the attributes nor does it change the XML representation.
+TIP: ICF NAME and ICF UID attributes may be "renamed" to a more user-friendly names using `displayName` clause in xref:/midpoint/reference/latest/resources/resource-configuration/schema-handling/[Resource Schema Handling]. This does not change the true nature of the attributes nor does it change the XML representation.
 It may improve user experience.
 
 

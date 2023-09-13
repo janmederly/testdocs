@@ -4,9 +4,9 @@
 
 == Introduction
 
-IMPORTANT: This feature is available only when using the xref:/midpoint/reference/repository/native-postgresql/[native repository implementation].
+IMPORTANT: This feature is available only when using the xref:/midpoint/reference/latest/repository/native-postgresql/[native repository implementation].
 
-For an introduction, please see xref:/midpoint/reference/correlation/#fuzzy-searching[Fuzzy Searching] section in the overview document.
+For an introduction, please see xref:/midpoint/reference/latest/correlation/#fuzzy-searching[Fuzzy Searching] section in the overview document.
 
 == Fuzzy Search Methods
 
@@ -192,7 +192,7 @@ Its overall confidence is then computed as:
 2+| *Overall confidence* | *0.4* (= 0.8 x 0.5)
 |===
 
-NOTE: The overall confidence value may be later scaled using a custom _rule weight_ when rules are composed together, as described in xref:/midpoint/reference/correlation/rule-composition/[rule composition] document.
+NOTE: The overall confidence value may be later scaled using a custom _rule weight_ when rules are composed together, as described in xref:/midpoint/reference/latest/correlation/rule-composition/[rule composition] document.
 
 == Using in Filters
 
@@ -235,4 +235,4 @@ familyName similarity ('gren', 0.5, true)
 
 == Limitations
 
-This feature is available only when using the xref:/midpoint/reference/repository/native-postgresql/[native repository implementation].
+This feature is available only when using the xref:/midpoint/reference/latest/repository/native-postgresql/[native repository implementation].

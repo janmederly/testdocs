@@ -19,8 +19,8 @@
 
 === Working With Objects
 
-This interface mostly work with midPoint objects as described in our xref:/midpoint/reference/schema/[Data Model]. Please see the xref:/midpoint/reference/schema/data-model-essentials/[Basic Data Model] page for a quick introduction to the data model.
-The xref:/midpoint/reference/schema/[Data Model] page expands on that and provides more details.
+This interface mostly work with midPoint objects as described in our xref:/midpoint/reference/latest/schema/[Data Model]. Please see the xref:/midpoint/reference/latest/schema/data-model-essentials/[Basic Data Model] page for a quick introduction to the data model.
+The xref:/midpoint/reference/latest/schema/[Data Model] page expands on that and provides more details.
 Almost all state and configuration changes in midPoint are done by creating, modifying and deleting midPoint objects.
 
 Each midPoint objects has a type and an xref:/midpoint/devel/prism/concepts/object-identifier/[OID]. These two pieces of information are all you need to read a midPoint object.
@@ -34,7 +34,7 @@ This interface provides a *unified view* of the objects.
 It means that the user of IDM Model Interface does not need to care about where the data resides.
 Some data reside in the midPoint repository (e.g. relational database).
 These are typically objects that represent xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/usertype/[users] or configuration objects.
-Other objects reside partially in midPoint repository and partially on remote resources (e.g. xref:/midpoint/reference/resources/shadow/[Shadow Objects]). However this distinction is mostly hidden from the user of IDM Model Interface.
+Other objects reside partially in midPoint repository and partially on remote resources (e.g. xref:/midpoint/reference/latest/resources/shadow/[Shadow Objects]). However this distinction is mostly hidden from the user of IDM Model Interface.
 This interface provides uniform access to all objects regardless of how and where are they stored.
 You can simply read an object and the implementation will figure out how to do that.
 And the implementation will take care of merging the data from several sources, process meta-data, data caching, type conversion and any other mechanism that needs to take place to work with the data.
@@ -46,7 +46,7 @@ It can be used to access the data using a variety of interfaces, parse and seria
 This is the basic framework of midPoint data therefore it is also used in all midPoint Java interfaces.
 Please have a look at xref:/midpoint/devel/prism/[Prism] page to get a generic introduction to the framework.
 
-MidPoint is designed to work with xref:/midpoint/reference/concepts/relativity/[relative change model.] This model is built deeply into the basic midPoint functionality.
+MidPoint is designed to work with xref:/midpoint/reference/latest/concepts/relativity/[relative change model.] This model is built deeply into the basic midPoint functionality.
 Therefore it is obvious that also midPoint interfaces will work with xref:/midpoint/devel/prism/concepts/deltas/[deltas]. Similarly to the objects the Java interfaces to midPoint are using deltas provided by xref:/midpoint/devel/prism/[prism framework]. Prism deltas are designed especially to work with prism objects and together they work a complete and elegant data representation and management solution.
 
 As midPoint is heavily relying on prism framework an instance of _prism context_ is sometimes needed to complete some tasks.
@@ -56,8 +56,8 @@ Therefore an instance of _prism context_  is needed to complete some operations 
 Similarly to other such instances also the prism context is managed by Spring framework.
 Therefore instance of prism context can be obtained by using Spring dependency injection, e.g. using the `@Autowire` annotation.
 
-Please note that most objects are using xref:/midpoint/reference/concepts/polystring/[PolyString] instead of plain strings for some attributes.
-The use of xref:/midpoint/reference/concepts/polystring/[PolyString] provides important advantage in internationalized environment.
+Please note that most objects are using xref:/midpoint/reference/latest/concepts/polystring/[PolyString] instead of plain strings for some attributes.
+The use of xref:/midpoint/reference/latest/concepts/polystring/[PolyString] provides important advantage in internationalized environment.
 E.g. it provides ability for database-independent searches that are quite close to an internationalized full-text search.
 While PolyString values are almost transparent when used for reading they require some attention when constructing objects and deltas.
 
@@ -106,7 +106,7 @@ A common set of exceptions is defined in the xref:/midpoint/architecture/archive
 Most of the exceptions are checked exceptions that define a specific circumstances (semantics) of the error.
 Therefore it is usually sufficient to react to (catch) a specific exception to handle the error.
 However the exception is only thrown if the whole operation fails or if an unexpected situation with unpredictable results occurs (e.g. out of memory error).
-More sophisticated error handling is possible by inspecting the xref:/midpoint/architecture/concepts/operation-result/[Operation Result]. E.g. if a user is modified, the modification is reflected to several accounts using xref:/midpoint/reference/expressions/mappings/[mappings], some of account modification succeed and one of the account modification fails then an exception is *not* thrown.
+More sophisticated error handling is possible by inspecting the xref:/midpoint/architecture/concepts/operation-result/[Operation Result]. E.g. if a user is modified, the modification is reflected to several accounts using xref:/midpoint/reference/latest/expressions/mappings/[mappings], some of account modification succeed and one of the account modification fails then an exception is *not* thrown.
 In such case the the operation returns as in it would after a successful operation.
 Operation result structure will be filled with details of every significant sub-operation.
 The overall status will indicate _partial error_ and one of the sub-operations will be set to _fatal error_. As this structure is intended for human readability and machine processability it can be used for variety of purposes.
@@ -144,11 +144,11 @@ Perhaps the only real exception are _search_ methods.
 These methods are designed to obtain midPoint objects even without knowing their OID.
 In fact these methods are often used to find out OID of an object to be used in other midPoint operations.
 
-The key to search methods is xref:/midpoint/reference/concepts/query/[midPoint query language]. This query language is specific to midPoint and it describes an abstract tree of search criteria.
+The key to search methods is xref:/midpoint/reference/latest/concepts/query/[midPoint query language]. This query language is specific to midPoint and it describes an abstract tree of search criteria.
 It may be slightly complex to construct but there are convenient factory methods that can be used for this purpose.
 The following example shows how a simple query is constructed and used in a search.
 Factory methods `createObjectQuery` and `createEqual` are used to construct a simple query.
-The query describes objects for which the `name` property (specified as `ResourceType.F_NAME`) equals to xref:/midpoint/reference/concepts/polystring/[PolyString]`"My Resource`". Once executed this will return all such xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/resourcetype/[ResourceType] objects (which obviously is at most one object as `name` property is unique across all the resources).
+The query describes objects for which the `name` property (specified as `ResourceType.F_NAME`) equals to xref:/midpoint/reference/latest/concepts/polystring/[PolyString]`"My Resource`". Once executed this will return all such xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/resourcetype/[ResourceType] objects (which obviously is at most one object as `name` property is unique across all the resources).
 
 [source,java]
 ----
@@ -286,10 +286,10 @@ TODO: options: partial reads, resolve, paging, ...
 
 == See Also
 
-* xref:/midpoint/reference/interfaces/model-java/[IDM Model Interface]
+* xref:/midpoint/reference/latest/interfaces/model-java/[IDM Model Interface]
 
 * xref:/midpoint/devel/prism/[Prism Objects]
 
 * xref:/midpoint/devel/prism/concepts/[Using Prism Objects]
 
-* xref:/midpoint/reference/interfaces/invoking-midpoint-services/[Invoking MidPoint Services HOWTO]
+* xref:/midpoint/reference/latest/interfaces/invoking-midpoint-services/[Invoking MidPoint Services HOWTO]

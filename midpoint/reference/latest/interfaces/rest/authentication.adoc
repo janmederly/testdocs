@@ -10,8 +10,8 @@
 
 [TIP]
 ====
-Starting with 4.2 the REST API uses xref:/midpoint/reference/security/authentication/flexible-authentication/[Flexible Authentication] with only Basic Authentication + Impersonation on by default.
-SecQ must be added via xref:/midpoint/reference/security/security-policy/[Security Policy Configuration].
+Starting with 4.2 the REST API uses xref:/midpoint/reference/latest/security/authentication/flexible-authentication/[Flexible Authentication] with only Basic Authentication + Impersonation on by default.
+SecQ must be added via xref:/midpoint/reference/latest/security/security-policy/[Security Policy Configuration].
 ====
 
 == Basic Authentication
@@ -150,7 +150,7 @@ http -v :8080/midpoint/ws/rest/self "Authorization: SecQ $(base64 -w 0 <<< '{"us
 
 == Other authentication options
 
-Please, consult xref:/midpoint/reference/security/authentication/flexible-authentication/configuration.adoc[Flexible authentication configuration]
+Please, consult xref:/midpoint/reference/latest/security/authentication/flexible-authentication/configuration.adoc[Flexible authentication configuration]
 for further options, e.g. `httpHeader` for pre-authenticated users.
 This allows to delegate authentication to another component, e.g. HTTP server reverse proxy, and implement other types of authentication like OAuth2, SAML, etc.
 

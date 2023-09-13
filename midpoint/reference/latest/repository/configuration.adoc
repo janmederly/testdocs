@@ -10,7 +10,7 @@ For old Generic repository configuration see xref:../generic/configuration/[this
 == Configuration overview
 
 By default, the repository configuration is stored in `config.xml` inside
-xref:/midpoint/reference/deployment/midpoint-home-directory/[midPoint home directory],
+xref:/midpoint/reference/latest/deployment/midpoint-home-directory/[midPoint home directory],
 also known as `midpoint.home`.
 
 This directory will be created upon the very first start of midPoint.
@@ -42,7 +42,7 @@ See xref:native-audit.adoc[]
 
 Configuring large-scale setup with multiple midPoint nodes requires more effort:
 
-* Check the xref:/midpoint/reference/deployment/clustering-ha/[Clustering / high availability setup]
+* Check the xref:/midpoint/reference/latest/deployment/clustering-ha/[Clustering / high availability setup]
 documentation for how to set up multiple midPoint nodes.
 
 * Tips about configuring the database server can be found xref:../native-postgresql/postgresql-configuration/[here].
@@ -140,7 +140,7 @@ The value cannot be lower than 2 for midPoint, and - if set so, minimum value 2 
 | Maximum # of connections in connection pool, if connection pool is not provided through dataSource.
 Please, be aware that for the multi-node setup the total number of connections *must not* go above
 the `max_connections` in the Postgres configuration, so this is a good default only up to 2 nodes.
-See xref:/midpoint/reference/repository/native-postgresql/postgresql-configuration/#connections[PostgreSQL Configuration] for more tips.
+See xref:/midpoint/reference/latest/repository/native-postgresql/postgresql-configuration/#connections[PostgreSQL Configuration] for more tips.
 
 When midPoint needs another connection from the pool it will wait for it.
 The time is determined by the default value for HikariCP `connectionTimeout` option, which is 30s.
@@ -158,8 +158,8 @@ It is always set by midPoint, so HikariCP default is never used.
 This value cannot be lower than `minPoolSize` - if set so, effective `minPoolSize` value is used.
 
 In addition to these connections, there may be another connection pool for the
-xref:/midpoint/reference/tasks/task-manager/configuration/[Task Manager] and
-xref:/midpoint/reference/repository/native-audit/#sql-audit-using-its-own-database[dedicated SQL Audit DB].
+xref:/midpoint/reference/latest/tasks/task-manager/configuration/[Task Manager] and
+xref:/midpoint/reference/latest/repository/native-audit/#sql-audit-using-its-own-database[dedicated SQL Audit DB].
 By default, the main DB pool described on this page is used by the Task Manager,
 unless configured otherwise.
 The same goes for SQL Audit - unless configured otherwise, it uses the main DB pool.
@@ -298,6 +298,6 @@ Of course, you still need the installed and prepared PostgreSQL database!
 
 * xref:../native-postgresql/[Native PostgreSQL Repository]
 * xref:../generic/[Old Generic Repository]
-* xref:/midpoint/reference/deployment/clustering-ha/[Clustering / high availability setup]
-* xref:/midpoint/reference/repository/native-postgresql/migration/[Migration to Native PostgreSQL Repository]
-* xref:/midpoint/reference/tasks/task-manager/configuration/[Task Manager Configuration]
+* xref:/midpoint/reference/latest/deployment/clustering-ha/[Clustering / high availability setup]
+* xref:/midpoint/reference/latest/repository/native-postgresql/migration/[Migration to Native PostgreSQL Repository]
+* xref:/midpoint/reference/latest/tasks/task-manager/configuration/[Task Manager Configuration]

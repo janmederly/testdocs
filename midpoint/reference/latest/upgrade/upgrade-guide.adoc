@@ -74,7 +74,7 @@ This is especially important for LTS to LTS upgrade (e.g. 4.0.x to 4.4.x) becaus
 deprecation warnings) are likely not available in the maintenance versions before the new LTS (4.4) is released.
 For example, first upgrade your 4.0 LTS to 4.0.4 which was released shortly after 4.4 LTS release.
 
-Use the xref:/midpoint/reference/deployment/ninja/[`ninja`] tool to check for deprecated and removed functionality:
+Use the xref:/midpoint/reference/latest/deployment/ninja/[`ninja`] tool to check for deprecated and removed functionality:
 
 [source,bash]
 ----
@@ -160,7 +160,7 @@ However, it is also recommended to update documentation, samples, `README` files
 Replace them with new versions from the distribution package.
 
 The only directory that should remain untouched during this step is `var` directory.
-This directory is your xref:/midpoint/reference/deployment/midpoint-home-directory/[midPoint home directory].
+This directory is your xref:/midpoint/reference/latest/deployment/midpoint-home-directory/[midPoint home directory].
 It contains startup configuration, logfiles, schema extensions, non-bundled connectors and other files that *should not be replaced* during upgrade.
 
 == Upgrading Database
@@ -169,13 +169,13 @@ Each midPoint release usually extends database schema with new tables, columns, 
 
 MidPoint is distributed with a convenient SQL script that alters the database schema as necessary.
 The scripts are located in the `doc/config/sql/` subdirectory of the distribution package.
-Since version 4.4, separate versions for the xref:/midpoint/reference/repository/native-postgresql/[Native repository]
-and the xref:/midpoint/reference/repository/generic/[Generic repository] are provided.
+Since version 4.4, separate versions for the xref:/midpoint/reference/latest/repository/native-postgresql/[Native repository]
+and the xref:/midpoint/reference/latest/repository/generic/[Generic repository] are provided.
 
-Database upgrade is thoroughly described in xref:/midpoint/reference/upgrade/database-schema-upgrade[this document].
+Database upgrade is thoroughly described in xref:/midpoint/reference/latest/upgrade/database-schema-upgrade[this document].
 There are also deployment specific details to consider, e.g. is the audit in the same database?
 
-For example, using the recommended xref:/midpoint/reference/repository/native-postgresql/[Native repository]
+For example, using the recommended xref:/midpoint/reference/latest/repository/native-postgresql/[Native repository]
 based on PostgreSQL, one can upgrade the database using the `psql` tool
 (considering the audit and the main repository are in a single database):
 
@@ -187,7 +187,7 @@ psql -v ON_ERROR_STOP=1 -h localhost -U midpoint -W -d midpoint \
 
 [IMPORTANT]
 ====
-If you created the schema objects as non-superuser as described xref:/midpoint/reference/repository/native-postgresql/usage/#installing-as-non-superuser[here],
+If you created the schema objects as non-superuser as described xref:/midpoint/reference/latest/repository/native-postgresql/usage/#installing-as-non-superuser[here],
 be sure to run all the missing `CREATE EXTENSION` commands as a superuser first!
 This is also a good reason to use `-v ON_ERROR_STOP=1` flag with the `psql` - as shown above.
 This stops the upgrade when the first such problem occurs, but works fine if the extension already exists.
@@ -218,7 +218,7 @@ Most midPoint releases bring new versions of bundled connectors.
 This means that new connector version appears in midPoint after the first post-upgrade system start, and the old connector versions will not work any longer.
 Connector references (`connectorRef`) in affected resources need to be updated to point to the new versions of the connectors.
 
-Many midPoint releases bring new and updated xref:/midpoint/reference/deployment/initial-objects/[initial objects].
+Many midPoint releases bring new and updated xref:/midpoint/reference/latest/deployment/initial-objects/[initial objects].
 New initial objects will be automatically imported to midPoint repository during first post-upgrade start.
 However, updated initial objects will not overwrite existing objects in the repository.
 Initial objects are just _initial_ configuration of midPoint, many of the initial objects are meant to be customized.
@@ -320,6 +320,6 @@ The recommendation for inexperienced engineers is to use long-term support (LTS)
 
 == See Also
 
-* xref:/midpoint/reference/upgrade/database-schema-upgrade/[Database Schema Upgrade]
+* xref:/midpoint/reference/latest/upgrade/database-schema-upgrade/[Database Schema Upgrade]
 
-* xref:/midpoint/reference/upgrade/upgradeability/[Upgradeability]
+* xref:/midpoint/reference/latest/upgrade/upgradeability/[Upgradeability]

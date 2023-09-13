@@ -13,7 +13,7 @@ The newly-introduced `items` correlator makes this process much easier by constr
 
 Here is the simplest configuration.
 It matches users based on the value of `employeeNumber` property.
-(We assume that the value of the property for accounts being correlated is determined by xref:/midpoint/projects/idmatch/implementation/correlation-time-mappings/[correlation-time evaluation of inbound mappings], as described in the xref:/midpoint/reference/correlation/[overview document].)
+(We assume that the value of the property for accounts being correlated is determined by xref:/midpoint/projects/idmatch/implementation/correlation-time-mappings/[correlation-time evaluation of inbound mappings], as described in the xref:/midpoint/reference/latest/correlation/[overview document].)
 
 .Listing 1. Matching on `employeeNumber`
 [source,xml]
@@ -191,7 +191,7 @@ An example:
 </objectTemplate>
 ----
 
-For more information please see xref:/midpoint/reference/correlation/fuzzy-searching/[fuzzy searching] document.
+For more information please see xref:/midpoint/reference/latest/correlation/fuzzy-searching/[fuzzy searching] document.
 It contains also information on specifying custom confidence values, as these are the most useful with the connection with the fuzzy search logic.
 
 == Default Search Options for an Item

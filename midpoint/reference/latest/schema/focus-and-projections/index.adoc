@@ -5,13 +5,13 @@
 :page-wiki-metadata-create-date: 2014-01-09T13:40:34.834+01:00
 :page-wiki-metadata-modify-user: petr.gasparik
 :page-wiki-metadata-modify-date: 2016-11-29T22:01:25.954+01:00
-:page-alias: { "parent" : "/midpoint/reference/concepts/clockwork/" }
+:page-alias: { "parent" : "/midpoint/reference/latest/concepts/clockwork/" }
 :page-upkeep-status: yellow
 :page-toc: top
 
 == Synchronization
 
-One of the primary function of midPoint is to xref:/midpoint/reference/synchronization/introduction/[synchronize] data between objects residing on resources over the network.
+One of the primary function of midPoint is to xref:/midpoint/reference/latest/synchronization/introduction/[synchronize] data between objects residing on resources over the network.
 MidPoint approach is to avoid the complexity of synchronization everything with everything.
 As the name of midPoint suggests there is always something in the middle.
 E.g. midPoint never synchronizes an account directly to another account.
@@ -38,14 +38,14 @@ image::focus-projection-1.png[]
 
 The real situation is slightly more complex.
 As _projections_ are resource objects it is inconvenient to work with them directly.
-Therefore they are represented by xref:/midpoint/reference/resources/shadow/[shadows] which is the usual way how midpoint represents all resource objects.
+Therefore they are represented by xref:/midpoint/reference/latest/resources/shadow/[shadows] which is the usual way how midpoint represents all resource objects.
 Shadows can be conveniently linked to focal objects as it is illustrated in the following diagram:
 
 image::focus-projection-2.png[]
 
 
 
-The projection shadows are then synchronized with the focus by using midPoint xref:/midpoint/reference/synchronization/introduction/[synchronization] mechanisms, mostly xref:/midpoint/reference/expressions/mappings/inbound-mapping/[inbound mappings] and xref:/midpoint/reference/expressions/mappings/outbound-mapping/[outbound mappings]:
+The projection shadows are then synchronized with the focus by using midPoint xref:/midpoint/reference/latest/synchronization/introduction/[synchronization] mechanisms, mostly xref:/midpoint/reference/latest/expressions/mappings/inbound-mapping/[inbound mappings] and xref:/midpoint/reference/latest/expressions/mappings/outbound-mapping/[outbound mappings]:
 
 image::focus-projection-3.png[]
 
@@ -53,10 +53,10 @@ image::focus-projection-3.png[]
 
 xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/usertype/[User] is the most common type of focal object.
 But it is not the only one.
-Since the xref:/midpoint/reference/synchronization/generic-synchronization/[generic synchronization] mechanism was introduced in midPoint version 3.0 there is a wider selection of focal objects to choose from.
+Since the xref:/midpoint/reference/latest/synchronization/generic-synchronization/[generic synchronization] mechanism was introduced in midPoint version 3.0 there is a wider selection of focal objects to choose from.
 E.g. an xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/orgtype/[Org] can be a focal object.
 The projections can also be of various types.
-E.g. it makes sense to synchronize xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/orgtype/[Orgs] to resource organizational units and groups (Note: a group is considered to be an resource xref:/midpoint/reference/resources/entitlements/[entitlement]).
+E.g. it makes sense to synchronize xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/orgtype/[Orgs] to resource organizational units and groups (Note: a group is considered to be an resource xref:/midpoint/reference/latest/resources/entitlements/[entitlement]).
 
 image::focus-projection-4.png[]
 
@@ -73,22 +73,22 @@ Following object types may act as a focus:
 
 * xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/orgtype/[Organization]
 
-* xref:/midpoint/reference/misc/services/[Service]
+* xref:/midpoint/reference/latest/misc/services/[Service]
 
-The common thing that all focal objects have are xref:/midpoint/reference/roles-policies/assignment/[assignments] and the ability to be owners of xref:/midpoint/reference/resources/shadow/[shadow objects] (they have an ability to xref:/midpoint/reference/roles-policies/assignment/assigning-vs-linking/[link]).
+The common thing that all focal objects have are xref:/midpoint/reference/latest/roles-policies/assignment/[assignments] and the ability to be owners of xref:/midpoint/reference/latest/resources/shadow/[shadow objects] (they have an ability to xref:/midpoint/reference/latest/roles-policies/assignment/assigning-vs-linking/[link]).
 
 
 === Projections
 
-Projections are simply resource objects represented by xref:/midpoint/reference/resources/shadow/[shadow objects]. The shadows contain information about xref:/midpoint/reference/resources/shadow/kind-intent-objectclass/[kind and intent] that are used in synchronization algorithm to sort out projections of the same focal object.
+Projections are simply resource objects represented by xref:/midpoint/reference/latest/resources/shadow/[shadow objects]. The shadows contain information about xref:/midpoint/reference/latest/resources/shadow/kind-intent-objectclass/[kind and intent] that are used in synchronization algorithm to sort out projections of the same focal object.
 
 
 == See Also
 
-* xref:/midpoint/reference/synchronization/introduction/[Synchronization]
+* xref:/midpoint/reference/latest/synchronization/introduction/[Synchronization]
 
-* xref:/midpoint/reference/synchronization/generic-synchronization/[Generic Synchronization]
+* xref:/midpoint/reference/latest/synchronization/generic-synchronization/[Generic Synchronization]
 
-* xref:/midpoint/reference/concepts/clockwork/clockwork-and-projector/[Clockwork and Projector]
+* xref:/midpoint/reference/latest/concepts/clockwork/clockwork-and-projector/[Clockwork and Projector]
 
-* xref:/midpoint/reference/concepts/clockwork/model-context/[Model Context]
+* xref:/midpoint/reference/latest/concepts/clockwork/model-context/[Model Context]

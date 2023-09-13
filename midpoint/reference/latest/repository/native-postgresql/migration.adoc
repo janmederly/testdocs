@@ -33,7 +33,7 @@ In terminal, go to your midPoint installation directory and execute:
 bin/ninja.sh -v export -r -O export.xml
 ----
 
-NOTE: See xref:/midpoint/reference/deployment/ninja[Ninja] for more export configuration options and their meaning.
+NOTE: See xref:/midpoint/reference/latest/deployment/ninja[Ninja] for more export configuration options and their meaning.
 
 If you want to migrate the audit tables, you can also export the audit now, but it is possible
 to migrate audit while the midPoint is already running.
@@ -41,7 +41,7 @@ Because this makes the critical migration path shorter, we discuss after-the-fac
 
 == Initializing & changing configuration for native PostgreSQL repository
 
-See xref:/midpoint/reference/repository/native-postgresql/usage[Using Native PostgreSQL Repository]
+See xref:/midpoint/reference/latest/repository/native-postgresql/usage[Using Native PostgreSQL Repository]
 for installation and configuration of native PostgreSQL repository.
 
 Be sure to size the new database adequately:
@@ -54,15 +54,15 @@ WARNING: Please, backup your `config.xml`, you may need it later, if you will ne
 revert changes in order to fix some problems.
 
 WARNING: Do not start midPoint after configuration changes performed in usage documentation.
-This would create the xref:/midpoint/reference/deployment/initial-objects/[initial objects] and irrelevant audit records
+This would create the xref:/midpoint/reference/latest/deployment/initial-objects/[initial objects] and irrelevant audit records
 that would have to be deleted.
 
 [IMPORTANT]
 ====
 If you want to migrate your old audit records to the new database and keep event record IDs unique,
-set the ID sequence in the new database as described in xref:/midpoint/reference/repository/native-audit/#audit-migration-from-other-database[Audit migration from other database].
+set the ID sequence in the new database as described in xref:/midpoint/reference/latest/repository/native-audit/#audit-migration-from-other-database[Audit migration from other database].
 
-Also, be sure you initialized xref:/midpoint/reference/repository/native-audit/#partitioning[audit table partitions] if you want to use them.
+Also, be sure you initialized xref:/midpoint/reference/latest/repository/native-audit/#partitioning[audit table partitions] if you want to use them.
 ====
 
 == Importing your existing data to repository
@@ -77,7 +77,7 @@ In terminal, navigate to your new midPoint installation directory and execute:
 bin/ninja.sh -v import -i export.xml
 ----
 
-NOTE: See xref:/midpoint/reference/deployment/ninja[Ninja] for more import configuration options and their meaning
+NOTE: See xref:/midpoint/reference/latest/deployment/ninja[Ninja] for more import configuration options and their meaning
 
 == Starting midPoint
 
@@ -89,4 +89,4 @@ With midPoint up and running you now have time to migrate the old audit records.
 The process can be done in a single export/import for smaller audit sizes (up to a million of entries), or iteratively for lager audits.
 It is even possible to drop the imported audit if anything goes wrong and start again - this is especially easy with partitioning.
 
-Check xref:/midpoint/reference/repository/native-audit/#audit-migration-from-other-database[Audit migration from other databases] section from xref:/midpoint/reference/repository/native-audit/[Native PostgreSQL Audit Trail] document for more details.
+Check xref:/midpoint/reference/latest/repository/native-audit/#audit-migration-from-other-database[Audit migration from other databases] section from xref:/midpoint/reference/latest/repository/native-audit/[Native PostgreSQL Audit Trail] document for more details.

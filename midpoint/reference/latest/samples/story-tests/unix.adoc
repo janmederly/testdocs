@@ -115,6 +115,6 @@ It is assumed that this is both general-purpose directory system and also a dire
 
 == See Also
 
-* xref:/midpoint/reference/samples/[Configuration Sample]
+* xref:/midpoint/reference/latest/samples/[Configuration Sample]
 
-* xref:/midpoint/reference/expressions/sequences/[Sequences]
+* xref:/midpoint/reference/latest/expressions/sequences/[Sequences]
