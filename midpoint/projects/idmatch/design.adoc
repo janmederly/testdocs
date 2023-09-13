@@ -42,7 +42,7 @@ In that case midPoint should stop the processing and let administrator decide.
 MidPoint should suspend the operation and try later.
 The retry should be automatic, no need to bother a human operator.
 
-When the process is stopped (e.g. administrator decision is required), midPoint will create a xref:/midpoint/reference/cases/[case].
+When the process is stopped (e.g. administrator decision is required), midPoint will create a xref:/midpoint/reference/latest/cases/[case].
 Most cases will be probably correlation cases, selecting among potential match candidates.
 Special case type will be created for these, including appropriate parts of user interface (similarly to approval cases).
 
@@ -80,7 +80,7 @@ NOTE: "Correlator" is just a working name, it might be changed.
 
 === Cases
 
-When user decision is needed to resolve a situation, midPoint synchronization service will create a xref:/midpoint/reference/cases/[case].
+When user decision is needed to resolve a situation, midPoint synchronization service will create a xref:/midpoint/reference/latest/cases/[case].
 Cases form a generic mechanism to resolve various situation in midPoint that do not have algorithmic solutions.
 We will implement a "correlation case", that will contain:
 

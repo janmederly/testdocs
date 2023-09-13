@@ -70,7 +70,7 @@ Link to environment: https://han-demo.evolveum.com/[https://han-demo.evolveum.co
 
 == Taskflow
 === Dashboard (Homepage)
-Home page consists of different configurable widgets. For now, there are two types of widgets, link widgets and preview widgets. Link widgets can be configured and used for better and quicker navigation to desired pages (even external links are supported). Preview widgets show concrete data, and it is also possible to define custom navigation actions. The example of such action is Request access button in My accesses preview widget, which will take a user to the access request process. (https://docs.evolveum.com/midpoint/reference/admin-gui/self-service/#home-page[Discover more here])
+Home page consists of different configurable widgets. For now, there are two types of widgets, link widgets and preview widgets. Link widgets can be configured and used for better and quicker navigation to desired pages (even external links are supported). Preview widgets show concrete data, and it is also possible to define custom navigation actions. The example of such action is Request access button in My accesses preview widget, which will take a user to the access request process. (https://docs.evolveum.com/midpoint/reference/latest/admin-gui/self-service/#home-page[Discover more here])
 
 NOTE: In this process is important to keep the observation capability simple and the scanning difficulty as easy/efficient as possible. Questions are: Is everything understandable? Is everything visible? Is everything legible?
 
@@ -80,7 +80,7 @@ NOTE: In this process is important to keep the observation capability simple and
 {nbsp} +
 
 === Profile management
-On the Profile page, all the necessary information about the logged-in user (or service) are shown. Information that are shown are influenced by the authorizations and GUI customizations. With combining these two mechanisms, it is possible to define what kind of information will be shown to concrete (logged-in user). It is important to have this possibility to define these restrictions, because there might be different users with different rights, e.g. end users, administrators, operators. End user can be restricted to perform some actions, but administrator can do anything. (https://docs.evolveum.com/midpoint/reference/admin-gui/self-service/#profile-page[Discover more here])
+On the Profile page, all the necessary information about the logged-in user (or service) are shown. Information that are shown are influenced by the authorizations and GUI customizations. With combining these two mechanisms, it is possible to define what kind of information will be shown to concrete (logged-in user). It is important to have this possibility to define these restrictions, because there might be different users with different rights, e.g. end users, administrators, operators. End user can be restricted to perform some actions, but administrator can do anything. (https://docs.evolveum.com/midpoint/reference/latest/admin-gui/self-service/#profile-page[Discover more here])
 
 {nbsp}{nbsp}{nbsp} *Task 1: Observe the environment*
 
@@ -99,7 +99,7 @@ On the Profile page, all the necessary information about the logged-in user (or 
 {nbsp} +
 
 === Credential management
-Changing password functionality is located on the separate page to make this process easy and fast. This page contains only the essentials to make the process as quick and straightforward as possible. The user is asked to enter their old password, the new password and repeat the new password again. A password strength indicator assists the user in the password change process, along with password conditions, which are located on the right side. For more complex configurations, the user is also supplied with a section in which the user can select which resources will be affected by the change and can also be informed whether the change can occur at all. (https://docs.evolveum.com/midpoint/reference/admin-gui/self-service/#credentials-page[Discover more here])
+Changing password functionality is located on the separate page to make this process easy and fast. This page contains only the essentials to make the process as quick and straightforward as possible. The user is asked to enter their old password, the new password and repeat the new password again. A password strength indicator assists the user in the password change process, along with password conditions, which are located on the right side. For more complex configurations, the user is also supplied with a section in which the user can select which resources will be affected by the change and can also be informed whether the change can occur at all. (https://docs.evolveum.com/midpoint/reference/latest/admin-gui/self-service/#credentials-page[Discover more here])
 
 {nbsp}{nbsp}{nbsp} *Task 1: Open Credentials from sidemenu and observe the environment and layout*
 
@@ -119,7 +119,7 @@ Changing password functionality is located on the separate page to make this pro
 
 
 === Access request
-Role (Access) requesting in the new version of midPoint has taken on a whole new look. The process tries to resemble a kind of wizard that will guide you through the entire request process and should feel and give the impression that someone is helping you. This process simply allows users to request access pretty much anywhere they need it (Application/Service/Resource/etc.) depending on the configuration of midPoint and its so-called role catalog, of course. (https://docs.evolveum.com/midpoint/reference/admin-gui/request-access/[Discover more here])
+Role (Access) requesting in the new version of midPoint has taken on a whole new look. The process tries to resemble a kind of wizard that will guide you through the entire request process and should feel and give the impression that someone is helping you. This process simply allows users to request access pretty much anywhere they need it (Application/Service/Resource/etc.) depending on the configuration of midPoint and its so-called role catalog, of course. (https://docs.evolveum.com/midpoint/reference/latest/admin-gui/request-access/[Discover more here])
 
 {nbsp}{nbsp}{nbsp} *Task 1: Open Request access from sidemenu and observe the environment and layout*
 
@@ -143,7 +143,7 @@ Role (Access) requesting in the new version of midPoint has taken on a whole new
 {nbsp} +
 
 === Approval process
-MidPoint does not have any special way how to request something. E.g. there is no special mechanism how to request assignment of a role or how to request creation of a new organizational unit. The request is simply the operation itself: user requests an assignment of a role simply by trying to assign the role to himself. When midPoint encounters an operation like this it will consult the policies (Policy Rules) and decide whether the operation needs to be driven through an approval process. If an approval is needed then midPoint will automatically compute the approvers and start a workflow process to drive the approvals. When the approval process is done then midPoint will gather the results and proceed with the operation. (https://docs.evolveum.com/midpoint/reference/cases/approval/[Discover more here])
+MidPoint does not have any special way how to request something. E.g. there is no special mechanism how to request assignment of a role or how to request creation of a new organizational unit. The request is simply the operation itself: user requests an assignment of a role simply by trying to assign the role to himself. When midPoint encounters an operation like this it will consult the policies (Policy Rules) and decide whether the operation needs to be driven through an approval process. If an approval is needed then midPoint will automatically compute the approvers and start a workflow process to drive the approvals. When the approval process is done then midPoint will gather the results and proceed with the operation. (https://docs.evolveum.com/midpoint/reference/latest/cases/approval/[Discover more here])
 
 NOTE: In order to go through this process it is important that the Role request action is executed first. Basically, the approval process is a follow-up to the Role request process.
 

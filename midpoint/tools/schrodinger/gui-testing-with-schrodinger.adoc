@@ -160,7 +160,7 @@ While executing the tests there are also a couple of additional arguments which 
 The default value is *8180*. Can be changed using the argument `-Dserver.port`. Please also bear in mind that the server port has to be changed in the *base_url *property in the *schrodinger.properties *property file as well.
 
 . The midpoint home directory.
-How the default is set is described on the following xref:/midpoint/reference/deployment/midpoint-home-directory/[page]. Can be changed using the argument* -Dmidpoint.home*
+How the default is set is described on the following xref:/midpoint/reference/latest/deployment/midpoint-home-directory/[page]. Can be changed using the argument* -Dmidpoint.home*
 
 . By default, there is a home directory created during the boot up of Midpoint or there can be one assigned via the midpoint.home argument.
 If you wish to remove such directories after the test execution finishes, there is a cleanup option present as well.

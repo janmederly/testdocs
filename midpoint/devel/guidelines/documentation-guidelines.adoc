@@ -82,4 +82,4 @@ The goal is deployment efficiency.
 
 == Administration Documentation
 
-is here: xref:/midpoint/reference/[Administration and Configuration Guide]. Do not forget to update it if you add or change functionality.
+is here: xref:/midpoint/reference/latest/[Administration and Configuration Guide]. Do not forget to update it if you add or change functionality.

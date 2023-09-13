@@ -84,7 +84,7 @@ However the numbers provided in the table above may be used as a starting point.
 == Sizing of Database System
 
 // TODO reference native repo docs, when sizing is written for it:
-// xref:/midpoint/reference/repository/native-postgresql/postgresql-configuration/#db-server-sizing[]
+// xref:/midpoint/reference/latest/repository/native-postgresql/postgresql-configuration/#db-server-sizing[]
 
 Database system is used to store vast majority of midPoint data.
 
@@ -95,9 +95,9 @@ Previously, we recommended re-using existing database systems for smaller midPoi
 Also, our repository could use many major RDBMS systems, so the advice was applicaple to more users.
 But many things have changed since.
 
-With midPoint 4.4 we introduced the xref:/midpoint/reference/repository/native-postgresql/[Native repository] that relies on PostgreSQL.
+With midPoint 4.4 we introduced the xref:/midpoint/reference/latest/repository/native-postgresql/[Native repository] that relies on PostgreSQL.
 Now we recommend using a separate server for the database, which is now easier than 10 years ago, thanks to various virtualization/cloud technologies.
-You may even consider xref:/midpoint/reference/security/audit/#separate-repository-configuration-for-audit[separate database for audit]
+You may even consider xref:/midpoint/reference/latest/security/audit/#separate-repository-configuration-for-audit[separate database for audit]
 and main repository, as the access patterns and sizing are quite different.
 ====
 
@@ -284,4 +284,4 @@ It is not a good choice to do this when you are doing acceptance testing or have
 
 * xref:/midpoint/release/[midPoint Releases]
 
-* xref:/midpoint/reference/deployment/ha/[High Availability and Load Balancing]
+* xref:/midpoint/reference/latest/deployment/ha/[High Availability and Load Balancing]

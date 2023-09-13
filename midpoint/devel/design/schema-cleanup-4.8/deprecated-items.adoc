@@ -842,7 +842,7 @@ It was moved into `schemaHandling/objectType` definitions and modernized.
 The legacy style (`synchronization/objectSynchronization`) was marked as deprecated in the same midPoint version by https://github.com/Evolveum/midpoint/commit/0a58e992[0a58e992].
 
 To migrate, use the new format.
-See https://docs.evolveum.com/midpoint/reference/resources/resource-configuration/schema-handling/changes-in-4.6/[the documentation] for more information.
+See https://docs.evolveum.com/midpoint/reference/latest/resources/resource-configuration/schema-handling/changes-in-4.6/[the documentation] for more information.
 
 // On 2023-05-25 we (Vilo, Rado, Pavol) decided to keep the legacy style available in 4.8, because otherwise there would be no migration path from 4.4.
 // (The functionality was not available at that time; and the change is substantial.)

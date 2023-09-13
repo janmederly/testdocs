@@ -41,7 +41,7 @@ The mapping would look like this:
 Notes:
 
 1. Specification of source object (`<object>`) is currently reused from the one we use in script execution policy rules.
-See xref:/midpoint/reference/synchronization/linked-objects/#selecting-objects-to-be-recomputed[here].
+See xref:/midpoint/reference/latest/synchronization/linked-objects/#selecting-objects-to-be-recomputed[here].
 It is not ideal and might be reconsidered before official 4.2 release (or later).
 
 2. Source names (`childFullName`, `parentFamilyName`) are used here only for clarity. The example would work

@@ -80,13 +80,13 @@ However, the most prominent object representation in midPoint is *XML*. The most
 
 * It aligns well with the target environment of midPoint (enterprise and web services).
 
-xref:/midpoint/reference/concepts/data-representation-formats/[XML is not perfect], but it is currently the best choice.
+xref:/midpoint/reference/latest/concepts/data-representation-formats/[XML is not perfect], but it is currently the best choice.
 Therefore the primary way how to express midPoint data model are XML Schema (XSD) and Java code is generated from that.
 This is required to maintain link:http://en.wikipedia.org/wiki/DRY[DRY] principles which in turn allow for reasonable development speed and sustainability of the development process.
 The XML-orientation may change in the future if anything better comes around.
 JSON and YAML support is in development, but this is unlikely to replace XML as the primary language.
 
-See xref:/midpoint/reference/concepts/data-representation-formats/['Objects, XML, JSON and others'] for more details.
+See xref:/midpoint/reference/latest/concepts/data-representation-formats/['Objects, XML, JSON and others'] for more details.
 
 == Model Layers
 
@@ -106,7 +106,7 @@ This is the _core_ model of our system.
 Identity schema is _static_, it is known at compile time, it is part of interface definitions and it is pretty much hardcoded into the system.
 Even though the schema is mostly hardcoded, it can be extended at a proper extension points.
 
-* *xref:/midpoint/reference/resources/resource-schema/[Resource Schema]* defines how resources (resource connectors, adapters, frameworks) present the information to the IDM system.
+* *xref:/midpoint/reference/latest/resources/resource-schema/[Resource Schema]* defines how resources (resource connectors, adapters, frameworks) present the information to the IDM system.
 Resource schema describes "live" objects on the resources, it always provides real-time authoritative information from the resource.
 Resource schema is _dynamic_, it is provided in run-time and can vary for each _instance_ of resource.
 
@@ -127,7 +127,7 @@ For more details see the sub-pages:
 
 * xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/[MidPoint Common Schema]
 
-* xref:/midpoint/reference/resources/resource-schema/[Resource Schema]
+* xref:/midpoint/reference/latest/resources/resource-schema/[Resource Schema]
 
 ====
 
@@ -142,17 +142,17 @@ image::Basic-Object-Types.png[]
 ====
 Most data types and items are documented in-line in the XSD schema definition files.
 Please see the current link:https://github.com/Evolveum/midpoint/blob/master/infra/schema/src/main/resources/xml/ns/public/common/common-3.xsd[XSD definition from the source-code repository] for the latest version.
-The processed documentation is available in a form of xref:/midpoint/reference/schema/schemadoc/[SchemaDoc].
+The processed documentation is available in a form of xref:/midpoint/reference/latest/schema/schemadoc/[SchemaDoc].
 
 ====
 
 == See Also
 
-* xref:/midpoint/reference/concepts/data-representation-formats/['Objects, XML, JSON and others']
+* xref:/midpoint/reference/latest/concepts/data-representation-formats/['Objects, XML, JSON and others']
 
 * xref:/midpoint/architecture/concepts/consistency-model/[Consistency Model]
 
-* xref:/midpoint/reference/schema/object-references/[Object References]
+* xref:/midpoint/reference/latest/schema/object-references/[Object References]
 
 * Individual data model layers:
 

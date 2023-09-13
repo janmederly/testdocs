@@ -57,7 +57,7 @@ NOTE: As it is obvious from the configuration example, this configuration is per
 If you want repository-based search for assignments of other object types, you need to add
 `objectDetailsPage` configuration for each of them.
 
-For additional existing assignment panels and their GUI configuration see xref:/midpoint/reference/admin-gui/admin-gui-config/[Admin GUI Configuration].
+For additional existing assignment panels and their GUI configuration see xref:/midpoint/reference/latest/admin-gui/admin-gui-config/[Admin GUI Configuration].
 
 After saving these changes, you should log out and log in again. Otherwise, the changes would not
 be applied to your GUI session.
@@ -66,7 +66,7 @@ be applied to your GUI session.
 
 The repository search provider allows you to use full-text search in assignment panels. In order
 to use this feature, full-text indexing must be enabled system-wide. Please see
-xref:/midpoint/reference/repository/full-text-search/[Full-Text Search] for details.
+xref:/midpoint/reference/latest/repository/full-text-search/[Full-Text Search] for details.
 
 For clarity of search for end-users, we recommend setting full-text indexing at least for
 the following properties:
@@ -424,7 +424,7 @@ In the case of assignments, you are able to perform queries that deal with both 
 and _assignment target data_. The latter are accessed via so-called dereferencing using special
 path component `@`.
 
-NOTE: You can learn more about filters and dereferencing in xref:/midpoint/reference/concepts/query/[Query Documentation].
+NOTE: You can learn more about filters and dereferencing in xref:/midpoint/reference/latest/concepts/query/[Query Documentation].
 
 Let us have a look at some examples.
 

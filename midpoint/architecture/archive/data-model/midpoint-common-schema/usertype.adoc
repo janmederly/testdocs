@@ -18,7 +18,7 @@ Therefore the user obect defines handful of properties that are commonly used to
 
 UserType, as all the midPoint objects, is a subtype of xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/objecttype/[ObjectType]. Therefore it has all the basic properties such as `name` and `description`.
 
-UserType is also a xref:/midpoint/reference/schema/focus-and-projections/[focal type]. Therefore it can behave as a "focus" (authoritative object) in midPoint xref:/midpoint/reference/synchronization/introduction/[synchronization].
+UserType is also a xref:/midpoint/reference/latest/schema/focus-and-projections/[focal type]. Therefore it can behave as a "focus" (authoritative object) in midPoint xref:/midpoint/reference/latest/synchronization/introduction/[synchronization].
 
 
 == SchemaDoc
@@ -246,13 +246,13 @@ optional, multi
 | Set of user's assignments.
 Represents objects (such as roles) or accounts directly assigned to a user.
 Represents a that the user _should have_ something.
-See xref:/midpoint/reference/roles-policies/assignment/[Assignment].
+See xref:/midpoint/reference/latest/roles-policies/assignment/[Assignment].
 
 
 | linkRef
 | ObjectReferenceType  +
 optional, multi
-| Reference to accounts that this user owns or embedded account object (see xref:/midpoint/reference/schema/object-references/[Object References]). This property specifies the _linked_ accounts, that means account that midPoint thinks the user really _has_. It may be different from what he should have as represented by assignments (see above).[NOTE]
+| Reference to accounts that this user owns or embedded account object (see xref:/midpoint/reference/latest/schema/object-references/[Object References]). This property specifies the _linked_ accounts, that means account that midPoint thinks the user really _has_. It may be different from what he should have as represented by assignments (see above).[NOTE]
 .Attention
 ====
 in 2.1.x versions use `accountRef` instead of `linkRef` when referencing accounts
@@ -323,13 +323,13 @@ Full list of items can be found by using the SchemaDoc links above.
 
 == Accounts and Assignments
 
-Please see xref:/midpoint/reference/roles-policies/assignment/[Assignment] and xref:/midpoint/reference/roles-policies/assignment/assigning-vs-linking/[Assigning vs Linking] pages.
+Please see xref:/midpoint/reference/latest/roles-policies/assignment/[Assignment] and xref:/midpoint/reference/latest/roles-policies/assignment/assigning-vs-linking/[Assigning vs Linking] pages.
 
 
 == See Also
 
-* xref:/midpoint/reference/roles-policies/assignment/[Assignment]
+* xref:/midpoint/reference/latest/roles-policies/assignment/[Assignment]
 
 * xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/orgtype/[OrgType]
 
-* xref:/midpoint/reference/resources/shadow/[Shadow Objects]
+* xref:/midpoint/reference/latest/resources/shadow/[Shadow Objects]

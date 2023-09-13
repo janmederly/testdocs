@@ -875,7 +875,7 @@ The main midPoint configuration is placed in the following places:
 
 * In DB repository: `System configuration` object
 
-The `config.xml` file is used to set up database repository connection, as documented in link:https://docs.evolveum.com/midpoint/reference/repository/configuration/[Repository Configuration].
+The `config.xml` file is used to set up database repository connection, as documented in link:https://docs.evolveum.com/midpoint/reference/latest/repository/configuration/[Repository Configuration].
 
 The following chapter describes additional configuration parameters in `config.xml` file.
 Any change in the file requires midPoint restart.
@@ -2184,7 +2184,7 @@ In case of errors, the error will be logged as Java exception. This means you ca
 When searching for exceptions, be sure to also check the *Caused by:* message.
 The last *Caused by* message should contain the error message text in all cases even if the exception messages above in the log are less understandable.
 
-Please include the *Caused by* exception in your log reports if reporting issues as described in xref:/midpoint/reference/diag/creating-a-bug-report/#submitting-a-bug-report[Submitting a Bug Report].
+Please include the *Caused by* exception in your log reports if reporting issues as described in xref:/midpoint/reference/latest/diag/creating-a-bug-report/#submitting-a-bug-report[Submitting a Bug Report].
 ====
 
 == Maintenance
@@ -2376,9 +2376,9 @@ Please read the release notes correctly and apply any required procedures.
 Alternatively, if you cannot upgrade your environment at this time, you can temporarily keep the original built-in connectors (remember you should have backed them up before upgrade) by putting them to `midpoint.home/icf-connectors` directory.
 Please note that the original versions of the connectors may not be supported anymore.
 
-//If, after the upgrade, you need to re-apply the LESS customizations, modify the `midpoint.home/less/*.less` files or follow link:https://docs.evolveum.com/midpoint/reference/admin-gui/deployment-information/[Deployment Information] for simple customizations.
+//If, after the upgrade, you need to re-apply the LESS customizations, modify the `midpoint.home/less/*.less` files or follow link:https://docs.evolveum.com/midpoint/reference/latest/admin-gui/deployment-information/[Deployment Information] for simple customizations.
 
-//LESS customizations have to be applied on all midPoint instances and it requires midPoint restart (except when using link:https://docs.evolveum.com/midpoint/reference/admin-gui/deployment-information/[Deployment Information Type]).
+//LESS customizations have to be applied on all midPoint instances and it requires midPoint restart (except when using link:https://docs.evolveum.com/midpoint/reference/latest/admin-gui/deployment-information/[Deployment Information Type]).
 
 After you finish the upgrade procedure, start the remaining midPoint instances and test the behaviour in the upgraded midPoint.
 Test all scenarios if possible.
@@ -2400,7 +2400,7 @@ MidPoint patching usually consist of the following tasks:
 
 * troubleshooting your issue (please see <<troubleshooting>> section for details)
 
-* submitting a Bug Report (https://jira.evolveum.com), if it was not already reported earlier. Please refer to xref:/midpoint/reference/diag/creating-a-bug-report/#submitting-a-bug-report[Submitting a Bug Report] for more information.
+* submitting a Bug Report (https://jira.evolveum.com), if it was not already reported earlier. Please refer to xref:/midpoint/reference/latest/diag/creating-a-bug-report/#submitting-a-bug-report[Submitting a Bug Report] for more information.
 
 * contact Evolveum for planning resolution of the issue
 
@@ -2427,7 +2427,7 @@ Please follow these steps:
 
 * If *Status* is `Closed` or `Resolved` and your version is older than the *Fix version*, contact Evolveum in order to check possibility of backporting the fix into a maintenance version of the release you have.
 
-. If you have not found your issue in JIRA, create a new issue in JIRA as described in xref:/midpoint/reference/diag/creating-a-bug-report/#submitting-a-bug-report[Submitting a Bug Report].
+. If you have not found your issue in JIRA, create a new issue in JIRA as described in xref:/midpoint/reference/latest/diag/creating-a-bug-report/#submitting-a-bug-report[Submitting a Bug Report].
 
 . When resolution is done (you will receive automatic e-mail notification sent from JIRA or you just can watch the issue JIRA manually), wait one day, https://download.evolveum.com/midpoint/[download a new support build from here, e.g. from 4.4-support subdirectory] and install it to upgrade to that version in your testing environment.
 

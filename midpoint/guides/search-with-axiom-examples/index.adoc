@@ -2,7 +2,7 @@
 :page-wiki-metadata-create-user: mspanik
 :page-since: "4.4"
 
-Midpoint provides multiple mechanisms to xref:/midpoint/reference/concepts/query/[query] data. This document provides basic information of xref:/midpoint/reference/concepts/query/axiom-query-language/[AXIOM query language] and examples of its usage in midPoint GUI.
+Midpoint provides multiple mechanisms to xref:/midpoint/reference/latest/concepts/query/[query] data. This document provides basic information of xref:/midpoint/reference/latest/concepts/query/axiom-query-language/[AXIOM query language] and examples of its usage in midPoint GUI.
 
 The document is intended for users who understand midPoint concepts and architecture (IDM operators, administrators, engineers,...). They can use the AXIOM language in deeper analysis and searching for the objects and their relations in GUI.
 
@@ -20,7 +20,7 @@ Objects in midPoint are binded by relations (assignments, inducements, ..). AXIO
 
 You can create complex queries also using _"match"_ operator and _"exists"_ operator. See examples below for their usage.
 
-More detail information and description of the operators can be found at xref:/midpoint/reference/concepts/query/axiom-query-language/[Axiom Query Language] documentation.
+More detail information and description of the operators can be found at xref:/midpoint/reference/latest/concepts/query/axiom-query-language/[Axiom Query Language] documentation.
 
 == How to start
 
@@ -146,7 +146,7 @@ and intent = "default"
 )`
 |Resource is identified by OID
 
-Note: For detail explanation of the query please check additional xref:/midpoint/reference/concepts/query/axiom-query-language/examples/[Example AXIOM queries] page.
+Note: For detail explanation of the query please check additional xref:/midpoint/reference/latest/concepts/query/axiom-query-language/examples/[Example AXIOM queries] page.
 
 |Users with account on specific resource
 |`linkRef/@ matches ( +
@@ -191,8 +191,8 @@ Views in "Assignments" panels display content of "assignment" attribute. So name
 
 == See Also
 
-- xref:/midpoint/reference/concepts/query/[midPoint Query] - Query concepts in midPoint
-- xref:/midpoint/reference/concepts/query/axiom-query-language/[Axiom Query Language] - Main page of AXIOM query language.
-- xref:/midpoint/reference/concepts/query/axiom-query-language/examples/[Example Axiom Queries] - Additional examples with more detail explanation.
-- xref:/midpoint/reference/concepts/query/axiom-query-language/expressions/[Expressions in Axiom Query] - Expressions in AXIOM queries.
+- xref:/midpoint/reference/latest/concepts/query/[midPoint Query] - Query concepts in midPoint
+- xref:/midpoint/reference/latest/concepts/query/axiom-query-language/[Axiom Query Language] - Main page of AXIOM query language.
+- xref:/midpoint/reference/latest/concepts/query/axiom-query-language/examples/[Example Axiom Queries] - Additional examples with more detail explanation.
+- xref:/midpoint/reference/latest/concepts/query/axiom-query-language/expressions/[Expressions in Axiom Query] - Expressions in AXIOM queries.
 - xref:/midpoint/devel/axiom/concepts/[Axiom Concepts] - Developers documentation - detail concepts of AXIOM query language.

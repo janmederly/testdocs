@@ -3,8 +3,8 @@
 
 [NOTE]
 This page is part of MidScale project documentation and was freezed at the end of the project.
-See xref:/midpoint/reference/repository/native-postgresql/design-and-implementation.adoc[Design and Implementation]
-and xref:/midpoint/reference/repository/native-postgresql/db-maintenance.adoc[DB maintenance] for current pages.
+See xref:/midpoint/reference/latest/repository/native-postgresql/design-and-implementation.adoc[Design and Implementation]
+and xref:/midpoint/reference/latest/repository/native-postgresql/db-maintenance.adoc[DB maintenance] for current pages.
 
 == Basic considerations
 
@@ -94,7 +94,7 @@ Can indexable JSON array be solution?
 Normally we don't cache attributes, in that case there is no problem, but what if we want to?
 There are still identifiers, primary is in `M_SHADOW`, we don't have secondary/tertiary.
 Problem also describe on the xref:/midpoint/devel/design/identifier-theory/[Identifier Theory page].
-** xref:/midpoint/reference/roles-policies/rbac/[Parametric roles]
+** xref:/midpoint/reference/latest/roles-policies/rbac/[Parametric roles]
 can/will contain definition of extended attributes, how to apply these to DB schema?
 *** Assignment parameters are more like "shadow attributes" while schema extensions are global.
 ** Ability to apply necessary DB schema changes without the restart would be nice,
@@ -198,7 +198,7 @@ Testing on SQL level with many rows, etc.
 == Schema to repository mapping
 
 Table shows only descendands of `ObjectType`, not other containers, assignments, etc.
-See also image::/midpoint/reference/repository/generic/midpoint-db-4.2.png[schema diagram for midPoint 4.2].
+See also image::/midpoint/reference/latest/repository/generic/midpoint-db-4.2.png[schema diagram for midPoint 4.2].
 
 |===
 | Schema type | Repo Q-type | Rows (expected max or typical for smaller tables)

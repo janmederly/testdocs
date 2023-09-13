@@ -193,7 +193,7 @@ So others will know who they should ask if they run into problems reading your c
 * Do not use public fields (except for constants).
 Use getter/setter methods.
 
-* Do not forget about appropriate xref:/midpoint/reference/diag/logging/[logging].
+* Do not forget about appropriate xref:/midpoint/reference/latest/diag/logging/[logging].
 Logging is important.
 Do *not* use stdout or stderr.
 Just don't.
@@ -362,7 +362,7 @@ Use them a lot.
 
 Full recommendation regarding interface definition can be found here: link:https://dracones.ideosystem.com/work/papers/2010-semancik-interface-definition.pdf[https://dracones.ideosystem.com/work/papers/2010-semancik-interface-definition.pdf]
 
-If the interface is meant to be public it should be listed in xref:/midpoint/reference/interfaces/[Interfaces] page.
+If the interface is meant to be public it should be listed in xref:/midpoint/reference/latest/interfaces/[Interfaces] page.
 
 == Dependency Guidelines
 

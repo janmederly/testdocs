@@ -108,10 +108,10 @@ However, there are many things that needs to be taken into account when configur
 * `instanceType`, `nTSecurityDescriptor` and `objectCategory` are formally defined as mandatory attributes in the `top` object class (!!!). This means they are (formally) mandatory for all objects accessed using LDAP connection.
 But the reality is different.
 It seems to be OK to create an object without these attributes.
-Therefore for a proper operation of midPoint we recommend to modify the schema using the `limitations` mechanism in midPoint xref:/midpoint/reference/resources/resource-configuration/schema-handling/[Resource Schema Handling] by setting `minOccurs=0`. (This is already done in the sample referenced below.)
+Therefore for a proper operation of midPoint we recommend to modify the schema using the `limitations` mechanism in midPoint xref:/midpoint/reference/latest/resources/resource-configuration/schema-handling/[Resource Schema Handling] by setting `minOccurs=0`. (This is already done in the sample referenced below.)
 
 * The objects can easily have attributes that are not defined in any object classes that they have.
-E.g. a normal user (the `user` object class) may have attribute `info`. If such extra attributes are used in your AD instance then the best way is to configure them as operational attributes in the connector configuration and define them explicitly in xref:/midpoint/reference/resources/resource-configuration/schema-handling/[Resource Schema Handling] (see bug:MID-3379[]).
+E.g. a normal user (the `user` object class) may have attribute `info`. If such extra attributes are used in your AD instance then the best way is to configure them as operational attributes in the connector configuration and define them explicitly in xref:/midpoint/reference/latest/resources/resource-configuration/schema-handling/[Resource Schema Handling] (see bug:MID-3379[]).
 ====
 
 === Resource Configuration Example
@@ -156,7 +156,7 @@ It is usually safe to ignore these warnings.
 
 === Passwords
 
-To avoid clear-text password visible in the repository, please refer to xref:/midpoint/reference/resources/resource-configuration/string-to-protectedstring-connector-configuration/[String to ProtectedString Connector Configuration].
+To avoid clear-text password visible in the repository, please refer to xref:/midpoint/reference/latest/resources/resource-configuration/string-to-protectedstring-connector-configuration/[String to ProtectedString Connector Configuration].
 
 === Full Active Directory Schema
 
@@ -210,7 +210,7 @@ Active Directory obviously leaves a large room for improvement in this area.
 For example, although LDAP specification states that DNs using different national characters should be considered different identifiers, Active Directory might consider them to be the same (see bug:MID-7355[]).
 
 Therefore, we *strongly recommend* to avoid use of national characters in Active Directory, especially in the identifiers (`dn` and hence also `cn`).
-MidPoint xref:/midpoint/reference/concepts/polystring/[polystring] functionality is designed especially for this purpose.
+MidPoint xref:/midpoint/reference/latest/concepts/polystring/[polystring] functionality is designed especially for this purpose.
 Following mapping may help create identifier without national characters:
 
 [source,xml]

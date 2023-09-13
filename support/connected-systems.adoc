@@ -4,7 +4,7 @@
 
 This page summarizes Evolveum support policy regarding systems connected to midPoint.
 This applies to xref:/connectors/[identity connectors] and the systems connected using the connectors.
-The same policy applies to all integrations, such as xref:/midpoint/reference/resources/manual/itsm-plugin/[plugins for ITSM systems], asynchronous messaging integrations.
+The same policy applies to all integrations, such as xref:/midpoint/reference/latest/resources/manual/itsm-plugin/[plugins for ITSM systems], asynchronous messaging integrations.
 
 As a general rule, Evolveum supports only such systems that are actively *supported by their vendor under a regular support program*.
 This means that Evolveum will not support versions of the systems that are in _end of life_ or _end of support_ state.

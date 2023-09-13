@@ -1,6 +1,6 @@
 = Processing mapping sets
 
-See xref:/midpoint/reference/expressions/mappings/[Mapping] for background information.
+See xref:/midpoint/reference/latest/expressions/mappings/[Mapping] for background information.
 
 Evaluation of _mapping sets_ converts _source object_ into a set of _item deltas_ to be applied on this (or other) object.
 It consists of evaluation of the mappings (probably chained because of mutual dependencies) and of _consolidation_

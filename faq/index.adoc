@@ -14,7 +14,7 @@
 
 Midpoint is a comprehensive identity management and identity governance system.
 It is basically a complex integration tool that can replicate and transform user records between numerous user databases, management of the records, reporting, auditing and so on.
-It allows very complex transformation and replication rules including support for advanced xref:/midpoint/reference/roles-policies/rbac/[RBAC], xref:/midpoint/reference/expressions/mappings/[data mappings], xref:/midpoint/reference/org/organizational-structure/[organizational structure management] and xref:/iam/iga/what-is-identity-governance/[identity governance].
+It allows very complex transformation and replication rules including support for advanced xref:/midpoint/reference/latest/roles-policies/rbac/[RBAC], xref:/midpoint/reference/latest/expressions/mappings/[data mappings], xref:/midpoint/reference/latest/org/organizational-structure/[organizational structure management] and xref:/iam/iga/what-is-identity-governance/[identity governance].
 Its internal mechanisms are based on state-of-the art concepts that are still not yet widely used in the field of Identity Management.
 
 For those that are interested in long reading there is xref:/book/[book about midPoint].
@@ -104,11 +104,11 @@ MidPoint provides a graphical administration and user interface (GUI) in a form 
 It is an integral part of midPoint application as a primary midPoint administration tool.
 Although the GUI is part of midPoint, the GUI layer is clearly separated from the back-end layer using well-defined interfaces.
 Therefore it is possible to adapt or even replace the GUI if needed.
-There is a xref:/midpoint/reference/interfaces/rest/[RESTful service] that can be used to build completely custom user interfaces.
+There is a xref:/midpoint/reference/latest/interfaces/rest/[RESTful service] that can be used to build completely custom user interfaces.
 
 === What services midPoint provides?
 
-MidPoint provides a xref:/midpoint/reference/interfaces/rest/[RESTful service] for the vital provisioning functions.
+MidPoint provides a xref:/midpoint/reference/latest/interfaces/rest/[RESTful service] for the vital provisioning functions.
 This service can be used to modify and control vast majority of midPoint functions.
 
 === What connectors and resource types midPoint supports?
@@ -140,7 +140,7 @@ Users should change and manage their passwords in midPoint.
 The password can then be easily replicated to any other system (resource).
 MidPoint can also enforce consistent password policies, make sure the passwords are same (or different) on several resources (in the future) and so on.
 
-See xref:/midpoint/reference/security/credentials/initial-password-management-discussion/[Initial Password Management Discussion page] for more detailed discussion of the topic.
+See xref:/midpoint/reference/latest/security/credentials/initial-password-management-discussion/[Initial Password Management Discussion page] for more detailed discussion of the topic.
 
 === Does midPoint supports Single Sign-On (SSO)?
 
@@ -160,7 +160,7 @@ This is very common integration scenario.
 * MidPoint can be a SSO client under some circumstances.
 For example, it can be SSO client for Active Directory system by correctly configuring midPoint spring security settings (may currently require some customization).
 Alternatively midPoint is just a web application therefore it can be integrated to a web-SSO system as an ordinary web application.
-See xref:/midpoint/reference/security/authentication/flexible-authentication/[Flexible Authentication] for more details.
+See xref:/midpoint/reference/latest/security/authentication/flexible-authentication/[Flexible Authentication] for more details.
 
 === Does midPoint support OAuth2, OpenID Connect, SAML and similar protocols?
 
@@ -178,7 +178,7 @@ However, when it comes to "client side" implementation that a slightly is a diff
 It makes sense for midPoint to support OAuth2, OpenID Connect and SAML on those services in a role of service provider (relying party).
 MidPoint supports some of the protocols for midPoint user interface and RESTful services.
 However, there are still some limitations.
-Please see xref:/midpoint/reference/security/authentication/flexible-authentication/[Flexible Authentication] for more details.
+Please see xref:/midpoint/reference/latest/security/authentication/flexible-authentication/[Flexible Authentication] for more details.
 
 == Does midPoint have a dedicated end-user interface (GUI)?
 
@@ -273,9 +273,9 @@ This requires more time during initial import but the time will pay off after th
 
 Of course it does.
 But most likely, you would not like to use them.
-MidPoint has something that is much better than generic objects: xref:/midpoint/reference/schema/archetypes/[Archetypes].
+MidPoint has something that is much better than generic objects: xref:/midpoint/reference/latest/schema/archetypes/[Archetypes].
 
-See xref:/midpoint/reference/schema/generic-objects/[Generic Objects] and xref:/midpoint/reference/schema/archetypes/[Archetypes] pages for the details.
+See xref:/midpoint/reference/latest/schema/generic-objects/[Generic Objects] and xref:/midpoint/reference/latest/schema/archetypes/[Archetypes] pages for the details.
 
 == Installation, Deployment and Operation
 
@@ -290,7 +290,7 @@ For the details please see xref:tomcat-deployment/[Is Tomcat deployment still su
 
 This warning is displayed during the starting of midPoint.
 It can be ignored unless you want to use a custom directory for your embedded repository or custom connectors.
-For more please see xref:/midpoint/reference/deployment/midpoint-home-directory/[midPoint Home directory].
+For more please see xref:/midpoint/reference/latest/deployment/midpoint-home-directory/[midPoint Home directory].
 
 === Missing `sn` attribute on LDAP
 
@@ -384,8 +384,8 @@ See xref:connid-result-handlers/[What are ConnId result handlers?] for more deta
 There are several Interfaces that you can use.
 Namely:
 
-* RESTful service: xref:/midpoint/reference/interfaces/rest/[REST API]
-* Local Java API: xref:/midpoint/reference/interfaces/model-java/[IDM Model Interface]
+* RESTful service: xref:/midpoint/reference/latest/interfaces/rest/[REST API]
+* Local Java API: xref:/midpoint/reference/latest/interfaces/model-java/[IDM Model Interface]
 * SOAP-based web service interface was present in midPoint up to midPoint 4.1.
 It is not available anymore.
 
@@ -395,11 +395,11 @@ We are using the local Java API ourselves (as given by midPoint architecture), s
 
 === I want to use RESTful service. Where do I start?
 
-Here: xref:/midpoint/reference/interfaces/rest/[RESTful service]
+Here: xref:/midpoint/reference/latest/interfaces/rest/[RESTful service]
 
 === I want to use the SOAP-based web service interface. Where do I start?
 
-Don't. SOAP interface was removed in midPoint 4.2. Please use xref:/midpoint/reference/interfaces/rest/[RESTful service] instead.
+Don't. SOAP interface was removed in midPoint 4.2. Please use xref:/midpoint/reference/latest/interfaces/rest/[RESTful service] instead.
 
 == Support
 

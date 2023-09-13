@@ -78,7 +78,7 @@ The details are available in following documents:
 
 Metadata schema is a basic building block of identity provenance solution, but it is not sufficient just by itself.
 We also have to populate, maintain and transform the metadata.
-MidPoint is using xref:/midpoint/reference/expressions/mappings/[mapping mechanism] to populate and transform the data.
+MidPoint is using xref:/midpoint/reference/latest/expressions/mappings/[mapping mechanism] to populate and transform the data.
 We plan to xref:../processing/model/thoughts/metadata-mapping-model/[re-use the concept] to populate and maintain the metadata as well.
 There will be metadata mappings that are applied globally in a form similar to metadata transformation policy.
 We also plan to implement a way how to configure a specific metadata handling for each mapping specifically.

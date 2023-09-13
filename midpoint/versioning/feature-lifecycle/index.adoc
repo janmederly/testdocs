@@ -151,13 +151,13 @@ If the feature is planned, experimental, deprecated or obsolete, there will be a
 
 If there is a configuration associated with the feature, the configuration will be marked in the schema.
 Configuration of experimental and deprecated features is marked with special annotations.
-MidPoint xref:/midpoint/reference/deployment/ninja/[ninja] tool can be used to check whether your configuration is using deprecated functionality.
+MidPoint xref:/midpoint/reference/latest/deployment/ninja/[ninja] tool can be used to check whether your configuration is using deprecated functionality.
 
 Configuration of experimental features will not be displayed in the user interface by default.
 You need to explicitly enable the use of experimental features to see the configuration in user interface.
 
 When we know that we are going to remove a particular deprecated functionality, we will mark associated configuration with special "planned removal" annotations.
-Once again, xref:/midpoint/reference/deployment/ninja/[ninja] tool can be used to check whether your system is using configuration that is planned for removal.
+Once again, xref:/midpoint/reference/latest/deployment/ninja/[ninja] tool can be used to check whether your system is using configuration that is planned for removal.
 However, please be careful here.
 Any deprecated feature can be removed at any time.
 Although we are trying to be nice and properly reflect our plans in the schema annotations, software development is a very dynamic affair.

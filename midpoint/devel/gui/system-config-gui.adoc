@@ -2,7 +2,7 @@
 :page-toc: top
 
 This page summarizes result of tests of 4.5 after new Sysconfig GUI using tiles was introduced.
-Most of the xref:/midpoint/reference/concepts/system-configuration-object/[System Configuration]
+Most of the xref:/midpoint/reference/latest/concepts/system-configuration-object/[System Configuration]
 (`SystemConfigurationType`) elements can be configured via GUI, the rest is mentioned at the end of this document.
 
 The following list is structured based on existing tiles (in 4.5) - for each tile there is

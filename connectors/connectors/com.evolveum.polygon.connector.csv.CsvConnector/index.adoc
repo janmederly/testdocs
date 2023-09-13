@@ -192,4 +192,4 @@ Support for other operating systems, remote or unusual filesystems has to be exp
 
 * xref:/connectors/connectors/com.evolveum.polygon.csvfile.CSVFileConnector/[CSVFile Connector (legacy)]
 
-* xref:/midpoint/reference/upgrade/connectors/csvfile-connector-migration/[CSVFile Connector Migration]
+* xref:/midpoint/reference/latest/upgrade/connectors/csvfile-connector-migration/[CSVFile Connector Migration]

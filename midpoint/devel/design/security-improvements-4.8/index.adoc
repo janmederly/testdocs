@@ -136,7 +136,7 @@ Results of a design meeting (Katka, Rado, Pavol) on 11th of July 2023.
 Especially for business roles.
 . Allowing GUI customizations using expressions - e.g. in custom columns, but also using other expressions.
 . Of course, continuing the support for expression in reports editable by non-root users.
-. https://docs.evolveum.com/midpoint/reference/admin-gui/admin-gui-config/#custom-actions-for-object-lists[Custom GUI actions for object lists] (that use task templates) should be callable by non-privileged users, even if they utilize Groovy code - bug:MID-6913[]/bug:MID-7831[].
+. https://docs.evolveum.com/midpoint/reference/latest/admin-gui/admin-gui-config/#custom-actions-for-object-lists[Custom GUI actions for object lists] (that use task templates) should be callable by non-privileged users, even if they utilize Groovy code - bug:MID-6913[]/bug:MID-7831[].
 
 ==== The Solution
 

@@ -7,7 +7,7 @@ This page summarizes thoughs about use of artificial intelligence (AI), machine 
 
 Priority: high
 
-MidPoint heavily relies on xref:/midpoint/reference/roles-policies/rbac/[roles] to manage privileges assigned to users.
+MidPoint heavily relies on xref:/midpoint/reference/latest/roles-policies/rbac/[roles] to manage privileges assigned to users.
 However, creation and maintenance of role definitions is a very demanding task.
 There may be thousands of roles in a particular system.
 In fact, it is not unusual for a system to have more roles than it has users.
@@ -130,7 +130,7 @@ This, quite obviously, leads to _privilege hoarding_.
 Users are getting new privileges, while still keeping old privileges.
 Access is granted, never revoked, and the overall security risk grows and grows.
 
-xref:/midpoint/reference/roles-policies/certification/[Access certification] mechanisms is designed as a counter-balance.
+xref:/midpoint/reference/latest/roles-policies/certification/[Access certification] mechanisms is designed as a counter-balance.
 The principle of access certification is (usually) a regular review of existing user privileges.
 The privileges need to be _certified_ during the review, confirming that user still needs them.
 
@@ -158,12 +158,12 @@ Or perhaps making this more like a recommender, highlighting the privileges that
 
 Users have many accounts in many systems, which is usually quite a mess.
 Primary job of identity management system is to clean things up, to find order and bring visibility.
-One of the most important mechanism helping with that task is xref:/midpoint/reference/synchronization/correlation-and-confirmation-expressions/[identity correlation].
+One of the most important mechanism helping with that task is xref:/midpoint/reference/latest/synchronization/correlation-and-confirmation-expressions/[identity correlation].
 Simply speaking, identity correlation is used to find out all the accounts that belong to a particular user.
 Or in other words: it finds identities that represent the same physical person.
 
-Traditionally, identity correlation is implemented in identity management systems by using simple deterministic xref:/midpoint/reference/synchronization/correlation-and-confirmation-expressions/[correlation expressions] and queries.
-Quite recently there is xref:/midpoint/reference/correlation/["Smart Correlation"] functionality that employs several methods, including some probabilistic techniques.
+Traditionally, identity correlation is implemented in identity management systems by using simple deterministic xref:/midpoint/reference/latest/synchronization/correlation-and-confirmation-expressions/[correlation expressions] and queries.
+Quite recently there is xref:/midpoint/reference/latest/correlation/["Smart Correlation"] functionality that employs several methods, including some probabilistic techniques.
 However, the correlation is not really "smart" yet.
 It just follows the rules set up by an administrator.
 
@@ -200,7 +200,7 @@ One of the mechanisms is data synchronization.
 Identity management systems are trying to keep all copies of identity data (known as _accounts_) synchronized, in all the systems that a person has an account.
 However, every system is a bit different.
 Some systems require human-readable usernames (`jsmith`), other use employee numbers (`X12345`), yet another use UUIDs, some of them accept intenrational characters in user full names and others do not, some of them have one field for full name, others have several separate fields (given name, family name, middle name, honorific titles).
-Identity management systems are using xref:/midpoint/reference/expressions/mappings/[mappings] to copy and transform and synchronize the data.
+Identity management systems are using xref:/midpoint/reference/latest/expressions/mappings/[mappings] to copy and transform and synchronize the data.
 
 Could "the machine" discover and suggest the data mappings and transformations?
 Could it suggest which attribute should be mapped to which property (using which transform), based on existing data sets.

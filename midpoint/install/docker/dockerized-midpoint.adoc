@@ -295,8 +295,8 @@ So be sure to avoid applying e.g. `mysql-upgrade-3.8-3.9-utf8mb4.sql` if the dat
 
 |===
 
-For automatic schema creation and upgrade options please see xref:/midpoint/reference/repository/generic/configuration/#schema-creation-and-updating[Schema creation and updating section in midPoint documentation]
-(not available for xref:/midpoint/reference/repository/native-postgresql/[Native PostgreSQL repository] yet).
+For automatic schema creation and upgrade options please see xref:/midpoint/reference/latest/repository/generic/configuration/#schema-creation-and-updating[Schema creation and updating section in midPoint documentation]
+(not available for xref:/midpoint/reference/latest/repository/native-postgresql/[Native PostgreSQL repository] yet).
 
 Note that in order to connect to the database you have to provide the password.
 For security reasons, we use the indirect way through file access.
@@ -372,7 +372,7 @@ And the following Docker secrets are to be provided:
 | secret
 | Names of the password and access files for JMX authentication and authorization.
 Use for clustering.
-For more information see xref:/midpoint/reference/deployment/clustering-ha/[Clustering / high availability setup].
+For more information see xref:/midpoint/reference/latest/deployment/clustering-ha/[Clustering / high availability setup].
 These secrets are specific for clustering demo.
 | `configs-and-secrets/midpoint/jmxremote.password`configs-and-secrets/midpoint/jmxremote.access
 

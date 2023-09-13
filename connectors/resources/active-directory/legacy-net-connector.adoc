@@ -147,7 +147,7 @@ link:https://github.com/Evolveum/midpoint-samples/blob/master/samples/resources/
 
 [TIP]
 ====
-Note: to avoid clear-text password visible in the repository, please refer to xref:/midpoint/reference/resources/resource-configuration/string-to-protectedstring-connector-configuration/[String to ProtectedString Connector Configuration].
+Note: to avoid clear-text password visible in the repository, please refer to xref:/midpoint/reference/latest/resources/resource-configuration/string-to-protectedstring-connector-configuration/[String to ProtectedString Connector Configuration].
 
 ====
 

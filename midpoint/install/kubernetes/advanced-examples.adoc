@@ -242,7 +242,7 @@ With any of these approach the information about processing (*.done*) will be ke
 === Flexible authentication @ Security policy
 
 Default security policy contain only information about the credentials.
-What may be interesting with the deployment is xref:/midpoint/reference/security/authentication/flexible-authentication/configuration.adoc[Flexible authentication].
+What may be interesting with the deployment is xref:/midpoint/reference/latest/security/authentication/flexible-authentication/configuration.adoc[Flexible authentication].
 
 .Configmap with flexible authentication | link:https://raw.githubusercontent.com/Evolveum/midpoint-kubernetes/main/advanced-examples/configmap-poi-120-flexible-auth.yaml[Github]
 [source]
@@ -453,7 +453,7 @@ Assigned objects:
 
 * 501-test-task-recompute-org-members.xml +
 Task definition to recompute all directly assigned members to the Org with any relation - member, manager, approver, owner.
-This example task utilizing xref:/midpoint/reference/tasks/activities/index.adoc[Activities].
+This example task utilizing xref:/midpoint/reference/latest/tasks/activities/index.adoc[Activities].
 
 .Example of the post-initial-objects | link:https://raw.githubusercontent.com/Evolveum/midpoint-kubernetes/main/advanced-examples/configmap-poi-role_user_org_task.yaml[Github]
 [source,kubernetes]
@@ -560,7 +560,7 @@ data:
 
 Connectors are located in the *icf-connectors* subdirectory of the midpoint.home (default is /opt/midpoint/var/icf-connectors).
 This directory may be empty as few basic connectors are directly bundled with the midpoint war file.
-Specific information related to the connectors can be found on the dedicated xref:/midpoint/reference/resources/connector-setup.adoc[Connector Setup] docs page.
+Specific information related to the connectors can be found on the dedicated xref:/midpoint/reference/latest/resources/connector-setup.adoc[Connector Setup] docs page.
 
 I would mention the most common options how to provide connectors to be available for the midpoint instance.
 The goal is simply provide the file inside the kubernetes pod.

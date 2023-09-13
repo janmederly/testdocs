@@ -7,7 +7,7 @@
 :page-wiki-metadata-modify-date: 2016-02-20T15:39:37.719+01:00
 
 Main subsystem interfaces in link:https://evolveum.com/[midPoint] use a very similar philosophy and approach.
-All the interfaces provide manipulation of the identity objects (objects from the xref:/midpoint/reference/schema/[data model]), therefore it is quite expected that all the interfaces will provide similar semantics.
+All the interfaces provide manipulation of the identity objects (objects from the xref:/midpoint/reference/latest/schema/[data model]), therefore it is quite expected that all the interfaces will provide similar semantics.
 The common functions provided by all the interfaces are:
 
 * Create, read, update and delete (CRUD) operations with objects.
@@ -19,7 +19,7 @@ These operations are in fact called `add`, `get`, `modify` and `delete` in midPo
 
 Concepts described here apply to the following interfaces:
 
-* xref:/midpoint/reference/interfaces/model-java/[IDM Model Interface] (Model API)
+* xref:/midpoint/reference/latest/interfaces/model-java/[IDM Model Interface] (Model API)
 
 * Provisioning Service Interface (Provisioning API)
 
@@ -88,7 +88,7 @@ The `get` operation returns an object identified by OID.
 It fails if the object does not exist.
 This operation is "safe" in a way that it must not have any side-effects and must not change the state of the objects.
 
-The implementation may be able to _resolve_ xref:/midpoint/reference/schema/object-references/[object references]. The client may request that the resulting object should be returned as xref:/midpoint/reference/schema/object-references/[composite], instead of a plain object with references.
+The implementation may be able to _resolve_ xref:/midpoint/reference/latest/schema/object-references/[object references]. The client may request that the resulting object should be returned as xref:/midpoint/reference/latest/schema/object-references/[composite], instead of a plain object with references.
 This approach may be more efficient for some applications.
 
 
@@ -108,7 +108,7 @@ The `delete` operation irreversibly removes the object.
 == List and Search
 
 The `list` and `search` operations look for objects.
-They return all objects of selected type (`list`) or objects of selected type that match a specified xref:/midpoint/reference/concepts/query/xml-query-language/[filter].
+They return all objects of selected type (`list`) or objects of selected type that match a specified xref:/midpoint/reference/latest/concepts/query/xml-query-language/[filter].
 
 Search operations may use _paging_, which is a support to return specific subset of the results.
 This feature is intended for efficient paged display of the results and also for efficient iterative processing of the results (including remote processing).
@@ -125,7 +125,7 @@ Interface operations should be named as _<operation><objectType>_ e.g. `searchOb
 
 * list - returning all objects, none or fixed search criteria
 
-* search - returning subset of objects with flexible search criteria (xref:/midpoint/reference/concepts/query/xml-query-language/[filter])
+* search - returning subset of objects with flexible search criteria (xref:/midpoint/reference/latest/concepts/query/xml-query-language/[filter])
 
 The operations named `get` should be efficient.
 The overhead to execute them should be low, e.g. direct fetch of a single object using an indexed path (`getObject`). The operations named `list` or `search` may have higher overhead.
@@ -162,6 +162,6 @@ More sophisticated error handling is possible by inspecting the xref:/midpoint/a
 
 * xref:/midpoint/architecture/concepts/consistency-model/[Consistency Model]
 
-* xref:/midpoint/reference/concepts/query/xml-query-language/[Query Language]
+* xref:/midpoint/reference/latest/concepts/query/xml-query-language/[Query Language]
 
-* xref:/midpoint/reference/schema/[Data Model]
+* xref:/midpoint/reference/latest/schema/[Data Model]

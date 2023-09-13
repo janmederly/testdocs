@@ -24,7 +24,7 @@ However, recently we have been refactoring and cleaning up the GUI code and also
 Currently there are several ways how to extend the GUI:
 
 * Customize GUI styles, e.g. color scheme, fonts and so on.
-(SCSS, see xref:/midpoint/reference/admin-gui/look-feel-customization/[Look & Feel Customization HOWTO])
+(SCSS, see xref:/midpoint/reference/latest/admin-gui/look-feel-customization/[Look & Feel Customization HOWTO])
 
 * Create custom launchers for "home" page in midPoint GUI (declarative, see Admin GUI Configuration Type)
 
@@ -94,7 +94,7 @@ Two most prominent classes are:
 
 * `WebComponentUtil`: contains utility methods that are often used in Wicket components (panels, forms, ...)
 
-* `WebModelServiceUtil`: contains utility methods that interact with midPoint xref:/midpoint/reference/interfaces/model-java/[IDM Model Interface] (`ModelService`, `ModelInteractionService`) and other midPoint components.
+* `WebModelServiceUtil`: contains utility methods that interact with midPoint xref:/midpoint/reference/latest/interfaces/model-java/[IDM Model Interface] (`ModelService`, `ModelInteractionService`) and other midPoint components.
 
 == MidPoint GUI Components
 
@@ -408,4 +408,4 @@ Learn to use generics properly.
 
 == See Also
 
-* xref:/midpoint/reference/deployment/maven-overlay-project/[Customization With Overlay Project]
+* xref:/midpoint/reference/latest/deployment/maven-overlay-project/[Customization With Overlay Project]

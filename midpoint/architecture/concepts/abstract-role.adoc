@@ -19,13 +19,13 @@ Following object types are abstract roles in midPoint:
 * Archetype (`ArchetypeType`) - since midPoint 4.0
 
 All those object types may act as roles.
-Which means they can cause provisioning of accounts or other resource objects, they may contain other abstract roles, they can form a platform for xref:/midpoint/reference/roles-policies/policy-rules/[Policy Rules] and so on.
+Which means they can cause provisioning of accounts or other resource objects, they may contain other abstract roles, they can form a platform for xref:/midpoint/reference/latest/roles-policies/policy-rules/[Policy Rules] and so on.
 
-In simple technical terms _abstract role_ means that the object may contain xref:/midpoint/reference/roles-policies/assignment/assignment-vs-inducement/[inducement].
+In simple technical terms _abstract role_ means that the object may contain xref:/midpoint/reference/latest/roles-policies/assignment/assignment-vs-inducement/[inducement].
 
 
 == See Also
 
-* xref:/midpoint/reference/roles-policies/rbac/[Advanced Hybrid RBAC]
+* xref:/midpoint/reference/latest/roles-policies/rbac/[Advanced Hybrid RBAC]
 
-* xref:/midpoint/reference/org/organizational-structure/[Organizational Structure]
+* xref:/midpoint/reference/latest/org/organizational-structure/[Organizational Structure]

@@ -110,7 +110,7 @@ E.g. this means copying the driver to `$TOMCAT_HOME/lib` directory if tomcat ser
 
 To avoid using JDBC connection properties such as host, port, username, password and database name, you can also use datasource.
 
-To xref:/midpoint/reference/repository/generic/configuration/#data-source-configuration[configure datasource in Tomcat], you can use the step 1 as when configuring midPoint repository (modification of server.xml and context.xml).
+To xref:/midpoint/reference/latest/repository/generic/configuration/#data-source-configuration[configure datasource in Tomcat], you can use the step 1 as when configuring midPoint repository (modification of server.xml and context.xml).
 
 After Tomcat restart, change your resource configurationProperties (`jdbc/testds1` is used as an example datasource):
 

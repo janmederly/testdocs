@@ -49,16 +49,16 @@ See below.
 |  xsd:any  +
 
 read-only
-|  XSD definition of xref:/midpoint/reference/resources/resource-schema/[resource schema] for the resource instance.
+|  XSD definition of xref:/midpoint/reference/latest/resources/resource-schema/[resource schema] for the resource instance.
 It defines data types for accounts, groups, roles, entitlements, organizational units or any other objects related to identity management that the resource supports.
-See below and also xref:/midpoint/reference/resources/resource-schema/[Resource Schema].
+See below and also xref:/midpoint/reference/latest/resources/resource-schema/[Resource Schema].
 
 
 |  schemaHandling
 |  SchemaHandlingType
 |  Specification of handling the objects defined in resource schema.
 E.g. read-only or read-write attributes, account object classes, expressions to determine values, etc.
-See xref:/midpoint/reference/resources/resource-configuration/schema-handling/[Resource Schema Handling].
+See xref:/midpoint/reference/latest/resources/resource-configuration/schema-handling/[Resource Schema Handling].
 
 
 |  nativeCapabilities

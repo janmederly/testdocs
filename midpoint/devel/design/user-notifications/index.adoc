@@ -8,7 +8,7 @@
 
 == User Notifications
 
-For an admin-level explanation of notifications, click xref:/midpoint/reference/misc/notifications/[here].
+For an admin-level explanation of notifications, click xref:/midpoint/reference/latest/misc/notifications/[here].
 
 As for the architecture, the (preliminary) structure is the following:
 

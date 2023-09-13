@@ -12,8 +12,8 @@
 
 == Motivation
 
-MidPoint has strong xref:/midpoint/reference/synchronization/introduction/[synchronization] features that includes ability to automatically xref:/midpoint/reference/synchronization/correlation-and-confirmation-expressions/[correlate] identities.
-xref:/midpoint/reference/synchronization/correlation-and-confirmation-expressions/[Correlation expression] is a simple but very powerful mechanism to correlate identities when reliable correlation identifier is present.
+MidPoint has strong xref:/midpoint/reference/latest/synchronization/introduction/[synchronization] features that includes ability to automatically xref:/midpoint/reference/latest/synchronization/correlation-and-confirmation-expressions/[correlate] identities.
+xref:/midpoint/reference/latest/synchronization/correlation-and-confirmation-expressions/[Correlation expression] is a simple but very powerful mechanism to correlate identities when reliable correlation identifier is present.
 This is common case in enterprise or government environments.
 But even in those environments there may be corner cases, omissions and typing mistakes.
 For example someone mistyped employee number when creating an account, employee numbers missing in older systems and so on.
@@ -42,7 +42,7 @@ But in case that there is no match midPoint can safely assume that this is a new
 
 == Sorter: Sophisticated Automatic Correlation
 
-Actually, first step towards improved correlation is already implemented: xref:/midpoint/reference/synchronization/synchronization-sorter/[Synchronization Sorter]. Sorter is sophisticated expression that can be used to implement completely custom identity correlation mechanism.
+Actually, first step towards improved correlation is already implemented: xref:/midpoint/reference/latest/synchronization/synchronization-sorter/[Synchronization Sorter]. Sorter is sophisticated expression that can be used to implement completely custom identity correlation mechanism.
 The sorter can make several correlation attempts with various criteria over many attributes with optional steps.
 It can even outsource identity correlation to an external system.
 There is just one limitation: the correlation mechanism is supposed to be synchronous.
@@ -56,14 +56,14 @@ Not yet.
 
 MidPoint can be improved to support manual identity correlation.
 In fact, this is something that we have expected almost since the beginning of midPoint development.
-For example there is a `disputed` xref:/midpoint/reference/synchronization/situations/[synchronization situation.]
+For example there is a `disputed` xref:/midpoint/reference/latest/synchronization/situations/[synchronization situation.]
 This situation is part of midPoint for years.
 But it was mostly considered to be a situation that indicates an error in a correlation expression.
 However, it was planned that this situation can be extended to indicate need for manual interaction.
 This situation can be supplemented with more information, such as (direct or indirect) list of candidate matches.
-Once again, such an extension was anticipated from the beginning and this was one of the reasons that midPoint has xref:/midpoint/reference/resources/shadow/[shadow objects]. In that case xref:/midpoint/reference/synchronization/correlation-and-confirmation-expressions/[correlation expressions] or xref:/midpoint/reference/synchronization/synchronization-sorter/[sorter] can be used to determine the candidate matches.
+Once again, such an extension was anticipated from the beginning and this was one of the reasons that midPoint has xref:/midpoint/reference/latest/resources/shadow/[shadow objects]. In that case xref:/midpoint/reference/latest/synchronization/correlation-and-confirmation-expressions/[correlation expressions] or xref:/midpoint/reference/latest/synchronization/synchronization-sorter/[sorter] can be used to determine the candidate matches.
 In case of multiple matches (or a single low-confidence match) the account will end up in `disputed` situation.
-Candidate matches will be recorded in the xref:/midpoint/reference/resources/shadow/[shadow object]. MidPoint user interface can be extended to look for disputed correlation cases and present them to operator.
+Candidate matches will be recorded in the xref:/midpoint/reference/latest/resources/shadow/[shadow object]. MidPoint user interface can be extended to look for disputed correlation cases and present them to operator.
 The operator can then make manual decisions in an efficient manner.
 
 === Step 2: Correlation Cases or Processes
@@ -86,7 +86,7 @@ Therefore midPoint can automatically maintain a _case_s for manual correlation.
 ====
 Manual correlation is a xref:/midpoint/features/synergy/[synergistic feature]. It is designed to fit together with another planned midPoint feature: xref:/midpoint/features/planned/case-management/[case management]. Case management is meant to support cases that describe a unit of cooperative work.
 Users may delegate cases, may comment on them and may work together to resolve the case.
-Cases are planned to support many midPoint features where manual work is required from xref:/midpoint/reference/cases/approval/[approvals] and xref:/midpoint/reference/resources/manual/[manual resources] to xref:/midpoint/features/planned/remediation/[remediation]. Manual correlation is just another reuse of the same principle.
+Cases are planned to support many midPoint features where manual work is required from xref:/midpoint/reference/latest/cases/approval/[approvals] and xref:/midpoint/reference/latest/resources/manual/[manual resources] to xref:/midpoint/features/planned/remediation/[remediation]. Manual correlation is just another reuse of the same principle.
 
 ====
 
@@ -110,9 +110,9 @@ And then the recommender may use that knowledge to improve its recommendations i
 
 == See Also
 
-* xref:/midpoint/reference/synchronization/introduction/[Synchronization]
+* xref:/midpoint/reference/latest/synchronization/introduction/[Synchronization]
 
-* xref:/midpoint/reference/synchronization/synchronization-sorter/[Synchronization Sorter]
+* xref:/midpoint/reference/latest/synchronization/synchronization-sorter/[Synchronization Sorter]
 
 * xref:/midpoint/features/planned/case-management/[Case Management]
 

@@ -110,8 +110,8 @@ Active Directory server over there in my server room
 
 There are two kinds of relations between account and user.
 An account could be _assigned_ to user or an account could be _linked_ to user.
-The xref:/midpoint/reference/synchronization/introduction/[synchronization] process treats these two cases in different manners.
-More info on subject you will find xref:/midpoint/reference/roles-policies/assignment/assigning-vs-linking/[here].
+The xref:/midpoint/reference/latest/synchronization/introduction/[synchronization] process treats these two cases in different manners.
+More info on subject you will find xref:/midpoint/reference/latest/roles-policies/assignment/assigning-vs-linking/[here].
 
 === Creating Users
 
@@ -265,7 +265,7 @@ Click Save to quick save changes or Back to go back to the User list.
 Roles represent sets of resources and resource attributes including resource privileges, which will be enforced when the role is assigned to or unassigned from the user.
 TODO By assigning a role, you specify that the user *should* have the resource account(s) specified by the role.
 By unassigning a role, you specify that the user *should not* have the resource account(s) specified by the role.
-More on midPoints Role Based Access Control you will find xref:/midpoint/reference/roles-policies/rbac/[here].
+More on midPoints Role Based Access Control you will find xref:/midpoint/reference/latest/roles-policies/rbac/[here].
 
 To create, modify or delete roles, click the Roles tab.
 A list of roles is displayed in a table with the role Name, Display name, Identifier and Description.
@@ -417,7 +417,7 @@ Please refer to the chapter xref:/midpoint/devel/xml-namespace-list/[XML Namespa
 
 * *c* and often the default namespace: midPoint's common schema (attributes common for all midPoint objects)
 
-More on subject with example code you will find in chapter xref:/midpoint/reference/resources/resource-configuration/[Resource Configuration].
+More on subject with example code you will find in chapter xref:/midpoint/reference/latest/resources/resource-configuration/[Resource Configuration].
 To understand how to use the resource samples documented in the xref:/connectors/[Resource and Connector Reference] chapter, please take into consideration that each resource sample is documented inline.
 
 === Resource Details
@@ -456,7 +456,7 @@ image::newResource.png[]
 The next step is Resource Configuration.
 Configuraton properties according to chosen connector are located in this section.
 Then follows sections defining resource object classes and attributes (resource schema), mapping of these attributes to the midPoint user model, resource capabilities, password policies, etc.
-These sections are more specifically described in xref:/midpoint/reference/resources/resource-configuration/[Resource Configuration documentation].
+These sections are more specifically described in xref:/midpoint/reference/latest/resources/resource-configuration/[Resource Configuration documentation].
 
 The second way of creating resources is using the Import resource definition feature (available under Resources tab).
 There are sample resources definition in XML files on link:https://github.com/Evolveum/midpoint-samples/tree/master/samples/resources[GitHub]. You can copy, alter the resource samples and import.
@@ -498,16 +498,16 @@ The synchronization situation and owner of an object are shown in line with the 
 === Importing Resource Objects
 
 To import resource objects that currently exist on the resource into midPoint repository, list resources objects and then click the Import option for the corresponding resource object from the list.
-You have to configure synchronization configuration (at least enable xref:/midpoint/reference/resources/resource-configuration/synchronization/[synchronization], configure correlation/confirmation and inbound expressions).
+You have to configure synchronization configuration (at least enable xref:/midpoint/reference/latest/resources/resource-configuration/synchronization/[synchronization], configure correlation/confirmation and inbound expressions).
 
-A new task will be created named Import from resource (resource name) and you can check its status in xref:/midpoint/reference/tasks/[] menu.
+A new task will be created named Import from resource (resource name) and you can check its status in xref:/midpoint/reference/latest/tasks/[] menu.
 
 The synchronization situation and owner of an object are shown in line with the object name.
 You can remove or change an owner, delete, enable/disable or import object via clicking a proper option using the gear wheel.
 
 [TIP]
 ====
-Consider this feature being functional only if xref:/midpoint/reference/synchronization/introduction/[] part of Resource configuration is properly set.
+Consider this feature being functional only if xref:/midpoint/reference/latest/synchronization/introduction/[] part of Resource configuration is properly set.
 ====
 
 == Server Tasks
@@ -542,7 +542,7 @@ As for nodes in cluster, there are the following operations available:
 
 * *stop scheduler*: puts the selected node into `stopped` state, meaning that no further task executions will be scheduled on it.
 
-* *stop scheduler + tasks*: the same as above, but, in addition, all tasks currently executing on that node are stopped (applying their `threadStopAction` attribute, see xref:/midpoint/reference/tasks/task-manager/[Task Manager].
+* *stop scheduler + tasks*: the same as above, but, in addition, all tasks currently executing on that node are stopped (applying their `threadStopAction` attribute, see xref:/midpoint/reference/latest/tasks/task-manager/[Task Manager].
 
 * *start*: puts the node back into `running` state.
 
@@ -575,7 +575,7 @@ There are two types of tasks: one-time (single) and recurring:
 * *The recurring tasks* will be executed immediately after the task creation and then again, based on the schedule interval (in seconds) or a cron like specification.
 TODO: example.
 
-For more information please refer to the xref:/midpoint/reference/tasks/task-manager/[Task Manager] section.
+For more information please refer to the xref:/midpoint/reference/latest/tasks/task-manager/[Task Manager] section.
 
 === Task Detail
 
@@ -629,13 +629,13 @@ It is *not* guaranteed that the identifier is globally unique or that it is tran
 
 * *Recurring task*: whether the task is recurring or single-run.
 
-* *Tightly bound*: if yes, the task permanently occupies a thread on a node; if no, the thread is allocated when needed (and on any node); see xref:/midpoint/reference/tasks/task-manager/[Task Manager]
+* *Tightly bound*: if yes, the task permanently occupies a thread on a node; if no, the thread is allocated when needed (and on any node); see xref:/midpoint/reference/latest/tasks/task-manager/[Task Manager]
 
-* *Schedule interval*, *Schedule cron-line specification*, *Do not start before*, *Do not start after*: self-explaining; see also xref:/midpoint/reference/tasks/task-manager/[Task Manager].
+* *Schedule interval*, *Schedule cron-line specification*, *Do not start before*, *Do not start after*: self-explaining; see also xref:/midpoint/reference/latest/tasks/task-manager/[Task Manager].
 
-* *Misfire action*: what to do if the task could not be started on scheduled time: either execute immediately or reschedule; see xref:/midpoint/reference/tasks/task-manager/[Task Manager].
+* *Misfire action*: what to do if the task could not be started on scheduled time: either execute immediately or reschedule; see xref:/midpoint/reference/latest/tasks/task-manager/[Task Manager].
 
-* *Thread stop action*: what to do on node shutdown or failure: restart, reschedule, suspend, close; see xref:/midpoint/reference/tasks/task-manager/[Task Manager].
+* *Thread stop action*: what to do on node shutdown or failure: restart, reschedule, suspend, close; see xref:/midpoint/reference/latest/tasks/task-manager/[Task Manager].
 
 * *Task run last started*: the last time the task run was started
 
@@ -663,7 +663,7 @@ For tightly-bound tasks the node name is shown here even if the task is not curr
 To edit a task, click the task name and then click the Edit button in the bottom part of details page. +
 Depending on the current task state, some attributes may not be editable; if you want to change them, you have to suspend the task first.
 
-Click the Cancel editing button to go back to xref:/midpoint/reference/tasks/[#Server Tasks] and discard changes or Save button to save the changes.
+Click the Cancel editing button to go back to xref:/midpoint/reference/latest/tasks/[#Server Tasks] and discard changes or Save button to save the changes.
 
 === Add Task
 
@@ -680,11 +680,11 @@ Please fill the fields according to the before mentioned description.
 Currently, only live synchronization, reconciliation, import accounts, recomputation, and demo tasks can be added using the Administration Interface.
 ====
 
-Click the Save button to save the task, or click Back to go back to xref:/midpoint/reference/tasks/[#Server Tasks].
+Click the Save button to save the task, or click Back to go back to xref:/midpoint/reference/latest/tasks/[#Server Tasks].
 
 === Task Manager Configuration
 
-Configuration of the task manager is (temporarily) described in the xref:/midpoint/reference/tasks/task-manager/configuration/[Task Manager Configuration] document.
+Configuration of the task manager is (temporarily) described in the xref:/midpoint/reference/latest/tasks/task-manager/configuration/[Task Manager Configuration] document.
 
 == Managing midPoint Configuration
 
@@ -938,7 +938,7 @@ Audit settings are displayed under the list of loggers.
 You can turn on basic auditing (logging with INFO log level) by checking the Audit log checkbox, or even more detailed auditing (logging with DEBUG log level) by checking the Details checkbox.
 By default, the auditing is off and the appender is undefined (inherited from midPoint logger).
 
-Please refer to the xref:/midpoint/reference/security/audit/[Auditing] chapter for more information.
+Please refer to the xref:/midpoint/reference/latest/security/audit/[Auditing] chapter for more information.
 
 Click the Save button to save your modifications and make them active.
 
@@ -999,7 +999,7 @@ Timestamp and reference to user performing modification is kept.
 Security Policy defines configuration of password, security question, self-service registration, etc.
 All this information is included in security policy objects which can be found in Configuration tab in section Repository objects by listing Security Policy objects.
 
-Please refer to the chapter xref:/midpoint/reference/security/security-policy/[Security Policy Configuration] for more information.
+Please refer to the chapter xref:/midpoint/reference/latest/security/security-policy/[Security Policy Configuration] for more information.
 
 TODO consider merging the mentioned chapter here.
 
@@ -1015,14 +1015,14 @@ Yet, the initial data loading is only the beginning.
 The content of the authoritative source(s) will change.
 And the user-account mapping should remain up to date as well.
 
-Therefore there are xref:/midpoint/reference/synchronization/flavors/[multiple ways] of creating user accounts in midPoint and/or linking them with their corresponding resource accounts.
+Therefore there are xref:/midpoint/reference/latest/synchronization/flavors/[multiple ways] of creating user accounts in midPoint and/or linking them with their corresponding resource accounts.
 All of them can be described as *synchronization*.
 
 All synchronization flavors have something in common: no matter how the synchronization was started, the configuration (or policy) is stored in the resource object.
 When a resource account change is detected on a resource, the resource account owner in midPoint has to be found.
 This is simple, if the account was already linked to a midPoint user.
 Otherwise, a correlation (or even confirmation) rule is applied to find a possible owner of the account.
-The result of the correlation/confirmation expressions is a xref:/midpoint/reference/synchronization/situations/[synchronization situation].
+The result of the correlation/confirmation expressions is a xref:/midpoint/reference/latest/synchronization/situations/[synchronization situation].
 
 The synchronization responses configuration from resource is then applied to find a corresponding action to the situation.
 
@@ -1036,8 +1036,8 @@ If a midPoint user is created or modified, the midPoint user attributes may be p
 
 Live synchronization can be configured for almost real-time synchronization with a resource providing the list of recent changes.
 
-To configure Live synchronization, the resource has to support the cap:livesync xref:/midpoint/reference/resources/resource-configuration/capabilities/[capability].
-You also have to xref:/midpoint/reference/synchronization/introduction/[configure] the correlation/confirmation expressions, the situation responses and actions and the inbound expressions for resource attributes.
+To configure Live synchronization, the resource has to support the cap:livesync xref:/midpoint/reference/latest/resources/resource-configuration/capabilities/[capability].
+You also have to xref:/midpoint/reference/latest/synchronization/introduction/[configure] the correlation/confirmation expressions, the situation responses and actions and the inbound expressions for resource attributes.
 Then you can create or import the synchronization task object.
 
 The following example defines a synchronization task from OpenDJ advanced sync sample:
@@ -1100,7 +1100,7 @@ It is a kind of a safety net mechanism as it can reliably detect all the changes
 However, it is also the least efficient of all the synchronization mechanisms.
 Reconciliation is usually executed as a scheduled task.
 
-To configure reconciliation, you have to xref:/midpoint/reference/synchronization/introduction/[configure] the correlation/confirmation expressions, the situation responses and actions and the inbound expressions for resource attributes.
+To configure reconciliation, you have to xref:/midpoint/reference/latest/synchronization/introduction/[configure] the correlation/confirmation expressions, the situation responses and actions and the inbound expressions for resource attributes.
 Then you can create or import the reconciliation task object.
 
 The following example defines a reconciliation task for OpenDJ sample resource:
@@ -1161,5 +1161,5 @@ TODO: update after authorization model change.
 
 Import from resource is a special case of synchronization that pretends that all resource accounts have been just created.
 
-You have to enable xref:/midpoint/reference/resources/resource-configuration/synchronization/[synchronization], the correlation/confirmation expressions, the situation responses and actions and the inbound expressions for resource attributes.
+You have to enable xref:/midpoint/reference/latest/resources/resource-configuration/synchronization/[synchronization], the correlation/confirmation expressions, the situation responses and actions and the inbound expressions for resource attributes.
 Then you can import the resource accounts as documented in Importing Resource Objects.

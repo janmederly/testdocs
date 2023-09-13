@@ -43,10 +43,10 @@ See xref:/midpoint/features/planned/expression-profiles/[Expression Profiles: Fu
 
 * bug:MID-5193[]
 
-* xref:/midpoint/reference/expressions/expressions/[Expression]
+* xref:/midpoint/reference/latest/expressions/expressions/[Expression]
 
-* xref:/midpoint/reference/expressions/expressions/script/[Script Expression]
+* xref:/midpoint/reference/latest/expressions/expressions/script/[Script Expression]
 
-* xref:/midpoint/reference/expressions/expressions/profiles/[Expression Profiles]
+* xref:/midpoint/reference/latest/expressions/expressions/profiles/[Expression Profiles]
 
 * xref:/midpoint/features/planned/expression-profiles/[Expression Profiles: Full Implementation]

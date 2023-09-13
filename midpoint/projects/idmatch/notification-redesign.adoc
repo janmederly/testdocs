@@ -341,7 +341,7 @@ Do we want some light-weight get without full object, only reading OID + BLOB fr
 
 * Simple UI based notification administration, e.g. simple copy/paste of HTML template without the need to escape it.
 ** Currently, this needs to be copied to the system configuration object XML.
-** xref:/midpoint/reference/misc/notifications/velocity/[Velocity templating] is already available,
+** xref:/midpoint/reference/latest/misc/notifications/velocity/[Velocity templating] is already available,
 which is often simpler and cleaner compared to Groovy, altough Groovy multi-line strings are also possible.
 * Template override for different transport (channel) without the need to create new notification handler.
 * Template management with multi-language support.
@@ -362,7 +362,7 @@ What is the difference between `transportRegistry.registerTransport(NAME, this)`
 * Element `handler` (under `notificationConfiguration`) is of type `EventHandlerType`, and so are many of the nested
 elements, e.g. `simpleUserNotifier`.
 ** Reportedly, there is a kind of "pipes and filters" pattern - but is it this nesting?
-There is also a xref:/midpoint/reference/misc/notifications/#special-kinds-of-handlers[handler chain],
+There is also a xref:/midpoint/reference/latest/misc/notifications/#special-kinds-of-handlers[handler chain],
 but that one is a sequence of handlers, not nested handlers.
 I guess, it doesn't make sense to nest stuff like `accountPasswordNotifier` inside each other?
 In any case, auto-complete in Studio is rather a mess inside the handlers.
@@ -421,33 +421,33 @@ notification-impl (witout test):
 
 == Existing notification documentation
 
-* xref:/midpoint/reference/misc/notifications/[Notifications] and subpages: xref:/midpoint/reference/misc/notifications/configuration/[Configuring Notifications], xref:/midpoint/reference/misc/notifications/sending-custom-notifications/[Sending custom notifications HOWTO], xref:/midpoint/reference/misc/notifications/general/[General notification - role assignment example], etc.
+* xref:/midpoint/reference/latest/misc/notifications/[Notifications] and subpages: xref:/midpoint/reference/latest/misc/notifications/configuration/[Configuring Notifications], xref:/midpoint/reference/latest/misc/notifications/sending-custom-notifications/[Sending custom notifications HOWTO], xref:/midpoint/reference/latest/misc/notifications/general/[General notification - role assignment example], etc.
 
 * Notes in xref:/midpoint/devel/design/efficient-deployment-ideas/[Efficient deployment ideas]:
 ** How to resend failed e-mail notifications?
 ** In-app notifications?
 ** Notification log?
 
-* xref:/midpoint/reference/misc/notifications/task-notifications/[Task Notifications]
+* xref:/midpoint/reference/latest/misc/notifications/task-notifications/[Task Notifications]
 
-* xref:/midpoint/reference/roles-policies/certification/notifications/[Access Certification Notifications]
-** Mentioned as a possible timed action in xref:/midpoint/reference/roles-policies/certification/escalation/[Escalation in Certification Campaigns]
-** Similar for cases: xref:/midpoint/reference/cases/escalation/[Escalation in Approval Processes]
+* xref:/midpoint/reference/latest/roles-policies/certification/notifications/[Access Certification Notifications]
+** Mentioned as a possible timed action in xref:/midpoint/reference/latest/roles-policies/certification/escalation/[Escalation in Certification Campaigns]
+** Similar for cases: xref:/midpoint/reference/latest/cases/escalation/[Escalation in Approval Processes]
 
-* xref:/midpoint/reference/cases/workflow-3/workflow-notifications/[Worfklow notifications] and briefly on various workflow pages (how up-to-date are those docs?)
+* xref:/midpoint/reference/latest/cases/workflow-3/workflow-notifications/[Worfklow notifications] and briefly on various workflow pages (how up-to-date are those docs?)
 
 * Mentioned in xref:/iam/iga/workflow/[IGA Capability: Identity Workflow Automation] (Identity Governance and Administration)
 
-* Possible action in xref:/midpoint/reference/misc/bulk/#actions[bulk actions], also
-xref:/midpoint/reference/misc/bulk/actions/[in experimental version for 4.2]
+* Possible action in xref:/midpoint/reference/latest/misc/bulk/#actions[bulk actions], also
+xref:/midpoint/reference/latest/misc/bulk/actions/[in experimental version for 4.2]
 
-* xref:/midpoint/reference/misc/self-registration/#email-notifications[Self-registration] has notifications, so does xref:/midpoint/reference/security/credentials/password-reset/[Password Reset]
+* xref:/midpoint/reference/latest/misc/self-registration/#email-notifications[Self-registration] has notifications, so does xref:/midpoint/reference/latest/security/credentials/password-reset/[Password Reset]
 
-* xref:/midpoint/reference/upgrade/migration-from-sun-idm/#notifications[Migration from Sun IdM]
+* xref:/midpoint/reference/latest/upgrade/migration-from-sun-idm/#notifications[Migration from Sun IdM]
 
 * Mentioned in xref:/midpoint/devel/design/parallel-and-asynchronous-provisioning/[Parallel and Asynchronous Provisioning]
 
-* xref:/midpoint/reference/misc/notifications/sending-custom-notifications/[Sending Custom Notifications]
+* xref:/midpoint/reference/latest/misc/notifications/sending-custom-notifications/[Sending Custom Notifications]
 
 * xref:/midpoint/devel/testing/test-scenarios/#notifications[Test Scenarios] for notifications (are they up to date?)
 

@@ -167,7 +167,7 @@ The basic mechanics of the tests is the same for all cases.
 But the scope and purpose of the tests differs whether your contribution is a new feature or bugfix:
 
 * *New feature*: Provide tests for your specific use case.
-This is likely to be xref:/midpoint/reference/samples/story-tests/["story test"]. We expect quite a few positive test cases and maybe handful of negative test cases.
+This is likely to be xref:/midpoint/reference/latest/samples/story-tests/["story test"]. We expect quite a few positive test cases and maybe handful of negative test cases.
 Unless it is a security feature.
 For security features we expect few positive test cases and a lot of negative test cases.
 But for "normal" features you are not expected to write tests for all possible cases.
@@ -203,7 +203,7 @@ But there is also a documentation that is supposed to make writing tests easier:
 
 * xref:/midpoint/devel/testing/integration/model/[Model Integration Tests]
 
-* xref:/midpoint/reference/samples/story-tests/[Story Tests]
+* xref:/midpoint/reference/latest/samples/story-tests/[Story Tests]
 
 * xref:/midpoint/tools/schrodinger/[]
 
@@ -264,7 +264,7 @@ New feature documentation usually contains two related, but slightly different p
 It does not dive to configuration details.
 The purpose of this page is for the user to get basic understanding of the feature and to decide whether the feature is the thing what he needs or whether he needs something else.
 
-* Feature configuration page (usually under xref:/midpoint/reference/[Administration and Configuration Guide]): Page that describes the details of feature mechanics, configuration, usage and so on.
+* Feature configuration page (usually under xref:/midpoint/reference/latest/[Administration and Configuration Guide]): Page that describes the details of feature mechanics, configuration, usage and so on.
 This page should contain configuration snippets, pointers to samples and so on.
 
 No user documentation is needed for bugfixes.
@@ -462,7 +462,7 @@ Overall, the issues will be processed using our priority system:
 
 * Priority 3: community issues
 
-Please, follow our xref:/midpoint/reference/diag/creating-a-bug-report/[bug report guidelines] when reporting a bug.
+Please, follow our xref:/midpoint/reference/latest/diag/creating-a-bug-report/[bug report guidelines] when reporting a bug.
 But if you are not covered by a support agreement then do not expect that the bug will be fixed immediately - or that it will be fixed at all.
 There is no free lunch.
 Not even in open source.

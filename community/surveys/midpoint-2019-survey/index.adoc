@@ -200,7 +200,7 @@ It looks like midPoint community is comfortable with *both graphical user interf
 It looks like the preferred approach is "GUI for business, CLI for system" - and that is exactly the approach that we are going to follow.
 
 You seem to like *MidPoint CLI* in general, but it obviously still needs some improvement.
-Our xref:/midpoint/reference/deployment/ninja/[Ninja] tool was received in a *positive way*.
+Our xref:/midpoint/reference/latest/deployment/ninja/[Ninja] tool was received in a *positive way*.
 However, many people are not aware of its existence.
 It looks like our documentation needs some updating.
 
@@ -246,7 +246,7 @@ However, it looks like majority of you keep audit trails in midPoint.
 Approximately a third of the responses indicated a presence of a data pump or a SIEM system, however this does not seem to be a dominant approach.
 These answers provide a lot of food for our thoughts and it looks like we will need to get back to the drawing board on this one.
 
-MidPoint has a xref:/midpoint/reference/deployment/stand-alone-deployment/[Stand-Alone Deployment] for several years already - and the *stand-alone deployment is generally preferred by the community*.
+MidPoint has a xref:/midpoint/reference/latest/deployment/stand-alone-deployment/[Stand-Alone Deployment] for several years already - and the *stand-alone deployment is generally preferred by the community*.
 However, many people still deploy midPoint into Tomcat container.
 This is now a real minority, but it is still enough of a crowd to keep this option supported.
 At least for some time.
@@ -256,7 +256,7 @@ MidPoint is a flexible system that can be adapted to a variety of use-cases and 
 We are more than aware of it and we do not plan to limit the flexibility of midPoint in any unnecessary way.
 
 You seem to enjoy many things about midPoint.
-But what came as a surprise to me was that xref:/midpoint/reference/roles-policies/metaroles/[Metaroles] were mentioned quite often.
+But what came as a surprise to me was that xref:/midpoint/reference/latest/roles-policies/metaroles/[Metaroles] were mentioned quite often.
 Don't get me wrong, metaroles are super-exciting to me and also to most of our team.
 I just though that we are quite alone in that geeky obsession.
 It looks like opposite is the truth and metaroles seem to be quite popular.

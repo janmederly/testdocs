@@ -17,4 +17,4 @@ This section of the site contains guides, describing connecting various system a
 
 == See Also
 
-* xref:/midpoint/reference/resources[] in MidPoint Configuration Reference
+* xref:/midpoint/reference/latest/resources[] in MidPoint Configuration Reference

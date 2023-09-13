@@ -7,7 +7,7 @@ Until the H2 DB backend will be available, you can run docker image directly but
 
 == Configuration prerequisites
 
-To this topic a dedicated xref:/midpoint/reference/repository/native-postgresql/usage/[docs page] is available.
+To this topic a dedicated xref:/midpoint/reference/latest/repository/native-postgresql/usage/[docs page] is available.
 
 === DB structure
 
@@ -164,7 +164,7 @@ command: [ "/opt/midpoint/bin/midpoint.sh", "container" ]
 == Docker-compose yaml file
 
 The following docker-compose configuration file can be used to run a working environment with postgres DB backend including the native repository implementation.
-There is example with link:https://docs.evolveum.com/midpoint/reference/deployment/post-initial-import/[post-initial-object].
+There is example with link:https://docs.evolveum.com/midpoint/reference/latest/deployment/post-initial-import/[post-initial-object].
 
 [[entry-point]]
 *MP_ENTRY_POINT* option is pointing to the folder in the container's filesystem, which is handled as a read only source for (not only) post-initial-objects.

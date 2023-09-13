@@ -201,7 +201,7 @@ The archetype(s) (probably `Active Employee`) can be incrementally enhanced with
 
 TODO: maybe we need a declarative way of specifying the conditions for specific archetypes (also auxiliary, perhaps conditional) in the `<objectSynchronization>`? Or simply a copy/paste mapping (set of mappings) will be needed in the HR resource?
 
-TODO: *Auxiliary archetypes are not yet claimed to be supported* (according to xref:/midpoint/reference/schema/archetypes/configuration/[], probably missing documentation, tracked as bug:MID-7515[] (TODO no fix version in JIRA!)).
+TODO: *Auxiliary archetypes are not yet claimed to be supported* (according to xref:/midpoint/reference/latest/schema/archetypes/configuration/[], probably missing documentation, tracked as bug:MID-7515[] (TODO no fix version in JIRA!)).
 This will be needed.
 We will need to display it as well.
 Already tracked as bug:MID-7525[] (TODO no fix version in JIRA!).

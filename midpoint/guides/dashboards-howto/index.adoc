@@ -57,7 +57,7 @@ You can also run the report itself, just, when you run the report, it creates ne
 
 Asynchronous widget is identified by `widget/data/sourceType = "widgetData"` or `widget/data/displaySourceType = "widgetData"`. displaySourceType element overrides source type only for displaying the number on widget. sourceType is used for redirect to details page.
 
-NOTE: Don't confuse the Report task with xref:/midpoint/reference/tasks/synchronization-tasks/asynchronous-update[Asynchronous update task] which is used for updating data from resources.
+NOTE: Don't confuse the Report task with xref:/midpoint/reference/latest/tasks/synchronization-tasks/asynchronous-update[Asynchronous update task] which is used for updating data from resources.
 
 == Setup
 NOTE: We recommend to use IDEA with xref:/midpoint/tools/studio/usage/index.adoc[midPoint Studio] plugin. Engineering midPoint with Studio is definitely much easier.
@@ -142,7 +142,7 @@ If you want to schedule the task, just uncomment the `<schedule>` element in the
 
 == See Also
 
-- xref:/midpoint/reference/admin-gui/dashboards/[] - main info about dashboards
-- xref:/midpoint/reference/admin-gui/dashboards/configuration/[] - details of dashboard configuration
-- xref:/midpoint/reference/misc/reports/configuration/[Report Configuration] - details of reports configuration
-- xref:/midpoint/reference/misc/reports/examples/example-report-number-of-members/[Example of Dashboard Report:Number of members] - more complex example of dashboard and dashboard report
+- xref:/midpoint/reference/latest/admin-gui/dashboards/[] - main info about dashboards
+- xref:/midpoint/reference/latest/admin-gui/dashboards/configuration/[] - details of dashboard configuration
+- xref:/midpoint/reference/latest/misc/reports/configuration/[Report Configuration] - details of reports configuration
+- xref:/midpoint/reference/latest/misc/reports/examples/example-report-number-of-members/[Example of Dashboard Report:Number of members] - more complex example of dashboard and dashboard report

@@ -30,7 +30,7 @@ The {release-version} release brings streamlined upgrade process, security stabi
 
 === New Features and Improvements
 
-* Improvements for the OIDC authentication module. Since version 4.8, the flow for identifying a user logged in via the GUI has been changed. MidPoint uses the claim value with the name from the _nameOfUsernameAttribute_. The claim is primarily obtained from the ID token. When a claim is missing in the ID token, midPoint looks for it in the access token. Finally, if the claim is missing in the access token, midPoint uses the user info endpoint to retrieve the claim. And since version 4.8 for REST request midPoint supports authentication with one of two token formats, JWT and Opaque Token. See https://docs.evolveum.com/midpoint/reference/security/authentication/flexible-authentication/configuration/#module-oidc[the documentation] for more configuration details.
+* Improvements for the OIDC authentication module. Since version 4.8, the flow for identifying a user logged in via the GUI has been changed. MidPoint uses the claim value with the name from the _nameOfUsernameAttribute_. The claim is primarily obtained from the ID token. When a claim is missing in the ID token, midPoint looks for it in the access token. Finally, if the claim is missing in the access token, midPoint uses the user info endpoint to retrieve the claim. And since version 4.8 for REST request midPoint supports authentication with one of two token formats, JWT and Opaque Token. See https://docs.evolveum.com/midpoint/reference/latest/security/authentication/flexible-authentication/configuration/#module-oidc[the documentation] for more configuration details.
 
 * Ninja command line options consolidated (few options renamed) https://jira.evolveum.com/browse/MID-7483[MID-7483]
 
@@ -41,14 +41,14 @@ The {release-version} release brings streamlined upgrade process, security stabi
 ** Hibernate 6
 ** Wicket 10
 
-* xref:/midpoint/reference/roles-policies/mining/[Role Mining].
+* xref:/midpoint/reference/latest/roles-policies/mining/[Role Mining].
 Introduction of anonymous role mining data export. This feature allows users to export relationships between roles, users, and
 organizations while ensuring the privacy and security of exported data.
 The following options are available for exporting anonymized role mining data:
 ** Ninja: For configuration details, refer to the
-xref:/midpoint/reference/deployment/ninja/#role-mining-exportimport[Ninja documentation].
+xref:/midpoint/reference/latest/deployment/ninja/#role-mining-exportimport[Ninja documentation].
 ** Repository object (GUI): For detailed information, see the
-xref:/midpoint/reference/roles-policies/mining/anonymous-data-export/#anonymous-export-of-role-mining-data[Anonymous Export of Role Mining Data documentation].
+xref:/midpoint/reference/latest/roles-policies/mining/anonymous-data-export/#anonymous-export-of-role-mining-data[Anonymous Export of Role Mining Data documentation].
 
 ** Shadow metadata - `metadata/createTimestamp` and `metadata/modifyTimestamp` is now being added for all shadow objects at all times.
 This changes behaviour for resources which have non-zero deadShadowRetentionPeriod in consistency defined.
@@ -60,7 +60,7 @@ Last shadow activity taken into account:
 *** `metadata/createTimestamp`
 *** `metadata/modifyTimestamp`
 ** Shadow changes are now being audited, new auditing stage `RESOURCE`.
-For more info see: xref:/midpoint/reference/security/audit/index.adoc[Auditing]
+For more info see: xref:/midpoint/reference/latest/security/audit/index.adoc[Auditing]
 
 * Creating new wizard flow for configuration of resource activation and configuration of resource credentials.
 ** Wizard step panels, that displaying inbound and outbound mapping attributes, was divided to two panels with main and optional configuration. Showed attributes are hardcoded, so we can use configuration only for hide showed items.
@@ -90,12 +90,12 @@ Please see _Upgrade_ section below for details.
 
 * xref:/midpoint/devel/prism/[Prism] data representation library {release-version} was released together with midPoint {release-version}.
 
-* xref:/midpoint/reference/interfaces/midpoint-client-java/[Midpoint client Java library] will be released soon after midPoint {release-version} release.
+* xref:/midpoint/reference/latest/interfaces/midpoint-client-java/[Midpoint client Java library] will be released soon after midPoint {release-version} release.
 
 
 == Changes With Respect To Version 4.4 LTS
 
-* Generic Repository with PostgreSQL is not supported, if you are using PostgreSQL with generic repository, please migrate to xref:/midpoint/reference/repository/native-postgresql/[PostgreSQL native repository].
+* Generic Repository with PostgreSQL is not supported, if you are using PostgreSQL with generic repository, please migrate to xref:/midpoint/reference/latest/repository/native-postgresql/[PostgreSQL native repository].
 
 
 ++++
@@ -133,7 +133,7 @@ Even though midPoint may work well on mobile devices, the support for small scre
 Partial support for small screens (e.g. only for self-service purposes) may be provided, but it has to be explicitly negotiated in a subscription contract.
 
 * There are several add-ons and extensions for midPoint that are not explicitly distributed with midPoint.
-This includes xref:/midpoint/reference/interfaces/midpoint-client-java/[Java client library],
+This includes xref:/midpoint/reference/latest/interfaces/midpoint-client-java/[Java client library],
 various https://github.com/Evolveum/midpoint-samples[samples], scripts, connectors and other non-bundled items.
 Support for these non-bundled items is limited.
 Generally speaking, those non-bundled items are supported only for platform subscribers and those that explicitly negotiated the support in their contract.
@@ -191,19 +191,19 @@ Use of open source OpenJDK builds with public support is recommended instead of 
 Since midPoint 4.4, midPoint comes with two repository implementations: _native_ and _generic_.
 Native PostgreSQL repository implementation is strongly recommended for all production deployments.
 
-See xref:/midpoint/reference/repository/repository-database-support/[] for more details.
+See xref:/midpoint/reference/latest/repository/repository-database-support/[] for more details.
 
 Since midPoint 4.0, *PostgreSQL is the recommended database* for midPoint deployments.
 Our strategy is to officially support the latest stable version of PostgreSQL database (to the practically possible extent).
 PostgreSQL database is the only database with clear long-term support plan in midPoint.
 We make no commitments for future support of any other database engines.
-See xref:/midpoint/reference/repository/repository-database-support/[] page for the details.
+See xref:/midpoint/reference/latest/repository/repository-database-support/[] page for the details.
 Only a direct connection from midPoint to the database engine is supported.
 Database and/or SQL proxies, database load balancers or any other devices (e.g. firewalls) that alter the communication are not supported.
 
 ==== Native Database Support
 
-xref:/midpoint/reference/repository/native-postgresql/[Native PostgreSQL repository implementation] is developed and tuned
+xref:/midpoint/reference/latest/repository/native-postgresql/[Native PostgreSQL repository implementation] is developed and tuned
 specially for PostgreSQL database, taking advantage of native database features, providing improved performance and scalability.
 
 This is now the *primary and recommended repository* for midPoint deployments.
@@ -213,7 +213,7 @@ Following database engines are supported:
 
 ==== Generic Database Support (deprecated)
 
-xref:/midpoint/reference/repository/generic/[Generic repository implementation] is based on object-relational
+xref:/midpoint/reference/latest/repository/generic/[Generic repository implementation] is based on object-relational
 mapping abstraction (Hibernate), supporting several database engines with the same code.
 Following database engines are supported with this implementation:
 
@@ -228,9 +228,9 @@ Also, upgrade of deployments based on H2 database are not supported.
 * Oracle 21c
 * Microsoft SQL Server 2019
 
-Support for xref:/midpoint/reference/repository/generic/[generic repository implementation] together with all the database engines supported by this implementation is *deprecated*.
-It is *strongly recommended* to migrate to xref:/midpoint/reference/repository/native-postgresql/[native PostgreSQL repository implementation] as soon as possible.
-See xref:/midpoint/reference/repository/repository-database-support/[] for more details.
+Support for xref:/midpoint/reference/latest/repository/generic/[generic repository implementation] together with all the database engines supported by this implementation is *deprecated*.
+It is *strongly recommended* to migrate to xref:/midpoint/reference/latest/repository/native-postgresql/[native PostgreSQL repository implementation] as soon as possible.
+See xref:/midpoint/reference/latest/repository/repository-database-support/[] for more details.
 
 === Supported Browsers
 
@@ -295,29 +295,29 @@ Although we try to our best, it is not possible to foresee all possible uses of 
 Therefore, the information provided in this section are for information purposes only without any guarantees of completeness.
 In case of any doubts about upgrade or behavior changes please use services associated with xref:/support/subscription-sponsoring/[midPoint subscription programs].
 
-Please refer to the xref:/midpoint/reference/upgrade/upgrade-guide/[] for general instructions and description of the upgrade process.
+Please refer to the xref:/midpoint/reference/latest/upgrade/upgrade-guide/[] for general instructions and description of the upgrade process.
 The guide describes the steps applicable for upgrades of all midPoint releases.
 Following sections provide details regarding release {release-version}.
 
 === Upgrade From MidPoint 4.7.x
 
 MidPoint {release-version} data model is backwards compatible with previous midPoint version.
-Please follow our xref:/midpoint/reference/upgrade/upgrade-guide/[Upgrade guide] carefully.
+Please follow our xref:/midpoint/reference/latest/upgrade/upgrade-guide/[Upgrade guide] carefully.
 
 Note that:
 
-* There are database schema changes (see xref:/midpoint/reference/upgrade/database-schema-upgrade/[Database schema upgrade]).
+* There are database schema changes (see xref:/midpoint/reference/latest/upgrade/database-schema-upgrade/[Database schema upgrade]).
 
 * Version numbers of some bundled connectors have changed.
 Connector references from the resource definitions that are using the bundled connectors need to be updated.
 
 * See also the _Actions required_ information below.
 
-It is strongly recommended migrating to the xref:/midpoint/reference/repository/native-postgresql/[new native PostgreSQL repository implementation]
+It is strongly recommended migrating to the xref:/midpoint/reference/latest/repository/native-postgresql/[new native PostgreSQL repository implementation]
 for all deployments that have not migrated yet.
 However, it is *not* recommended upgrading the system and migrating the repositories in one step.
 It is recommended doing it in two separate steps.
-Please see xref:/midpoint/reference/repository/native-postgresql/migration/[] for the details.
+Please see xref:/midpoint/reference/latest/repository/native-postgresql/migration/[] for the details.
 
 === Upgrade From MidPoint 4.4.x LTS
 
@@ -500,7 +500,7 @@ See commit https://github.com/Evolveum/midpoint/commit/c9b1ceb18ead45cc193b1991c
 // It is because of the fix in the process of aggregation of these reports.
 // See also commit link:https://github.com/Evolveum/midpoint/commit/60f52da3[60f52da3].
 //
-// * User authentication while password reset procedure was improved with new authentication modules. For more information, please see xref:/midpoint/reference/security/credentials/password-reset/index.adoc[Password Reset Configuration] page for details.
+// * User authentication while password reset procedure was improved with new authentication modules. For more information, please see xref:/midpoint/reference/latest/security/credentials/password-reset/index.adoc[Password Reset Configuration] page for details.
 //
 // * Selection of resource objects for Live synchronization tasks was implemented (see bug:MID-8537[] and commit https://github.com/Evolveum/midpoint/commit/d929179c[d929179c]).
 // Some configuration that are not 100% correct and rely e.g. on setting `kind` to `account` in a live sync task that returns unqualified objects (i.e. objects without `kind` and `intent`), would break down.
@@ -549,7 +549,7 @@ See https://github.com/Evolveum/midpoint/commit/12f6f66d[12f6f66d].
 // * Some now-obsolete methods in `OperationResult` were removed (see commit link:https://github.com/Evolveum/midpoint/commit/c90e5ee1[c90e5ee1]).
 // * Code in the `provisioning-impl` module was streamlined, so check any potential dependencies on it.
 // * So-called _proposed shadows_ are no longer marked using `lifecycleState` property.
-// See bug:MID-4833[], commit link:https://github.com/Evolveum/midpoint/commit/b7d9c550[b7d9c550], and the xref:/midpoint/reference/resources/shadow/dead/[docs].
+// See bug:MID-4833[], commit link:https://github.com/Evolveum/midpoint/commit/b7d9c550[b7d9c550], and the xref:/midpoint/reference/latest/resources/shadow/dead/[docs].
 
 ++++
 {% include release-issues.html %}

@@ -1185,7 +1185,7 @@ Multi-node midPoint setup is a bit more complex than the single-node one; in the
 
 . There are some parameters that have to be filled-in, namely node name and JMX-related parameters, which are necessary for inter-node communication.
 
-For more information, see xref:/midpoint/reference/tasks/task-manager/configuration/[Task Manager Configuration article].
+For more information, see xref:/midpoint/reference/latest/tasks/task-manager/configuration/[Task Manager Configuration article].
 For best testing results, set the `threads` parameter of both nodes to 6 (i.e. a value lower than the number of tasks).
 
 == Clustering and basic task failover
@@ -1565,7 +1565,7 @@ a| . Start with 2-nodes cluster, without any custom tasks.
 
 | 2
 | Groups defined
-a| . Set Execution group for *Task1* and *Task2* to *Node2* (see xref:/midpoint/reference/tasks/node-sticky-tasks/[Node-sticky tasks HOWTO]) +
+a| . Set Execution group for *Task1* and *Task2* to *Node2* (see xref:/midpoint/reference/latest/tasks/node-sticky-tasks/[Node-sticky tasks HOWTO]) +
 . Wait around 30 seconds
 | When editing the tasks via GUI, Node2 should be shown in "nodes allowed to run tasks in this group". +
 These tasks should then really execute on Node2 only.
@@ -2668,7 +2668,7 @@ a| [source,xml]
 
 == Prerequisites
 
-* Get yourself familiar with the concept of role-based GUI authorization, read xref:/midpoint/reference/security/authorization/[Authorization] section from our wiki,
+* Get yourself familiar with the concept of role-based GUI authorization, read xref:/midpoint/reference/latest/security/authorization/[Authorization] section from our wiki,
 
 * Create new user, fill out the very minimum and be sure to set Administrative Status value to enabled.
 
@@ -3470,7 +3470,7 @@ After 4: Notifications about workflow process instance end and work item end sho
 
 * work item related notifications should go to the approver
 
-(see xref:/midpoint/reference/cases/workflow-3/workflow-notifications/[Workflow notifications])
+(see xref:/midpoint/reference/latest/cases/workflow-3/workflow-notifications/[Workflow notifications])
 a| [source,xml]
 
 ----
@@ -4191,7 +4191,7 @@ After 2: Result should be the same, except this time, .xml containing all object
 | Extend User with custom schema
 |
 
-.. Go to your midpoint home directory (if you have trouble locating it, please refer to xref:/midpoint/reference/deployment/midpoint-home-directory/[MidPoint Home Directory]),
+.. Go to your midpoint home directory (if you have trouble locating it, please refer to xref:/midpoint/reference/latest/deployment/midpoint-home-directory/[MidPoint Home Directory]),
 
 .. In schema directory, create an .XSD file containing schema extension from this example,
 
@@ -4398,7 +4398,7 @@ They should represent same level of information.
 . *Logging:* Check that the logging on INFO or DEBUG level provides at least some information about the executed operation.
 Make sure that there is not more than one or two lines on INFO level.
 Check that there is not too much information on DEBUG level.
-See also xref:/midpoint/reference/diag/logging/log-levels/[Log Levels].
+See also xref:/midpoint/reference/latest/diag/logging/log-levels/[Log Levels].
 
 == Security checks
 

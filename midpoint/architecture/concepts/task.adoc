@@ -17,10 +17,10 @@ Each "business" operation in midPoint should be executed in a context of a task.
 
 == Task Manager
 
-Tasks are managed by xref:/midpoint/reference/tasks/task-manager/[Task Manager] component.
+Tasks are managed by xref:/midpoint/reference/latest/tasks/task-manager/[Task Manager] component.
 The task manager creates the tasks and manages the lifecycle of tasks.
 Task manager can create broad range of tasks from lightweight synchronous tasks to a persistent asynchronous and scheduled tasks.
-See the xref:/midpoint/reference/tasks/task-manager/[Task Manager] page for more details.
+See the xref:/midpoint/reference/latest/tasks/task-manager/[Task Manager] page for more details.
 
 
 == Task Usage
@@ -35,5 +35,5 @@ OperationResult result = task.getResult();
 
 == See Also
 
-* xref:/midpoint/reference/tasks/task-manager/[Task Manager]
-* xref:/midpoint/reference/tasks/activities/[Activities]
+* xref:/midpoint/reference/latest/tasks/task-manager/[Task Manager]
+* xref:/midpoint/reference/latest/tasks/activities/[Activities]

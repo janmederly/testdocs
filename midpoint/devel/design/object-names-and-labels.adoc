@@ -132,4 +132,4 @@ _this specifies name of the [.underline]#type# as users should see it_
 
 * xref:/midpoint/devel/design/archetypes-design-notes/[Archetypes Design Notes]
 
-* xref:/midpoint/reference/admin-gui/collections-views/[Object Collections and Views]
+* xref:/midpoint/reference/latest/admin-gui/collections-views/[Object Collections and Views]

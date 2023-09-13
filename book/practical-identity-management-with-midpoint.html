@@ -8686,7 +8686,7 @@ Function <code>norm()</code> from the basic library can be invoked in a Groovy s
 <p>Invocation of the libraries from JavaScript and Python is almost the same, and we are sure that a clever reader will have no trouble figuring that out.
 What is more difficult to figure out is which functions the libraries provide.
 For that purpose there is a page in midPoint docs that lists all the libraries and this page also has a link to library function documentation.
-Look for <a href="https://docs.evolveum.com/midpoint/reference/expressions/expressions/script/functions/">Script Expression Functions</a> page in midPoint docs.</p>
+Look for <a href="https://docs.evolveum.com/midpoint/reference/latest/expressions/expressions/script/functions/">Script Expression Functions</a> page in midPoint docs.</p>
 </div>
 <div class="paragraph">
 <p>Only two libraries were mentioned in this section so far.
@@ -18946,7 +18946,7 @@ However, they are also excellent source of inspiration and they have often prove
 <div class="ulist">
 <ul>
 <li>
-<p>Documentation: <a href="https://docs.evolveum.com/midpoint/reference/samples/story-tests/" class="bare">https://docs.evolveum.com/midpoint/reference/samples/story-tests/</a></p>
+<p>Documentation: <a href="https://docs.evolveum.com/midpoint/reference/latest/samples/story-tests/" class="bare">https://docs.evolveum.com/midpoint/reference/latest/samples/story-tests/</a></p>
 </li>
 <li>
 <p>Code and configuration: <a href="https://github.com/Evolveum/midpoint/tree/master/testing/story" class="bare">https://github.com/Evolveum/midpoint/tree/master/testing/story</a></p>
@@ -19410,7 +19410,7 @@ In that case the midPoint-specific meaning is explained as well.</p>
 <p>In midPoint terminology: Archetype is a formal definition of object subtype in midPoint. Archetypes can give specific characters to basic midPoint types such as user, role or org. For example, archetypes can be used to further refine concept of user to represent employees, students, contractors and partners.</p>
 </div>
 <div class="paragraph">
-<p>See also <a href="https://docs.evolveum.com/midpoint/reference/schema/archetypes/">more information at docs.evolveum.com</a>.</p>
+<p>See also <a href="https://docs.evolveum.com/midpoint/reference/latest/schema/archetypes/">more information at docs.evolveum.com</a>.</p>
 </div>
 </dd>
 <dt><a id="glossterm-assignment"></a>Assignment</dt>
@@ -19419,7 +19419,7 @@ In that case the midPoint-specific meaning is explained as well.</p>
 <p>In midPoint terminology: Assignment is a relation that directly assigns privileges, organizational membership, policy elements or other midPoint concepts to assignment holder objects (usually users). Assignment is quite a rich, flexible and universal mechanism. Assignments can be conditional, there may be time constraints, parameters and other details specifying the relation between assignment holder (usually user) and target (usually role or org). Many types of objects can be a target of an assignment, allowing for a significant expressive power.</p>
 </div>
 <div class="paragraph">
-<p>See also <a href="https://docs.evolveum.com/midpoint/reference/roles-policies/assignment/">more information at docs.evolveum.com</a>.</p>
+<p>See also <a href="https://docs.evolveum.com/midpoint/reference/latest/roles-policies/assignment/">more information at docs.evolveum.com</a>.</p>
 </div>
 <div class="paragraph">
 <p>See also: <a href="#glossterm-inducement">Inducement</a>, <a href="#glossterm-assignment-holder">Assignment Holder</a>, <a href="#glossterm-focus">Focus</a></p>
@@ -19816,7 +19816,7 @@ In that case the midPoint-specific meaning is explained as well.</p>
 <p>In midPoint terminology: An object that can is a focus of computation, an object central to midPoint computation. The focus is usually a user, but it can be a role, org or a service. Focus is the center of a computation, the hub in hub-and-spoke (star) data synchronization in midPoint. The "spokes" in the computation are represented by projections.</p>
 </div>
 <div class="paragraph">
-<p>See also <a href="https://docs.evolveum.com/midpoint/reference/schema/focus-and-projections/">more information at docs.evolveum.com</a>.</p>
+<p>See also <a href="https://docs.evolveum.com/midpoint/reference/latest/schema/focus-and-projections/">more information at docs.evolveum.com</a>.</p>
 </div>
 <div class="paragraph">
 <p>Alternative terms: Focal Object</p>
@@ -20211,7 +20211,7 @@ In that case the midPoint-specific meaning is explained as well.</p>
 <p>In midPoint terminology: Inducement is an indirect representation of an assignment, a relation that assigns privileges, organizational membership, policy elements or other midPoint concepts to assignment holder objects (usually users). Inducement has the same data structure as assignment, and very similar functionality. However, while assignment represents direct relation, inducement is indirect. For example, assignment can be used to assign an account or a group membership directly to a user. Inducement can facilitate the same functionality, however it is usually placed in role. As the role is assigned (using an assignment) to the user, inducements placed in the role are indirectly applied to a user.</p>
 </div>
 <div class="paragraph">
-<p>See also <a href="https://docs.evolveum.com/midpoint/reference/roles-policies/assignment/assignment-vs-inducement/">more information at docs.evolveum.com</a>.</p>
+<p>See also <a href="https://docs.evolveum.com/midpoint/reference/latest/roles-policies/assignment/assignment-vs-inducement/">more information at docs.evolveum.com</a>.</p>
 </div>
 <div class="paragraph">
 <p>See also: <a href="#glossterm-assignment">Assignment</a>, <a href="#glossterm-role">Role</a></p>
@@ -20359,7 +20359,7 @@ In that case the midPoint-specific meaning is explained as well.</p>
 <p>In midPoint terminology: Org is a type of midPoint objects, object that represent various forms of organizational units and structures. Org can represent company, division, section, project, team, research group or any other grouping of identities. Orgs are not limited to grouping people, orgs can be used to group most midPoint objects (any assignment holder object).</p>
 </div>
 <div class="paragraph">
-<p>See also <a href="https://docs.evolveum.com/midpoint/reference/org/">more information at docs.evolveum.com</a>.</p>
+<p>See also <a href="https://docs.evolveum.com/midpoint/reference/latest/org/">more information at docs.evolveum.com</a>.</p>
 </div>
 <div class="paragraph">
 <p>See also: <a href="#glossterm-organizational-structure">Organizational Structure</a></p>
@@ -20577,7 +20577,7 @@ In that case the midPoint-specific meaning is explained as well.</p>
 <p>In midPoint terminology: Projection is a part of midPoint computation that represents the objects in identity resources, usually accounts, entitlements or organizational units. Projection are the "spokes" in hub-and-spoke (star) data synchronization in midPoint. Projections are represented in the computation in a form of shadows (shadow objects), usually supplemented with real-time data from the resource objects.</p>
 </div>
 <div class="paragraph">
-<p>See also <a href="https://docs.evolveum.com/midpoint/reference/schema/focus-and-projections/">more information at docs.evolveum.com</a>.</p>
+<p>See also <a href="https://docs.evolveum.com/midpoint/reference/latest/schema/focus-and-projections/">more information at docs.evolveum.com</a>.</p>
 </div>
 <div class="paragraph">
 <p>See also: <a href="#glossterm-shadow">Shadow</a>, <a href="#glossterm-focus">Focus</a>, <a href="#glossterm-assignment">Assignment</a></p>
@@ -20809,7 +20809,7 @@ In that case the midPoint-specific meaning is explained as well.</p>
 <p>In midPoint terminology: Shadow objects are objects in midPoint repository representing objects in identity resources, such as accounts or groups. Shadow objects are used by midPoint as a proxy objects, or data adapters for real accounts, groups or organizational units in identity resources. MidPoint stores identifiers of resource objects in shadow objects, together with meta-data, policy-related information and operational data that relate to the resource object that the shadows represent. The identifiers stored in shadow objects are used to locate the correct resource object even in cases that is renamed or it moves. Shadow objects may contain copies of the data of real resource objects. However, in default configuration, only identifiers are stored in shadow objects.</p>
 </div>
 <div class="paragraph">
-<p>See also <a href="https://docs.evolveum.com/midpoint/reference/resources/shadow/">more information at docs.evolveum.com</a>.</p>
+<p>See also <a href="https://docs.evolveum.com/midpoint/reference/latest/resources/shadow/">more information at docs.evolveum.com</a>.</p>
 </div>
 <div class="paragraph">
 <p>Alternative terms: Shadow Object</p>

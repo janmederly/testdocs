@@ -98,7 +98,7 @@ This synchronization method is inherently inefficient and unreliable.
 It should be used only as a last resort, if no other method is available.
 Active Directory DirSync method should be preferred whenever available.
 
-* Minimal xref:/midpoint/reference/resources/resource-configuration/schema-handling/#fetch-strategy[fetch strategy] does not work reliably.
+* Minimal xref:/midpoint/reference/latest/resources/resource-configuration/schema-handling/#fetch-strategy[fetch strategy] does not work reliably.
 LDAP has no way to specify that the connector wants to fetch all regular attributes except for one.
 Therefore, the connector has to list all the other attributes of an object, except the one expensive attribute (such as `jpegPhoto` or `member`).
 However, Active Directory has attributes that cannot be used it a regular (subtree) search.
@@ -263,7 +263,7 @@ Logging improvements.
 | 17th April 2018
 | 1.4.2.18
 | TBD
-| xref:/midpoint/reference/security/advisories/004-ad-and-ldap-connectors-do-not-check-certificate-validity/[Fix of security vulnerability: missing check of certificate validity.]
+| xref:/midpoint/reference/latest/security/advisories/004-ad-and-ldap-connectors-do-not-check-certificate-validity/[Fix of security vulnerability: missing check of certificate validity.]
 
 
 | 2.0
@@ -287,7 +287,7 @@ Additional search filter support.
 | 17th April 2019
 | 1.5.0.0
 | none
-| xref:/midpoint/reference/security/advisories/004-ad-and-ldap-connectors-do-not-check-certificate-validity/[Fix of security vulnerability: missing check of certificate validity.]
+| xref:/midpoint/reference/latest/security/advisories/004-ad-and-ldap-connectors-do-not-check-certificate-validity/[Fix of security vulnerability: missing check of certificate validity.]
 
 
 | 2.2

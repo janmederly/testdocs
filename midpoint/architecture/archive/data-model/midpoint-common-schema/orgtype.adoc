@@ -18,7 +18,7 @@ Orgs are designed for grouping of objects.
 Orgs usually group users, but they can group any kind of objects (roles, policies, resources, etc.)
 This can be used to create a flexible delegated administration setup.
 
-See xref:/midpoint/reference/org/organizational-structure/[Organizational Structure] page for general introduction to the concepts.
+See xref:/midpoint/reference/latest/org/organizational-structure/[Organizational Structure] page for general introduction to the concepts.
 
 OrgType, as all the midPoint objects, is a subtype of xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/objecttype/[ObjectType].
 Therefore it has all the basic properties such as `name` and `description`.
@@ -28,8 +28,8 @@ Therefore Orgs can also work as roles and OrgType has almost all of the properti
 Although roles and orgs are very similar there is one principal difference:
 Orgs are designed for grouping, roles are designed for flexible policy definition.
 
-OrgType is also a xref:/midpoint/reference/schema/focus-and-projections/[focal type].
-Therefore it can behave as a "focus" (authoritative object) in midPoint xref:/midpoint/reference/synchronization/introduction/[synchronization].
+OrgType is also a xref:/midpoint/reference/latest/schema/focus-and-projections/[focal type].
+Therefore it can behave as a "focus" (authoritative object) in midPoint xref:/midpoint/reference/latest/synchronization/introduction/[synchronization].
 In that case the Orgs can correspond to LDAP OUs or groups or any similar resource objects.
 
 == SchemaDoc
@@ -121,7 +121,7 @@ It is used if the "name" property contains a code that is not entirelly user-fri
 | assignment, inducement
 | AssignmentType +
 optional, multi
-| See xref:/midpoint/reference/roles-policies/assignment/[Assignment] and xref:/midpoint/reference/roles-policies/assignment/assignment-vs-inducement/[Assignment vs Inducement].
+| See xref:/midpoint/reference/latest/roles-policies/assignment/[Assignment] and xref:/midpoint/reference/latest/roles-policies/assignment/assignment-vs-inducement/[Assignment vs Inducement].
 
 
 | authorization
@@ -130,7 +130,7 @@ optional, multi
 | Set of authorizations that apply to org members.
 Authorization define fine-grained access to midPoint objects and system functionality.
 The authorizations that are defined in a role apply to all users that have this org assigned (such user is a "subject" of the authorizations). +
-See xref:/midpoint/reference/security/authorization/[Authorization]
+See xref:/midpoint/reference/latest/security/authorization/[Authorization]
 
 
 | riskLevel
@@ -177,12 +177,12 @@ Full list of items can be found by using the SchemaDoc links above.
 
 == See Also
 
-* xref:/midpoint/reference/org/organizational-structure/[Organizational Structure]
+* xref:/midpoint/reference/latest/org/organizational-structure/[Organizational Structure]
 
 * xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/usertype/[UserType]
 
 * xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/roletype/[RoleType]
 
-* xref:/midpoint/reference/roles-policies/assignment/assignment-vs-inducement/[Assignment vs Inducement]
+* xref:/midpoint/reference/latest/roles-policies/assignment/assignment-vs-inducement/[Assignment vs Inducement]
 
-* xref:/midpoint/reference/roles-policies/metaroles/gensync/['Roles, Metaroles and Generic Synchronization']
+* xref:/midpoint/reference/latest/roles-policies/metaroles/gensync/['Roles, Metaroles and Generic Synchronization']

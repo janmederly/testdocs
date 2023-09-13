@@ -2,10 +2,10 @@
 
 Xrefs:
 
-* xref:/midpoint/reference/concepts/system-configuration-object.adoc[system configuration object] adoc
-* xref:/midpoint/reference/concepts/system-configuration-object/[system configuration object] dir/
+* xref:/midpoint/reference/latest/concepts/system-configuration-object.adoc[system configuration object] adoc
+* xref:/midpoint/reference/latest/concepts/system-configuration-object/[system configuration object] dir/
 
 Links:
 
-* xref:/midpoint/reference/concepts/system-configuration-object.adoc[system configuration object] adoc
-* xref:/midpoint/reference/concepts/system-configuration-object/[system configuration object] dir/
+* xref:/midpoint/reference/latest/concepts/system-configuration-object.adoc[system configuration object] adoc
+* xref:/midpoint/reference/latest/concepts/system-configuration-object/[system configuration object] dir/

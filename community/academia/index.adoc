@@ -191,4 +191,4 @@ Some of the improvements were made and today, the mechanism is  part of the midP
 I received a praise of the dean of the faculty and I was also suggested for the dean price.
 My diploma thesis was also selected as one of the top 10 diploma thesis of all diploma theses in the school year (2011/2012) and you can find my diploma thesis in the gallery of the best from Czech and Slovakia (link:http://www.acm-spy.cz/index.php?cid=13&rocnik=2012[http://www.acm-spy.cz/index.php?cid=13rocnik=2012]  topic: Konzistencia dajov pri sprve podnikovch identt) and full text is available here: link:http://www.acm-spy.cz/data/gallery2012/acmspy2012_submission_16.pdf[http://www.acm-spy.cz/data/gallery2012/acmspy2012_submission_16.pdf]
 
-Description of consistency mechanism which is practically used in midPoint can be found in the section xref:/midpoint/reference/synchronization/consistency/[Consistency Mechanism].
+Description of consistency mechanism which is practically used in midPoint can be found in the section xref:/midpoint/reference/latest/synchronization/consistency/[Consistency Mechanism].

@@ -75,9 +75,9 @@ We need to record mapping that produced value to have smart range expressions.
 
 * Reference documentation
 
-** xref:/midpoint/reference/expressions/mappings/[]
+** xref:/midpoint/reference/latest/expressions/mappings/[]
 
-** xref:/midpoint/reference/expressions/expressions/[]
+** xref:/midpoint/reference/latest/expressions/expressions/[]
 
 ** Describe algorithms:
 

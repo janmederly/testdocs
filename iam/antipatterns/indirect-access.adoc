@@ -193,7 +193,7 @@ The system will be a liability, it will pull all other identity management and g
 The costs will add up.
 
 It may not be possible to create connectors for all the systems, especially at the beginning of IAM program.
-However, some IDM systems (such as xref:/midpoint/reference/resources/manual/configuration/[midPoint]) provide ability to use _semi-manual_ connectors.
+However, some IDM systems (such as xref:/midpoint/reference/latest/resources/manual/configuration/[midPoint]) provide ability to use _semi-manual_ connectors.
 Semi-manual connectors do provisioning activities manually, by creating a ticket for system administrator.
 However, they are able to _read_ data from target system automatically.
 Semi manual connector may connect directly to a database table in target system.

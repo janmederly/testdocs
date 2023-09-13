@@ -23,7 +23,7 @@ The ConnectorFactory implementation will produce instances of ConnectorInstance 
 
 Currently there are two UCF implementations:
 
-* ucf-impl-connid: Implementation using the xref:/midpoint/reference/resources/connid/[ConnId] framework.
+* ucf-impl-connid: Implementation using the xref:/midpoint/reference/latest/resources/connid/[ConnId] framework.
 This is used for almost all midPoint connectors.
 
 * ucf-impl-builtin: Implementation for specialized built-in connectors.

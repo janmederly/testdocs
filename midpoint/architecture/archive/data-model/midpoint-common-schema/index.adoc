@@ -73,7 +73,7 @@ image::Basic-Object-Types.png[]
 ====
 Most data types and items are documented in-line in the XSD schema definition files.
 Please see the current link:https://github.com/Evolveum/midpoint/blob/master/infra/schema/src/main/resources/xml/ns/public/common/common-3.xsd[XSD definition from the source-code repository] for the latest version.
-The processed documentation is available in a form of xref:/midpoint/reference/schema/schemadoc/[SchemaDoc].
+The processed documentation is available in a form of xref:/midpoint/reference/latest/schema/schemadoc/[SchemaDoc].
 
 ====
 
@@ -103,7 +103,7 @@ Following table summarizes links to docs pages that provide detailed explanation
 
 | Shadow
 | xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/shadowtype/[ShadowType]
-| xref:/midpoint/reference/resources/shadow/[Shadow Objects]
+| xref:/midpoint/reference/latest/resources/shadow/[Shadow Objects]
 
 
 | Connector
@@ -133,20 +133,20 @@ Following table summarizes links to docs pages that provide detailed explanation
 
 |===
 
-All the object types are described inline in XSD schema files or you can access the formated documentation in xref:/midpoint/reference/schema/schemadoc/[SchemaDoc] form.
+All the object types are described inline in XSD schema files or you can access the formated documentation in xref:/midpoint/reference/latest/schema/schemadoc/[SchemaDoc] form.
 
 
 == See Also
 
-* xref:/midpoint/reference/schema/[Data Model]
+* xref:/midpoint/reference/latest/schema/[Data Model]
 
-* xref:/midpoint/reference/schema/data-model-essentials/[Basic Data Model]
+* xref:/midpoint/reference/latest/schema/data-model-essentials/[Basic Data Model]
 
-* xref:/midpoint/reference/resources/resource-schema/explanation/[Resource and Connector Schema Explanation]
+* xref:/midpoint/reference/latest/resources/resource-schema/explanation/[Resource and Connector Schema Explanation]
 
-* xref:/midpoint/reference/schema/object-references/[Object References]
+* xref:/midpoint/reference/latest/schema/object-references/[Object References]
 
-* xref:/midpoint/reference/resources/shadow/[Shadow Objects]
+* xref:/midpoint/reference/latest/resources/shadow/[Shadow Objects]
 
 
 == External links

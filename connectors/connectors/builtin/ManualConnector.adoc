@@ -11,7 +11,7 @@ connector-protocol:
 source-url-master: https://github.com/Evolveum/midpoint/blob/master/provisioning/ucf-impl-builtin/src/main/java/com/evolveum/midpoint/provisioning/ucf/impl/builtin/ManualConnectorInstance.java
 description: Built-in identity connector for manual provisioning operations.
 connid-bundle-name: com.evolveum.midpoint.provisioning.ucf.impl.builtin
-documentation-link: https://docs.evolveum.com/midpoint/reference/resources/manual/
+documentation-link: https://docs.evolveum.com/midpoint/reference/latest/resources/manual/
 bundling: builtin
 nav-title: Manual Connector
 upkeep-status: orange
@@ -25,4 +25,4 @@ Provisioning to these resources rely on a manual work, typically executed by a s
 
 == See Also
 
-* xref:/midpoint/reference/resources/manual/[]
+* xref:/midpoint/reference/latest/resources/manual/[]

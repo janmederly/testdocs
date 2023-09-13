@@ -326,4 +326,4 @@ It is not yet clear how to set up data sources for embedded Tomcat.
 
 == See Also
 
-* xref:/midpoint/reference/security/authentication/spring-security-/[Authentication Configuration (Spring Security)]
+* xref:/midpoint/reference/latest/security/authentication/spring-security-/[Authentication Configuration (Spring Security)]

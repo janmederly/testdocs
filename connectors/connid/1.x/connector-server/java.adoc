@@ -438,7 +438,7 @@ If these passwords were not the same then the key password needs to be changed i
 keytool -keystore keystore.jks -storepass changeit -keypasswd -alias mykey
 ----
 
-See xref:/midpoint/reference/security/crypto/keystore-configuration/[Keystore Configuration] page for some more tips and tricks dealing with keystore.
+See xref:/midpoint/reference/latest/security/crypto/keystore-configuration/[Keystore Configuration] page for some more tips and tricks dealing with keystore.
 But please note that this page deals with *midPoint keystore* which is slightly different than *Connector server keystore*.
 
 === Passing Keystore Parameters to Connector Server

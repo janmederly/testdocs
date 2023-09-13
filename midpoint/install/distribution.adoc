@@ -72,13 +72,13 @@ Following instructions will refer to the relative paths inside the installation 
 
 === MidPoint Home Directory
 
-xref:/midpoint/reference/deployment/midpoint-home-directory/[MidPoint Home Directory] is a filesystem directory that midPoint uses to store initial configuration, cryptographic keys, log files and similar "variable" content.
+xref:/midpoint/reference/latest/deployment/midpoint-home-directory/[MidPoint Home Directory] is a filesystem directory that midPoint uses to store initial configuration, cryptographic keys, log files and similar "variable" content.
 MidPoint home directory is located in the `var` subdirectory by default (e.g. `/opt/midpoint/var`).
 This location is acceptable for many installations.
 However, some installations may want to separate the static (read-only) parts of the installation and the dynamic (read-write) parts.
 In that case the midPoint home directory may be moved to any suitable location.
 This can be achieved simply by setting `MIDPOINT_HOME` environment variable (on UNIX systems) or manipulating the JVM options.
-Please see xref:/midpoint/reference/deployment/midpoint-home-directory/[MidPoint Home Directory] and xref:/midpoint/reference/deployment/stand-alone-deployment/[Stand-Alone Deployment] pages for details.
+Please see xref:/midpoint/reference/latest/deployment/midpoint-home-directory/[MidPoint Home Directory] and xref:/midpoint/reference/latest/deployment/stand-alone-deployment/[Stand-Alone Deployment] pages for details.
 
 MidPoint home directory may be moved even after midPoint is installed.
 However, setting the directory correctly during installation may save a lot of work later on.
@@ -90,7 +90,7 @@ This database will be used by midPoint after the installation unless other repos
 However, the embedded database is *not* supported for production installations.
 Therefore, for anything other than evaluation and demo installations, it is strongly recommended setting up a full-scale database engine.
 PostgreSQL database has to be used for any serious midPoint deployment.
-Please see xref:/midpoint/reference/repository/native-postgresql/usage/[native PostgreSQL repository page] for installation details.
+Please see xref:/midpoint/reference/latest/repository/native-postgresql/usage/[native PostgreSQL repository page] for installation details.
 
 == Post-Installation
 
@@ -128,7 +128,7 @@ This script can also be invoked directly:
 ----
 
 The `midpoint.sh` script will process the script `setenv.sh` if it exists in the same directory
-(`bin`) or in xref:/midpoint/reference/deployment/midpoint-home-directory/[midPoint home directory].
+(`bin`) or in xref:/midpoint/reference/latest/deployment/midpoint-home-directory/[midPoint home directory].
 The script is a convenient place for customizing JVM properties, for example:
 
 [source,bash]
@@ -170,8 +170,8 @@ Following pages provide specific instruction for individual operating systems:
 
 == See Also
 
-* xref:/midpoint/reference/deployment/midpoint-home-directory/[MidPoint Home Directory]
+* xref:/midpoint/reference/latest/deployment/midpoint-home-directory/[MidPoint Home Directory]
 
-* xref:/midpoint/reference/repository/configuration/[]
+* xref:/midpoint/reference/latest/repository/configuration/[]
 
-* xref:/midpoint/reference/deployment/stand-alone-deployment/[Stand-Alone Deployment]
+* xref:/midpoint/reference/latest/deployment/stand-alone-deployment/[Stand-Alone Deployment]

@@ -87,7 +87,7 @@ However, the connector usually has very little "business" logic.
 Even the little logic that the connector has will only deal with handling of the communication protocol and protocol data formats.
 Except for a few special-purpose attributes, the connector usually does not understand the meaning of the data that are passed through it.
 Vast majority of the IDM logic is implemented in identity management systems, such as midPoint.
-E.g. midPoint xref:/midpoint/reference/expressions/mappings/[mappings] copies and transforms attribute values, midPoint handles resource capabilities, xref:/midpoint/reference/synchronization/[synchronization], etc.
+E.g. midPoint xref:/midpoint/reference/latest/expressions/mappings/[mappings] copies and transforms attribute values, midPoint handles resource capabilities, xref:/midpoint/reference/latest/synchronization/[synchronization], etc.
 The connector does not need to deal with that.
 The connector just translates protocols and data formats.
 

@@ -1,7 +1,7 @@
 = Smart Correlation in midPoint 4.6 and Beyond
 :toc:
 
-NOTE: This is a historic design document. It was transformed into a xref:/midpoint/reference/correlation/[feature description].
+NOTE: This is a historic design document. It was transformed into a xref:/midpoint/reference/latest/correlation/[feature description].
 
 == Introduction
 
@@ -112,7 +112,7 @@ and the candidate identity whose match is being considered.
 The correlation can involve _multiple sources of identity data_. For example, the information
 of a person can come from the Student information system, the Human resources system, or even from
 both at once. Some of these systems can use the
-xref:/midpoint/reference/resources/multiaccounts/[multi-accounts feature], allowing multiple
+xref:/midpoint/reference/latest/resources/multiaccounts/[multi-accounts feature], allowing multiple
 accounts for the same person. All this means that:
 
 . we need to be able to correlate against multiple versions of identity data,
@@ -202,7 +202,7 @@ Each variant (called `identity`) contains the following:
 as in the original object (e.g., user). They are not searchable.
 | `search` | Searchable version of the data. These items are stored in the flat structure, as a set of (potentially
 multivalued) properties. The values are usually normalized by defined means (like using
-xref:/midpoint/reference/schema/polystring-normalization/[configured `PolyString` normalization]).
+xref:/midpoint/reference/latest/schema/polystring-normalization/[configured `PolyString` normalization]).
 |===
 
 For space and performance reasons, the searchable version of the identity data may be merged into

@@ -86,7 +86,7 @@
             score: 6
             advantage: Very flexible support for diverse identity types using archetypes, while still retaining useful amount of built-in functionality for each identity type.
             limitation: User interface support for multiple archetypes, archetyp transition and archetype-specific schema is still somehow limited.
-            readMore: /midpoint/reference/schema/archetypes/
+            readMore: /midpoint/reference/latest/schema/archetypes/
           midpoint5:
             score: 7
           midpoint-ambition:
@@ -106,7 +106,7 @@
             score: 6
             advantage: Very flexible organizational structure support, allowing multiple paralel organizational structures. Policies can be directly connected to organizational units.
             limitation: User interface could be improved.
-            readMore: /midpoint/reference/org/organizational-structure/
+            readMore: /midpoint/reference/latest/org/organizational-structure/
           midpoint5:
             score: 7
           midpoint-ambition:
@@ -125,7 +125,7 @@
           midpoint:
             score: 5
             note: Basic support for personas is available. It is quite Spartan, but it works.
-            readMore: /midpoint/reference/misc/persona/
+            readMore: /midpoint/reference/latest/misc/persona/
           midpoint5:
             score: 6
           midpoint-ambition:
@@ -148,7 +148,7 @@
           midpoint:
               score: 5
               note: Same mechanisms used as are used for identity lifecycle, hence same functionality level.
-              readMore: /midpoint/reference/resources/entitlements/
+              readMore: /midpoint/reference/latest/resources/entitlements/
           midpoint5:
               score: 7
               note: Same mechanisms used as are used for identity lifecycle, hence same functionality level.
@@ -170,7 +170,7 @@
               score: 6
               advantage: Entitlement associations (e.g. group membership) are native, built-in concepts in midPoint. User interface takes advantage of that.
               limitation: User interface could be improved. Entitlement concepts could be better integrated with reporting and analytics.
-              readMore: /midpoint/reference/resources/entitlements/
+              readMore: /midpoint/reference/latest/resources/entitlements/
           midpoint5:
               score: 7
           midpoint-ambition:
@@ -664,7 +664,7 @@
           midpoint:
               score: 3
               note: Workflow engine was present in midPoint almost since the beginning, but it was deliberatelly removed.
-              readMore: /midpoint/reference/cases/workflowless/
+              readMore: /midpoint/reference/latest/cases/workflowless/
           midpoint5:
               score: 3
           midpoint-ambition:

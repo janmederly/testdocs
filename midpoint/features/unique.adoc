@@ -25,7 +25,7 @@ For the sake of completeness there is a xref:/midpoint/features/current/[list of
 
 === Relative Changes
 
-Mail article: xref:/midpoint/reference/concepts/relativity/[Relativity]
+Mail article: xref:/midpoint/reference/latest/concepts/relativity/[Relativity]
 
 The unique feature of midPoint is the method of dealing with data changes and consistency.
 Most identity management systems work with absolute state, e.g. the complete copy of new user or account data.
@@ -43,7 +43,7 @@ Also, other roles can be assigned to or revoked from the user at the same time, 
 The system usually does not need locking, as it is operating on a common identity model that is well understood by system components.
 Therefore a very straightforward way of conflict-free merging of several operations is possible.
 
-This xref:/midpoint/reference/concepts/relativity/[relative approach] is an integral part of midPoint from the very beginning of the development.
+This xref:/midpoint/reference/latest/concepts/relativity/[relative approach] is an integral part of midPoint from the very beginning of the development.
 xref:/midpoint/devel/prism/concepts/deltas/[Deltas] from the blood which circulates inside midPoint.
 This approach provides such obvious advantages that we often wonder how the other IDM system can live without it.
 To be completely honest this feature is not an invention of midPoint.
@@ -53,16 +53,16 @@ The LDAP protocol is using similar change propagation and weak consistency model
 
 === Advanced RBAC
 
-Main article: xref:/midpoint/reference/roles-policies/rbac/[Advanced Hybrid RBAC]
+Main article: xref:/midpoint/reference/latest/roles-policies/rbac/[Advanced Hybrid RBAC]
 
 MidPoint is using a Role-Based Access Control (RBAC) principle to make provisioning more manageable.
 However the use of simple RBAC leads to a xref:/iam/role-explosion/[role explosion] problem.
 Much more sophisticated approach is needed to make RBAC really useful.
 And that's exactly what midPoint has:
 
-* The roles may contain xref:/midpoint/reference/expressions/mappings/outbound-mapping/[outbound mappings] that enforce specific account attributes or xref:/midpoint/reference/resources/entitlements/[entitlements]. This is the traditional way how provisioning roles usually work.
-But midPoint makes this much more powerful than usual by the means of a very flexible xref:/midpoint/reference/expressions/mappings/[mapping] mechanism.
-The xref:/midpoint/reference/expressions/mappings/mapping-relativity/[mappings produce deltas] therefore it is easy and safe to merge results of many mappings together.
+* The roles may contain xref:/midpoint/reference/latest/expressions/mappings/outbound-mapping/[outbound mappings] that enforce specific account attributes or xref:/midpoint/reference/latest/resources/entitlements/[entitlements]. This is the traditional way how provisioning roles usually work.
+But midPoint makes this much more powerful than usual by the means of a very flexible xref:/midpoint/reference/latest/expressions/mappings/[mapping] mechanism.
+The xref:/midpoint/reference/latest/expressions/mappings/mapping-relativity/[mappings produce deltas] therefore it is easy and safe to merge results of many mappings together.
 That's exactly what is required in complex RBAC structures.
 
 * The roles can be hierarchical.
@@ -71,44 +71,44 @@ Therefore the roles can be used to form various models such as the frequently us
 
 * Roles can be parametric.
 This means that a role does not contain specific value but just an expression.
-The expression computes the value from parameters which are usually stored in xref:/midpoint/reference/roles-policies/assignment/[assignments] or in subordinate roles.
+The expression computes the value from parameters which are usually stored in xref:/midpoint/reference/latest/roles-policies/assignment/[assignments] or in subordinate roles.
 This simple mechanism is a very powerful weapon against xref:/iam/role-explosion/[role explosion]. E.g. a single role "assistant" can be sufficient for the entire organization if it is parametrized by department and location.
-These two parameters reside in the xref:/midpoint/reference/roles-policies/assignment/[assignment] and can therefore be specified each time a role is assigned to a user.
+These two parameters reside in the xref:/midpoint/reference/latest/roles-policies/assignment/[assignment] and can therefore be specified each time a role is assigned to a user.
 The expression in the role can use the department and location parameters e.g. to compute file server host name and home folder location.
 This is as close as a provisioning system can get to Attribute-Based Access Control (ABAC).
 
-* A single role can be an xref:/midpoint/reference/roles-policies/assignment/[assignment] to a single user several times.
+* A single role can be an xref:/midpoint/reference/latest/roles-policies/assignment/[assignment] to a single user several times.
 Each specific assignment represents "contract" or "job" from the user.
 Each assignment can have specific parameters such as start and stop dates.
 
 * The roles in midPoint are not limited to the users.
-Any kind of xref:/midpoint/reference/schema/focus-and-projections/[focal object] can be assigned to a role.
-E.g. an xref:/midpoint/reference/org/organizational-structure/[organizational unit] can be assigned to a role which specifies on which resources to create xref:/midpoint/reference/schema/focus-and-projections/[a projection] of that organizational unit.
+Any kind of xref:/midpoint/reference/latest/schema/focus-and-projections/[focal object] can be assigned to a role.
+E.g. an xref:/midpoint/reference/latest/org/organizational-structure/[organizational unit] can be assigned to a role which specifies on which resources to create xref:/midpoint/reference/latest/schema/focus-and-projections/[a projection] of that organizational unit.
 This projection may be in a form of LDAP `organizationalUnit` object, in a form of AD group or any other kind of resource object.
 This approach is generalizing RBAC also to non-user objects which greatly simplifies system maintenance.
 The roles can even be applied to roles themselves thus creating meta-roles.
 
 Especially the parametric roles and meta-roles can be used in a very simple and elegant configurations.
-A handful of xref:/midpoint/reference/roles-policies/rbac/[roles], xref:/midpoint/reference/expressions/object-template/[object templates] and xref:/midpoint/reference/expressions/expressions/[expressions] can handle situations for which other IDM systems need thousands of lines of custom code.
-One such example can be found in xref:/midpoint/reference/samples/story-tests/orgsync/[OrgSync Story Test].
+A handful of xref:/midpoint/reference/latest/roles-policies/rbac/[roles], xref:/midpoint/reference/latest/expressions/object-template/[object templates] and xref:/midpoint/reference/latest/expressions/expressions/[expressions] can handle situations for which other IDM systems need thousands of lines of custom code.
+One such example can be found in xref:/midpoint/reference/latest/samples/story-tests/orgsync/[OrgSync Story Test].
 
 
 === Assignments
 
-Main article: xref:/midpoint/reference/roles-policies/assignment/[Assignment]
+Main article: xref:/midpoint/reference/latest/roles-policies/assignment/[Assignment]
 
 Assignment is a basic structural element of midPoint policy.
-Assignments define what _should be_ (as opposed to xref:/midpoint/reference/roles-policies/assignment/assigning-vs-linking/[links] which describe what _is_). Assignments associate a user with roles and resource objects such as accounts.
+Assignments define what _should be_ (as opposed to xref:/midpoint/reference/latest/roles-policies/assignment/assigning-vs-linking/[links] which describe what _is_). Assignments associate a user with roles and resource objects such as accounts.
 Traditional IDM systems has a very simple structure instead of assignment.
 It is mostly binary: either a user has a role or he does not.
 This can work for very simple cases but it fails miserably in more complex scenarios.
-However the xref:/midpoint/reference/roles-policies/assignment/[assignment] in midPoint is much more powerful.
+However the xref:/midpoint/reference/latest/roles-policies/assignment/[assignment] in midPoint is much more powerful.
 It contains activation and deactivation dates.
 It can be conditional.
-It can contain parameters for xref:/midpoint/reference/roles-policies/rbac/[parametric roles]. The consequence is that several assignments can be used to assign the same role to the same used at the same time.
+It can contain parameters for xref:/midpoint/reference/latest/roles-policies/rbac/[parametric roles]. The consequence is that several assignments can be used to assign the same role to the same used at the same time.
 
 But the assignment is even more powerful than that.
-Only a very naive IDM project expects that everything and everyone will comply to the rules (e.g. xref:/midpoint/reference/roles-policies/rbac/[RBAC]) and that there will be no exception.
+Only a very naive IDM project expects that everything and everyone will comply to the rules (e.g. xref:/midpoint/reference/latest/roles-policies/rbac/[RBAC]) and that there will be no exception.
 There are always exceptions.
 Assignments are a way to support such exceptions in systematic and elegant way.
 The assignments can make sure that the exceptions are recorded and properly managed.
@@ -132,11 +132,11 @@ It is obvious that something has to be innovated here.
 So we did it:
 
 * MidPoint supports provisioning to an offline system.
-Once again we take advantage of xref:/midpoint/reference/concepts/relativity/[relative changes]. The xref:/midpoint/devel/prism/concepts/deltas/[delta] that has to be provisioned to the unavailable system is recorded in the xref:/midpoint/reference/resources/shadow/[shadow object] until the target system becomes available again.
+Once again we take advantage of xref:/midpoint/reference/latest/concepts/relativity/[relative changes]. The xref:/midpoint/devel/prism/concepts/deltas/[delta] that has to be provisioned to the unavailable system is recorded in the xref:/midpoint/reference/latest/resources/shadow/[shadow object] until the target system becomes available again.
 Then the delta is replayed.
 As deltas have natural ability to merge with existing state this approach is reasonably safe and it definitely improves the operational characteristics of the whole solution.
 
-* MidPoint has a sophisticated built-in opportunistic xref:/midpoint/reference/synchronization/consistency/[consistency mechanism]. There are several ways how midPoint can detect an inconsistency during a normal provisioning operation.
+* MidPoint has a sophisticated built-in opportunistic xref:/midpoint/reference/latest/synchronization/consistency/[consistency mechanism]. There are several ways how midPoint can detect an inconsistency during a normal provisioning operation.
 E.g. midPoint may try to modify account that was accidentally deleted in the meantime - and an "object not found" error occurs.
 Or midPoint may try to create an account that was already created manually by system administrator - and "already exists" error occurs.
 Traditional IDM systems would usually just report the error and stop.
@@ -151,7 +151,7 @@ Smart.
 
 === Generic Synchronization
 
-Main article: xref:/midpoint/reference/synchronization/generic-synchronization/[Generic Synchronization]
+Main article: xref:/midpoint/reference/latest/synchronization/generic-synchronization/[Generic Synchronization]
 
 Traditional IDM systems deal just with the "identities" which essentially means _accounts_. But that's only a part of the story.
 There are groups, privileges, organizational units, projects, categories, teams, ... you name it.
@@ -161,12 +161,12 @@ But there is no need for this to be separated from the Identity Management prope
 In fact, it makes no sense whatsoever to separate it.
 Connectors, policies, mechanisms - all of this can be reused.
 And midPoint is an excellent example.
-With xref:/midpoint/reference/synchronization/generic-synchronization/[Generic Synchronization] feature midPoint is reusing xref:/midpoint/reference/synchronization/introduction/[synchronization mechanisms], provisioning capabilities, xref:/midpoint/reference/roles-policies/assignment/[assignments], xref:/midpoint/reference/expressions/mappings/[mappings] and essentially almost all the other features of identity management to synchronize many object types.
+With xref:/midpoint/reference/latest/synchronization/generic-synchronization/[Generic Synchronization] feature midPoint is reusing xref:/midpoint/reference/latest/synchronization/introduction/[synchronization mechanisms], provisioning capabilities, xref:/midpoint/reference/latest/roles-policies/assignment/[assignments], xref:/midpoint/reference/latest/expressions/mappings/[mappings] and essentially almost all the other features of identity management to synchronize many object types.
 
 While this is a revolutionary concept when compared to "hardcore" user provisioning system, it may not seem so impressive in the company of more flexible metadirectory-based provisioning tools.
 These tools were able to do this for ages.
 But midPoint still has one major advantage: it allows to map these unusual resource objects to objects that actually make sense from the business perspective.
-For example a group `wizards` in AD can be mapped to midPoint xref:/midpoint/reference/org/organizational-structure/[organizational unit] `Wizards` which represent the "Wizard Task Force".
+For example a group `wizards` in AD can be mapped to midPoint xref:/midpoint/reference/latest/org/organizational-structure/[organizational unit] `Wizards` which represent the "Wizard Task Force".
 This object is something that has a business meaning.
 It represents a real team in the organization, an ad-hoc group of people.
 And midPoint knows this.
@@ -177,12 +177,12 @@ Which provides all the necessary information resources for the Wizard Task Force
 
 MidPoint does not blindly replicate the objects.
 Blind replication is usually a pointless and quite expensive exercise.
-MidPoint is designed to form a real information hub, to join information in a way that makes sense, to create and maintain xref:/midpoint/reference/schema/common-data-model/[common data model]. MidPoint creates information structure that is exposing a meaning and brings value.
+MidPoint is designed to form a real information hub, to join information in a way that makes sense, to create and maintain xref:/midpoint/reference/latest/schema/common-data-model/[common data model]. MidPoint creates information structure that is exposing a meaning and brings value.
 
 
 === Entitlements
 
-Main articale: xref:/midpoint/reference/resources/entitlements/[Entitlements]
+Main articale: xref:/midpoint/reference/latest/resources/entitlements/[Entitlements]
 
 Entitlements are groups, privileges or any kind of "things" on the resource side that can be associated with an account.
 Every non-trivial resource has some kind of entitlements and they need to be managed.
@@ -230,7 +230,7 @@ It has to remain excellent and even improve in many years and decades to come.
 The basic building blocks are as important as the features.
 
 MidPoint is fully based on schemas.
-Schema means a formal definition of our xref:/midpoint/reference/schema/[data model]. The schema is defined once and then every midPoint component reuses that definition.
+Schema means a formal definition of our xref:/midpoint/reference/latest/schema/[data model]. The schema is defined once and then every midPoint component reuses that definition.
 The schema is even automatically translated to Java classes during the build to guarantee the best consistency and programming convenience.
 You may think that this is not such a great achievement, this technique was invented more than a decade ago anyway.
 But the difference is that we work in the IDM field.
@@ -435,11 +435,11 @@ That's the reason it works so well.
 
 * xref:/midpoint/introduction/approach/[Approach]
 
-* xref:/midpoint/reference/concepts/relativity/[Relativity]
+* xref:/midpoint/reference/latest/concepts/relativity/[Relativity]
 
 * xref:/midpoint/devel/prism/concepts/deltas/[Deltas]
 
-* xref:/midpoint/reference/synchronization/consistency/[Consistency mechanism]
+* xref:/midpoint/reference/latest/synchronization/consistency/[Consistency mechanism]
 
 * xref:/midpoint/devel/prism/[Prism Objects]
 

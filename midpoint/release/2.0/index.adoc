@@ -80,7 +80,7 @@ midPoint 2.0 provides following features:
 
 
 
-* xref:/midpoint/reference/concepts/polystring/[PolyString] support allows automatic conversion of strings in national alphabets
+* xref:/midpoint/reference/latest/concepts/polystring/[PolyString] support allows automatic conversion of strings in national alphabets
 
 * Custom schema extensibility
 
@@ -126,17 +126,17 @@ When compared to the previous version, Phoebe is introducing following changes:
 
 * Groovy expressions
 
-* xref:/midpoint/reference/expressions/expressions/script/javascript/[ECMAScript (JavaScript) expressions]
+* xref:/midpoint/reference/latest/expressions/expressions/script/javascript/[ECMAScript (JavaScript) expressions]
 
 * Protected accounts
 
-* Basic Segregation of Duties (SoD): xref:/midpoint/reference/roles-policies/segregation-of-duties/[Role exclusions]
+* Basic Segregation of Duties (SoD): xref:/midpoint/reference/latest/roles-policies/segregation-of-duties/[Role exclusions]
 
 * Underlying platform based entirely on xref:/midpoint/devel/prism/[Prism Objects]
 
 * Schema stabilization, move to "version 2" schemas, backward compatibility of the schema
 
-* xref:/midpoint/reference/concepts/polystring/[PolyString] support allows automatic conversion of strings in national alphabets
+* xref:/midpoint/reference/latest/concepts/polystring/[PolyString] support allows automatic conversion of strings in national alphabets
 
 * Custom schema extensibility
 

@@ -130,7 +130,7 @@ Bundled with midPoint 3.4.
 
 == Documentation
 
-* xref:/midpoint/reference/upgrade/connectors/csvfile-connector-migration/[CSVFile Connector Migration]
+* xref:/midpoint/reference/latest/upgrade/connectors/csvfile-connector-migration/[CSVFile Connector Migration]
 
 
 == Resource Examples

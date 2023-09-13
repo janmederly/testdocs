@@ -177,7 +177,7 @@ There are two great resources to arm you with essential knowledge:
 * https://docs.evolveum.com/book/practical-identity-management-with-midpoint.html#90-troubleshooting[Troubleshooting chapter] in midPoint book.
 Make sure you read through this chapter (and the entire https://docs.evolveum.com/book/[book] as well) *before your first deployment*.
 
-* xref:/midpoint/reference/diag/troubleshooting/[Troubleshooting section] in midPoint wiki.
+* xref:/midpoint/reference/latest/diag/troubleshooting/[Troubleshooting section] in midPoint wiki.
 There are many useful information and tips here.
 This is a great resource for later reference.
 You should come back here when you run into problems during your project.
@@ -233,12 +233,12 @@ Handling of the problem heavily depends on whether it is a bug, missing feature 
 You are an engineer, you are expected to handle this.
 Make sure you follow appropriate troubleshooting practices
 (remember https://docs.evolveum.com/book/practical-identity-management-with-midpoint.html#90-troubleshooting[book]
-and xref:/midpoint/reference/diag/troubleshooting/[wiki]).
+and xref:/midpoint/reference/latest/diag/troubleshooting/[wiki]).
 If you find dealing with the misconfiguration too difficult for you, then you can engage consulting services to assist you.
 
 * *Bug* is a problem of midPoint development team.
 If you have purchased _support subscription_, we will fix any bugs that you encounter.
-Please create a xref:/midpoint/reference/diag/creating-a-bug-report/[bug report].
+Please create a xref:/midpoint/reference/latest/diag/creating-a-bug-report/[bug report].
 However, this is software development and you should set your expectations right.
 It is not possible to fix all the bugs immediately after they are reported.
 There is also a development and release cycle to consider.
@@ -257,7 +257,7 @@ As the name suggests, we will be expecting that the issue has already passed thr
 Evolveum developers will expect that they are talking to an experienced engineer on your side.
 
 You should make sure your bug reports is professional and complete.
-There is a xref:/midpoint/reference/diag/creating-a-bug-report/[bug reporting guide] to check that you have included everything in the report.
+There is a xref:/midpoint/reference/latest/diag/creating-a-bug-report/[bug reporting guide] to check that you have included everything in the report.
 
 == Evolveum Development And Support Procedures
 

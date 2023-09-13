@@ -168,7 +168,7 @@ MidPoint is using embedded H2 database by default to store its data.
 The embedded H2 database is find for first steps with midPoint, demo environments, development and similar non-production purposes.
 It is not supported for any pre-production and production use.
 PostgreSQL database has to be used for any serious midPoint deployment.
-Please see xref:/midpoint/reference/repository/native-postgresql/usage/[native PostgreSQL repository page] for installation details.
+Please see xref:/midpoint/reference/latest/repository/native-postgresql/usage/[native PostgreSQL repository page] for installation details.
 
 == Frequently Asked Questions
 

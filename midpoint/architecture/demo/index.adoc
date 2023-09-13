@@ -274,7 +274,7 @@ The configuration says that for each `unmatched` account a new midPoint user sho
 .. MidPoint cannot create just any user.
 The new user needs to be initialized with the data from the account that caused all this in the first place.
 Therefore, link:https://wiki.evolveum.com/display/midPoint/Inbound+Mapping[inbound mappings] are used to initialize the new user.
-This sets username, given name, family name and other user attributes. They also assign an link:https://docs.evolveum.com/midpoint/reference/schema/archetypes/[archetype] to a user. This archetype is assigned based on user's employment type, and it induces roles that users with a given employment type should have. Please note that these roles are indirectly assigned to a user, so they would not appear in _all_ section of _assignments_ section but only in _all direct/indirect assignments_ section.
+This sets username, given name, family name and other user attributes. They also assign an link:https://docs.evolveum.com/midpoint/reference/latest/schema/archetypes/[archetype] to a user. This archetype is assigned based on user's employment type, and it induces roles that users with a given employment type should have. Please note that these roles are indirectly assigned to a user, so they would not appear in _all_ section of _assignments_ section but only in _all direct/indirect assignments_ section.
 
 .. link:https://wiki.evolveum.com/display/midPoint/Object+Template[User template] processing takes place now.
 User template is processed every time user is created or modified.

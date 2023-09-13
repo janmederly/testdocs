@@ -12,7 +12,7 @@
 *Status:* Public +
 *Stability:*[.red]#DRAFT#, some changes expected +
 *Platform:* Java +
-*Dependencies:*xref:/midpoint/reference/schema/[Data Model] +
+*Dependencies:*xref:/midpoint/reference/latest/schema/[Data Model] +
 *Responsible person:* Radovan Semancik
 
 
@@ -39,7 +39,7 @@ This interface is an extension of generic Object Access Interface. Supported obj
 
 Supported extra data types:
 
-* Resource Object (from xref:/midpoint/reference/resources/resource-schema/[Resource Schema])
+* Resource Object (from xref:/midpoint/reference/latest/resources/resource-schema/[Resource Schema])
 
 
 == History

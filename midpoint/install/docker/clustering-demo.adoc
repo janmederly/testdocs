@@ -8,7 +8,7 @@
 :page-upkeep-status: orange
 
 This demo shows how to run two midPoint nodes working against common midPoint repository.
-For more information you see xref:/midpoint/reference/deployment/clustering-ha/[Clustering / high availability setup].
+For more information you see xref:/midpoint/reference/latest/deployment/clustering-ha/[Clustering / high availability setup].
 
 The image can be found in the link:https://github.com/Evolveum/midpoint-docker[Evolveum/midpoint-docker] GitHub project.
 

@@ -100,7 +100,7 @@ Setup of appropriate cryptographic material needs to be done on both sides.
 
 
 | How to set up crypto material
-| Add trusted root CA certificate to xref:/midpoint/reference/security/crypto/keystore-configuration/[midPoint keystore]
+| Add trusted root CA certificate to xref:/midpoint/reference/latest/security/crypto/keystore-configuration/[midPoint keystore]
 | Configure keypair on connector server SSL: xref:/connectors/connid/1.x/connector-server/java/[Java], xref:/connectors/connid/1.x/connector-server/dotnet/[.NET]
 
 
@@ -121,7 +121,7 @@ There are numerous primers how to set up a private CA for this purpose, e.g. by 
 * `java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty`
 
 ** This strange message usually indicates a missing keystore or a missing trusted root CA certificate in the keystore.
-See xref:/midpoint/reference/security/crypto/keystore-configuration/[Keystore Configuration].
+See xref:/midpoint/reference/latest/security/crypto/keystore-configuration/[Keystore Configuration].
 
 == See Also
 
@@ -129,4 +129,4 @@ See xref:/midpoint/reference/security/crypto/keystore-configuration/[Keystore Co
 
 * xref:/connectors/connid/1.x/connector-server/dotnet/[.NET Connector Server]
 
-* xref:/midpoint/reference/security/crypto/keystore-configuration/[Keystore Configuration]
+* xref:/midpoint/reference/latest/security/crypto/keystore-configuration/[Keystore Configuration]

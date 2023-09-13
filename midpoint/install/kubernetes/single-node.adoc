@@ -13,8 +13,8 @@ For Cluster deployment see xref:/midpoint/install/kubernetes/cluster.adoc[Midpoi
 
 Since Midpoint 4.4 there are two definition for the repository (where the data for the midpoint application are stored).
 
-* xref:/midpoint/reference/repository/generic/[Generic] (deprecated since 4.4)
-* xref:/midpoint/reference/repository/native-postgresql/[Native]
+* xref:/midpoint/reference/latest/repository/generic/[Generic] (deprecated since 4.4)
+* xref:/midpoint/reference/latest/repository/native-postgresql/[Native]
 
 [NOTE]
 ====
@@ -237,11 +237,11 @@ spec:
 As far as we are using generic repository we can use "default" config.xml file.
 All the changes can be overwritten during the start.
 This is realized by the *MP_SET_** values which are handled by the xref:/midpoint/install/midpoint-sh.adoc[Start script].
-The name and content for the variables are related to the xref:/midpoint/reference/repository/configuration/[Repository configuration].
+The name and content for the variables are related to the xref:/midpoint/reference/latest/repository/configuration/[Repository configuration].
 
 === Native
 
-xref:/midpoint/reference/repository/native-postgresql/[Native] repository came with midpoint 4.4.
+xref:/midpoint/reference/latest/repository/native-postgresql/[Native] repository came with midpoint 4.4.
 For the purpose of deployment there is few specifics:
 
 * DB related:

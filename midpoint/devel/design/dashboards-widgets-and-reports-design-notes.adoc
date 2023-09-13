@@ -110,4 +110,4 @@ Some parts of this may be also needed for xref:/midpoint/features/planned/compli
 
 ** xref:/midpoint/features/planned/compliance/[Compliance]
 
-** xref:/midpoint/reference/admin-gui/dashboards/[Customizable Dashboards]
+** xref:/midpoint/reference/latest/admin-gui/dashboards/[Customizable Dashboards]

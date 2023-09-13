@@ -47,11 +47,11 @@ midPoint 3.8 provides following features:
 
 ** Extensible object types:
 
-*** User objects to represent users, physical persons and xref:/midpoint/reference/misc/persona/[personas]
+*** User objects to represent users, physical persons and xref:/midpoint/reference/latest/misc/persona/[personas]
 
 *** Role objects to represent roles, privileges, jobs and so on
 
-*** Org objects to represent xref:/midpoint/reference/org/organizational-structure/[organizational units], teams, workgroups, etc.
+*** Org objects to represent xref:/midpoint/reference/latest/org/organizational-structure/[organizational units], teams, workgroups, etc.
 
 *** Service objects to represent servers, network devices, mobile devices, network services, etc.
 
@@ -69,7 +69,7 @@ midPoint 3.8 provides following features:
 
 *** Limited support for complex data types
 
-** Processing and computation fully based on xref:/midpoint/reference/concepts/relativity/[relative changes]
+** Processing and computation fully based on xref:/midpoint/reference/latest/concepts/relativity/[relative changes]
 
 ** Off-the-shelf support for user password credentials
 
@@ -91,34 +91,34 @@ midPoint 3.8 provides following features:
 
 ** Annotation support (such as "experimental" and "deprecated" annotation to control data model evolution)
 
-** xref:/midpoint/reference/schema/polystring-normalization/[Customizable PolyString normalization]
+** xref:/midpoint/reference/latest/schema/polystring-normalization/[Customizable PolyString normalization]
 
 
 * *Identity management*
 
-** xref:/midpoint/reference/synchronization/examples/[Enabling and disabling accounts]
+** xref:/midpoint/reference/latest/synchronization/examples/[Enabling and disabling accounts]
 
-** Support for xref:/midpoint/reference/expressions/[mapping and expressions] to determine account attributes
+** Support for xref:/midpoint/reference/latest/expressions/[mapping and expressions] to determine account attributes
 
-** xref:/midpoint/reference/resources/resource-configuration/schema-handling/[Multi-layer attribute access limitations]
+** xref:/midpoint/reference/latest/resources/resource-configuration/schema-handling/[Multi-layer attribute access limitations]
 
-** xref:/midpoint/reference/resources/provisioning-dependencies/[Provisioning dependencies]
+** xref:/midpoint/reference/latest/resources/provisioning-dependencies/[Provisioning dependencies]
 
 *** Higher-order dependencies (enables partial support for circular provisioning dependencies)
 
-** xref:/midpoint/reference/synchronization/consistency/[Provisioning robustness] - ability to provision to non-accessible (offline) resources
+** xref:/midpoint/reference/latest/synchronization/consistency/[Provisioning robustness] - ability to provision to non-accessible (offline) resources
 
-** xref:/midpoint/reference/synchronization/consistency/[Provisioning consistency] - ability to handle provisioning errors and compensate for inconsistencies
+** xref:/midpoint/reference/latest/synchronization/consistency/[Provisioning consistency] - ability to handle provisioning errors and compensate for inconsistencies
 
-** xref:/midpoint/reference/resources/propagation/[Provisioning Propagation]
+** xref:/midpoint/reference/latest/resources/propagation/[Provisioning Propagation]
 
-** Support for xref:/midpoint/reference/resources/resource-configuration/schema-handling/#attribute-tolerance[tolerant attributes]
+** Support for xref:/midpoint/reference/latest/resources/resource-configuration/schema-handling/#attribute-tolerance[tolerant attributes]
 
 *** Ability to select tolerant and non-tolerant values using a pattern (regexp)
 
 ** Support for volatile attributes (attributes changed by the resource)
 
-** xref:/midpoint/reference/concepts/matching-rules/[Matching Rules]
+** xref:/midpoint/reference/latest/concepts/matching-rules/[Matching Rules]
 
 *** Matching rules to support case insensitive attributes, DN and UUID attributes, XML attributes, etc.
 (extensible)
@@ -131,9 +131,9 @@ midPoint 3.8 provides following features:
 
 *** Ad-hoc provisioning script execution
 
-*** xref:/midpoint/reference/schema/object-references/[Object schema validation during import] (can be switched off)
+*** xref:/midpoint/reference/latest/schema/object-references/[Object schema validation during import] (can be switched off)
 
-*** xref:/midpoint/reference/schema/object-references/[Smart references between objects based on search filters]
+*** xref:/midpoint/reference/latest/schema/object-references/[Smart references between objects based on search filters]
 
 ** Advanced support for account activation (enabled/disabled states)
 
@@ -145,28 +145,28 @@ midPoint 3.8 provides following features:
 
 *** Support for account validity time constrains (valid from, valid to)
 
-*** Support easy xref:/midpoint/reference/resources/resource-configuration/schema-handling/activation/[activation existence mappings] (e.g. easy configuration of "disables instead of delete" feature)
+*** Support easy xref:/midpoint/reference/latest/resources/resource-configuration/schema-handling/activation/[activation existence mappings] (e.g. easy configuration of "disables instead of delete" feature)
 
-*** Support for xref:/midpoint/reference/expressions/mappings/[mapping time constraints] in activation mappings that allow configuring time-related provisioning features such as xref:/midpoint/reference/resources/resource-configuration/schema-handling/activation/[deferred account delete or pre-provisioning].
+*** Support for xref:/midpoint/reference/latest/expressions/mappings/[mapping time constraints] in activation mappings that allow configuring time-related provisioning features such as xref:/midpoint/reference/latest/resources/resource-configuration/schema-handling/activation/[deferred account delete or pre-provisioning].
 
-** Ability to specify set of xref:/midpoint/reference/resources/resource-configuration/protected-accounts/[protected accounts] that will not be affected by IDM system
+** Ability to specify set of xref:/midpoint/reference/latest/resources/resource-configuration/protected-accounts/[protected accounts] that will not be affected by IDM system
 
 ** Support for base context searches for connectors that support object hierarchies (such as LDAP)
 
-** xref:/midpoint/reference/misc/notifications/[Notifications]
+** xref:/midpoint/reference/latest/misc/notifications/[Notifications]
 
-** xref:/midpoint/reference/misc/bulk/[Bulk actions]
+** xref:/midpoint/reference/latest/misc/bulk/[Bulk actions]
 
-** Passive xref:/midpoint/reference/resources/attribute-caching/[Attribute Caching] (EXPERIMENTAL)
+** Passive xref:/midpoint/reference/latest/resources/attribute-caching/[Attribute Caching] (EXPERIMENTAL)
 
 ** Partial multi-tenancy support
 
 
 * *Synchronization*
 
-** xref:/midpoint/reference/synchronization/introduction/[Live synchronization]
+** xref:/midpoint/reference/latest/synchronization/introduction/[Live synchronization]
 
-** xref:/midpoint/reference/concepts/relativity/[Reconciliation]
+** xref:/midpoint/reference/latest/concepts/relativity/[Reconciliation]
 
 *** Ability to execute scripts before/after reconciliation
 
@@ -176,14 +176,14 @@ midPoint 3.8 provides following features:
 
 ** Concept of _channel_ that can be used to adjust synchronization behaviour in some situations
 
-** xref:/midpoint/reference/synchronization/generic-synchronization/[Generic Synchronization] allows synchronization of roles to groups to organizational units to ... anything
+** xref:/midpoint/reference/latest/synchronization/generic-synchronization/[Generic Synchronization] allows synchronization of roles to groups to organizational units to ... anything
 
-** Self-healing xref:/midpoint/reference/synchronization/consistency/[consistency mechanism]
+** Self-healing xref:/midpoint/reference/latest/synchronization/consistency/[consistency mechanism]
 
 
 * *Advanced RBAC*
 
-** xref:/midpoint/reference/expressions/expressions/[Expressions in the roles]
+** xref:/midpoint/reference/latest/expressions/expressions/[Expressions in the roles]
 
 ** Hierarchical roles
 
@@ -193,19 +193,19 @@ midPoint 3.8 provides following features:
 
 ** Temporal constraints (validity dates: valid from, valid to)
 
-** xref:/midpoint/reference/roles-policies/metaroles/gensync/[Metaroles]
+** xref:/midpoint/reference/latest/roles-policies/metaroles/gensync/[Metaroles]
 
 ** Role catalog
 
 ** Role request based on shopping cart paradigm
 
-** Several xref:/midpoint/reference/synchronization/projection-policy/[assignment enforcement modes]
+** Several xref:/midpoint/reference/latest/synchronization/projection-policy/[assignment enforcement modes]
 
 *** Ability to specify global or resource-specific enforcement mode
 
 *** Ability to "legalize" assignment that violates the enforcement mode
 
-** Rule-based RBAC (RB-RBAC) ability by using conditional mappings in xref:/midpoint/reference/expressions/object-template/[user template] and xref:/midpoint/reference/roles-policies/role-autoassignment/[role autoassignment] and entitlement associations
+** Rule-based RBAC (RB-RBAC) ability by using conditional mappings in xref:/midpoint/reference/latest/expressions/object-template/[user template] and xref:/midpoint/reference/latest/roles-policies/role-autoassignment/[role autoassignment] and entitlement associations
 
 ** GUI support for entitlement listing, membership and editing
 
@@ -216,23 +216,23 @@ midPoint 3.8 provides following features:
 
 * *Identity governance*
 
-** Powerful xref:/midpoint/reference/org/organizational-structure/[organizational structure management]
+** Powerful xref:/midpoint/reference/latest/org/organizational-structure/[organizational structure management]
 
-** xref:/midpoint/reference/cases/workflow-3/[Workflow support] (based on link:http://www.activiti.org/[Activiti] engine)
+** xref:/midpoint/reference/latest/cases/workflow-3/[Workflow support] (based on link:http://www.activiti.org/[Activiti] engine)
 
-*** Declarative policy-based multi-level xref:/midpoint/reference/cases/approval/[approval] process
+*** Declarative policy-based multi-level xref:/midpoint/reference/latest/cases/approval/[approval] process
 
 *** Visualization of approval process
 
-** xref:/midpoint/reference/concepts/object-lifecycle/[Object lifecycle] property
+** xref:/midpoint/reference/latest/concepts/object-lifecycle/[Object lifecycle] property
 
 ** Object history (time machine)
 
-** xref:/midpoint/reference/roles-policies/policy-rules/[Policy Rules] as a unified mechanism to define identity management, governance and compliance policies
+** xref:/midpoint/reference/latest/roles-policies/policy-rules/[Policy Rules] as a unified mechanism to define identity management, governance and compliance policies
 
-** xref:/midpoint/reference/roles-policies/segregation-of-duties/[Segregation of Duties] (SoD)
+** xref:/midpoint/reference/latest/roles-policies/segregation-of-duties/[Segregation of Duties] (SoD)
 
-*** Many options to define xref:/midpoint/reference/roles-policies/segregation-of-duties/[role exclusions]
+*** Many options to define xref:/midpoint/reference/latest/roles-policies/segregation-of-duties/[role exclusions]
 
 *** SoD approvals
 
@@ -240,19 +240,19 @@ midPoint 3.8 provides following features:
 
 ** Assignment constraints for roles and organizational structure
 
-** xref:/midpoint/reference/roles-policies/certification/[Access certification]
+** xref:/midpoint/reference/latest/roles-policies/certification/[Access certification]
 
 ** Ad-hoc recertificaiton
 
-** Basic xref:/midpoint/reference/roles-policies/role-lifecycle/[role lifecycle] management (role approvals)
+** Basic xref:/midpoint/reference/latest/roles-policies/role-lifecycle/[role lifecycle] management (role approvals)
 
-** xref:/midpoint/reference/roles-policies/applicable-policies/[User-friendly policy selection]
+** xref:/midpoint/reference/latest/roles-policies/applicable-policies/[User-friendly policy selection]
 
-** xref:/midpoint/reference/misc/deputy/[Deputy] (ad-hoc privilege delegation)
+** xref:/midpoint/reference/latest/misc/deputy/[Deputy] (ad-hoc privilege delegation)
 
 ** Escalation in approval and certification processes
 
-** xref:/midpoint/reference/misc/persona/[Personas]
+** xref:/midpoint/reference/latest/misc/persona/[Personas]
 
 ** Rich assignment meta-data
 
@@ -261,23 +261,23 @@ midPoint 3.8 provides following features:
 
 * *Expressions, mappings and other dynamic features*
 
-** xref:/midpoint/reference/expressions/sequences/[Sequences] for reliable allocation of unique identifiers
+** xref:/midpoint/reference/latest/expressions/sequences/[Sequences] for reliable allocation of unique identifiers
 
-** xref:/midpoint/reference/expressions/expressions/[Customization expressions]
+** xref:/midpoint/reference/latest/expressions/expressions/[Customization expressions]
 
-*** xref:/midpoint/reference/expressions/expressions/script/groovy/[Groovy]
+*** xref:/midpoint/reference/latest/expressions/expressions/script/groovy/[Groovy]
 
 *** Python
 
-*** xref:/midpoint/reference/expressions/expressions/script/javascript/[JavaScript (ECMAScript)]
+*** xref:/midpoint/reference/latest/expressions/expressions/script/javascript/[JavaScript (ECMAScript)]
 
 *** Built-in libraries with a convenient set of functions
 
-** xref:/midpoint/reference/expressions/expressions/[PolyString] support allows automatic conversion of strings in national alphabets
+** xref:/midpoint/reference/latest/expressions/expressions/[PolyString] support allows automatic conversion of strings in national alphabets
 
 ** Mechanism to iteratively determine unique usernames and other identifier
 
-** xref:/midpoint/reference/expressions/function-libraries/[Function libraries]
+** xref:/midpoint/reference/latest/expressions/function-libraries/[Function libraries]
 
 
 * *Web-based administration user interface*
@@ -298,7 +298,7 @@ midPoint 3.8 provides following features:
 
 ** Identity merge
 
-** GUI support for xref:/midpoint/reference/samples/configurable-transform-sample/[more complex data in object extension] (containers), improved GUI customization (experimental)
+** GUI support for xref:/midpoint/reference/latest/samples/configurable-transform-sample/[more complex data in object extension] (containers), improved GUI customization (experimental)
 
 ** Support for custom static web content
 
@@ -326,7 +326,7 @@ midPoint 3.8 provides following features:
 
 *** Support for OpenICF connectors (limited)
 
-** Automatic generation and caching of xref:/midpoint/reference/resources/resource-schema/[resource schema] from the connector
+** Automatic generation and caching of xref:/midpoint/reference/latest/resources/resource-schema/[resource schema] from the connector
 
 ** xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/connectortype/[Local connector discovery]
 
@@ -334,7 +334,7 @@ midPoint 3.8 provides following features:
 
 ** Remote connector discovery
 
-** xref:/midpoint/reference/resources/manual/[Manual Resource and ITSM Integration]
+** xref:/midpoint/reference/latest/resources/manual/[Manual Resource and ITSM Integration]
 
 *** Simple management of cases - internal midPoint tickets (contributed, experimental)
 
@@ -343,11 +343,11 @@ midPoint 3.8 provides following features:
 
 * *Flexible identity repository implementations and SQL repository implementation*
 
-** xref:/midpoint/reference/repository/generic/implementation/[Identity repository based on relational databases]
+** xref:/midpoint/reference/latest/repository/generic/implementation/[Identity repository based on relational databases]
 
 ** xref:/midpoint/guides/admin-gui-user-guide/#keeping-metadata-for-all-objects-creation-modification-approvals[Keeping metadata for all objects] (creation, modification, approvals)
 
-** xref:/midpoint/reference/deployment/removing-obsolete-information/[Automatic repository cleanup] to keep the data store size sustainable
+** xref:/midpoint/reference/latest/deployment/removing-obsolete-information/[Automatic repository cleanup] to keep the data store size sustainable
 
 
 
@@ -355,9 +355,9 @@ midPoint 3.8 provides following features:
 
 ** Fine-grained authorization model
 
-*** xref:/midpoint/reference/security/authorization/configuration/[Authorization expressions]
+*** xref:/midpoint/reference/latest/security/authorization/configuration/[Authorization expressions]
 
-*** Limited xref:/midpoint/reference/security/power-of-attorney/[power of attorney] implementation
+*** Limited xref:/midpoint/reference/latest/security/power-of-attorney/[power of attorney] implementation
 
 ** Organizational structure and RBAC integration
 
@@ -367,7 +367,7 @@ midPoint 3.8 provides following features:
 
 *** Password distribution
 
-*** xref:/midpoint/reference/security/credentials/password-policy/[Password policies]
+*** xref:/midpoint/reference/latest/security/credentials/password-policy/[Password policies]
 
 *** Password retention policy
 
@@ -381,20 +381,20 @@ midPoint 3.8 provides following features:
 
 ** CSRF protection
 
-** Auditing to xref:/midpoint/reference/security/audit/#logfile-auditing[file (logging)]
+** Auditing to xref:/midpoint/reference/latest/security/audit/#logfile-auditing[file (logging)]
 
-** Auditing to xref:/midpoint/reference/security/audit/#database-table-auditing[SQL table]
+** Auditing to xref:/midpoint/reference/latest/security/audit/#database-table-auditing[SQL table]
 
 ** Interactive audit log viewer
 
 
 * *Extensibility*
 
-** xref:/midpoint/reference/schema/custom-schema-extension/[Custom schema extensibility]
+** xref:/midpoint/reference/latest/schema/custom-schema-extension/[Custom schema extensibility]
 
-** xref:/midpoint/reference/concepts/clockwork/scripting-hooks/[Scripting Hooks]
+** xref:/midpoint/reference/latest/concepts/clockwork/scripting-hooks/[Scripting Hooks]
 
-** xref:/midpoint/reference/misc/lookup-tables/[Lookup Tables]
+** xref:/midpoint/reference/latest/misc/lookup-tables/[Lookup Tables]
 
 ** Support for overlay projects and deep customization
 
@@ -413,16 +413,16 @@ midPoint 3.8 provides following features:
 
 ** Comprehensive reporting based on Jasper Reports
 
-** xref:/midpoint/reference/misc/reports/post-report-script/[Post report script]
+** xref:/midpoint/reference/latest/misc/reports/post-report-script/[Post report script]
 
 
 * *Internals*
 
-** xref:/midpoint/reference/tasks/task-manager/[Task management]
+** xref:/midpoint/reference/latest/tasks/task-manager/[Task management]
 
-*** xref:/midpoint/reference/tasks/task-template/[Task template]
+*** xref:/midpoint/reference/latest/tasks/task-template/[Task template]
 
-*** xref:/midpoint/reference/tasks/node-sticky-tasks/[Node-sticky tasks]
+*** xref:/midpoint/reference/latest/tasks/node-sticky-tasks/[Node-sticky tasks]
 
 *** xref:/midpoint/devel/design/multi-node-partitioned-and-stateful-tasks/['Multi-node, partitioned and stateful tasks']
 
@@ -431,11 +431,11 @@ midPoint 3.8 provides following features:
 
 ** Lightweight deployment structure with two deployment options:
 
-*** xref:/midpoint/reference/deployment/stand-alone-deployment/[Stand-alone deployment]
+*** xref:/midpoint/reference/latest/deployment/stand-alone-deployment/[Stand-alone deployment]
 
 *** Deployment to web container (WAR)
 
-** xref:/midpoint/reference/tasks/task-manager/[Multi-node task manager component with HA support]
+** xref:/midpoint/reference/latest/tasks/task-manager/[Multi-node task manager component with HA support]
 
 ** Comprehensive logging designed to aid troubleshooting
 
@@ -448,17 +448,17 @@ midPoint 3.8 provides following features:
 
 ** xref:/midpoint/architecture/[Architectural documentation publicly available in the wiki]
 
-** Schema documentation automatically generated from the definition (xref:/midpoint/reference/schema/schemadoc/[schemadoc])
+** Schema documentation automatically generated from the definition (xref:/midpoint/reference/latest/schema/schemadoc/[schemadoc])
 
 == Changes With Respect to Version 3.7
 
 * User interface improvements
 
-** xref:/midpoint/reference/roles-policies/applicable-policies/[User-friendly policy selection]
+** xref:/midpoint/reference/latest/roles-policies/applicable-policies/[User-friendly policy selection]
 
 ** User-friendly entitlement association management
 
-** GUI support for xref:/midpoint/reference/samples/configurable-transform-sample/[more complex data in object extension] (containers), improved GUI customization (experimental)
+** GUI support for xref:/midpoint/reference/latest/samples/configurable-transform-sample/[more complex data in object extension] (containers), improved GUI customization (experimental)
 
 ** Simple GUI pages for _cases_ (internal midPoint tickets) contributed by link:https://www.exclamationlabs.com/[Exclamation Labs]
 
@@ -477,12 +477,12 @@ midPoint 3.8 provides following features:
 
 ** Properties `locality`, `costCenter`, `preferredLanguage`, `locale`, `timezone`, `emailAddress` and `telephoneNumber` moved up from `UserType` to `FocusType`.
 
-** xref:/midpoint/reference/schema/polystring-normalization/[Customizable PolyString normalization]
+** xref:/midpoint/reference/latest/schema/polystring-normalization/[Customizable PolyString normalization]
 
 
 * Security improvements
 
-** xref:/midpoint/reference/security/credentials/password-policy/[Password Policy: prohibited projection values]
+** xref:/midpoint/reference/latest/security/credentials/password-policy/[Password Policy: prohibited projection values]
 
 ** Negative item enumeration in authorizations (`exceptItem`)
 
@@ -493,7 +493,7 @@ midPoint 3.8 provides following features:
 
 * Provisioning
 
-** xref:/midpoint/reference/resources/propagation/[Provisioning Propagation]
+** xref:/midpoint/reference/latest/resources/propagation/[Provisioning Propagation]
 
 ** Ad-hoc provisioning script execution
 
@@ -512,12 +512,12 @@ midPoint 3.8 provides following features:
 
 ** Audit delta and operation result compression
 
-** xref:/midpoint/reference/repository/generic/configuration/[Repository layer cache]
+** xref:/midpoint/reference/latest/repository/generic/configuration/[Repository layer cache]
 
 
 * Miscellaneous improvements
 
-** Improved handling of xref:/midpoint/reference/expressions/function-libraries/[function library] updates
+** Improved handling of xref:/midpoint/reference/latest/expressions/function-libraries/[function library] updates
 
 ** Minor mapping improvements
 
@@ -604,7 +604,7 @@ Please migrate from deprecated platforms as soon as possible.
 [NOTE]
 .Web container (application server) support
 ====
-MidPoint 3.7 introduced xref:/midpoint/reference/deployment/stand-alone-deployment/[Stand-alone deployment] form that does not need an application server.
+MidPoint 3.7 introduced xref:/midpoint/reference/latest/deployment/stand-alone-deployment/[Stand-alone deployment] form that does not need an application server.
 This is the primary deployment model for midPoint.
 The deployment to web container is still supported.
 However the only supported web container is Apache Tomcat.
@@ -696,16 +696,16 @@ Microsoft Internet Explorer compatibility mode is *not* supported.
 .Stand-alone deployment model
 ====
 MidPoint deployment method has changed in midPoint release 3.7.
-xref:/midpoint/reference/deployment/stand-alone-deployment/[Stand-alone deployment] is now the default deployment method.
+xref:/midpoint/reference/latest/deployment/stand-alone-deployment/[Stand-alone deployment] is now the default deployment method.
 MidPoint default configuration, scripts and almost everything else was adapted for this method.
 
 * *New midPoint users* and *new deployments* should simply follow the xref:install.adoc[installation manual].
 
 * *Existing deployments* prior to version 3.7 may keep using exactly the same configuration as before.
 xref:/midpoint/install/webapp-deployment/[Deployment of midPoint as Web Application] is still supported as an alternative.
-However, xref:/midpoint/reference/deployment/stand-alone-deployment/[stand-alone deployment] is now the primary option.
+However, xref:/midpoint/reference/latest/deployment/stand-alone-deployment/[stand-alone deployment] is now the primary option.
 It is recommended to migrate the deployment based on application server to a stand-alone deployment in the future.
-See our xref:/midpoint/reference/upgrade/tomcat-to-standalone/[brief migration guide].
+See our xref:/midpoint/reference/latest/upgrade/tomcat-to-standalone/[brief migration guide].
 ====
 
 == Upgrade
@@ -736,7 +736,7 @@ Subtype is now the recommended way how to sort object such as users into smaller
 Subtype is a direct replacement for `employeeType`, `roleType` and `serviceType`. Introduction of subtype as step towards schema unification.
 Existing deprecated properties (`employeeType`, `roleType` and `serviceType`) still work in the same way as they have worked in previous midPoint versions (with one exception, see below).
 However, `subtype` property should be used as a replacement whenever possible.
-The only difference in functionality is that xref:/midpoint/reference/misc/persona/[personas] construction will now set `subtype` property in new personas instead of `employeeType` property as it was in previous midPoint versions.
+The only difference in functionality is that xref:/midpoint/reference/latest/misc/persona/[personas] construction will now set `subtype` property in new personas instead of `employeeType` property as it was in previous midPoint versions.
 
 * Properties `locality`, `costCenter`, `preferredLanguage`, `locale`, `timezone`, `emailAddress` and `telephoneNumber` moved up from `UserType` to `FocusType`. This should be a transparent change for existing objects.
 Moving those properties up in a type hierarchy allows to use those properties in other focal types (roles, orgs, services).
@@ -793,7 +793,7 @@ It has to be explicitly requested.
 
 * REST interface was extended with experimental password reset method.
 
-* xref:/midpoint/reference/security/audit/[Audit table] was extended and modified
+* xref:/midpoint/reference/latest/security/audit/[Audit table] was extended and modified
 
 ** `id` column in `m_audit_event` table is now generated by default (auto increment)
 

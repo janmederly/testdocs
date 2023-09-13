@@ -27,6 +27,6 @@ The xref:AsyncProvisioningConnector/[Asynchronous Provisioning Connector] implem
 
 == See Also
 
-* xref:/midpoint/reference/resources/asynchronous/inbound/[Asynchronous (Messaging) Inbound Resources]
+* xref:/midpoint/reference/latest/resources/asynchronous/inbound/[Asynchronous (Messaging) Inbound Resources]
 
 * xref:AsyncProvisioningConnector/[]

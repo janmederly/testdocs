@@ -180,7 +180,7 @@ To import the AD CA certificate to midPoint keystore:
 
 . start midPoint
 
-If not working, please check if you already set up xref:/midpoint/reference/security/crypto/keystore-configuration/[javax.net.ssl.trustStore to midPoint keystore].
+If not working, please check if you already set up xref:/midpoint/reference/latest/security/crypto/keystore-configuration/[javax.net.ssl.trustStore to midPoint keystore].
 
 == See Also
 

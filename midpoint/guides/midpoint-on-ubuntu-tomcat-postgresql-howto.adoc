@@ -308,7 +308,7 @@ sudo /etc/init.d/tomcat stop
 
 link:https://www.evolveum.com/download/[Download] or build `midpoint.war`. Place it into `/opt/apache-tomcat/webapps` directory.
 
-Create xref:/midpoint/reference/deployment/midpoint-home-directory/[midPoint home directory]. This directory contains midpoint startup configuration, keystore, connector code and similar things.
+Create xref:/midpoint/reference/latest/deployment/midpoint-home-directory/[midPoint home directory]. This directory contains midpoint startup configuration, keystore, connector code and similar things.
 According to UNIX conventions the best place is perhaps `/var/opt` directory but use whatever place suits your installation.
 Also make sure it can be accessed by tomcat:
 
@@ -454,7 +454,7 @@ sudo /etc/init.d/tomcat start
 
 ----
 
-See xref:/midpoint/reference/security/crypto/[Encryption and Keys] and xref:/midpoint/reference/security/crypto/keystore-configuration/[Keystore Configuration] pages for more information.
+See xref:/midpoint/reference/latest/security/crypto/[Encryption and Keys] and xref:/midpoint/reference/latest/security/crypto/keystore-configuration/[Keystore Configuration] pages for more information.
 
 
 == Enjoy

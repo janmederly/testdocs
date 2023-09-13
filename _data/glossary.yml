@@ -152,7 +152,7 @@
       Archetype is a formal definition of object subtype in midPoint.
       Archetypes can give specific characters to basic midPoint types such as user, role or org.
       For example, archetypes can be used to further refine concept of user to represent employees, students, contractors and partners.
-  readMore: /midpoint/reference/schema/archetypes/
+  readMore: /midpoint/reference/latest/schema/archetypes/
 
 - id: assignment
   term: Assignment
@@ -162,7 +162,7 @@
       Assignments can be conditional, there may be time constraints, parameters and other details specifying the relation between assignment holder (usually user) and target (usually role or org).
       Many types of objects can be a target of an assignment, allowing for a significant expressive power.
   seeAlso: [ 'inducement', 'assignment-holder', 'focus' ]
-  readMore: /midpoint/reference/roles-policies/assignment/
+  readMore: /midpoint/reference/latest/roles-policies/assignment/
 
 - id: assignment-holder
   term: Assignment Holder
@@ -625,7 +625,7 @@
       Focus is the center of a computation, the hub in hub-and-spoke (star) data synchronization in midPoint.
       The "spokes" in the computation are represented by projections.
   seeAlso: [ 'assignment', 'projection' ]
-  readMore: /midpoint/reference/schema/focus-and-projections/
+  readMore: /midpoint/reference/latest/schema/focus-and-projections/
 
 - id: fulfillment
   term: Fulfillment
@@ -1102,7 +1102,7 @@
       Inducement can facilitate the same functionality, however it is usually placed in role.
       As the role is assigned (using an assignment) to the user, inducements placed in the role are indirectly applied to a user.
   seeAlso: [ 'assignment', 'role' ]
-  readMore: /midpoint/reference/roles-policies/assignment/assignment-vs-inducement/
+  readMore: /midpoint/reference/latest/roles-policies/assignment/assignment-vs-inducement/
 
 - id: joiner-leaver
   term: Joiner-Leaver Processes
@@ -1283,7 +1283,7 @@
       Org can represent company, division, section, project, team, research group or any other grouping of identities.
       Orgs are not limited to grouping people, orgs can be used to group most midPoint objects (any assignment holder object).
   seeAlso: [ 'organizational-structure' ]
-  readMore: /midpoint/reference/org/
+  readMore: /midpoint/reference/latest/org/
 
 - id: organizational-structure
   term: Organizational Structure
@@ -1580,7 +1580,7 @@
       Projection are the "spokes" in hub-and-spoke (star) data synchronization in midPoint.
       Projections are represented in the computation in a form of shadows (shadow objects), usually supplemented with real-time data from the resource objects.
   seeAlso: [ 'shadow', 'focus', 'assignment' ]
-  readMore: /midpoint/reference/schema/focus-and-projections/
+  readMore: /midpoint/reference/latest/schema/focus-and-projections/
 
 - id: pseudonym
   term: Pseudonym
@@ -1828,7 +1828,7 @@
       Shadow objects may contain copies of the data of real resource objects.
       However, in default configuration, only identifiers are stored in shadow objects.
   seeAlso: [ 'projection' ]
-  readMore: /midpoint/reference/resources/shadow/
+  readMore: /midpoint/reference/latest/resources/shadow/
 
 - id: sso
   term: Single Sign-On

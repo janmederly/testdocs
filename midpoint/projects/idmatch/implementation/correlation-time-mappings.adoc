@@ -119,7 +119,7 @@ So, the knowledge that `hrId` maps to `employeeNumber` (and how exactly) has to 
 
 By default, inbound mappings are _not_ evaluated for correlation (yet).
 footnote:[Starting with 4.6, they are automatically enabled when an items-based correlator is present.
-See xref:/midpoint/reference/correlation/[Smart Correlation] for more information.]
+See xref:/midpoint/reference/latest/correlation/[Smart Correlation] for more information.]
 Therefore, one has to explicitly enable this.
 It can be done for all the mappings in given object type:
 
@@ -201,6 +201,6 @@ As an _experimental_ feature (4.5), the following simplified syntax of correlati
 
 This is equivalent to the condition `employeeNumber` = `$focus/employeeNumber` with the additional treatment of `null` values.
 
-Please see xref:/midpoint/reference/correlation/[Smart Correlation] for details on how to configure the correlation.
+Please see xref:/midpoint/reference/latest/correlation/[Smart Correlation] for details on how to configure the correlation.
 The format was slightly changed between the experimental form of this feature in 4.5 and the "production-ready" form in 4.6.
 ====

@@ -309,4 +309,4 @@ The user must know what he's doing.
 
 == See Also
 
-* xref:/midpoint/reference/concepts/relation/relation-configuration/[Relation Configuration]
+* xref:/midpoint/reference/latest/concepts/relation/relation-configuration/[Relation Configuration]

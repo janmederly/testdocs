@@ -11,8 +11,8 @@ Stop.sh is wrapper to midpoint.sh adding parameter stop so *<install-dir>/bin/mi
 This page focuses directly on `midpoint.sh` script which is covering what is needed to run the application.
 
 [NOTE]
-Do not confuse xref:/midpoint/reference/deployment/stand-alone-deployment/#installation-directory[installation directory] that contains the binaries and scripts (normally extracted
-from the distribution archive) with xref:/midpoint/reference/deployment/midpoint-home-directory/[midPoint home directory] that is important for the running application, containing initial configuration and logs.
+Do not confuse xref:/midpoint/reference/latest/deployment/stand-alone-deployment/#installation-directory[installation directory] that contains the binaries and scripts (normally extracted
+from the distribution archive) with xref:/midpoint/reference/latest/deployment/midpoint-home-directory/[midPoint home directory] that is important for the running application, containing initial configuration and logs.
 
 == Basic usage
 
@@ -95,9 +95,9 @@ This approach tries to prevent unwanted start of the application in case the ins
 
 There are few things which should be ready before we can successfully run the application.
 
-* xref:/midpoint/reference/deployment/midpoint-home-directory/index.adoc[home directory]
+* xref:/midpoint/reference/latest/deployment/midpoint-home-directory/index.adoc[home directory]
 ** log
-** xref:/midpoint/reference/deployment/post-initial-import.adoc[_post initial objects_]
+** xref:/midpoint/reference/latest/deployment/post-initial-import.adoc[_post initial objects_]
 * class path / -jar
 * JAVA_OPTS
 
@@ -210,7 +210,7 @@ Ignore <<Default values for the parameters>> for Xms. The Java default value wou
 
 _-D*_ +
 
-Next to other JAVA environment or application parameter *-D** can be used to xref:/midpoint/reference/deployment/midpoint-home-directory/overriding-config-xml-parameters.adoc[override config.xml parameters].
+Next to other JAVA environment or application parameter *-D** can be used to xref:/midpoint/reference/latest/deployment/midpoint-home-directory/overriding-config-xml-parameters.adoc[override config.xml parameters].
 The structure of the "key" in config.xml hierarchy delimited by the *dot*.
 
 === backwards compatible variables
@@ -308,7 +308,7 @@ environment:
 
 === entry point
 
-In some situation it is not possible to directly mount some information to the midpoint structure (home directory). As an example may be xref:/midpoint/reference/deployment/post-initial-import.adoc[post initial objects] where once the object is processed the suffix *.done* is added to the name (after extension). This is normal and expected situation but in some scenario it is not what we want to realize.
+In some situation it is not possible to directly mount some information to the midpoint structure (home directory). As an example may be xref:/midpoint/reference/latest/deployment/post-initial-import.adoc[post initial objects] where once the object is processed the suffix *.done* is added to the name (after extension). This is normal and expected situation but in some scenario it is not what we want to realize.
 
 The example of this situation is docker environment. Once we create container (instance of the image) we may need to re-process the post initial objects to get the environment to the specific state. In case we would attach the objects in read-only mode the processing will fail as the objects are expected to be writable. Once it is mounted as external volume, with the first processing the name is changed and in case of new instance of image the objects seems to be already processed even it was done in previous instance...
 

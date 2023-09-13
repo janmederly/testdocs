@@ -2,7 +2,7 @@ RewriteRule   "^midpoint/support/bug\-tracking\-system/?$" "/support/bug-trackin
 
 RewriteRule   "^midpoint/support/bundled\-support/?$" "/support/bundled-support/" [R]
 
-RewriteRule   "^midpoint/reference/tasks/task\-error\-handling/?$" "/midpoint/reference/tasks/activities/error-handling/" [R]
+RewriteRule   "^midpoint/reference/latest/tasks/task\-error\-handling/?$" "/midpoint/reference/latest/tasks/activities/error-handling/" [R]
 
 RewriteRule   "^iam/identity\-governance/?$" "/iam/iga/what-is-identity-governance/" [R]
 
@@ -10,9 +10,9 @@ RewriteRule   "^midpoint/studio(/|$)(.*)" "/midpoint/tools/studio/$2" [R]
 
 RewriteRule   "^midpoint/schrodinger(/|$)(.*)" "/midpoint/tools/schrodinger/$2" [R]
 
-RewriteRule   "^midpoint/reference/repository/db(/|$)(.*)" "/midpoint/reference/repository/generic/$2" [R]
+RewriteRule   "^midpoint/reference/latest/repository/db(/|$)(.*)" "/midpoint/reference/latest/repository/generic/$2" [R]
 
-RewriteRule   "^midpoint/reference/expressions/introduction/?$" "/midpoint/reference/expressions/" [R]
+RewriteRule   "^midpoint/reference/latest/expressions/introduction/?$" "/midpoint/reference/latest/expressions/" [R]
 
 RewriteRule   "^midpoint/midscale(/|$)(.*)" "/midpoint/projects/midscale/$2" [R]
 
@@ -30,4 +30,4 @@ RewriteRule   "^midpoint/support/subscription\-sponsoring/?$" "/support/subscrip
 
 RewriteRule   "^midpoint/support/support\-guidelines/?$" "/support/support-guidelines/" [R]
 
-RewriteRule   "^midpoint/reference/synchronization/live\-sync\-error\-handling\-strategy/?$" "/midpoint/reference/tasks/task-error-handling/" [R]
+RewriteRule   "^midpoint/reference/latest/synchronization/live\-sync\-error\-handling\-strategy/?$" "/midpoint/reference/latest/tasks/task-error-handling/" [R]

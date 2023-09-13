@@ -10,7 +10,7 @@ interchangeably; preferring the latter one.
 == Introduction
 
 Before midPoint 4.5, the correlation process was quite limited: It was possible to provide a
-xref:/midpoint/reference/synchronization/correlation-and-confirmation-expressions/[query] -
+xref:/midpoint/reference/latest/synchronization/correlation-and-confirmation-expressions/[query] -
 or a set of queries - along with optional confirmation expression.
 These were evaluated against midPoint repository,
 and produced zero, one, or more _candidate owners_. If this process resulted in a single candidate,

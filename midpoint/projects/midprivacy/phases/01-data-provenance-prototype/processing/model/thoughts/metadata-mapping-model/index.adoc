@@ -2,7 +2,7 @@
 
 See also:
 
-* xref:/midpoint/reference/expressions/expressions/[Expression] for background information on expression evaluation,
+* xref:/midpoint/reference/latest/expressions/expressions/[Expression] for background information on expression evaluation,
 * xref:../../plain/expressions/[Processing expressions] for information on processing "simple" data expressions,
 * xref:../../plain/mappings/[Processing mappings] for information on processing "simple" data mappings.
 
@@ -28,7 +28,7 @@ An example:
 image::data-mapping-example.png["Data mapping example"]
 
 NOTE: Why is there only one source object? In fact, with the advent of
-xref:/midpoint/reference/synchronization/linked-objects/[linked objects] one can imagine a mapping that would
+xref:/midpoint/reference/latest/synchronization/linked-objects/[linked objects] one can imagine a mapping that would
 operate on a set of all objects connected to the focus via particular link type. See
 xref:../multi-object-mappings/[Multi-objects mappings].
 

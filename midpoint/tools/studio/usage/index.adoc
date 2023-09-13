@@ -452,7 +452,7 @@ Click *Process* icon in the results part of the *MidPoint* tool window and selec
 ** *By OIDs, in batches of N*: the results will be processed by their OIDs in batches (you need to select batch size *N*)
 ** *Using original query (selection ignored)*: the results will be processed by the original query and any selection is ignored
 //* *Wrap created bulk action into tasks*: not only a bulk action will be created, but a task object will wrap it
-* *Use activity in task (for midPoint 4.4 and above)*: the task will be created using xref:/midpoint/reference/tasks/activities[activities] (midPoint 4.4 and above)
+* *Use activity in task (for midPoint 4.4 and above)*: the task will be created using xref:/midpoint/reference/latest/tasks/activities[activities] (midPoint 4.4 and above)
 * *Create tasks in suspended state*: the tasks will be created as `suspended` and not executed upon import to midPoint
 * *Execute in raw mode*: the actions will be executed in `raw` mode
 * *Use symbolic references*: TODO

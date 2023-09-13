@@ -8,7 +8,7 @@
 :page-wiki-metadata-modify-date: 2020-11-24T10:53:14.515+01:00
 :page-toc: top
 
-Deltas are data structures that describe xref:/midpoint/reference/concepts/relativity/[Relativity].
+Deltas are data structures that describe xref:/midpoint/reference/latest/concepts/relativity/[Relativity].
 Deltas describe how a thing should be modified.
 It does rely on how the thing looked before the change or how it will look after the change.
 Delta describes only what was changed.

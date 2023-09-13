@@ -128,6 +128,6 @@ Original OpenICF version *does not* contain these fixes yet e.g. to correctly su
 
 == See Also
 
-* xref:/midpoint/reference/upgrade/connectors/ldap-connector-migration/[LDAP Connector Migration]
+* xref:/midpoint/reference/latest/upgrade/connectors/ldap-connector-migration/[LDAP Connector Migration]
 
 * xref:/connectors/connectors/com.evolveum.polygon.connector.ldap.LdapConnector/[LDAP Connector]
