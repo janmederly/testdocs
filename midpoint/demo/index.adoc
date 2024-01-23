@@ -29,7 +29,7 @@ The same environment is shared by all the users therefore please be nice and try
 Try to create your own users, account and roles and do not considerably modify existing users, roles or resources.
 We would like this description to hold at least roughly even after a few users played a bit with the demo machine.
 If you find the machine in a bad shape please contact us.
-We will fix it as soon as possible.
+We will fix it as soon as possible. test
 
 URL: link:https://demo.evolveum.com[https://demo.evolveum.com] +
 Login: administrator +
