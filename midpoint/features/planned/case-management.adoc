@@ -26,9 +26,9 @@ But the idea is that the cases would behave in a way that is known from the ITSM
 Case is similar to a "trouble ticket".
 It can be assigned, re-assigned, delegated, it can be commented on, there may be escalation policies and so on.
 
-The _case management_ functionality is meant to handle situations when midPoint cannot decide for itself, such as:
+The _case management_ functionality is meant to handle situations when midPoint cannot decide for itself, such as: test
 
-* xref:/midpoint/reference/resources/manual/[Manual resources]
+* xref:/midpoint/reference/master/resources/manual/[Manual resources]
 
 * xref:/midpoint/reference/cases/approval/[Approvals] (midPoint 4.0 and later)
 
