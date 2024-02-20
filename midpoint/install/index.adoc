@@ -26,7 +26,8 @@ If you want to try midPoint, there is a simplified description:
 == See Also
 
 * xref:../quickstart/[]
-* xref:/midpoint/midscale/[]
+* xref:/midpoint/midscale/[test1]
+* xref:/midpoint/support/subscription\-sponsoring/[test2]
 * xref:/book/[MidPoint Book]
 * https://www.youtube.com/channel/UCSDs8qBlv7MgRKRLu1rU_FQ[Evolveum YouTube channel]
 * xref:/midpoint/features/current/[]
