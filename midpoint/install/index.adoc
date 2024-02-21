@@ -27,7 +27,9 @@ If you want to try midPoint, there is a simplified description:
 
 * xref:../quickstart/[]
 * xref:/midpoint/midscale/[test1]
-* xref:/midpoint/support/subscription\-sponsoring/[test2]
+* xref:/midpoint/support/subscription-sponsoring/[test2]
+* xref:/midpoint/support/subscription\-sponsoring/[test3]
+* xref:/midpoint/midscale/abcd/def/[test4]
 * xref:/book/[MidPoint Book]
 * https://www.youtube.com/channel/UCSDs8qBlv7MgRKRLu1rU_FQ[Evolveum YouTube channel]
 * xref:/midpoint/features/current/[]
