@@ -21,7 +21,7 @@ Please select the method that is most appropriate for your environment:
 The installation guides above provide detailed information on setting up midPoint in pre-production and production environments.
 If you want to try midPoint, there is a simplified description:
 
-* xref:../quickstart/[*Quick Start* installation] describes the very essential steps to get midPoint running for evaluation purposes. test
+* xref:../quickstart/[*Quick Start* installation] describes the very essential steps to get midPoint running for evaluation purposes. test2
 
 == See Also
 
