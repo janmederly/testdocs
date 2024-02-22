@@ -1234,6 +1234,7 @@
   - feature: Performance Improvements
   docsBranch: support-4.8
   docsDisplayBranch: '4.8'
+  docsReleaseBranch: '4.8'
   defaultBranch: true
 - version: 4.8.1
   codeName: Curie
@@ -1248,6 +1249,7 @@
   description: 'TODO: The Curie update 1 brings miscellaneous bugfixes and minor improvements.'
   highlights:
   - TBU
+  legacyDocs: true
 - version: 4.8.2
   codeName: Curie
   releaseDate: 
@@ -1261,6 +1263,7 @@
   description: 'TODO: The Curie update 2 brings miscellaneous bugfixes and minor improvements.'
   highlights:
   - TBU
+  legacyDocs: true
 - version: 4.8.3
   codeName: Curie
   releaseDate: 
@@ -1274,6 +1277,7 @@
   description: 'TODO: The Curie update 3 brings miscellaneous bugfixes and minor improvements.'
   highlights:
   - TBU
+  legacyDocs: true
 - version: '4.9'
   codeName: 
   plannedReleaseTimeFrame: October 2024
@@ -1293,6 +1297,7 @@
   - feature: Role Engineering
   - feature: Certification Improvements
   - feature: Advanced Lifecycle Management
+  legacyDocs: true
 - version: '4.10'
   codeName: 
   plannedReleaseTimeFrame: October 2025
@@ -1312,6 +1317,7 @@
   - feature: Risk Management
   - feature: Advanced Identity Analytics
   - feature: Axiom Schema
+  legacyDocs: true
 - version: '4.11'
   codeName: 
   plannedReleaseTimeFrame: October 2026
@@ -1330,6 +1336,7 @@
   - feature: Parametric Roles
   - feature: Audit Analytics Improvements
   - feature: Multi-identities
+  legacyDocs: true
 - version: '4.12'
   codeName: 
   plannedReleaseTimeFrame: October 2027
@@ -1348,3 +1355,4 @@
   - feature: Organizational Structure UX Improvements
   - feature: Connector Marketplace
   - feature: Mobile Application
+  legacyDocs: true
