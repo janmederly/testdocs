@@ -1234,7 +1234,7 @@
   - feature: Performance Improvements
   docsBranch: support-4.8
   docsDisplayBranch: '4.8'
-  docsReleaseBranch: '4.8'
+  docsReleaseBranch: 'v4.8'
   defaultBranch: true
 - version: 4.8.1
   codeName: Curie
