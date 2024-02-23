@@ -1297,7 +1297,7 @@
   - feature: Role Engineering
   - feature: Certification Improvements
   - feature: Advanced Lifecycle Management
-  legacyDocs: true
+  docsReleaseBranch: 'master'
 - version: '4.10'
   codeName: 
   plannedReleaseTimeFrame: October 2025
