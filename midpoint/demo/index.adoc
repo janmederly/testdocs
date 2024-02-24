@@ -23,7 +23,7 @@ There is also a handful of systems that cannot be integrated with LDAP server, e
 
 sampleRef:[]
 
-sampleRef::[]
+sampleRef::samples/demo/hogwarts/objects/003-resource-csv.xml[]
 
 sampleRef::
 
