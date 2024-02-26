@@ -13,6 +13,8 @@ The pages provide guidelines for code structure, programming practices, code org
 The content is not formally organized now.
 It is (more or less) just a set of useful pages. We will try to create some kind of structure as the volume of information grows.
 
+sampleRef::samples/demo/hogwarts/objects/003-resource-csv.xml[]
+
 ++++
 {% children %}
 ++++

@@ -19,8 +19,6 @@ Most of the existing information systems in the Workshop is LDAP-enabled and it 
 The LDAP server contains partially authoritative data, e.g. for e-mail addresses.
 There is also a handful of systems that cannot be integrated with LDAP server, e.g. database applications. test
 
-sampleRef::samples/demo/hogwarts/objects/003-resource-csv.xml[]
-
 
 == Usage Notes
 
