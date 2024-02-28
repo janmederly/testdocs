@@ -1,0 +1,3 @@
+environment:
+  searchUrl: searchtest.evolveum.com
+  docsUrl: docstest.evolveum.com
