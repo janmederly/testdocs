@@ -1244,7 +1244,7 @@
   type: maintenance
   support: lts
   portrait: curie.png
-  status: planned
+  status: released
   focus: bugfixes
   description: 'TODO: The Curie update 1 brings miscellaneous bugfixes and minor improvements.'
   highlights:
@@ -1258,7 +1258,7 @@
   type: maintenance
   support: lts
   portrait: curie.png
-  status: planned
+  status: released
   focus: bugfixes
   description: 'TODO: The Curie update 2 brings miscellaneous bugfixes and minor improvements.'
   highlights:
