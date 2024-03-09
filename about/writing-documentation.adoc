@@ -2,7 +2,6 @@
 :page-toc: top
 :page-display-order: 50
 :page-description: This document provides overview of how the docs site works, and how to write and maintain Evolveum documentation.
-:page-alias: { "parent" : "/midpoint/guides/" }
 :page-upkeep-status: yellow
 
 // TODO: copyright and trademarks
@@ -53,7 +52,7 @@ Developers and engineers would probably like to clone the site sources from gitl
 
 While Jekyll does almost all the work transparently for AsciiDoc documents, other document types need a couple of additional things.
 Especially HTML documents usually need a place to specify document title and other meta-data.
-This place is called _front matter_ and it is located at the beginning of the document:
+This place is called _front matter_, it is located at the beginning of the document:
 
 [source,html]
 ----
@@ -163,6 +162,7 @@ You can also use simple xref:bar.adoc[], document title will be automatically us
 
 The `xref` macro points to the source file, not to the URL.
 In this case Evolveum plugins take care of proper translation of file names to URLs.
+
 However, you can also use directory URLs, just make sure they end with slash (`/`) character:
 
 [source,asciidoc]
@@ -172,6 +172,9 @@ This is a link to xref:/midpoint/projects/midprivacy/[MidPrivacy initiative].
 
 The plugin checks that the xref points to an existing site page.
 There will be an error message during the build if the link is broken.
+If you use xref for linking a reference page, please do not specify the version.
+By default, the xref macro automatically adds the current version to the link.
+If you want to link a specific version of a page, please use the slightly modified macro xrefv:.
 
 .Implementation details
 TIP: This is not a default behavior of Asciidoctor or Jekyll.
@@ -211,6 +214,19 @@ Also, beware of bug:MID-4321[a particularly nasty issue] in midPoint 1.8.
 Maybe it is finally time to upgrade to midPoint 4.3?
 ----
 
+=== Samples Macro
+
+Including code from midpoint samples can be achieved using the `sampleRef` block macro:
+
+[source,asciidoc]
+----
+For example, this is how this resource is configured in the midpoint hogwarts demo: sampleRef::samples/demo/hogwarts/objects/003-resource-csv.xml
+----
+
+Currently, we are supporting code and CSV files.
+When including a code file, it will create a code block.
+In the case of a CSV file, it will create a table from the CSV file.
+
 === Glossary Reference
 
 Link to glossary terms should be done using `glossref` macro:
@@ -246,6 +262,8 @@ Our plugin for asciidoctor adds "smart" functionality to `xref` macro.
 The macro is able to figure out correct HTML link, whether it points to source `adoc` file, or to target URL.
 Yet, the most important aspect of `xref` is that it *`xref` checks link integrity*.
 The `xref` macro will complain if the link is broken, e.g. in case it points to non-existent page.
+The `xref` macro also complains if the link contains a specific version of documentation.
+When you want to include a specific version of the reference documentation, please use `xrefv` instead.
 The `xref` will also automatically use title of the target page in case the link text is empty.
 Use `xref` as much as you can.
 
@@ -256,6 +274,8 @@ However, `link` is not very smart, and there is almost no checking.
 Rule of the thumb is:
 
 * `xref` should be used for internal links in docs site, pretty much all the time.
+
+* `xrefv` should be used when you want to specify the version of reference documentation.
 
 * `link` should be used to external links, links that go outside docs, or outside `evolveum.com` domain.
 
@@ -685,7 +705,7 @@ Blah blah blah ... the pages:
 {% children %}
 ++++
 
-<p>That's it</p>
+That's it.
 ----
 
 [source,html]
@@ -697,6 +717,61 @@ title: Project Foo Documents
 <p>Blah blah blah ... the pages:</p>
 
 {% children %}
+
+<p>That's it.</p>
+----
+
+The default setting of the `children` tag creates simple bullet list.
+There is an option to create nicer table which includes child page descriptions.
+You can use `style` parameter, set to `table`:
+
+[source,asciidoc]
+----
+= Project Foo Documents
+:page-liquid:
+
+Blah blah blah ... for more details please see following table:
+
+++++
+{% children style: table %}
+++++
+
+<p>That's it</p>
+----
+
+The description in the second column is taken from the `description` attribute of indivudual subpages.
+The description can be set using the usual method in page front matter:
+
+[source,asciidoc]
+----
+= Project Foo Subdocument Bar
+:page-description: This is page about the bar, whatever the bar is.
+
+Blah blah blah ...
+----
+
+[source,html]
+----
+---
+layout: page
+title: Project Foo Subdocument Bar
+description: This is page about the bar, whatever the bar is.
+---
+<p>Blah blah blah ...</p>
+----
+
+Additionally, the `heading` parameter can be used to change the heading of first table column produced by the `children` tag:
+
+[source,asciidoc]
+----
+= Project Foo Documents
+:page-liquid:
+
+Blah blah blah ... check out individual myths in the following table:
+
+++++
+{% children style: table, heading: Myth %}
+++++
 
 <p>That's it</p>
 ----
@@ -732,6 +807,8 @@ The alias can specify even more details for the "symlink" in the menu:
 = MidPrivacy Initiative
 :page-alias: { "parent" : "/midpoint/", "title" : "MidPrivacy", "display-order" : 300 }
 ----
+
+WARNING: Please do not use aliases to show a page from outside of reference documentation inside of it.
 
 == Stubs
 
@@ -898,6 +975,88 @@ Bla bla
 .Implementation detail
 TIP: Jekyll generates the redirects as a series of Apache `RewriteRule` statements in `.htaccess` file.
 The code is in the `jekyll-redirect-plugin.rb` file in the `evolveum-jekyll-plugin` project.
+
+== Page Attributes
+
+Various page attributes can be set in page _front matter_.
+The attributes usually add meta-data to the page, used for better indexing, and search optimization.
+
+[source,asciidoc]
+----
+= Project Foo
+:page-description: This is page about Project Foo, aimed at exploring the mysterious concept of Foo.
+:page-keywords: [ 'project', 'Foo', 'exploration', 'mystery' ]
+
+Blah blah blah ...
+----
+
+[source,html]
+----
+---
+layout: page
+title: Project Foo
+description: This is page about Project Foo, aimed at exploring the mysterious concept of Foo.
+keywords: [ 'project', 'Foo', 'exploration', 'mystery' ]
+---
+<p>Blah blah blah ...</p>
+----
+
+The attributes are summarized in the following table:
+
+[%autowidth]
+|====
+| Attribute | Description | Use
+
+| `description`
+| Short description of page content.
+Usually just a couple of short sentences.
+| Placed in `description` HTML meta tag, used by search engines.
+Can also be used to automatically generate page summaries, such as in `children` liquid tag.
+
+| `keywords`
+| List of few words that describe content of the page.
+| Placed in `keywords` HTML meta tag, hopefully used by search engines.
+
+| `upkeep-status`
+| Internal marker, specifying how the page is maintained.
+Value `green` means that the page is fresh, information is well-structured and complete.
+Values `yellow` and `orange` mark a page that is not maintained so well.
+Pages with `red` status are quite bad, they should be updated as soon as possible.
+| Internal use only.
+Used to prioritize page updates and documentation maintenance.
+
+| `search-alias`
+| Phrase or word to help with searching for a given page.
+If there is an exact match on this attribute, the internal search will put the page in the first place in the results.
+For example, this attribute is used in a book page because in the page there is practically no occurrence of the word "book," but when a user searches using the query "book," we would like to have the book page as the first result.
+| Placed in `keywords` HTML meta tag.
+
+
+| `midpointVersion`
+| Used in reference documentation, it stores the latest released version of midpoint that the docs version describes.
+The example value is 4.7.4.
+| Generated by the versioning plugin; do not include it in the source.
+
+
+| `midpointBranch`
+| Used in reference documentation, it stores the docs version in which the page is located.
+The example value is docs/before-4.8.
+| Generated by the versioning plugin; do not include it in the source.
+
+
+| `midpointBranchSlug`
+| Used in reference documentation, it stores the optimized docs version used in the url and file structure.
+The example value is before-4.8.
+| Generated by the versioning plugin; do not include it in the source.
+
+
+| `midpointBranchDisplayName`
+| Used in reference documentation, it stores the display value of docs version used in titles and the version select element.
+The example value is 4.7 and earlier.
+| Generated by the versioning plugin; do not include it in the source.
+
+|====
+
 
 == Data Files
 
@@ -1080,3 +1239,4 @@ If you see it in source, you may replace it with `xref:`.
 * xref:/copyright/[]
 
 {% endraw %}
+
