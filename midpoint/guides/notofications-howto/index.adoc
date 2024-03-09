@@ -4,7 +4,6 @@
 :page-since-improved: [ "4.6", "4.7", "4.8" ]
 :page-toc: top
 :experimental:
-:page-experimental: true
 
 == Basic Information
 
