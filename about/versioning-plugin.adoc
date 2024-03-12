@@ -2,18 +2,18 @@
 
 Currently, we store reference documentation in the midPoint github repository.
 For implementing it into docs we use the jekyll-versioning-plugin.rb part of evolveum-jekyll-plugin.
-This plugin looks for midPoint versions that have attribute docsBranch in _data/midpoint-versions.yaml and includes them in docs.
-By default, it also includes two versions: master and docs/before-4.8.
+This plugin looks for midPoint versions that have attribute `docsBranch` in _data/midpoint-versions.yaml and includes them in docs.
+By default, it also includes two versions: `master` and `docs/before-4.8`.
 
 == Midpoint versions file
 To include a branch in docs you must add 3 attributes in the midpoint versions file.
 
-. docsBranch: defines the midPoint source branch.
-. docsDisplayBranch: defines how the branch is going to be displayed in docs.
-. defaultBranch: if set to true, it becomes the default branch; users will be automatically redirected to this branch, and it will be prioritized in search.
+. `docsBranch`: defines the midPoint source branch.
+. `docsDisplayBranch`: defines how the branch is going to be displayed in docs.
+. `defaultBranch`: if set to true, it becomes the default branch; users will be automatically redirected to this branch, and it will be prioritized in search.
 
-== How it works
-Firstly, this plugin loads versions from _data/midpoint-versions.yaml and processes them, then stores the values in VersionReader module variables. These are:
+== How It Works
+Firstly, this plugin loads versions from _data/midpoint-versions.yaml and processes them, then stores the values in `VersionReader` module variables. These are:
 
 |====
 | Name | Type | Description
@@ -42,10 +42,8 @@ Firstly, this plugin loads versions from _data/midpoint-versions.yaml and proces
 
 NOTE: One version does have the same index in all of the arrays.
 
-If you want to use these variables in another plugin, you just need to include jekyll-version-plugin.rb, and then you can access them using VersionReader.get_config_value(variable).
+If you want to use these variables in another plugin, you just need to include jekyll-version-plugin.rb, and then you can access them using `VersionReader.get_config_value(variable)`.
 
-When all the versions are loaded, it clones midPoint repository branches into #{site.config['docs']['midpointVersionsPath'] + site.config['docs']['midpointVersionsPrefix'] + filteredVersionsWhDocs[index]}. In the next step, it creates simlinks from the midpoint repository/docs to the docs repo/midpoint/reference.
+When all the versions are loaded, it clones midPoint repository branches into `#{site.config['docs']['midpointVersionsPath'] + site.config['docs']['midpointVersionsPrefix'] + filteredVersionsWhDocs[index]}`. In the next step, it creates simlinks from the midpoint repository/docs to the docs repo/midpoint/reference.
 
 In the last step, it sets midpoint page variables (described in the link:https://docs.evolveum.com/about/writing-documentation/[]) for each site inside reference.
-
-
