@@ -1,17 +1,22 @@
 = Release version plugin
 
-This plugin is used to include release notes and installation instructions from the midpoint repository in the docs.
+This plugin is used to include release notes and installation instructions from the midPoint repository in the docs.
 
 == Usage
-If you want to use release notes from the midpoint repository for a specific midpoint version, you must:
+If you want to use release notes from the midPoint repository for a specific midPoint version, you must:
 
 . Set the `legacyDocs` attribute to `true` in _data/midpoint-versions.yaml.
 . Set the `docsReleaseBranch` attribute to a specific branch or tag from which you want to include release notes and installation instructions.
 . Delete the release notes and install instructions from the docs.
-This is needed because we are not downloading new release notes every time we build the site.
 
 == How It Works
-It looks for midpoint versions that don't have the `legacyDocs` attribute set to true and that have the `docsReleaseBranch` attribute defined in _data/midpoint-versions.yaml.
-Then it creates a directory with the version name if it doesn't exist, downloads release notes and install dist files.
-If `docsReleaseBranch` for a specific version does have the same value as 'docsBranch', it will create a symlink from the midpoint directory to the docs directory. If not, it will download release notes and install dist files using wget.
-In the next step, it uses mv to rename the release notes file to index.adoc and the install dist file to install.adoc.
+It looks for midPoint versions that don't have the `legacyDocs` attribute set to true and that have the `docsReleaseBranch` attribute defined in _data/midpoint-versions.yaml.
+Then, if `docsReleaseBranch` for a specific version does not have the same value as 'docsBranch', it will create a directory with the version name in the `midpointReleasePath/midpointReleaseDir` directory.
+If there aren't files named `index.adoc` and `install.adoc` in the version directory, it will download them.
+
+NOTE: `mipointReleasePath` and `midpointReleaseDir` are parameters in _config.yaml.
+
+In the next step, it checks if there are already `index.adoc` and `install.adoc` files in the `midpoint/release/#{ver}/` directory.
+If not, it will create a symlink from the midPoint or release directory to `midpoint/release/#{ver}`.
+When they exist, it will check if they are only symlinks.
+If not, it will force copy them from the midPoint or release directory and log a warning.
