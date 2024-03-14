@@ -12,6 +12,8 @@ To include a branch in docs you must add 3 attributes in the midpoint versions f
 . `docsDisplayBranch`: defines how the branch is going to be displayed in docs.
 . `defaultBranch`: if set to true, it becomes the default branch; users will be automatically redirected to this branch, and it will be prioritized in search.
 
+NOTE: If you are using local jekyll environment and want to update reference documentation, you must manually update all midpoint repositories using for example `git pull`.
+
 == How It Works
 Firstly, this plugin loads versions from _data/midpoint-versions.yaml and processes them, then stores the values in `VersionReader` module variables. These are:
 
