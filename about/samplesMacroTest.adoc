@@ -1,0 +1,9 @@
+= Samples Macro Test
+
+Example of xml file from samples repo:
+
+sampleRef::samples/demo/hogwarts/objects/003-resource-csv.xml[]
+
+Example of csv file from samples repo:
+
+sampleRef::samples/demo/hogwarts/accounts.csv[]
