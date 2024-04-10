@@ -8,5 +8,5 @@ Example of csv file from samples repo:
 
 sampleRef::samples/demo/hogwarts/accounts.csv[]
 
-include::{{ site.config.docs.midpointSamplesPath + site.config.docs.midpointSamplesDir }}/samples/demo/hogwarts/objects/003-resource-csv.xml[]
+include::{{ site.docs.midpointSamplesPath + site.docs.midpointSamplesDir }}/samples/demo/hogwarts/objects/003-resource-csv.xml[]
 
