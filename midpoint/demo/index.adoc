@@ -22,6 +22,8 @@ The LDAP server contains partially authoritative data, e.g. for e-mail addresses
 There is also a handful of systems that cannot be integrated with LDAP server, e.g. database applications. test
 
 
+= test
+
 == Usage Notes
 
 The live demo environment is deployed on a Kubernetes cluster.
