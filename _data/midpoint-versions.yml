@@ -1272,12 +1272,12 @@
   type: maintenance
   support: lts
   portrait: curie.png
-  status: planned
+  status: released
   focus: bugfixes
   description: 'TODO: The Curie update 3 brings miscellaneous bugfixes and minor improvements.'
   highlights:
   - TBU
-  docsReleaseBranch: 'v4.8.3'
+  docsReleaseBranch: 'docs/release-notes/4.8.3'
 - version: '4.9'
   codeName: 
   plannedReleaseTimeFrame: October 2024
