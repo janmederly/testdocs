@@ -1277,7 +1277,7 @@
   description: 'TODO: The Curie update 3 brings miscellaneous bugfixes and minor improvements.'
   highlights:
   - TBU
-  legacyDocs: true
+  docsReleaseBranch: 'v4.8.3'
 - version: '4.9'
   codeName: 
   plannedReleaseTimeFrame: October 2024
