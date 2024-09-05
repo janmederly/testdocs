@@ -12,7 +12,7 @@
     {% assign cpages = include.pages | sort: "display-order" %}
     {% for cpage in cpages %}
     <tr>
-        <th  scope="row"><a href="{{cpage.url}}">{{cpage.title}}</a></th>
+        <td  scope="row"><a href="{{cpage.url}}">{{cpage.title}}</a></td>
         <td>{{cpage.support-status}}</td>
         <td>{{cpage.support-provided-by}}<br>({{cpage.origin}})</td>
         <td>{{cpage.target-systems}}</td>
