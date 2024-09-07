@@ -99,7 +99,7 @@ Site source code follows closely the resulting site structure, except for some U
 Such translations usually apply to asciidoc documents and index files (`index.html`, `index.adoc`).
 It is perhaps best to explain the URL translation on examples:
 
-[%autowidth,"data-bs-toggle="tooltip"data-bs-placement="right"title="Test."]
+[%autowidth,."data-bs-toggle="tooltip"data-bs-placement="right"title="Test."]
 |====
 | Source file location | URL | Note
 
