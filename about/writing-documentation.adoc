@@ -14,6 +14,8 @@ This document provides overview of how the _docs_ site works, and how to write a
 
 == Overview
 
+datatable::test[]
+
 The "docs" site is built using https://jekyllrb.com/[Jekyll] static site generator, spiced up with https://asciidoctor.org/[Asciidoctor] and other goodies.
 The site is generated from the "sources" into static HTML files.
 There is no dynamic interpretation of HTTP requests, however there is some client-side JavaScript to improve site presentation.
