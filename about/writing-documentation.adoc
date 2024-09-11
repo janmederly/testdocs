@@ -100,36 +100,31 @@ Such translations usually apply to asciidoc documents and index files (`index.ht
 It is perhaps best to explain the URL translation on examples:
 
 [datatable]
-++++
-|====
 | Source file location | URL | Note
-
+-
 | `index.html`
 | `https://docs.evolveum.com/`
 | Site home document
-
+-
 | `foo/bar.adoc`
 | `https://docs.evolveum.com/foo/bar/`
 |
-
+-
 | `foo/bar.html`
 | `https://docs.evolveum.com/foo/bar/`
 |
-
+-
 | `foo/index.adoc`
 | `https://docs.evolveum.com/foo/`
 | `index.adoc` is a special name that stands for the entire directory.
-
+-
 | `foo/index.html`
 | `https://docs.evolveum.com/foo/`
 | `index.html` is a special name that stands for the entire directory.
-
+-
 | `foo/bar.png`
 | `https://docs.evolveum.com/foo/bar.png`
 | Image files (`*.png`, `*.jpg`), PDFs (`*.pdf`) and similar data files are not translated.
-
-|====
-++++
 
 Which means that there are two ways how to store your document:
 
