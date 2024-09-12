@@ -294,9 +294,11 @@ This is a nice short fairy tale ...
 The variable may contain several values, changing the type of ToC:
 
 [.datatable-config]
+====
 {
     "paging": "true"
 }
+====
 
 |====
 | `page-toc` value | description
