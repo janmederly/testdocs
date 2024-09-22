@@ -1210,7 +1210,7 @@
   - Security fixes
   - Miscellaneous bugfixes
   - Ninja tool improvements
-  docsReleaseBranch: 'v4.7.2'
+  legacyDocs: true
 - version: '4.8'
   codeName: Curie
   plannedReleaseTimeFrame: October 2023
