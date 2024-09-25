@@ -1,0 +1,29 @@
+---
+layout: default
+---
+{% comment %} Layout for IAM Myth page {% endcomment %}
+<div class="row">
+	<div class="d-none d-md-block col-md-3">
+		<div class="navtree">
+			{% navtree %}
+		</div>
+	</div>
+	<div class="col-md-9 col-sm-12">
+		<nav aria-label="breadcrumb">{% breadcrumbs %}</nav>
+
+        <div id="titleAndSelectVerDiv"><span><h1>IAM Myth: {{ page.title | escape }}</h1></span></div>
+
+        {% if page.author %}<address class="author" rel="author">{{ page.author }}</address>{% endif %} {% if page.lastModificationDate %}
+        <div class="page-meta">Last modified {{ page.lastModificationDate | date: "%d %b %Y %H:%M %Z" }}</div>{% endif %} {% include page-warnings.html %} {% if page.toc %}
+        <div class="toc-{{page.toc}}">
+            <title>Table of Contents</title>
+            {{ page.document | tocify_asciidoc }}
+        </div>
+        {% endif %}
+
+		{{ content }}
+
+        {% include page-ending.html %}
+        {% include page-eval.html %}
+    </div>
+</div>

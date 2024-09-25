@@ -1047,7 +1047,7 @@ Modifications will be applied when the resource goes online: Adding attribute va
 (2) Delete midpoint users "u1" and "u2"
 | (1) Warning should appear +
 (2) Account shadows for "u1" and "u2" should indicate a failed operation.
-|
+
 
 
 | 7
@@ -1150,7 +1150,7 @@ Steps:  +
 (1) create user "c": name=fullname=familyname=c, assigned account on OpenDJ + Save  +
 (2) start OpenDJ(3) Test connection(4) run reconciliation
 | After (1) :- a error "Communication error: javax.naming.CommunicationException(localhost:1389)->java.net.ConnectException(Connection refused: connect)"After (4) : midPoint user "c" should be linked to OpenDJ account "uid=c,...there should be a reasonable message in the log file  +
-(currently there are misleading errors reported, see link:https://jira.evolveum.com/browse/MID-1085[MID-1085], comment)
+(currently there are misleading errors reported, see bug:MID-1085[], comment)
 
 
 | 15
@@ -1166,7 +1166,7 @@ Steps:  +
 (2) start OpenDJ(3) Test connection(4) run reconciliation
 | After (1) :- a warning "Could not delete shadow from the resource resource: Localhost OpenDJ (no extension schema) (OID:ef2bc95b-76e0-48e2-86d6-3d4f02d3e1a2), because resource is unreachable. Account will be delete when the resource goes online: Removing attribute values failed +
 After (4) : midPoint user "c" nor OpenDJ account "uid=c,..." should exist  (2) there should be reasonable message(s) in log file  +
-(currently there is an error without indication that it was in fact handled, see link:https://jira.evolveum.com/browse/MID-1085[MID-1085], comment)
+(currently there is an error without indication that it was in fact handled, see bug:MID-1085[], comment)
 
 
 | 16
@@ -1683,7 +1683,7 @@ Import file samples/resources/opendj/opendj-localhost-basic.xml.
 | Success message should be displayed.
 See Basic Localhost OpenDJ resource in debug pages ("Configuration/Repository objects/Resource"); it should contain schema information.
 +
-Currently this seems not to work (link:https://jira.evolveum.com/browse/MID-1069[MID-1069]).
+Currently this seems not to work (bug:MID-1069[]).
 
 
 | 7
@@ -2625,7 +2625,7 @@ Be sure to fill description attribute.
 
 .. Operation should perform successfully.
 
-.. - || -
+.. -  -
 
 .. New user should be created in midpoint with linked account on the CSV resource.
 This time, attribute description of created user should contain value: IMPORT
@@ -2730,7 +2730,7 @@ link:http://localhost:8080/midpoint/admin/users[http://localhost:8080/midpoint/a
 | 6
 | Reload allowed actions for logged user after changes in roles definitions test
 | 1. Log as administrator and assign created testRole to our user, please save. 2. Log out administrator from midpoint. 3. Log in to midpoint as user. 4. Open different web browser and log in as administrator. 5. Unassign testRole from logged test user (or restrict GUI access actions), please save.6. Log out user and try to log as user again.
-| 6. The user (step 6) should be able perform all activities with midPoint while is still logged. As soon as user logs out his access is denied because of unassigning testRole by administrator in another web browser.This is currently not functional - link:https://jira.evolveum.com/browse/MID-1420[MID-1420]
+| 6. The user (step 6) should be able perform all activities with midPoint while is still logged. As soon as user logs out his access is denied because of unassigning testRole by administrator in another web browser.This is currently not functional - bug:MID-1420[]
 
 
 |===
@@ -3470,7 +3470,7 @@ After 4: Notifications about workflow process instance end and work item end sho
 
 * work item related notifications should go to the approver
 
-(see xref:/midpoint/reference/cases/workflow-3/workflow-notifications/[Workflow notifications])
+(see xrefv:/midpoint/reference/before-4.8/cases/workflow-3/workflow-notifications/[Workflow notifications])
 a| [source,xml]
 
 ----
@@ -3668,16 +3668,7 @@ a| Code 1:
             <assignmentTargetSearch>
             	 <targetType xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3">c:OrgType</targetType>
         		<filter>
-					<q:equal xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3">
-						<q:path>c:name</q:path>
-						<expression>
-							<script>
-								<code>
-									orgpath.tokenize('/')[0]
-								</code>
-							</script>
-						</expression>
-					</q:equal>
+                    <q:text>name = `orgpath.tokenize('/')[0]`</q:text>
 				</filter>
 				<createOnDemand>true</createOnDemand>
 				<populateObject>
@@ -3826,13 +3817,8 @@ Edit SystemConfiguration object in debug pages (Configuration/Repository objects
         <expression>
             <assignmentTargetSearch>
                 <targetType  xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3">c:RoleType</targetType>
-                <filter xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3">
-                    <q:equal>
-                        <q:path xmlns:ext="http://midpoint.evolveum.com/xml/ns/story/orgsync/ext">c:extension/ext:responsibility</q:path>
-                        <expression>
-                            <path xmlns:ext="http://midpoint.evolveum.com/xml/ns/story/orgsync/ext">$ext:responsibility</path>
-                        </expression>
-                    </q:equal>
+                <filter xmlns:ext="http://midpoint.evolveum.com/xml/ns/story/orgsync/ext">
+                    <q:text>extension/ext:responsibility = $ext:responsibility</q:text>
                 </filter>
                 <createOnDemand>true</createOnDemand>
                 <populateObject>
@@ -4577,18 +4563,14 @@ Most of tests check if a filter is saved to a correct place for different user v
    					<searchItem>
    						<path>c:name</path>
    						<filter>
-   			                                <q:substring>
-                          			             <q:matching>polyStringNorm</q:matching>
-                          			             <q:path>c:name</q:path>
-                          			             <q:value xsi:type="t:PolyStringType">ad</q:value>
-                          			         </q:substring>
-                          			</filter>
-                          			<display>
-   			                                <label>Name</label>
-                  			                 <help>  Human-readable, mutable name of the object. It may also be an identifier (login name, group name). It is usually unique in the respective context of interpretation. E.g. the name of the UserType subtype is usually unique in the whole system. The name of the ShadowType subtype is usually unique in the scope of resource (target system) that it belongs to.   The name may not be human-readable in a sense to display to a common end-user. It is intended to be displayed to IDM system administrator. Therefore it may contain quite a "ugly" structures such as LDAP DN or URL.   Name is mutable. It is considered to be ordinary property of the object. Therefore it can be changed by invoking usual modifyObject operations. However, change of the name may have side effects (rename process).   Although name is specified as optional by this schema, it is in fact mandatory for most object types. The reason for specifying the name as optional is that the name may be generated by the system instead of supplied by the clients. However, all objects stored in the repository must have a name.
-                  			                 </help>
-                  			         </display>
-   				                <visibleByDefault>true</visibleByDefault>
+                            <q:text>c:name contains[polyStringNorm] "ad"</q:text>
+                        </filter>
+                        <display>
+                                <label>Name</label>
+                                 <help>  Human-readable, mutable name of the object. It may also be an identifier (login name, group name). It is usually unique in the respective context of interpretation. E.g. the name of the UserType subtype is usually unique in the whole system. The name of the ShadowType subtype is usually unique in the scope of resource (target system) that it belongs to.   The name may not be human-readable in a sense to display to a common end-user. It is intended to be displayed to IDM system administrator. Therefore it may contain quite a "ugly" structures such as LDAP DN or URL.   Name is mutable. It is considered to be ordinary property of the object. Therefore it can be changed by invoking usual modifyObject operations. However, change of the name may have side effects (rename process).   Although name is specified as optional by this schema, it is in fact mandatory for most object types. The reason for specifying the name as optional is that the name may be generated by the system instead of supplied by the clients. However, all objects stored in the repository must have a name.
+                                 </help>
+                         </display>
+                        <visibleByDefault>true</visibleByDefault>
    					</searchItem>
    				</availableFilter>
    			</searchBoxConfiguration>

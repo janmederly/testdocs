@@ -1,0 +1,42 @@
+---
+layout: page
+title: Current MidPoint Features
+nav-title: Current Features
+wiki-name: Features
+wiki-id: 3571864
+wiki-metadata-create-user: semancik
+wiki-metadata-create-date: 2012-01-28T13:43:46.764+01:00
+wiki-metadata-modify-user: mbenckova
+wiki-metadata-modify-date: 2020-06-25T10:23:28.433+02:00
+upkeep-status: green
+---
+
+<p>
+This is a list of most important and unique features of <a href="https://evolveum.com/midpoint">midPoint</a>:
+</p>
+
+<table class="tableblock frame-all grid-all fit-content">
+
+    <thead>
+        <tr>
+            <th class="tableblock halign-left valign-top">Feature</th>
+            <th class="tableblock halign-left valign-top">Description</th>
+            <th class="tableblock halign-left valign-top">Compliance</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    {% for f in site.data.midpoint-features %}
+        <tr>
+            <td class="tableblock halign-left valign-top"><a href="{{ f.url }}">{{ f.title }}{% if f.acronym %} ({{ f.acronym }}){% endif %}</a></td>
+            <td class="tableblock halign-left valign-top">{{ f.description }}</td>
+            <td class="tableblock halign-left valign-top">
+                {%- for c in f.compliance.iso27001 -%}
+                    ISO27001&nbsp;{{ c.id }}<br/>
+                {%- endfor -%}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+
+</table>

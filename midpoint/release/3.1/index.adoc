@@ -22,7 +22,7 @@ The {release-version} release brings new usability features and significantly im
 ++++
 {% capture dedicationContent %}
 <p>
-    <a href="http://en.wikipedia.org/wiki/Mimar_Sinan">Mimar Sinan</a> (1489-1588) was the chief Ottoman architect and civil engineer.
+    <a href="https://en.wikipedia.org/wiki/Mimar_Sinan">Mimar Sinan</a> (1489-1588) was the chief Ottoman architect and civil engineer.
     He was responsible for the construction of more than 300 structures ranging from simple roads to magnificent marvels of architecture.
     The list of his works is very long and it includes surprisingly high number of civic structures that provided benefit to the society: colleges, bath-houses, inns, public kitchens, bridges, store houses, granaries, schools, aqueducts and hospitals.
     Sinan remained in the post of chief architect for almost fifty years which made him one of the most productive and versatile architect in history.
@@ -41,7 +41,7 @@ The {release-version} release brings new usability features and significantly im
 
 == Credits
 
-Majority of the work on the _Sinan_ release was done by the link:http://www.evolveum.com/[Evolveum] team.
+Majority of the work on the _Sinan_ release was done by the https://www.evolveum.com/[Evolveum] team.
 However, this release would not be possible without the help of our partners, customers, contributors, friends and families.
 We would like to express a great gratitude to all the people that contributed to the midPoint project.
 
@@ -49,22 +49,22 @@ We would like to express a great gratitude to all the people that contributed to
 image:biznet.png[]
 
 MidPoint version 3.1 is named after Mimar Sinan, one of the greatest Turkish architects.
-By doing so we would like to express a special thanks to our Turkish partner link:http://www.biznet.com.tr[Biznet] for their contribution to the midPoint project and for their loyal support.
+By doing so we would like to express a special thanks to our Turkish partner http://www.biznet.com.tr[Biznet] for their contribution to the midPoint project and for their loyal support.
 
 ****
 
 We would also like to thank:
 
-* link:http://www.cvtisr.sk/[Slovak Centre of Scientific and Technical Information] for their support in developing connectors for SAS, AIX and also supporting and testing other midPoint features.
-We would also like to thank our partner link:http://www.infokey.sk/[INFOkey] for their great cooperation.
+* https://www.cvtisr.sk/[Slovak Centre of Scientific and Technical Information] for their support in developing connectors for SAS, AIX and also supporting and testing other midPoint features.
+We would also like to thank our partner http://www.infokey.sk/[INFOkey] for their great cooperation.
 
-* Deepak Natarajan from link:http://axapoint.com/[Axapoint] for the help with testing midPoint and especially for a very valuable feedback and ideas.
+* Deepak Natarajan from http://axapoint.com/[Axapoint] for the help with testing midPoint and especially for a very valuable feedback and ideas.
 
-* The IT professionals from link:http://www.union.sk/[Union] who helped to shape midPoint by their feedback and support.
+* The IT professionals from https://www.union.sk/[Union] who helped to shape midPoint by their feedback and support.
 
-* link:http://www.confluxsys.com/[Confluxsys] for their valuable ideas and help with midPoint testing.
+* https://www.confluxsys.com/[Confluxsys] for their valuable ideas and help with midPoint testing.
 
-* link:http://www.ami.cz/[AMI Praha], link:http://www.posam.sk/[PosAm] and link:http://datalan.sk[Datalan] for their continuous support and cooperation.
+* https://www.ami.cz/[AMI Praha], https://www.posam.sk/[PosAm] and https://datalan.sk[Datalan] for their continuous support and cooperation.
 
 * Jason Everling for the real academic use cases testing and great feedback and improvement proposals.
 
@@ -103,25 +103,25 @@ midPoint 3.1 provides following features:
 
 * Account provisioning (create, read, update, delete accounts)
 
-** xref:/midpoint/reference/synchronization/examples/[Enabling and disabling accounts]
+** xrefv:/midpoint/reference/before-4.8/synchronization/examples/[Enabling and disabling accounts]
 
-** Support for xref:/midpoint/reference/expressions/[mapping and expressions] to determine account attributes
+** Support for xrefv:/midpoint/reference/before-4.8/expressions/[mapping and expressions] to determine account attributes
 
 ** Support of multi-value attributes
 
-** Processing and computation fully based on xref:/midpoint/reference/concepts/relativity/[relative changes]
+** Processing and computation fully based on xrefv:/midpoint/reference/before-4.8/concepts/relativity/[relative changes]
 
-** xref:/midpoint/reference/resources/resource-configuration/schema-handling/[Multi-layer attribute access limitations]
+** xrefv:/midpoint/reference/before-4.8/resources/resource-configuration/schema-handling/[Multi-layer attribute access limitations]
 
-** xref:/midpoint/reference/resources/provisioning-dependencies/[Provisioning dependencies]
+** xrefv:/midpoint/reference/before-4.8/resources/provisioning-dependencies/[Provisioning dependencies]
 
 *** Higher-order dependencies (enables partial support for circular provisioning dependencies)
 
-** xref:/midpoint/reference/synchronization/consistency/[Provisioning robustness] - ability to provision to non-accessible (offline) resources
+** xrefv:/midpoint/reference/before-4.8/synchronization/consistency/[Provisioning robustness] - ability to provision to non-accessible (offline) resources
 
-** xref:/midpoint/reference/synchronization/consistency/[Provisioning consistency] - ability to handle provisioning errors and compensate for inconsistencies
+** xrefv:/midpoint/reference/before-4.8/synchronization/consistency/[Provisioning consistency] - ability to handle provisioning errors and compensate for inconsistencies
 
-** Support for xref:/midpoint/reference/resources/resource-configuration/schema-handling/#attribute-tolerance[tolerant attributes]
+** Support for xrefv:/midpoint/reference/before-4.8/resources/resource-configuration/schema-handling/#attribute-tolerance[tolerant attributes]
 
 *** Ability to select tolerant and non-tolerant values using a pattern (regexp)
 
@@ -139,11 +139,11 @@ midPoint 3.1 provides following features:
 
 *** Support for account validity time constrains (valid from, valid to)
 
-*** Support easy xref:/midpoint/reference/resources/resource-configuration/schema-handling/activation/[activation existence mappings] (e.g. easy configuration of "disables instead of delete" feature)
+*** Support easy xrefv:/midpoint/reference/before-4.8/resources/resource-configuration/schema-handling/activation/[activation existence mappings] (e.g. easy configuration of "disables instead of delete" feature)
 
-*** Support for xref:/midpoint/reference/expressions/mappings/[mapping time constraints] in activation mappings that allow configuring time-related provisioning features such as xref:/midpoint/reference/resources/resource-configuration/schema-handling/activation/[deferred account delete or pre-provisioning].
+*** Support for xrefv:/midpoint/reference/before-4.8/expressions/mappings/[mapping time constraints] in activation mappings that allow configuring time-related provisioning features such as xrefv:/midpoint/reference/before-4.8/resources/resource-configuration/schema-handling/activation/[deferred account delete or pre-provisioning].
 
-** Ability to specify set of xref:/midpoint/reference/resources/resource-configuration/protected-accounts/[protected accounts] that will not be affected by IDM system
+** Ability to specify set of xrefv:/midpoint/reference/before-4.8/resources/resource-configuration/protected-accounts/[protected accounts] that will not be affected by IDM system
 
 
 * Connectors
@@ -158,7 +158,7 @@ midPoint 3.1 provides following features:
 
 ** xref:/midpoint/architecture/archive/subsystems/provisioning/ucf/[Unified Connector Framework (UCF) layer to allow more provisioning frameworks in the future]
 
-** Automatic generation and caching of xref:/midpoint/reference/resources/resource-schema/[resource schema] from the connector
+** Automatic generation and caching of xrefv:/midpoint/reference/before-4.8/resources/resource-schema/[resource schema] from the connector
 
 ** xref:/midpoint/architecture/archive/data-model/midpoint-common-schema/connectortype/[Local connector discovery]
 
@@ -184,20 +184,20 @@ midPoint 3.1 provides following features:
 ** Built-in XML editor for identity and configuration objects
 
 
-* xref:/midpoint/architecture/archive/subsystems/repo/identity-repository-interface/[Flexible identity repository implementations] and xref:/midpoint/reference/repository/generic/implementation/[SQL repository implementation]
+* xref:/midpoint/architecture/archive/subsystems/repo/identity-repository-interface/[Flexible identity repository implementations] and xrefv:/midpoint/reference/before-4.8/repository/generic/implementation/[SQL repository implementation]
 
-** xref:/midpoint/reference/repository/generic/implementation/[Identity repository based on relational databases]
+** xrefv:/midpoint/reference/before-4.8/repository/generic/implementation/[Identity repository based on relational databases]
 
 ** xref:/midpoint/guides/admin-gui-user-guide/#keeping-metadata-for-all-objects-creation-modification-approvals[Keeping metadata for all objects] (creation, modification, approvals)
 
-** xref:/midpoint/reference/deployment/removing-obsolete-information/[Automatic repository cleanup] to keep the data store size sustainable
+** xrefv:/midpoint/reference/before-4.8/deployment/removing-obsolete-information/[Automatic repository cleanup] to keep the data store size sustainable
 
 
 * Synchronization
 
-** xref:/midpoint/reference/synchronization/introduction/[Live synchronization]
+** xrefv:/midpoint/reference/before-4.8/synchronization/introduction/[Live synchronization]
 
-** xref:/midpoint/reference/concepts/relativity/[Reconciliation]
+** xrefv:/midpoint/reference/before-4.8/concepts/relativity/[Reconciliation]
 
 *** Ability to execute scripts before/after reconciliation
 
@@ -207,12 +207,12 @@ midPoint 3.1 provides following features:
 
 ** Concept of _channel_ that can be used to adjust synchronization behaviour in some situations
 
-** xref:/midpoint/reference/synchronization/generic-synchronization/[Generic Synchronization] allows synchronization of roles to groups to organizational units to ... anything
+** xrefv:/midpoint/reference/before-4.8/synchronization/generic-synchronization/[Generic Synchronization] allows synchronization of roles to groups to organizational units to ... anything
 
 
 * Advanced RBAC support and flexible account assignments
 
-** xref:/midpoint/reference/expressions/expressions/[Expressions in the roles]
+** xrefv:/midpoint/reference/before-4.8/expressions/expressions/[Expressions in the roles]
 
 ** Hierarchical roles
 
@@ -225,7 +225,7 @@ midPoint 3.1 provides following features:
 ** Higher-order inducements
 
 
-* xref:/midpoint/reference/resources/entitlements/[Entitlements]
+* xrefv:/midpoint/reference/before-4.8/resources/entitlements/[Entitlements]
 
 * Advanced internal security mechanisms
 
@@ -234,25 +234,25 @@ midPoint 3.1 provides following features:
 ** Delegated administration
 
 
-* Several xref:/midpoint/reference/synchronization/projection-policy/[assignment enforcement modes]
+* Several xrefv:/midpoint/reference/before-4.8/synchronization/projection-policy/[assignment enforcement modes]
 
 ** Ability to specify global or resource-specific enforcement mode
 
 ** Ability to "legalize" assignment that violates the enforcement mode
 
 
-* xref:/midpoint/reference/expressions/expressions/[Customization expressions]
+* xrefv:/midpoint/reference/before-4.8/expressions/expressions/[Customization expressions]
 
-** xref:/midpoint/reference/expressions/expressions/script/groovy/[Groovy]
+** xrefv:/midpoint/reference/before-4.8/expressions/expressions/script/groovy/[Groovy]
 
-** xref:/midpoint/reference/expressions/expressions/script/javascript/[JavaScript (ECMAScript)]
+** xrefv:/midpoint/reference/before-4.8/expressions/expressions/script/javascript/[JavaScript (ECMAScript)]
 
-** xref:/midpoint/reference/expressions/expressions/script/xpath/[XPath version 2] and xref:/midpoint/reference/legacy/xpath2/[XPath Tutorial]
+** xrefv:/midpoint/reference/before-4.8/expressions/expressions/script/xpath/[XPath version 2] and xrefv:/midpoint/reference/before-4.8/legacy/xpath2/[XPath Tutorial]
 
 ** Built-in libraries with a convenient set of functions
 
 
-* xref:/midpoint/reference/concepts/polystring/[PolyString] support allows automatic conversion of strings in national alphabets
+* xrefv:/midpoint/reference/before-4.8/concepts/polystring/[PolyString] support allows automatic conversion of strings in national alphabets
 
 
 * Mechanism to iteratively determine unique usernames and other identifiers
@@ -260,27 +260,27 @@ midPoint 3.1 provides following features:
 
 * Extensibility
 
-** xref:/midpoint/reference/schema/custom-schema-extension/[Custom schema extensibility]
+** xrefv:/midpoint/reference/before-4.8/schema/custom-schema-extension/[Custom schema extensibility]
 
-** xref:/midpoint/reference/concepts/clockwork/scripting-hooks/[Scripting Hooks]
+** xrefv:/midpoint/reference/before-4.8/concepts/clockwork/scripting-hooks/[Scripting Hooks]
 
 
 * Reporting based on Jasper Reports
 
 * Comprehensive logging designed to aid troubleshooting
 
-* xref:/midpoint/reference/tasks/task-manager/[Multi-node task manager component with HA support]
+* xrefv:/midpoint/reference/before-4.8/tasks/task-manager/[Multi-node task manager component with HA support]
 
-* Rule-based RBAC (RB-RBAC) ability by using conditional mappings in xref:/midpoint/reference/expressions/object-template/[user template]
+* Rule-based RBAC (RB-RBAC) ability by using conditional mappings in xrefv:/midpoint/reference/before-4.8/expressions/object-template/[user template]
 
-* xref:/midpoint/reference/security/audit/[Auditing]
+* xrefv:/midpoint/reference/before-4.8/security/audit/[Auditing]
 
-** Auditing to xref:/midpoint/reference/security/audit/#logfile-auditing[file (logging)]
+** Auditing to xrefv:/midpoint/reference/before-4.8/security/audit/#logfile-auditing[file (logging)]
 
-** Auditing to xref:/midpoint/reference/security/audit/#database-table-auditing[SQL table]
+** Auditing to xrefv:/midpoint/reference/before-4.8/security/audit/#database-table-auditing[SQL table]
 
 
-* xref:/midpoint/reference/security/credentials/password-policy/[Password policies]
+* xrefv:/midpoint/reference/before-4.8/security/credentials/password-policy/[Password policies]
 
 * Partial multi-tenancy support
 
@@ -290,18 +290,18 @@ midPoint 3.1 provides following features:
 
 * Import from file and resource
 
-** xref:/midpoint/reference/schema/object-references/[Object schema validation during import] (can be switched off)
+** xrefv:/midpoint/reference/before-4.8/schema/object-references/[Object schema validation during import] (can be switched off)
 
-** xref:/midpoint/reference/schema/object-references/[Smart references between objects based on search filters]
+** xrefv:/midpoint/reference/before-4.8/schema/object-references/[Smart references between objects based on search filters]
 
 
-* Simple xref:/midpoint/reference/synchronization/consistency/[handling of provisioning errors]
+* Simple xrefv:/midpoint/reference/before-4.8/synchronization/consistency/[handling of provisioning errors]
 
-* xref:/midpoint/reference/resources/resource-configuration/protected-accounts/[Protected accounts] (accounts that will not be affected by midPoint)
+* xrefv:/midpoint/reference/before-4.8/resources/resource-configuration/protected-accounts/[Protected accounts] (accounts that will not be affected by midPoint)
 
-* xref:/midpoint/reference/roles-policies/segregation-of-duties/[Segregation of Duties] (SoD)
+* xrefv:/midpoint/reference/before-4.8/roles-policies/segregation-of-duties/[Segregation of Duties] (SoD)
 
-** xref:/midpoint/reference/roles-policies/segregation-of-duties/[Role exclusions]
+** xrefv:/midpoint/reference/before-4.8/roles-policies/segregation-of-duties/[Role exclusions]
 
 
 * Export objects to XML
@@ -310,9 +310,9 @@ midPoint 3.1 provides following features:
 
 * API accessible using a web service, REST and local JAVA calls
 
-* xref:/midpoint/reference/cases/workflow-3/[Workflow support] (based on link:http://www.activiti.org/[Activiti])
+* xrefv:/midpoint/reference/before-4.8/cases/workflow-3/[Workflow support] (based on https://www.activiti.org/[Activiti])
 
-* xref:/midpoint/reference/misc/notifications/[Notifications]
+* xrefv:/midpoint/reference/before-4.8/misc/notifications/[Notifications]
 
 
 * Documentation
@@ -361,7 +361,7 @@ Also for lock-out attributes simulation.
 ** Improved import and reconciliation performance (parallelization).
 
 
-* Polygon versions of LDAP, DBTable and CSVFile connectors (see link:http://lists.evolveum.com/pipermail/midpoint/2014-November/000643.html[this mailing list post])
+* Polygon versions of LDAP, DBTable and CSVFile connectors (see https://lists.evolveum.com/pipermail/midpoint/2014-November/000643.html[this mailing list post])
 
 * Significantly improved paging support in LDAP connector
 
@@ -464,7 +464,7 @@ Several steps need to be executed:
 . *Update database schema.* MidPoint database schema was extended due to organization structure performance improvements (a.k.a. "org closure table"). Execute the following script: +
 `config/sql/midpoint/<db>/<db>-3.1-closure-upgrade.sql`
 
-. *Update connector namespaces and versions.* The default connectors that are bundled with midPoint were migrated from OpenICF to Evolveum Polygon project (see link:http://lists.evolveum.com/pipermail/midpoint/2014-November/000643.html[this mailing list post]). Connector bundle names and types were changed to avoid confusion.
+. *Update connector namespaces and versions.* The default connectors that are bundled with midPoint were migrated from OpenICF to Evolveum Polygon project (see https://lists.evolveum.com/pipermail/midpoint/2014-November/000643.html[this mailing list post]). Connector bundle names and types were changed to avoid confusion.
 Therefore the connector types and namespaces used in the resource definitions need to be changes according to the following table:
 
 [%autowidth,cols="h,1,1"]
@@ -506,8 +506,3 @@ Development team is small, flexible and very efficient.
 Contributions are welcome.
 
 For the full project background see the xref:/midpoint/history/[midPoint History] page.
-
-
-== Known Issues
-
-See link:https://jira.evolveum.com/issues/?jql=project%20%3D%20MID%20AND%20affectedVersion%3D%223.1%20%28Sinan%29%22%20AND%20fixVersion%20!%3D%20%223.1%20%28Sinan%29%22[Jira]

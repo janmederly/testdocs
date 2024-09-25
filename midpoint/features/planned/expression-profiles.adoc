@@ -1,3 +1,7 @@
+---
+midpoint-feature: expression-profile
+doc-type: plan
+---
 = Expression Profiles: Full Implementation
 :page-wiki-name: Expression Profiles: Full Implementation
 :page-wiki-id: 30245338
@@ -5,7 +9,6 @@
 :page-wiki-metadata-create-date: 2019-04-08T14:32:47.634+02:00
 :page-wiki-metadata-modify-user: semancik
 :page-wiki-metadata-modify-date: 2019-04-08T15:59:54.323+02:00
-:page-planned: true
 :page-upkeep-status: yellow
 
 == Motivation
@@ -20,7 +23,7 @@ But for some purposes they may be just too powerful.
 Expressions, and especially xref:/midpoint/reference/expressions/expressions/script/[scripting expressions], can do anything.
 This can be abused by a malevolent attacker to gain unauthorized access to data, disable the system or do almost any kind of damage.
 This is the very nature of customization based on scripting.
-Even though the dangers are quite obvious and self-explanatory, we have xref:/midpoint/reference/security/security-guide/[warned] the users about this all the time.
+Even though the dangers are quite obvious and self-explanatory, we have xref:/midpoint/security/security-guide/[warned] the users about this all the time.
 The recommendation was not to allow any untrusted user to set up any expression.
 
 But this can be improved by using xref:/midpoint/reference/expressions/expressions/profiles/[expression profiles.]
@@ -152,4 +155,4 @@ Therefore the performance of profile checks in larger deployments should be test
 
 * xref:/midpoint/reference/expressions/expressions/profiles/configuration/[Expression Profile Configuration]
 
-* xref:/midpoint/reference/security/security-guide/[Security Guide]
+* xref:/midpoint/security/security-guide/[Security Guide]

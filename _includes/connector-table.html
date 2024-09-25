@@ -1,4 +1,4 @@
-<table class="table dataTable" data-sortable data-initial-length="25" data-pageLength="25" data-order-column="1" data-length-menu-auto="false" data-length-menu="100,75,50,25,10" data-order="asc" data-paging="true">
+<table class="table">
     <thead>
     <tr>
         <th scope="col">Connector</th>
@@ -12,7 +12,7 @@
     {% assign cpages = include.pages | sort: "display-order" %}
     {% for cpage in cpages %}
     <tr>
-        <td scope="row"><a href="{{cpage.url}}">{{cpage.title}}</a></td>
+        <th  scope="row"><a href="{{cpage.url}}">{{cpage.title}}</a></th>
         <td>{{cpage.support-status}}</td>
         <td>{{cpage.support-provided-by}}<br>({{cpage.origin}})</td>
         <td>{{cpage.target-systems}}</td>

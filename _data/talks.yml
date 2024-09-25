@@ -1,3 +1,212 @@
+- id: 2024-09-ami-sap-sucessfactorsHR
+  title: "MidPoint Intengrations, Partner Series: SAP SuccessFactors HR Webinar by AMI Praha"
+  date: 2024-09
+  event: Evolveum Webinar
+  author: Martin Lízner (AMI Praha)
+  slidesFile: 2024-09-ami-sap-sucessfactorsHR.pdf
+  youtubeUrl: https://youtu.be/ZYjEZNpHL0w
+
+
+- id: 2024-06-teaser-mdit
+  title: "Teaser: MidPoint Deployment Intermediate Training"
+  date: 2024-06
+  event: Evolveum Webinar
+  author: Ivan Noris
+  slidesFile: 2024-06-teaser-mdit.pdf
+  youtubeUrl: https://youtu.be/BkZO6hJjsq0
+
+- id: 2024-05-iso27001
+  title: "ISO 27001 Directive"
+  date: 2024-05
+  event: Evolveum Webinar
+  author: Peter Pištek (Securedo), Radovan Semančík
+  slidesFile: 2024-05-iso27001.pdf
+  youtubeUrl: https://youtu.be/p3_g4Lw4Bp4
+
+- id: 2024-05-flexible-authentication
+  title: "Introduction to Flexible Authentication"
+  date: 2024-05
+  event: Evolveum Webinar
+  author: Lukáš Škublík
+  slidesFile: 2024-05-flexible-authentication.pdf
+  youtubeUrl: https://youtu.be/9B-KF5VZ97s
+
+- id: 2024-04-preparing-for-nis2
+  title: "Preparing for NIS2 Directive"
+  date: 2024-04
+  event: Evolveum Webinar
+  author: Peter Pištek (Securedo), Martin Handl (Inalogy), Radovan Semančík
+  slidesFile: 2024-04-preparing-for-nis2.pdf
+  youtubeUrl: https://youtu.be/d50rklEzDCI
+
+- id: 2024-04-securing-midpoint-deployments
+  title: "Securing MidPoint Deployments"
+  date: 2024-04
+  event: Evolveum Webinar
+  author: Tony Tkáčik
+  slidesFile: 2024-04-securing-midpoint-deployments.pdf
+  youtubeUrl: https://youtu.be/8xZdAzmqfzQ
+
+
+- id: 2024-03-simulations
+  title: "Can Your IGA See into the Future?"
+  date: 2024-03
+  event: Ventum IAM Expert Summit 2024
+  eventUrl: https://ventum.id/IAM_Summit_2024/
+  author: Katarína Bolemant
+  slidesFile: 2024-03-simulations.pdf
+
+- id: 2024-03-correlations
+  title: "Smart Correlation"
+  date: 2024-03
+  event: Evolveum Webinar
+  author: Pavol Mederly
+  slidesFile: 2024-03-smart-correlation.pdf
+  youtubeUrl: https://youtu.be/nYl7Zlb5zvk
+
+- id: 2024-03-query-language
+  title: "How to Search for Information in MidPoint: MidPoint Query Language for Engineers"
+  date: 2024-03
+  event: Evolveum Webinar
+  author: Martin Špánik
+  slidesFile: 2024-03-query-language.pdf
+  youtubeUrl: https://youtu.be/216ArG_Hq9w
+  
+- id: 2024-02-request-access
+  title: "Request Access"
+  date: 2024-02
+  event: Evolveum Webinar
+  author: Viliam Repáň
+  slidesFile: 2024-02-request-access.pdf
+  youtubeUrl: https://youtu.be/nMo9cQfOWbU
+
+- id: 2024-02-accessibility
+  title: "Unlocking Accessibility in MidPoint"
+  date: 2024-02
+  event: Evolveum Webinar
+  slidesFile: 2024-02-accessibility.pdf
+  youtubeUrl: https://youtu.be/LbDwO39fJo8
+  author: Patrik Maliňák
+
+- id: 2024-02-fosdem
+  title: "Role of IGA in Access Management with Multilateral Identities"
+  date: 2024-02
+  event: FOSDEM 2024
+  eventUrl: https://fosdem.org/2024/
+  slidesFile: 2024-02-fosdem.pdf
+  youtubeUrl: https://youtu.be/denDzz9rTWI
+  author: Slávek Licehammer
+
+- id: 2024-01-roadmap
+  title: "MidPoint’s Roadmap"
+  date: 2024-01
+  event: MidPoint Working Group at TIIME Unconference
+  eventUrl: https://tiime-unconference.eu/
+  author: Katarína Bolemant (presentation), Igor Farinič (talk)
+
+- id: 2024-01-workflowless
+  title: "Myth Busting Workflowless"
+  date: 2024-01
+  event: MidPoint Working Group at TIIME Unconference
+  eventUrl: https://tiime-unconference.eu/
+  author: Slávek Licehammer
+
+- id: 2024-01-query
+  title: "MidPoint Query Language"
+  date: 2024-01
+  event: MidPoint Working Group at TIIME Unconference
+  eventUrl: https://tiime-unconference.eu/
+  author: Martin Špánik
+
+- id: 2024-01-compliance
+  title: "MidPoint and Cybersecurity Compliance"
+  date: 2024-01
+  event: MidPoint Working Group at TIIME Unconference
+  eventUrl: https://tiime-unconference.eu/
+  author: Radovan Semančík
+
+- id: 2024-01-securing-deployments
+  title: "Securing MidPoint Deployments"
+  date: 2024-01
+  event: MidPoint Working Group at TIIME Unconference
+  eventUrl: https://tiime-unconference.eu/
+  author: Tony Tkáčik
+
+- id: 2024-01-license-management
+  title: "License Management"
+  date: 2024-01
+  event: MidPoint Working Group at TIIME Unconference
+  eventUrl: https://tiime-unconference.eu/
+  author: Slávek Licehammer
+
+- id: 2024-01-smart-correlation
+  title: "Smart Correlation"
+  date: 2024-01
+  event: MidPoint Working Group at TIIME Unconference
+  eventUrl: https://tiime-unconference.eu/
+  author: Pavol Mederly
+  
+- id: 2024-01-role-mining
+  title: "Role Mining"
+  date: 2024-01
+  event: MidPoint Working Group at TIIME Unconference
+  eventUrl: https://tiime-unconference.eu/
+  author: Tadeáš Chrapovič
+
+- id: 2024-01-roles
+  title: "Parametric and Dynamic Roles"
+  date: 2024-01
+  event: MidPoint Working Group at TIIME Unconference
+  eventUrl: https://tiime-unconference.eu/
+  author: Radovan Semančík
+
+- id: 2024-01-operations
+  title: "Modern Approach to midPoint Operations"
+  date: 2024-01
+  event: MidPoint Working Group at TIIME Unconference
+  eventUrl: https://tiime-unconference.eu/
+  author: Kamil Jireš
+
+- id: 2024-01-tracing
+  title: "Tracing and Troubleshooting"
+  date: 2024-01
+  event: MidPoint Working Group at TIIME Unconference
+  eventUrl: https://tiime-unconference.eu/
+  author: Slávek Licehammer
+
+- id: 2024-01-ninja
+  title: "Ninja Upgrade"
+  date: 2024-01
+  event: Evolveum Webinar
+  author: Viliam Repáň
+  slidesFile: 2024-01-ninja-upgrade.pdf
+  youtubeUrl: https://youtu.be/3RDMGVdDlP4?si=pwnhVrGGM5geUSrx
+
+- id: 2023-12-simulations
+  title: "Simulations"
+  date: 2023-12
+  event: Evolveum Webinar
+  author: Pavol Mederly
+  slidesFile: 2023-12-simulations.pdf
+  youtubeUrl: https://youtu.be/egVzcbGp-VM?si=ONOB92B_Il4F2Jrq
+
+- id: 2023-12-navigating-access-control-maze
+  title: "Navigating the Access Control Maze"
+  date: 2023-12
+  event: KuppingerCole's Webinar
+  eventUrl: https://www.kuppingercole.com/events/2023/12/navigating-access-control
+  author: Radovan Semančík, Paul Fisher
+  slidesFile: 2023-12-navigating-access-control-maze.pdf
+  youtubeUrl: https://youtu.be/Lld43SzXkiw
+
+- id: 2023-11-resource-wizard
+  title: "Resource Wizard"
+  date: 2023-11
+  event: Evolveum Webinar
+  author: Lukáš Škublík
+  slidesFile: 2023-11-resource-wizard.pdf
+  youtubeUrl: https://youtu.be/-JUXHMGrFyI
+  
 - id: 2023-11-first-steps-methodology
   title: "First Steps Methodology"
   date: 2023-11
