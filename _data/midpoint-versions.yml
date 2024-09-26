@@ -1299,25 +1299,25 @@
   - feature: Advanced Lifecycle Management
   docsReleaseBranch: 'master'
 - version: '4.10'
-  codeName: 
+  codeName:
   plannedReleaseTimeFrame: October 2025
-  plannedReleaseDate: 02-10-2025
-  releaseDate: 
-  endOfSupport: 
+  plannedReleaseDate: 01-10-2025
+  releaseDate:
+  endOfSupport:
   type: production
   support: feature
-  portrait: 
-  status: planned
+  portrait:
+  status: development
   focus: ''
-  description: 
+  description:
   highlights:
   - ''
   roadmap:
   - feature: Approval Improvements
   - feature: Risk Management
   - feature: Advanced Identity Analytics
-  - feature: Axiom Schema
-  legacyDocs: true
+  - feature: Advanced Lifecycle Management
+  docsReleaseBranch: 'master'
 - version: '4.11'
   codeName: 
   plannedReleaseTimeFrame: October 2026
