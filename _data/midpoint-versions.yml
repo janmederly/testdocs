@@ -1279,25 +1279,29 @@
   - TBU
   docsReleaseBranch: 'docs/release-notes/4.8.3'
 - version: '4.9'
-  codeName: 
+  codeName: Verne
   plannedReleaseTimeFrame: October 2024
-  plannedReleaseDate: 01-10-2024
-  releaseDate: 
-  endOfSupport: 
+  releaseDate: 18-10-2024
+  endOfSupport: 18-10-2025
   type: production
   support: feature
-  portrait: 
-  status: development
-  focus: ''
-  description: 
+  portrait: curie.png
+  status: released
+  focus: "..."
+  description: "..." 
   highlights:
-  - ''
+  - Upgrade Simplifications
+  - Role Mining
+  - Security Improvements
   roadmap:
-  - feature: Lightweight Reconciliation
-  - feature: Role Engineering
-  - feature: Certification Improvements
-  - feature: Advanced Lifecycle Management
-  docsReleaseBranch: 'master'
+  - feature: first feature
+  - feature: second feature
+  - feature: third feature
+  - feature: forth feature
+  - feature: fitfh feature
+  docsBranch: support-4.9
+  docsDisplayBranch: '4.9'
+  docsReleaseBranch: 'docs/release-notes/4.9'
 - version: '4.10'
   codeName: 
   plannedReleaseTimeFrame: October 2025
