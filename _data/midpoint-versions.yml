@@ -1211,6 +1211,47 @@
   - Miscellaneous bugfixes
   - Ninja tool improvements
   legacyDocs: true
+- version: 4.7.3
+  codeName: Johnson
+  releaseDate: 29-01-2024
+  endOfSupport: 14-04-2024
+  type: maintenance
+  support: feature
+  portrait: johnson.png
+  status: released
+  focus: bugfixes
+  description: The Johnson Update 3 brings miscellaneous bugfixes, Ninja tool improvements.
+  highlights:
+  - Miscellaneous bugfixes
+  - Ninja tool improvements
+  legacyDocs: true
+- version: 4.7.4
+  codeName: Johnson
+  releaseDate: 27-02-2024
+  endOfSupport: 14-04-2024
+  type: maintenance
+  support: feature
+  portrait: johnson.png
+  status: released
+  focus: bugfixes
+  description: The Johnson Update 4 brings security, stability and miscellaneous bugfixes.
+  highlights:
+  - Miscellaneous bugfixes
+  - Ninja tool improvements
+  legacyDocs: true
+- version: 4.7.5
+  codeName: Johnson
+  releaseDate:
+  endOfSupport: 14-04-2024
+  type: maintenance
+  support: feature
+  portrait: johnson.png
+  status: planned
+  focus: bugfixes
+  description: 'TODO: The Johnson Update 5 brings security, stability and miscellaneous bugfixes.'
+  highlights:
+      - 'TODO'
+  legacyDocs: true
 - version: '4.8'
   codeName: Curie
   plannedReleaseTimeFrame: October 2023
@@ -1278,6 +1319,74 @@
   highlights:
   - TBU
   docsReleaseBranch: 'docs/release-notes/4.8.3'
+- version: 4.8.5
+  codeName: Curie
+  releaseDate:
+  plannedReleaseDate: 18-10-2024
+  endOfSupport: 17-10-2028
+  type: maintenance
+  support: lts
+  portrait: curie.png
+  status: planned
+  focus: bugfixes
+  docsReleaseBranch: 'support-4.8'
+  description: 'TODO: The Curie update 5 brings miscellaneous bugfixes and minor improvements.'
+  highlights:
+      - TBU
+- version: 4.8.6
+  codeName: Curie
+  releaseDate:
+  plannedReleaseDate: 29-01-2025
+  endOfSupport: 17-10-2028
+  type: maintenance
+  support: lts
+  portrait: curie.png
+  status: planned
+  focus: bugfixes
+  docsReleaseBranch: 'support-4.8'
+  description: 'TODO: The Curie update 6 brings miscellaneous bugfixes and minor improvements.'
+  highlights:
+      - TBU
+- version: 4.8.7
+  codeName: Curie
+  plannedReleaseTimeFrame:
+  plannedReleaseDate: 30-04-2025
+  releaseDate:
+  endOfSupport: 17-10-2028
+  type: maintenance
+  support: lts
+  portrait:
+  status: planned
+  focus: bugfixes
+  docsReleaseBranch: 'support-4.8'
+  description:
+  highlights:
+      - ''
+  roadmap:
+      - feature:
+      - feature:
+      - feature:
+      - feature:
+- version: 4.8.8
+  codeName: Curie
+  plannedReleaseTimeFrame:
+  plannedReleaseDate: 13-08-2025
+  releaseDate:
+  endOfSupport: 17-10-2028
+  type: maintenance
+  support: lts
+  portrait:
+  status: planned
+  focus: bugfixes
+  docsReleaseBranch: 'support-4.8'
+  description:
+  highlights:
+      - ''
+  roadmap:
+      - feature:
+      - feature:
+      - feature:
+      - feature:
 - version: '4.9'
   codeName: 
   plannedReleaseTimeFrame: October 2024
