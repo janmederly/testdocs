@@ -1481,3 +1481,19 @@
   description: 'Test for release notes'
   highlights:
       - TBU
+- version: '4.10.1-TEST'
+  codeName: Test
+  releaseDate: 02-10-2024
+  plannedReleaseDate: 02-10-2024
+  endOfSupport: 17-10-2028
+  type: maintenance
+  support: lts
+  portrait: curie.png
+  status: planned
+  focus: bugfixes
+  docsBranch: support-4.10-TEST
+  docsDisplayBranch: '4.10.1-TEST'
+  docsReleaseBranch: 'v4.10.1-TEST'
+  description: 'Test for release notes 4.10.1-TEST'
+  highlights:
+      - TBU
