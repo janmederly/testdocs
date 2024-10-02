@@ -1470,8 +1470,8 @@
   releaseDate: 02-10-2024
   plannedReleaseDate: 02-10-2024
   endOfSupport: 17-10-2028
-  type: maintenance
-  support: lts
+  type: production
+  support: feature
   portrait: curie.png
   status: planned
   focus: bugfixes
@@ -1487,7 +1487,7 @@
   plannedReleaseDate: 02-10-2024
   endOfSupport: 17-10-2028
   type: maintenance
-  support: lts
+  support: feature
   portrait: curie.png
   status: planned
   focus: bugfixes
