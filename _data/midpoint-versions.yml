@@ -1473,7 +1473,7 @@
   type: production
   support: feature
   portrait: curie.png
-  status: planned
+  status: released
   focus: bugfixes
   docsBranch: support-4.10-TEST
   docsDisplayBranch: '4.10-TEST'
@@ -1489,7 +1489,7 @@
   type: maintenance
   support: feature
   portrait: curie.png
-  status: planned
+  status: released
   focus: bugfixes
   docsBranch: support-4.10-TEST
   docsReleaseBranch: 'v4.10.1-TEST'
