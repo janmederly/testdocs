@@ -100,6 +100,8 @@ image::deployment.png[Deployment diagram]
 
 Following table provides an overview of each of the component's role in the demo system.
 
+[.datatable-config]
+
 |===
 | Component | Implemented by | Description | Access
 
