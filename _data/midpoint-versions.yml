@@ -1465,34 +1465,34 @@
   - feature: Connector Marketplace
   - feature: Mobile Application
   legacyDocs: true
-- version: '4.10-TEST'
-  codeName: Test
-  releaseDate: 02-10-2024
-  plannedReleaseDate: 02-10-2024
-  endOfSupport: 17-10-2028
-  type: production
-  support: feature
-  portrait: curie.png
-  status: released
-  focus: bugfixes
-  docsBranch: support-4.10-TEST
-  docsDisplayBranch: '4.10-TEST'
-  docsReleaseBranch: 'v4.10-TEST'
-  description: 'Test for release notes'
-  highlights:
-      - TBU
-- version: '4.10.1-TEST'
-  codeName: Test
-  releaseDate: 02-10-2024
-  plannedReleaseDate: 02-10-2024
-  endOfSupport: 17-10-2028
-  type: maintenance
-  support: feature
-  portrait: curie.png
-  status: released
-  focus: bugfixes
-  docsBranch: support-4.10-TEST
-  docsReleaseBranch: 'v4.10.1-TEST'
-  description: 'Test for release notes 4.10.1-TEST'
-  highlights:
-      - TBU
+# - version: '4.10-TEST'
+#   codeName: Test
+#   releaseDate: 02-10-2024
+#   plannedReleaseDate: 02-10-2024
+#   endOfSupport: 17-10-2028
+#   type: production
+#   support: feature
+#   portrait: curie.png
+#   status: released
+#   focus: bugfixes
+#   docsBranch: support-4.10-TEST
+#   docsDisplayBranch: '4.10-TEST'
+#   docsReleaseBranch: 'v4.10-TEST'
+#   description: 'Test for release notes'
+#   highlights:
+#       - TBU
+# - version: '4.10.1-TEST'
+#   codeName: Test
+#   releaseDate: 02-10-2024
+#   plannedReleaseDate: 02-10-2024
+#   endOfSupport: 17-10-2028
+#   type: maintenance
+#   support: feature
+#   portrait: curie.png
+#   status: released
+#   focus: bugfixes
+#   docsBranch: support-4.10-TEST
+#   docsReleaseBranch: 'v4.10.1-TEST'
+#   description: 'Test for release notes 4.10.1-TEST'
+#   highlights:
+#       - TBU
