@@ -1559,6 +1559,10 @@ The options are shown in https://en.wikipedia.org/wiki/Letter_case#Kebab_case[ke
 Use lower camel case (dromedaryCase) for JSON specification inside AsciiDoc (e.g. `pageLength` instead of `page-lenght`).
 
 [.datatable-config]
+{
+  "original-order": true
+}
+
 |===
 | Option | Description | Default | Possible values
 
@@ -1627,23 +1631,22 @@ Use lower camel case (dromedaryCase) for JSON specification inside AsciiDoc (e.g
 The layout is defined as JSON object.
 For more details see https://datatables.net/reference/option/layout[DataTables documentation].
 To use this option, you need to set `custom-layout` to `true`.
-| ----
-{
+| `{
     topStart: paging ? 'pageLength' : null,
     topEnd: searchable ? 'search' : null,
     bottomStart: paging ? 'info' : null,
     bottomEnd: paging ? 'paging' : null
-}
-----
-This layout is only available in javascript.
+}`
+
+This layout object is only available in javascript.
 When using the `layout` option in adoc file, you must omit the logical conditions.
 | JSON object
 
 | `auto-width`
 | Enable or disable automatic column width calculation.
-This option is different than auto-width in asciidoc tables.
+This option is different than `%autowidth` in asciidoc tables.
 If enabled, it calculates the column width based on the content of the table cells but the width is stuck at 100%.
-If disabled the width from asciidoc is used. So when you want to use narrow table you must define the table is asciidoc as `[%autowidth]` and set `auto-width` in config to `false`.
+If disabled the width from asciidoc is used. So when you want to use narrow table you must define the table in asciidoc as `[%autowidth]` and set `auto-width` in config to `false`.
 | true
 | true, false
 
