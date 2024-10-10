@@ -1319,17 +1319,17 @@
   highlights:
   - TBU
   docsReleaseBranch: 'docs/release-notes/4.8.3'
-- version: 4.8.5
+- version: 4.8.4
   codeName: Curie
-  releaseDate:
-  plannedReleaseDate: 18-10-2024
+  releaseDate: 10-10-2024
+  plannedReleaseDate: 18-9-2024
   endOfSupport: 17-10-2028
   type: maintenance
   support: lts
   portrait: curie.png
-  status: planned
+  status: released
   focus: bugfixes
-  docsReleaseBranch: 'support-4.8'
+  docsReleaseBranch: 'docs/release-notes/4.8.4'
   description: 'TODO: The Curie update 5 brings miscellaneous bugfixes and minor improvements.'
   highlights:
       - TBU
