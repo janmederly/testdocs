@@ -27,30 +27,36 @@ upkeep-status: yellow
 <table class="roadmap">
 
     <tr>
-        <th class="released">{% include midpoint-version.html version=lastReleasedVersion %}<br>RELEASED</th>
-        <th class="development">{% include midpoint-version.html version=developmentVersion %}<br>DEVELOPMENT</th>
 {% for v in site.data.midpoint-versions %}
-    {% if v.status == "planned" and v.type != "maintenance" %}
+    {% if v == lastReleasedVersion %}
+        <th class="released">{% include midpoint-version.html version=v %}<br>RELEASED</th>
+    {% elsif v.status == "development" %}        
+        <th class="development">{% include midpoint-version.html version=v %}<br>DEVELOPMENT</th>
+    {% elsif v.status == "planned" and v.type != "maintenance" %}
         <th class="planned">{% include midpoint-version.html version=v %}<br>PLANNED</th>
     {% endif %}
 {% endfor %}
     </tr>
 
     <tr>
-        <th class="released">{% if lastReleasedVersion.plannedReleaseDate %}{{ lastReleasedVersion.plannedReleaseDate | date: "%d %B %Y" }}{% else %}{{ lastReleasedVersion.plannedReleaseTimeFrame }}{% endif %}</th>
-        <th class="development">{% if developmentVersion.plannedReleaseDate %}{{ developmentVersion.plannedReleaseDate | date: "%d %B %Y" }}{% else %}{{ developmentVersion.plannedReleaseTimeFrame }}{% endif %}</th>
 {% for v in site.data.midpoint-versions %}
-    {% if v.status == "planned" and v.type != "maintenance" %}
+    {% if v == lastReleasedVersion %}
+        <th class="released">{% if v.plannedReleaseDate %}{{ v.plannedReleaseDate | date: "%d %B %Y" }}{% else %}{{ v.plannedReleaseTimeFrame }}{% endif %}</th>
+    {% elsif v.status == "development" %}
+        <th class="development">{% if v.plannedReleaseDate %}{{ v.plannedReleaseDate | date: "%d %B %Y" }}{% else %}{{ v.plannedReleaseTimeFrame }}{% endif %}</th>
+    {% elsif v.status == "planned" and v.type != "maintenance" %}
         <th class="planned">{% if v.plannedReleaseDate %}{{ v.plannedReleaseDate | date: "%d %B %Y" }}{% else %}{{ v.plannedReleaseTimeFrame }}{% endif %}</th>
     {% endif %}
 {% endfor %}
     </tr>
 
     <tr>
-        <td class="released">{% include roadmap-content.html version=lastReleasedVersion %}</td>
-        <td class="development">{% include roadmap-content.html version=developmentVersion %}</td>
 {% for v in site.data.midpoint-versions %}
-    {% if v.status == "planned" and v.type != "maintenance" %}
+    {% if v == lastReleasedVersion %}
+        <td class="released">{% include roadmap-content.html version=v %}</td>
+    {% elsif v.status == "development" %}
+        <td class="development">{% include roadmap-content.html version=v %}</td>
+    {% elsif v.status == "planned" and v.type != "maintenance" %}
         <td class="planned">{% include roadmap-content.html version=v %}</td>
     {% endif %}
 {% endfor %}
