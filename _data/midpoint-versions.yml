@@ -1330,6 +1330,20 @@
   status: released
   focus: bugfixes
   docsReleaseBranch: 'docs/release-notes/4.8.4'
+  description: 'TODO: The Curie update 4 brings miscellaneous bugfixes and minor improvements.'
+  highlights:
+      - TBU
+- version: 4.8.5
+  codeName: Curie
+  releaseDate: 11-10-2024
+  plannedReleaseDate: 18-9-2024
+  endOfSupport: 17-10-2028
+  type: maintenance
+  support: lts
+  portrait: curie.png
+  status: released
+  focus: bugfixes
+  docsReleaseBranch: 'docs/release-notes/4.8.5'
   description: 'TODO: The Curie update 5 brings miscellaneous bugfixes and minor improvements.'
   highlights:
       - TBU
