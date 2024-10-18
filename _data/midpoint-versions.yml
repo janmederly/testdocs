@@ -1088,6 +1088,46 @@
   - Various GUI fixes (shopping cart, certifications)
   - Ninja tool improvements, upgrade commands added, command and options names realigned/renamed
   legacyDocs: true
+- version: 4.4.7
+  codeName: Tesla
+  releaseDate: 29-01-2024
+  endOfSupport: 26-11-2024
+  type: maintenance
+  support: lts
+  portrait: tesla.png
+  status: released
+  focus: bugfixes
+  description: The Tesla update 7 brings miscellaneous bugfixes and Ninja tool improvements.
+  highlights:
+  - Ninja tool improvements
+  legacyDocs: true
+- version: 4.4.8
+  codeName: Tesla
+  releaseDate: 27-02-2024
+  endOfSupport: 26-11-2024
+  type: maintenance
+  support: lts
+  portrait: tesla.png
+  status: released
+  focus: bugfixes
+  description: The Tesla update 8 brings security, stability and miscellaneous bugfixes.
+  highlights:
+  - Security fixes and improvements
+  - Ninja tool improvements
+  legacyDocs: true
+- version: 4.4.9
+  codeName: Tesla
+  releaseDate: 19-08-2024
+  endOfSupport: 26-11-2024
+  type: maintenance
+  support: lts
+  portrait: tesla.png
+  status: released
+  focus: bugfixes
+  description: The Tesla update 9 brings miscellaneous bugfixes and Ninja tool improvements.
+  highlights:
+      - Various bugfixes
+  legacyDocs: true
 - version: '4.5'
   codeName: Nightingale
   plannedReleaseTimeFrame: April 2022
@@ -1204,7 +1244,7 @@
   portrait: johnson.png
   status: released
   focus: bugfixes
-  description: The Johnson Update 2 brings security and miscleanous bugfixes, Ninja
+  description: The Johnson Update 2 brings security and miscellaneous bugfixes, Ninja
     tool improvements.
   highlights:
   - Security fixes
@@ -1275,11 +1315,10 @@
   - feature: Performance Improvements
   docsBranch: support-4.8
   docsDisplayBranch: '4.8'
-  docsReleaseBranch: 'v4.8'
-  defaultBranch: true
 - version: 4.8.1
+  legacyDocs: true
   codeName: Curie
-  releaseDate:
+  releaseDate: 29-01-2024
   plannedReleaseDate: 29-01-2024
   endOfSupport: 17-10-2028
   type: maintenance
@@ -1287,66 +1326,65 @@
   portrait: curie.png
   status: released
   focus: bugfixes
-  description: 'TODO: The Curie update 1 brings miscellaneous bugfixes and minor improvements.'
+  description: The Curie update 1 brings miscellaneous bugfixes and minor improvements.
   highlights:
-  - TBU
-  legacyDocs: true
+  - Security fixes and improvements
+  - Different fixes in GUI & UX
+  - Role mining fixes
+  - Detection algorithm to distinguish between test and production environments
 - version: 4.8.2
+  legacyDocs: true
   codeName: Curie
-  releaseDate:
-  plannedReleaseDate: 10-05-2024
+  releaseDate: 27-02-2024
   endOfSupport: 17-10-2028
   type: maintenance
   support: lts
   portrait: curie.png
   status: released
   focus: bugfixes
-  description: 'TODO: The Curie update 2 brings miscellaneous bugfixes and minor improvements.'
+  description: The Curie update 2 brings security, stability and miscellaneous bugfixes.
   highlights:
-  - TBU
-  legacyDocs: true
+  - Security fixes and improvements
+  - Ninja tool improvements
 - version: 4.8.3
   codeName: Curie
-  releaseDate:
-  plannedReleaseDate: 19-08-2024
+  releaseDate: 10-05-2024
   endOfSupport: 17-10-2028
   type: maintenance
   support: lts
   portrait: curie.png
   status: released
   focus: bugfixes
-  description: 'TODO: The Curie update 3 brings miscellaneous bugfixes and minor improvements.'
+  description: 'The Curie update 3 brings miscellaneous bugfixes and minor improvements.'
   highlights:
-  - TBU
-  docsReleaseBranch: 'docs/release-notes/4.8.3'
+      - Various Bugfixes
+  docsReleaseBranch: docs/release-notes/4.8.3
 - version: 4.8.4
   codeName: Curie
-  releaseDate: 10-10-2024
-  plannedReleaseDate: 18-9-2024
+  releaseDate: 19-08-2024
   endOfSupport: 17-10-2028
   type: maintenance
   support: lts
   portrait: curie.png
   status: released
   focus: bugfixes
-  docsReleaseBranch: 'docs/release-notes/4.8.4'
-  description: 'TODO: The Curie update 4 brings miscellaneous bugfixes and minor improvements.'
+  docsReleaseBranch: docs/release-notes/4.8.4
+  description: 'The Curie update 4 brings miscellaneous bugfixes and minor improvements.'
   highlights:
-      - TBU
+      - Various Bugfixes
 - version: 4.8.5
   codeName: Curie
-  releaseDate: 11-10-2024
-  plannedReleaseDate: 18-9-2024
+  releaseDate: 18-10-2024
   endOfSupport: 17-10-2028
   type: maintenance
   support: lts
   portrait: curie.png
   status: released
   focus: bugfixes
-  docsReleaseBranch: 'docs/release-notes/4.8.5'
-  description: 'TODO: The Curie update 5 brings miscellaneous bugfixes and minor improvements.'
+  docsReleaseBranch: docs/release-notes/4.8.5
+  description: 'The Curie update 5 brings miscellaneous bugfixes and minor improvements.'
   highlights:
-      - TBU
+      - Various Bugfixes
 - version: 4.8.6
   codeName: Curie
   releaseDate:
@@ -1361,6 +1399,7 @@
   description: 'TODO: The Curie update 6 brings miscellaneous bugfixes and minor improvements.'
   highlights:
       - TBU
+
 - version: 4.8.7
   codeName: Curie
   plannedReleaseTimeFrame:
@@ -1381,6 +1420,7 @@
       - feature:
       - feature:
       - feature:
+
 - version: 4.8.8
   codeName: Curie
   plannedReleaseTimeFrame:
@@ -1401,26 +1441,49 @@
       - feature:
       - feature:
       - feature:
+
 - version: '4.9'
-  codeName:
+  codeName: Verne
   plannedReleaseTimeFrame: October 2024
-  plannedReleaseDate: 01-10-2024
-  releaseDate:
-  endOfSupport:
+  plannedReleaseDate: 18-10-2024
+  releaseDate: 18-10-2024
+  endOfSupport: 17-10-2026
   type: production
   support: feature
-  portrait:
-  status: development
-  focus: ''
-  description:
+  portrait: verne.png
+  status: released
+  focus: role engineering, certification, approval improvements
+  description: The Verne release brings improvements in role engineering, certification, approvals, stability and miscellaneous improvements.
   highlights:
-  - ''
+  - Role engineering
+  - Certification improvements
+  - Approvals - REST API Improvements
   roadmap:
-  - feature: Lightweight Reconciliation
+  - feature: Lightweight Processing
   - feature: Role Engineering
   - feature: Certification Improvements
-  - feature: Advanced Lifecycle Management
-  docsReleaseBranch: 'master'
+  - feature: Approvals - REST API Improvements
+  docsBranch: 'support-4.9'
+  docsDisplayBranch: '4.9'
+  docsReleaseBranch: 'docs/release-notes/4.9'
+  defaultBranch: true
+
+- version: '4.9.1'
+  codeName: Verne
+  plannedReleaseTimeFrame:
+  plannedReleaseDate:
+  releaseDate:
+  endOfSupport: 17-10-2026
+  type: maintenance
+  support: feature
+  portrait: verne.png
+  status: development
+  focus: bugfixes
+  description: 'TODO'
+  highlights:
+      - 'TBU'
+  docsReleaseBranch: 'support-4.9'
+
 - version: '4.10'
   codeName:
   plannedReleaseTimeFrame: October 2025
@@ -1430,7 +1493,7 @@
   type: production
   support: feature
   portrait:
-  status: development
+  status: planned
   focus: ''
   description:
   highlights:
@@ -1440,10 +1503,10 @@
   - feature: Risk Management
   - feature: Advanced Identity Analytics
   - feature: Advanced Lifecycle Management
-  docsReleaseBranch: 'master'
 - version: '4.11'
   codeName:
   plannedReleaseTimeFrame: October 2026
+  plannedReleaseDate: 02-10-2026
   releaseDate:
   endOfSupport:
   type: production
@@ -1459,7 +1522,6 @@
   - feature: Parametric Roles
   - feature: Audit Analytics Improvements
   - feature: Multi-identities
-  legacyDocs: true
 - version: '4.12'
   codeName:
   plannedReleaseTimeFrame: October 2027
@@ -1478,35 +1540,3 @@
   - feature: Organizational Structure UX Improvements
   - feature: Connector Marketplace
   - feature: Mobile Application
-  legacyDocs: true
-# - version: '4.10-TEST'
-#   codeName: Test
-#   releaseDate: 02-10-2024
-#   plannedReleaseDate: 02-10-2024
-#   endOfSupport: 17-10-2028
-#   type: production
-#   support: feature
-#   portrait: curie.png
-#   status: released
-#   focus: bugfixes
-#   docsBranch: support-4.10-TEST
-#   docsDisplayBranch: '4.10-TEST'
-#   docsReleaseBranch: 'v4.10-TEST'
-#   description: 'Test for release notes'
-#   highlights:
-#       - TBU
-# - version: '4.10.1-TEST'
-#   codeName: Test
-#   releaseDate: 02-10-2024
-#   plannedReleaseDate: 02-10-2024
-#   endOfSupport: 17-10-2028
-#   type: maintenance
-#   support: feature
-#   portrait: curie.png
-#   status: released
-#   focus: bugfixes
-#   docsBranch: support-4.10-TEST
-#   docsReleaseBranch: 'v4.10.1-TEST'
-#   description: 'Test for release notes 4.10.1-TEST'
-#   highlights:
-#       - TBU
