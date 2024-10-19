@@ -17,6 +17,15 @@
         {% if page.version != null %}
             <a href="https://github.com/Evolveum/midpoint/blob/{{ page.version }}/docs{{ page.path | replace: "midpoint/reference/", "" | replace: page.versionWhDocs, "" }}"><button type="button" class="btn btn-light btn-sm">Edit on GitHub</button></a>
             <a href="https://github.com/Evolveum/midpoint/commits/{{ page.version }}/docs{{ page.path | replace: "midpoint/reference/", "" | replace: page.versionWhDocs, "" }}"><button type="button" class="btn btn-light btn-sm">History</button></a>
+        {% elsif page.docsReleaseBranch != null %}
+        <!-- maybe add and page.docsReleaseBranch != "nil" -->
+            {% if page.url contains "install" %}
+            <a href="https://github.com/Evolveum/midpoint/blob/{{ page.docsReleaseBranch }}/install-dist.adoc"><button type="button" class="btn btn-light btn-sm">Edit on GitHub</button></a>
+            <a href="https://github.com/Evolveum/midpoint/commits/{{ page.docsReleaseBranch }}/install-dist.adoc"><button type="button" class="btn btn-light btn-sm">History</button></a>
+            {% else %}
+            <a href="https://github.com/Evolveum/midpoint/blob/{{ page.docsReleaseBranch }}/release-notes.adoc"><button type="button" class="btn btn-light btn-sm">Edit on GitHub</button></a>
+            <a href="https://github.com/Evolveum/midpoint/commits/{{ page.docsReleaseBranch }}/release-notes.adoc"><button type="button" class="btn btn-light btn-sm">History</button></a>
+            {% endif %}
         {% else %}
             <a href="https://github.com/Evolveum/docs/blob/master/{{ page.path }}"><button type="button" class="btn btn-light btn-sm">Edit on GitHub</button></a>
             <a href="https://github.com/Evolveum/docs/commits/master/{{ page.path }}"><button type="button" class="btn btn-light btn-sm">History</button></a>
