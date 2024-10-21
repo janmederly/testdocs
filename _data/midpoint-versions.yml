@@ -1447,7 +1447,7 @@
   plannedReleaseTimeFrame: October 2024
   plannedReleaseDate: 18-10-2024
   releaseDate: 18-10-2024
-  endOfSupport: 17-10-2026
+  endOfSupport: 18-10-2026
   type: production
   support: feature
   portrait: verne.png
@@ -1473,11 +1473,11 @@
   plannedReleaseTimeFrame:
   plannedReleaseDate:
   releaseDate:
-  endOfSupport: 17-10-2026
+  endOfSupport: 18-10-2026
   type: maintenance
   support: feature
   portrait: verne.png
-  status: development
+  status: planned
   focus: bugfixes
   description: 'TODO'
   highlights:
@@ -1493,9 +1493,10 @@
   type: production
   support: feature
   portrait:
-  status: planned
+  status: development
   focus: ''
   description:
+  docsReleaseBranch: 'master'
   highlights:
   - ''
   roadmap:
