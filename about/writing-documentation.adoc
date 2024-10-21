@@ -10,7 +10,7 @@
 
 {% raw %}
 
-This document provides overview of how the _docs_ site works, and how to write and maintain Evolveum documentation. test
+This document provides overview of how the _docs_ site works, and how to write and maintain Evolveum documentation. test2
 
 == Overview
 
