@@ -1,3 +1,51 @@
+- id:  2024-12-daasi-international-midpoint-and-scim
+  title: "MidPoint Intengrations, Partner Series: MidPoint and SCIM"
+  date: 2024-12
+  event: Evolveum Webinar
+  author: Peter Gietz (DAASI International)
+  slidesFile: 2024-12-daasi-international-midpoint-and-scim.pdf
+  youtubeUrl: https://youtu.be/EqpcJNhyJcc
+
+- id: 2024-11-certifications
+  title: "The Power of Access Certification"
+  date: 2024-11
+  event: Evolveum Webinar
+  author: Kateryna Honchar
+  slidesFile: 2024-11-certifications.pdf
+  youtubeUrl: https://youtu.be/Nyz_YnLDiVQ
+
+- id:  2024-11-inalogy-keycloak-as-an-access-layer
+  title: "MidPoint Intengrations, Partner Series: Keycloak as an Access Layer"
+  date: 2024-11
+  event: Evolveum Webinar
+  author: Ján Marcin (Inalogy)
+  slidesFile: 2024-11-inalogy-keycloak-as-an-access-layer.pdf
+  youtubeUrl: https://youtu.be/2tw0MwyGIlo
+
+- id: 2024-11-group-management
+  title: "Group Management with MidPoint"
+  date: 2024-11
+  event: Evolveum Webinar
+  author: Ivan Noris
+  slidesFile: 2024-11-group-management.pdf
+  youtubeUrl: https://youtu.be/4CdhXfSm2dA
+
+- id:  2024-10-atricore-midpoint-and-siem
+  title: "MidPoint Intengrations, Partner Series: Enhancing Security through MidPoint and SIEM Integration Webinar by Atricore and Wazuh"
+  date: 2024-10
+  event: Evolveum Webinar
+  author: Sebastián Gonzalez Oyuela (Atricore), Gianluca Brigandi (Atricore), Gerardo David Caceres Fleitas (Wazuh)
+  slidesFile: 2024-10-atricore-midpoint-and-siem.pdf
+  youtubeUrl: https://youtu.be/8M2yIJLMFeQ
+
+- id: 2024-09-role-mining
+  title: "Role Mining in MidPoint: Transformative Access Governance"
+  date: 2024-09
+  event: Evolveum Webinar
+  author: Tadeáš Chrapovič
+  slidesFile: 2024-09-role-mining.pdf
+  youtubeUrl: https://youtu.be/20o_m-3A3qI
+
 - id: 2024-09-ami-sap-sucessfactorsHR
   title: "MidPoint Intengrations, Partner Series: SAP SuccessFactors HR Webinar by AMI Praha"
   date: 2024-09
@@ -5,7 +53,6 @@
   author: Martin Lízner (AMI Praha)
   slidesFile: 2024-09-ami-sap-sucessfactorsHR.pdf
   youtubeUrl: https://youtu.be/ZYjEZNpHL0w
-
 
 - id: 2024-06-teaser-mdit
   title: "Teaser: MidPoint Deployment Intermediate Training"

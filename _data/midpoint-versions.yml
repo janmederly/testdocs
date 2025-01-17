@@ -1541,3 +1541,18 @@
   - feature: Organizational Structure UX Improvements
   - feature: Connector Marketplace
   - feature: Mobile Application
+  releaseDate:
+  endOfSupport:
+  type: production
+  support: LTS
+  portrait:
+  status: planned
+  focus: ''
+  description:
+  highlights:
+  - ''
+  roadmap:
+  - feature: Personas Improvements
+  - feature: Organizational Structure UX Improvements
+  - feature: Connector Marketplace
+  - feature: Mobile Application

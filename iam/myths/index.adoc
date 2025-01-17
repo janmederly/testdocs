@@ -10,6 +10,8 @@
 :page-moved-from: /iam/antipatterns/
 :upkeep-status: yellow
 
+image::myths-logo.png[Logo,float="right"]
+
 There are often practices and ideas that are very common - and very wrong.
 They are used often, but they usually fail miserably.
 These are the IAM _myths_, misconceptions, antipatterns and pitfalls.
@@ -30,6 +32,16 @@ However, it ends up in tears.
 // IDEAS:
 //
 //  Authorization is all about allow/deny decisions (search query, autz preview: e.g. enabled/disabled buttons, properties noaccess/read/write)
+// Also, reverse query: answering question "who has access to this?"
+// Also, you have to handle change of policies, e.g. situations that were allowed in old policy, but are denied in new policy. E.g. deny assignment of privileged access: how to handle access which is already assigned and becomes marked as privileged? (e.g. adding privileged app role into existing business role).
+//
+//   Certification reduces access:
+//     Certification is an effective tool to reduce access, thus reducing risk.
+//     It isn't. People are just approving everything.
+//     Certification is a bread&butter of compliance (reference ISO, CSF and other frameworks)
+//     Solution: assisted certification - indicate risk level
+//               divide cerifications: smaller risk-based campaigns, microcertification
+//               best of all: avoid certifications by using rules (PD-RBAC)
 //
 //   IGA is process-oriented:
 //     All the wise IDM advice from 2000s and 2010s said: IDM is all about processes.
@@ -56,7 +68,7 @@ However, it ends up in tears.
 //     You will have to change them anyway, otherwise you will have difficulty to comply with new wave of regulations and standards.
 //     At least, go half the way, adapt IGA to your needs and adapt your processes to IGA.
 //
-//   Pump&dump provisioning (pull provisioning). E.g. pulling data from HR to LDAP, from LDAP to application databases (copying data)
+//   Pump&dump provisioning (pull provisioning). E.g. pulling data from HR to LDAP, from LDAP to application databases (copying data, on-demand, on first login)
 //     Both antipattern and common industry practice
 //     Problem: low visibility Where are my data?
 //              Are data deprovisioned? You can disable auth, but the data may stay (and often they do)
@@ -82,3 +94,5 @@ However, it ends up in tears.
 
 //  Other:
 //   * Messaging-based data feed without reconciliation, relying on message broker not to loose messages
+//   * Access Cloning: copying all access from a "donor" to a new employee - mix with some RBAC myth, maybe application roles?
+// * Policy is never done, RBAC is never done. Identity maintenance never stops. Removing old stuff is just as important as adding new stuff. xref: IDM big bang, Identity project

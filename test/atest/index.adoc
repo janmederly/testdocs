@@ -261,15 +261,8 @@ And with some non-default config:
 [.datatable-config]
 {
     "searchable": true,
-    "order-column": 1,
-    "order": "asc",
-    "custom-layout": true,
-    "layout": {
-	    "topStart": "pageLength",
-	    "topEnd": "search",
-	    "bottomStart": "info",
-	    "bottomEnd": "paging"
-    }
+    "orderColumn": 1,
+    "orderDirection": "asc"
 }
 
 |===
@@ -283,61 +276,6 @@ And with some non-default config:
 | `page-length`
 | Number of rows per page
 | 10 or if `length-menu` is set or if `length-menu-auto` is set, the first value from `length-menu`
-| integer
-|===
-
-
-Narrow table - we dont want to use 100% of width.
-Also we want to keep order of rows at initialization.
-
-[.datatable-config]
-{
-	"auto-width": false,
-	"original-order": true
-}
-
-[%autowidth]
-|===
-| Option | De... | Default | Poss...
-
-| `paging`
-| Enable ...
-| false
-| true, false
-
-| `atest`
-| test
-| test
-| test
-
-| `page-length`
-| Number ...
-| 10
-| integer
-|===
-
-
-Narrow table - we dont want to use 100% of width with search
-
-[.datatable-config]
-{
-	"auto-width": false,
-	"original-order": true,
-	"searchable": true
-}
-
-[%autowidth]
-|===
-| Option | De... | Default | Poss...
-
-| `paging`
-| Enable ...
-| false
-| true, false
-
-| `page-length`
-| Number ...
-| 10
 | integer
 |===
 

@@ -17,6 +17,7 @@
 # accountability
 # provenance (origin of data) - link to authenticity
 # CIA triad
+# non-human identities (NHI), alias: machine identity
 
 # TODO: ISO27000
 #   base measure
@@ -80,10 +81,10 @@
 
 - id: access-cloning
   term: Access Cloning
-  alternativeTerms: [ "Access Rights Cloning" ]
+  alternativeTerms: [ "Access Rights Cloning", "Donor user" ]
   description: >
       Access cloning is a practice of assigning a user the same access rights as another user has.
-      It is often used to provision new users with initial access rights, copying access rights of an existing user.
+      It is often used to provision new users with initial access rights, copying access rights of an existing donor user.
 
       Access cloning is an undesirable practice (see ISO/IEC 27002 5.18), as it often leads to over-provisioning.
       Even if the cloned access rights are justified, business role (RBAC) or similar mechanism should be used instead of cloning.
@@ -173,7 +174,7 @@
   alternativeTerms:
   description: >
     An identity repository created by Microsoft that stores and arranges identity information.
-    Based on this information, it provides access and permissions to users to enter particular resources and therefore improves organization’s security.
+    Based on this information, it provides access and permissions to users to enter particular resources and therefore improves organization's security.
   example:
   seeAlso:
 
@@ -297,7 +298,7 @@
   example: >
     An employee wants to log in to a working group.
     He provides his username and password.
-    This data is compared with the information stored in the company’s database to see if it matches or not.
+    This data is compared with the information stored in the company's database to see if it matches or not.
     This process is password-based authentication (something you know).
   seeAlso: [ 'identification', 'authorization', 'mfa' ]
   upkeepStatus: green
@@ -312,6 +313,31 @@
     In software development, it is often referred to as "authenticated user" or "authenticated principal".
   example: >
   seeAlso: [ 'authentication', 'principal' ]
+
+-   id: authenticator
+    term: Authenticator
+    alternativeTerms: [ 'Authentication token' ]
+    iso24760Term: credential
+    x1252Term: credential
+    nist800633Term:  authenticator
+    description: >
+        Something the subject possesses and controls, which is used to prove the identity during authentication.
+        Authenticator can be digital (information), physical (an object such as ID card or authentication device) or a combination of both (an ID card with a tamper-proof chip containing cryptographic keys).
+        Perhaps the most common type of authenticator is a password.
+
+        The term "authenticator" is closely related to term "credential" - which is even more confusing as many authenticators are also credentials.
+        The difference is that credential is bound to the authenticated identity, while authenticator does not need to be.
+        E.g. password is not inherently bound to authenticated identity, as the same password can be used to authenticate many identities at various sites.
+        Therefore, strictly speaking, password is an authenticator but not a credential.
+        On the other end, digital certificate (X.509) with associated private key is bound to a specific identity, therefore it is both an authenticator and a credential.
+        There are also credentials that are not authenticators, such as records in the authentication database linking identity identifiers.
+        However, in common usage, the term "credential" is often used to refer to authenticators as well.
+    example:
+        Password, PIN, passkey, secret key stored on smartcard, private key stored in a token, fingerprint.
+        Physical authenticators includes various identification cards, such as national identification cards, club membership cards and so on.
+        Even a username can be considered an authenticator, although such authentication is likely to be very weak.
+    seeAlso: [ 'credential', 'password', 'passkey', 'pin', 'authentication' ]
+    upkeepStatus: green
 
 - id: authenticity
   term: Authenticity
@@ -391,7 +417,7 @@
   example: >
       All users are automatically granted access to user profile management application.
       All employees are automatically assigned an Active Directory access and an e-mail account.
-  seeAlso: [ 'provisioning', 'archetype', 'org', 'inducement' ]
+  seeAlso: [ 'identity-provisioning', 'archetype', 'org', 'inducement' ]
   upkeepStatus: green
 
 - id: blinded-affirmation
@@ -446,7 +472,7 @@
   description: >
     Internet-based computing when resources like storage, applications or servers are used by organizations or users via Internet.
     Data could be accessed any time from any place, without any installations and is stored and processed in third-party data centers which could be located anywhere in the world.
-    Cloud computing is considered to lower organization’s costs by avoiding the need of purchasing servers as well as to speed up the processes with less maintenance needed.
+    Cloud computing is considered to lower organization's costs by avoiding the need of purchasing servers as well as to speed up the processes with less maintenance needed.
     Due to data being centralized at one place, it is considered to be secure and easily shared across bigger amount of users.
   example: >
     Company creates construction machines.
@@ -577,15 +603,25 @@
   alternativeTerms: [ 'Digital credential', 'Credentials' ]
   iso24760Term: credential
   x1252Term: credential
+  nist800633Term:  authenticator
   description: >
-      Information used to prove the identity during authentication.
+      Information used to prove the identity of a subject during authentication, which is bound to that particular identity.
       Credentials can be digital (information), physical (an object such as ID card) or a combination of both (an ID card with a tamper-proof chip containing cryptographic keys).
-      Perhaps the most common type of digital credential is a password.
+      Perhaps the most common type of digital credential is a password-based credential.
+
+      The term "credential" is closely related to term "authenticator" - which is even more confusing as many authenticators are also credentials.
+      The difference is that credential is bound to the authenticated identity, while authenticator does not need to be.
+      E.g. password is not inherently bound to authenticated identity, as the same password can be used to authenticate many identities at various sites.
+      Therefore, strictly speaking, password is an authenticator but not a credential.
+      However, when password is established as a shared secret at a particular site, and bound to a particular identity in that site's authentication database, a password-based credential is created.
+      On the other end, digital certificate (X.509) with associated private key is bound to a specific identity, therefore it is both an authenticator and a credential.
+      There are also credentials that are not authenticators, such as records in the authentication database linking identity identifiers.
+      However, in common usage, the term "credential" is often used to refer to authenticators as well.
   example:
-      Password, PIN, passkey, secret key stored on smartcard, private key stored in a token, fingerprint.
-      Physical credential includes various identification cards, such as national identification cards, club membership cards and so on.
-      Even a username can be considered a credential, although such authentication is likely to be very weak.
-  seeAlso: [ 'password', 'passkey', 'pin', 'authentication' ]
+      Established password, PIN, passkey, secret key stored on smartcard, private key stored in a token, fingerprint or similar authenticator, when bound to a particular identity.
+      Physical credential includes various identification cards, such as national identification cards which provides information and proof of citizen identity.
+      Even a plain username can be considered a credential, although such authentication is likely to be very weak.
+  seeAlso: [ 'authenticator', 'password', 'passkey', 'pin', 'authentication' ]
   upkeepStatus: green
 
 - id: credential-issuer
@@ -848,11 +884,13 @@
   description: >
       Digital representation of identity:
       set of characteristics, qualities, believes and behaviors of en entity, usually represented as a set of attributes.
+      Digital identity forms unique representation of a subject engaged in an online transaction.
+      While digital identity is always unique in the context of a digital service, but does not necessarily need to be traceable back to a specific real-life subject (linkability).
 
       Digital identity should not be confused with identifier.
       Digital identity is a set of characteristics (complex data), while identifier is (usually simple) value used to refer to digital identity.
   example:
-  seeAlso: [ "identity", "digital-identity-attribute", "entity" ]
+  seeAlso: [ "identity", "digital-identity-attribute", "entity", "linkability" ]
   upkeepStatus: orange
   todo: "explain the richer digital identity meaning, as a set of self-service features"
 
@@ -1238,7 +1276,7 @@
 
 - id: identity-based-security
   term: Identity-based Security
-  alternativeTerms: [ 'Identity-first security', 'Identity-centric security' ]
+  alternativeTerms: [ 'Identity-first security', 'Identity-centric security', 'Identity-defined security', 'Identity defense in depth' ]
   description: >
       Identity-based security is a approach to cybersecurity, focused on concept of identity.
       It places identities in the center of cybersecurity mind-set, adjusting cybersecurity design and practices around identities.
@@ -1367,8 +1405,8 @@
     Identity federation is an agreement between several domains, specifying the details of exchange and use of shared identity information.
     The information in identity federation is usually transferred by the means of identity assertions, exchanged between identity providers and relying parties.
 
-    From user's point of view, identity federation is a process of sharing user’s identification and personal data between multiple systems and between organizations,
-    so the user doesn’t have to register for each organization separately and can seamlessly access systems in federated organizations.
+    From user's point of view, identity federation is a process of sharing user's identification and personal data between multiple systems and between organizations,
+    so the user doesn't have to register for each organization separately and can seamlessly access systems in federated organizations.
   example: >
     A student goes for an internship to another university.
     Thanks to identity federation, he is registered to the library, student system and online timetable automatically.
@@ -1472,8 +1510,12 @@
   description: >
       Verification of evidence to make sure that identity information are true and up-to-date.
       Identity proofing is used to achieve higher level of assurance of identity information.
+
+      Identity proofing should not be confused with authentication.
+      Identity proofing is used to establish the link between identities and/or subjects/entities.
+      However, identity proofing does not necessarily provide assurance that the entity currently interacting with a service is in fact the same entity that was initially established.
   example:
-  seeAlso: [ "digital-identity-attribute", "level-of-assurance" ]
+  seeAlso: [ "digital-identity-attribute", "level-of-assurance", "linkability", "authentication" ]
   upkeepStatus: orange
   todo: expand
 
@@ -1776,7 +1818,7 @@
 
 - id: least-privilege
   term: Least Privilege Principle
-  alternativeTerms: [ 'Principle of Least Privilege', 'Default deny' ]
+  alternativeTerms: [ 'Principle of Least Privilege', 'PoLP', 'Default deny' ]
   description: >
       Principle of information security, stating that each user should have the least privilege necessary to carry out their activities.
       In other words, the principle states that there should be no over-provisioning (over-permissioning) of users.
@@ -1793,10 +1835,11 @@
   alternativeTerms:
   x1252Term: linkability
   description: >
-      Ability to determine that two digital identities represent the same entity.
+      Ability to determine that two digital identities represent the same entity, or whether a digital identity represents a particular (real-life) subject.
       Linkability is usually deterministic, based on a reliable identifier.
+      Identity proofing is a mechanism to reliably establish the link.
   example:
-  seeAlso: [ "identity-correlation" ]
+  seeAlso: [ "identity-correlation", "digital-identity", "identity-proofing" ]
   upkeepStatus: orange
   todo: expand
 
@@ -1825,6 +1868,17 @@
   example:
   seeAlso: [ 'fulfillment', 'identity-provisioning', 'identity-deprovisioning', 'identity-connector' ]
   upkeepStatus: green
+
+- id: memorized-secret-authenticator
+  term: Memorized Secret Authenticator
+  alternativeTerms: [ 'Something you know' ]
+  description: >
+      Memorized secret authenticator is a secret value intended to be memorized by the user, used during authentication.
+      Passwords and PINs are the most common type of memorized secret authenticators.
+      Memorized secrets are used for "something you know" type of authentication.
+  example:
+  seeAlso: [ 'authenticator', 'password', 'pin' ]
+  todo: expand
 
 - id: metadata
   term: Metadata
@@ -1992,7 +2046,7 @@
   example: >
     There are many open source software or systems available on the market.
     One of the best known is perhaps Linux, a computer operating system with the penguin logo.
-    Anyone can download it and adjust its code according to one’s own needs.
+    Anyone can download it and adjust its code according to one's own needs.
   seeAlso:
 
 - id: org
@@ -2022,7 +2076,7 @@
   description: >
     A hierarchical arrangement of authority, rights or duties in an organization.
     It determines the assignment, control or coordination of roles, responsibilities and power.
-    A character of the organizational structure is highly dependent on the organization’s strategy and goals.
+    A character of the organizational structure is highly dependent on the organization's strategy and goals.
 
     The theme of organizational structure is closely linked to identity management.
     Organizing the company into this structure, assigning rights to individuals, working groups or project and controlling everything from one place – that are advantages that any high quality IDM solution is supposed to provide.
@@ -2060,7 +2114,7 @@
 
 - id: over-provisioning
   term: Over-provisioning
-  alternativeTerms: [ 'Over-permissioning', 'Over-privileged Access' ]
+  alternativeTerms: [ 'Over-permissioning', 'Over-privileged Access', 'Excessive Access', 'Excessive Privilege' ]
   description: >
       Situation when an identity has more privileges than are necessary for the tasks that the identity is supposed to carry out.
 
@@ -2100,15 +2154,14 @@
   term: Password
   alternativeTerms: [ "Passcode" ]
   description: >
-      Password is a type of (usualy weak) digital credential.
-      Passwords are meant to be secret, known only to a single user.
-      They are usually selected by users, meant to be remembered.
+      Password is a type of (usualy weak) digital credential, meant to be secret, known only to a single user.
+      Passwords are memorized secret authenticators, usually selected by users, meant to be remembered.
       Therefore, they are often short strings in a human-friendly form, such as simple words or names.
       Simplicity of passwords makes them vulnerable to dictionary attacks.
       Recently, passwords are randomly generated, managed by password management applications.
       However, even randomly-generated passwords may still be vulnerable to phishing attacks.
       Therefore organizations are moving towards authentication methods that do not depend on passwords (e.g. passkeys), or enroll multi-factor authentication schemes.
-  seeAlso: [ 'credential', 'password-management', 'password-policy', 'passkey' ]
+  seeAlso: [ 'authenticator', 'memorized-secret-authenticator', 'credential', 'password-management', 'password-policy', 'passkey' ]
 
 - id: passwordless-authentication
   term: Passwordless authentication
@@ -2139,7 +2192,7 @@
       The term "password management" may also mean management of password on the user side, such as generating and storing of random passwords.
   example: >
       An organization works with midPoint and wishes to use its credential management feature to ensure the information safety.
-      IT employee responsible for security sets midPoint’s password policy.
+      IT employee responsible for security sets midPoint's password policy.
       He decides what characters are allowed in the password, how many times they can repeat, how many are required and how they are positioned.
       He sets minimal and maximal length of the password or minimal number of unique characters used in it.
       The outcome is complex and strong password that lowers the risk of the account being hacked.
@@ -2312,14 +2365,14 @@
   term: Personal identification number
   acronym: 'PIN'
   description: >
-      Personal identification number (PIN) is a type of digital credential.
-      PINs are meant to be secret, known only to a single user.
-      They are almost always in a form of short numbers (4-8 digits)
+      Personal identification number (PIN) is a type of authenticator, meant to be secret, known only to a single user.
+      They are almost always in a form of short numbers (4-8 digits).
+      PINs are memorized secret authenticators.
       Even though most PINs are randomly generated, they are meant to be remembered by the users.
       Simplicity of PINs makes them vulnerable to enumeration attacks when used on their own.
-      Therefore PINs they are almost exclusively used in combination with other credentials.
-      E.g. PINs are often used to protect strong credentials, such as passkeys or public key credentials stored on smart cards.
-  seeAlso: [ 'credential', 'passkey' ]
+      Therefore PINs they are almost exclusively used in combination with other authenticators.
+      E.g. PINs are often used to protect strong authenticators/credentials, such as passkeys or public key credentials stored on smart cards.
+  seeAlso: [ 'authenticator', 'memorized-secret-authenticator', 'credential', 'passkey' ]
 
 - id: pip
   term: Policy Information Point
@@ -2607,7 +2660,7 @@
       Reconciliation is meant to detect differences in the data, including detection of orphaned accounts.
 
       Reconciliation is usually quite heavyweight, yet very reliable mechanism of identity data synchronization.
-  seeAlso: [ 'account', 'user', 'orphaned-account' ]
+  seeAlso: [ 'account', 'user', 'orphan-account' ]
 
 - id: rebac
   term: Relationship-Based Access Control
@@ -3076,7 +3129,7 @@
   term: Security Posture
   alternativeTerms: [ 'Cybersecurity posture' ]
   description: >
-      Security posture is the security status of an enterprise’s networks, information, and systems based on cybersecurity resources (e.g., people, hardware, software, policies)
+      Security posture is the security status of an enterprise's networks, information, and systems based on cybersecurity resources (e.g., people, hardware, software, policies)
       and capabilities in place to manage the defense of the enterprise and to react as the situation changes.
       It is a "big picture" of the state of cybersecurity in an organization.
   example:
@@ -3180,7 +3233,7 @@
       While static entitlements may be necessary at higher levels (especially identity governance level), they may not necessarily be reflected to lower levels (e.g. directory services and operating systems).
       Eliminating low-level standing privilege has several advantages, including lower risk of misuse and less visibility for the attacker.
       Just-in-time or on-demand mechanisms for temporary assignment of privileged access provides a solution for bridging high-level and low-level static entitlements.
-  seeAlso: [ 'entitlement', 'access-control', 'rbac', 'pbrbac', 'abac', 'pbac' ]
+  seeAlso: [ 'entitlement', 'access-control', 'rbac', 'pdrbac', 'abac', 'pbac' ]
 
 - id: subject
   term: Subject

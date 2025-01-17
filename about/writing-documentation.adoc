@@ -10,7 +10,7 @@
 
 {% raw %}
 
-This document provides overview of how the _docs_ site works, and how to write and maintain Evolveum documentation. test3
+This document provides overview of how the _docs_ site works, and how to write and maintain Evolveum documentation.
 
 == Overview
 
@@ -1521,7 +1521,7 @@ Here is an example:
 {
     "paging": true,
     "order-column": 1,
-    "order-direction": "desc"
+    "order": "desc"
 }
 |===
 ... your table here ...
@@ -1537,7 +1537,7 @@ Here is an example:
 </table>
 ----
 
-If you want a narrow table, you must set the `auto-width` option in config to `false` and in adoc file you must define the table as `[%autowidth]`:
+If you want a narrow table, you must set the `auto-width` option in config to `false` and in the adoc file, you must define the table as `[%autowidth]`:
 
 ----
 [.datatable-config]
@@ -1555,14 +1555,8 @@ If you want a narrow table, you must set the `auto-width` option in config to `f
 //Inside HTML (and also in the table below), the options are written with .
 
 The following table lists the available options.
-The options are shown in https://en.wikipedia.org/wiki/Letter_case#Kebab_case[kebab-case] - as used in HTML (but without `data-` prefix).
-Use lower camel case (dromedaryCase) for JSON specification inside AsciiDoc (e.g. `pageLength` instead of `page-lenght`).
 
 [.datatable-config]
-{
-  "original-order": true
-}
-
 |===
 | Option | Description | Default | Possible values
 
@@ -1608,18 +1602,14 @@ Use lower camel case (dromedaryCase) for JSON specification inside AsciiDoc (e.g
 
 | `order`
 | Default sorting order
-| "asc" - ascending
+| "asc" - ascending, if both `order` and `order-column` are not set, the table is not sorted.
+If at least one of them is set, the table is sorted with the default values.
 | "asc", "desc"
 
 | `order-column`
 | Default sorting column
 | 1 - first column
 | integer
-
-| `original-order`
-| Preserve the original order of the rows at initialization, overrides `order` and `order-column` options
-| false
-| true, false
 
 | `custom-layout`
 | Enable custom layout of the table elements
@@ -1628,8 +1618,9 @@ Use lower camel case (dromedaryCase) for JSON specification inside AsciiDoc (e.g
 
 | `layout`
 | Layout of the table elements.
-The layout is defined as JSON object.
-For more details see https://datatables.net/reference/option/layout[DataTables documentation].
+The layout is defined as a JSON object.
+For more details, see https://datatables.net/reference/option/layout[DataTables library documentation].
+Format of this option is identical to the `layout` option in the DataTables library.
 To use this option, you need to set `custom-layout` to `true`.
 | `{
     topStart: paging ? 'pageLength' : null,
@@ -1639,18 +1630,20 @@ To use this option, you need to set `custom-layout` to `true`.
 }`
 
 This layout object is only available in javascript.
-When using the `layout` option in adoc file, you must omit the logical conditions.
+When using the `layout` option in an adoc file, you must omit the logical conditions.
 | JSON object
 
 | `auto-width`
 | Enable or disable automatic column width calculation.
 This option is different than `%autowidth` in asciidoc tables.
-If enabled, it calculates the column width based on the content of the table cells but the width is stuck at 100%.
-If disabled the width from asciidoc is used. So when you want to use narrow table you must define the table in asciidoc as `[%autowidth]` and set `auto-width` in config to `false`.
+If enabled, it calculates the column width based on the content of the table cells, but the width is stuck at 100%.
+If disabled, the width from asciidoc is used. So when you want to use a narrow table, you must define the table in asciidoc as `[%autowidth]` and set `auto-width` in config to `false`.
 | true
 | true, false
 
 |===
+
+NOTE: The table is not sorted at initialization only if both `order` and `order-column` attributes are not set.
 
 == Escaping and passthrouhgs
 
@@ -1731,4 +1724,3 @@ Provide links for the reader to dig deeper, to follow up on related topics.
 * xref:/copyright/[]
 
 {% endraw %}
-

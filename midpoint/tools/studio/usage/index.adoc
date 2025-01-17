@@ -1,6 +1,5 @@
 = Working with midPoint Studio
 :page-toc: top
-:experimental:
 
 == Creating midPoint Project
 
@@ -230,10 +229,14 @@ This operation will send the selected object to midPoint repository and optional
 
 The following operations are available either from the main toolbar or from the *Update object actions* context menu:
 
-* *Upload/Execute*: will upload the selected object(s). Tasks may be automatically executed (based on their `executionState`).
-* *Upload/Execute (stop on error)*: will upload the selected object(s). Tasks may be automatically executed (based on their `executionState`). The first object with an upload error will stop the action.
-* *Upload/Recompute*: will upload the selected object(s) and recompute them after the upload.
-* *Upload/Test Resource*: will upload the selected object(s) and assuming they are resources, it will also test the connections.
+* *Upload (Full Processing)*: will upload the selected object(s) and recompute it.
+If it's an executable action script then it will be executed.
+If the object is a resource test connection will be executed as well.
+* Secondary actions hidden under *Other Actions* toolbar menu:
+** *Upload/Execute*: will upload the selected object(s). Tasks may be automatically executed (based on their `executionState`).
+** *Upload/Execute (stop on error)*: will upload the selected object(s). Tasks may be automatically executed (based on their `executionState`). The first object with an upload error will stop the action.
+** *Upload/Recompute*: will upload the selected object(s) and recompute them after the upload.
+** *Upload/Test Resource*: will upload the selected object(s) and assuming they are resources, it will also test the connections.
 
 The `Console` tool window will display the operation status, for example:
 
@@ -496,6 +499,74 @@ Supported by archetypes
 
 NOTE: Please, be sure to review changes in task after migration.
 
+=== Generate Documentation
+
+This operation will generate the documentation for the selected object(s).
+Studio internally uses xref:/midpoint/tools/midscribe/[midScribe] tool to generate the documentation.
+
+.Generate documentation dialog
+image::generate-documentation.png[Screenshot of generate documentation dialog,width=500,align=center]
+
+User dialog allows you to select the following options:
+
+* source directory - the parent directory where the files with midPoint objects are stored
+* include/exclude patterns - ant-like patterns to include/exclude files from the documentation
+* export format - the format of the generated documentation (HTML, PDF or ADOC)
+* output file - the file where the documentation will be generated
+
+=== Cleanup File
+
+This operation will remove all unnecessary data from the selected files/objects that were downloaded from midPoint.
+This is useful for better readability and as a preparation for files to be stored in a version control system.
+
+Cleanup will remove operational data, and moreover it will check and do following:
+
+* For all objects
+** Check all references to other objects - validate if they can be referenced from project.
+Otherwise, user will be warned about missing references.
+** Check natural keys - natural keys are items that define identity of different parts of configuration.
+These are being used for example in debug logs, during configuration merge, etc.
+For example `outbound/name` in resource object, `panel/identifier` admin gui configuration.
+* For resources
+** Replace `connectorRef` reference `oid` attribute with `filter` definition if connector object is available.
+E.g. if environment is selected and connector object can be fetched.
+** Asks whether to remove resource schema (`schema/definition`) which will be generated upon upload for all resources that supports schema operation by connector (almost all).
+
+Result of each cleanup and validation is displayed as notification in the bottom right corner of the screen.
+When there are missing objects, user can decide to download them from midPoint or mark them ignored so that it's not reported in the future.
+
+==== Configuration
+
+The cleanup operation behavior can be tweaked in the project settings.
+
+.Objects cleanup
+image::objects-cleanup.png[Screenshot of objects cleanup settings,width=800,align=center]
+
+Settings allows to change cleanup behavior for different types and paths
+User can set whether to remove or keep specific parts, or to ask user for confirmation.
+
+.Missing objects
+image::missing-objects.png[Screenshot of missing objects settings,width=800,align=center]
+
+Settings for references validation, searching for missing objects in project can be changed in _Missing Objects_ tab.
+_Missing objects_ tab allows to list objects (oids) and action that should happend for such references.
+
+For example if reference can't be resolved within project, user can decide to automatically download missing object from midPoint.
+Otherwise, user might want to ignore missing reference, e.g. reference to connector object - connect to object is not needed to be stored inside project (and VCS).
+
+=== Synchronize objects
+
+This operation will synchronize the selected files with the midPoint repository.
+When synchronization is invoked on local objects, user interface similar to GIT is shown.
+On left side Studio displays list of files (and objects inside).
+Editor displays differences between local and remote object.
+
+This view allows user to review differences between local and remote objects.
+It also gives user possibility to select which changes should be applied to local or remote object.
+
+.Objects synchronization
+image::synchronize-objects.png[Screenshot of objects synchronization,width=800,align=center]
+
 == Working With Object Editor
 
 The object editor uses all IntelliJ IDEA tricks to make the text editing very comfortable.
@@ -509,6 +580,7 @@ Some midPoint object-related tricks are:
 * the ability to resolve object names from OIDs based on the existing project files
 * the ability to navigate to other object by CTRL+clicking the OID in references
 * mixed syntax highlighting (XML/Groovy).
+* the ability to suggest and complete midpoint queries in filter `text` elements
 
 You can force most of the completions using `CTRL+space`.
 

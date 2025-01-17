@@ -10,7 +10,7 @@
 == Introduction
 
 The Live Demo environment is an installation of https://evolveum.com/midpoint[midPoint] in a very small deployment.
-However, we have tried to make this deployment like the typical deployment for the enterprise environment, using an LDAP server, databases, HR integration, RBAC, organizational structure and also other aspects of typical provisioning solution deployment. test
+However, we have tried to make this deployment like the typical deployment for the enterprise environment, using an LDAP server, databases, HR integration, RBAC, organizational structure and also other aspects of typical provisioning solution deployment.
 
 The demo environment provides a simple identity management solution for a fictitious organization _Leonardo's Workshop_.
 This organization has several employees and contractors sorted out to a simple organizational structures.
@@ -99,8 +99,6 @@ The technical components of the demo environment are illustrated in the followin
 image::deployment.png[Deployment diagram]
 
 Following table provides an overview of each of the component's role in the demo system.
-
-[.datatable-config]
 
 |===
 | Component | Implemented by | Description | Access
