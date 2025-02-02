@@ -262,7 +262,7 @@
   - Resource wizard
   - Improved role and organization user interface
   - Improved entitlement GUI
-  - Notification support for roles and organizations
+  - Notification support for roles and organizations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
   - Conditional roles and assignments/inducements
   - Significant performance improvement
   roadmap:
@@ -1535,7 +1535,7 @@
   focus: ''
   description:
   highlights:
-  - ''
+- version: '4.13'
   roadmap:
   - feature: Personas Improvements
   - feature: Organizational Structure UX Improvements
