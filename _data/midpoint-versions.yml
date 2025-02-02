@@ -1535,12 +1535,13 @@
   focus: ''
   description:
   highlights:
-- version: '4.13'
+  - ''
   roadmap:
   - feature: Personas Improvements
   - feature: Organizational Structure UX Improvements
   - feature: Connector Marketplace
   - feature: Mobile Application
+- version: '4.13'
   releaseDate:
   endOfSupport:
   type: production
