@@ -12,6 +12,9 @@
 The Live Demo environment is an installation of https://evolveum.com/midpoint[midPoint] in a very small deployment.
 However, we have tried to make this deployment like the typical deployment for the enterprise environment, using an LDAP server, databases, HR integration, RBAC, organizational structure and also other aspects of typical provisioning solution deployment.
 
+. In icon:tasks[]&nbsp;*Server tasks* > icon:upload[] *Import tasks*, click icon:upload[role="green"] btn:[New import task].
+. Switch to the icon:gears[] *Execution* screen using the left-side menu:
+
 The demo environment provides a simple identity management solution for a fictitious organization _Leonardo's Workshop_.
 This organization has several employees and contractors sorted out to a simple organizational structures.
 The primary source of employee and contractor data is HR system.
