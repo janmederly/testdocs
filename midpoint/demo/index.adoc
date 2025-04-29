@@ -12,6 +12,14 @@
 The Live Demo environment is an installation of https://evolveum.com/midpoint[midPoint] in a very small deployment.
 However, we have tried to make this deployment like the typical deployment for the enterprise environment, using an LDAP server, databases, HR integration, RBAC, organizational structure and also other aspects of typical provisioning solution deployment.
 
+- [ ] TODO
+- [x] DONE
+
+[unstyled]
+* hello
+* adoc
+* world
+
 . In icon:tasks[]&nbsp;*Server tasks* > icon:upload[] *Import tasks*, click icon:upload[role="green"] btn:[New import task].
 . Switch to the icon:gears[] *Execution* screen using the left-side menu:
 
