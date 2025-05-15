@@ -10,7 +10,7 @@
 == Introduction
 
 The Live Demo environment is an installation of https://evolveum.com/midpoint[midPoint] in a very small deployment.
-However, we have tried to make this deployment like the typical deployment for the enterprise environment, using an LDAP server, databases, HR integration, RBAC, organizational structure and also other aspects of typical provisioning solution deployment. test5 test5
+However, we have tried to make this deployment like the typical deployment for the enterprise environment, using an LDAP server, databases, HR integration, RBAC, organizational structure and also other aspects of typical provisioning solution deployment. test6 test5
 
 === test1
 
