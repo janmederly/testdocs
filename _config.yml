@@ -14,6 +14,7 @@ theme: evolveum-jekyll-theme
 plugins:
   - jekyll-feed
   - evolveum-jekyll-plugin
+  - asciidoctor-bibtex
 
 exclude:
   - .idea/
@@ -22,6 +23,8 @@ asciidoctor:
   attributes:
     xref-ignored-prefixes:
       - /media
+  requires:
+    - asciidoctor-bibtex
 
 defaults:
   - scope:

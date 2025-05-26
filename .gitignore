@@ -10,3 +10,4 @@ Gemfile.lock
 .$*.bkp
 book/**/*.adoc
 book/images/
+book/samples/
