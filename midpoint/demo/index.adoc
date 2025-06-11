@@ -6,26 +6,7 @@
 :page-wiki-metadata-modify-user: semancik
 :page-wiki-metadata-modify-date: 2020-12-11T17:54:10.158+01:00
 :page-toc: top
-:bibtex-file: test.bib
 
-== Introduction
-
-The Live Demo environment is an installation of https://evolveum.com/midpoint[midPoint] in a very small deployment.
-However, we have tried to make this deployment like the typical deployment for the enterprise environment, using an LDAP server, databases, HR integration, RBAC, organizational structure and also other aspects of typical provisioning solution deployment. test6 test6
-
-== Introduction2
-
-As noted by Smith and Doe, foobar theory is still evolving cite:[Smith2020] and has spawned a variety of follow-up studies cite:[Miller2018(23)].
-
-== Background
-
-Lee presents a concise overview of how to hook into Asciidoctor’s extension API bibitem:[Lee2019].
-
-== Conclusion
-
-We’ve now seen inline author-year citations and a full bibliography at the end of the document.
-
-bibliography::[]
 
 === test1
 
