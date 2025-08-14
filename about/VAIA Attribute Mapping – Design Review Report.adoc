@@ -1,0 +1,28 @@
+= VAIA Attribute Mapping – Design Review Report
+
+== 2. Objectives
+- SimplifyDSFDSFSAther task).
+
+== 3. Design Work Completed
+
+“Although tASDFASDFAFnt cycles.”
+
+Based on Figma boaASDFASDFgn work has been completed:
+
+*Research & Analysis* (FigJam)
+- User Flows – New guided flowsADSFASDDFAS
+- Figma Prototype – Side-by-sASDFASDFASF lines.
+- FlASDFASFASce 
+  (Number, Mapping Rule → Split → Stretch → Strong → Personal number mapped to source).
+
+*Magic Pattern low code prototype*
+httpADFASFFASFteASDFASDFp.com/
+
+*Prototype missing items:*
+- AISDSDAFSFSAFSDAg types (direct, transformed, conditional).
+
+== 4. Key Findings from Discovery Phase
+a. Current mADSFSADFadmins due to deep navigation and scripting.  
+b. Debugging mappinASDFS feature.  
+c. Large mapping sets become unmanageable wSADFSADAFs.  
+d. Users desire both ASDFSADAFASDFd scenarios.  
