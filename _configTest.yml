@@ -1,0 +1,5 @@
+environment:
+  searchUrl: searchtest.evolveum.com
+  docsUrl: docstest.evolveum.com
+  name: docs-test
+  midpointRepositoryGhName: Evolveum/midpoint
