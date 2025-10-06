@@ -1410,7 +1410,7 @@
   portrait: curie.png
   status: released
   focus: bugfixes
-  docsReleaseBranch: 'docs/release-notes/4.8.6'
+  docsReleaseBranch: 'support-4.8'
   description: 'The Curie update 6 brings miscellaneous bugfixes and minor improvements.'
   highlights:
       - Various Bugfixes
@@ -1424,7 +1424,7 @@
   portrait: curie.png
   status: released
   focus: bugfixes
-  docsReleaseBranch: 'docs/release-notes/4.8.7'
+  docsReleaseBranch: 'support-4.8'
   description: 'The Curie update 7 brings miscellaneous bugfixes and minor improvements.'
   highlights:
       - Security fixes and improvements
@@ -1440,7 +1440,7 @@
   portrait: curie.png
   status: released
   focus: bugfixes
-  docsReleaseBranch: 'docs/release-notes/4.8.8'
+  docsReleaseBranch: 'support-4.8'
   description: 'The Curie update 8 brings miscellaneous bugfixes and minor improvements.'
   highlights:
       - Security fixes and improvements
@@ -1457,7 +1457,7 @@
   portrait: curie.png
   status: released
   focus: bugfixes
-  docsReleaseBranch: 'docs/release-notes/4.8.9'
+  docsReleaseBranch: 'support-4.8'
   description: 'The Curie update 9 brings miscellaneous bugfixes and minor improvements.'
   highlights:
       - Security fixes and improvements
@@ -1545,7 +1545,7 @@
   description: 'The Verne update 1 brings miscellaneous bugfixes and minor improvements.'
   highlights:
       - Various Bugfixes
-  docsReleaseBranch: 'docs/release-notes/4.9.1'
+  docsReleaseBranch: 'support-4.9'
 
 - version: '4.9.2'
   codeName: Verne
@@ -1562,7 +1562,7 @@
   highlights:
        - Security fixes and improvements
        - Various Bugfixes
-  docsReleaseBranch: 'docs/release-notes/4.9.2'
+  docsReleaseBranch: 'support-4.9'
 
 - version: '4.9.3'
   codeName: Verne
@@ -1578,7 +1578,7 @@
   description: 'The Verne update 3 brings miscellaneous bugfixes and minor improvements.'
   highlights:
        - Various Bugfixes
-  docsReleaseBranch: 'docs/release-notes/4.9.3'
+  docsReleaseBranch: 'support-4.9'
 
 - version: '4.9.4'
   codeName: Verne
@@ -1594,7 +1594,7 @@
   description: 'The Verne update 4 brings miscellaneous bugfixes and minor improvements.'
   highlights:
        - Various Bugfixes
-  docsReleaseBranch: 'docs/release-notes/4.9.4'
+  docsReleaseBranch: 'support-4.9'
 
 - version: '4.9.5'
   codeName: Verne
