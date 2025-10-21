@@ -370,3 +370,12 @@ AppCluster --> DB[(PostgreSQL)]
 DevLaptop -->|VPN| Bastion -->|JIT SSH| AppCluster
 </div>
 ++++
+
+++++
+{% mermaid %}
+flowchart LR
+Internet -->|HTTPS| WAF/Ingress -->|mTLS| AppCluster[(K8s Cluster)]
+AppCluster --> DB[(PostgreSQL)]
+DevLaptop -->|VPN| Bastion -->|JIT SSH| AppCluster
+{% endmermaid %}
+++++
