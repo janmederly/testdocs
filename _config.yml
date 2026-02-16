@@ -15,6 +15,11 @@ plugins:
   - jekyll-feed
   - evolveum-jekyll-plugin
 
+sass:
+  quiet_deps: true
+  silence_deprecations:
+    - import
+
 exclude:
   - .idea/
 
