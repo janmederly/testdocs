@@ -1,0 +1,251 @@
+= Docs Expert Search Guide
+
+This page describes advanced search features of an `Expert Search` mode of documentation search.
+Expert Search is intended for users who are familiar with the documentation structure and want to quickly find relevant information. It by-passes the usual search multipliers and other scoring mechanisms and instead relies on manual selection on filter, search fields and other parameters.
+
+== Basic concepts
+
+Expert Search can be accessed by clicking on the `Expert Search` toggle in the search modal or by typing `qs:` in the search input field.
+
+It uses `query_string` query type of OpenSearch, with the backup option of `simple_query_string` in case of errors.
+This means that the search query syntax is the same as in the OpenSearch query string queries. For more information on the syntax, see the [OpenSearch documentation](https://docs.opensearch.org/latest/query-dsl/full-text/query-string/).
+
+Expert search enables features like:
+
+* Boolean operators in search queries (AND, OR, NOT)
+* Field-specific searches (e.g. `title:`, `content:`, `tags:`)
+* Grouping of search terms using parentheses
+* Wildcard searches using `*` and `?`
+* Fuzzy searches using `~`
+* And many more features of the OpenSearch query string syntax.
+
+== Difference between Expert Search and `query_string` OpenSearch query type
+
+Expert Search mode offers a more user-friendly interface for constructing complex search queries, while still allowing users to take advantage of the powerful features of the OpenSearch query string syntax.
+
+Differences that enable this behavior include:
+
+* The main difference is the presence of default search fields and their weak boosting, which allows users to get relevant results even if they are not familiar with the exact syntax of the query string queries.
+The fields and the boosting can be easily adjusted in the query.
+
+* Expert Search provides a backup mechanism to ensure that users get results even if their query contains syntax errors, which is not the case when using `query_string` directly.
+
+* Collapse clause used to filter out duplicate documents from different branches of the documentation.
+It does this by collapsing results that scored worse than the best scoring document, there is no multiplier for documents from branches that are not up-to-date.
+
+=== Backup query type
+
+When using `query_string`, if the query contains syntax errors, the search will fail and return no results.
+If this happens, the search will display an warning with the error message and will automatically retry the search using `simple_query_string` query type.
+`simple_query_string` is a more forgiving query type that ignores invalid parts of the query and tries to execute the rest. It does not support all features of `query_string`, but it allows users to get results even if their query is not perfectly formatted.
+
+== Escaping special characters
+
+In `query_string` queries, certain characters have special meanings (e.g. `+`, `-`, `&&`, `||`, `!`, `(`, `)`, `{`, `}`, `[`, `]`, `^`, `"`, `~`, `*`, `?`, `:`, `\` and `/`).
+If you want to search for these characters as literals, you need to escape them with a backslash (`\`).
+Since the backslash itself is a special character, you need to escape it as well if you want to search for a literal backslash. For example, to search for `nice: query!`, you would need to enter `nice\\: query\\!` in the search input.
+
+WARNING: `<` and `>` characters are not escapable in `query_string` queries.
+
+== Example queries
+
+In the following table, you can find some example queries that demonstrate the use of different features of the Expert Search mode.
+
+|===
+| Query | Description
+
+| `title:authentication AND keywords:oauth`
+| This query searches for documents that have the word "authentication" in the title and the word "oauth" in the keywords.
+
+| `text:(authentication OR authorization) AND NOT tags:deprecated`
+| This query searches for documents that have either "authentication" or "authorization" in the content
+
+| `text:"maintain large set of authorization"~5`
+| This query searches for documents that have the exact phrase "maintain large set of authorization" in the content, allowing for a maximum edit distance of 5.
+
+| `/au[a-z]h/`
+| This query uses regular expression to search for documents that have a word that starts with "au", followed by any lowercase letter, and ends with "h" in the content (e.g. "auth").
+|===
+
+== Fields
+
+There are two types of fields that can be used in Expert Search queries: search fields and filter fields.
+In the default configuration, the filter fields are not used and the search query is executed against the following fields:
+
+* `title` (boosted by 2)
+* `second_titles` (boosted by 1.5)
+* `third_titles` (boosted by 1.2)
+* `fourth_titles` (boosted by 1.1)
+* `fifth_titles` (boosted by 1.0)
+* `keywords` (boosted by 2)
+* `search-alias` (boosted by 2.5)
+* `text` (no boost)
+
+Here is the table of all available fields:
+
+[.datatable-config]
+{}
+
+|===
+| Field name | Description | Type | Default | Default boost
+
+| `title`
+| The main title of the document
+| string
+| Yes
+| 2.0
+
+| `second_titles`
+| The second level titles of the document
+| Array[string]
+| Yes
+| 1.5
+
+| `third_titles`
+| The third level titles of the document
+| Array[string]
+| Yes
+| 1.2
+
+| `fourth_titles`
+| The fourth level titles of the document
+| Array[string]
+| Yes
+| 1.1
+
+| `fifth_titles`
+| The fifth level titles of the document
+| Array[string]
+| Yes
+| 1.0
+
+| `keywords`
+| Keywords associated with the document
+| Array[string]
+| Yes
+| 2.0
+
+| `search-alias`
+| Search alias of the document
+| string
+| Yes
+| 2.5
+
+| `text`
+| The full text content of the document
+| string
+| Yes
+| 1.0
+
+| `type`
+| The type/category of the document (e.g. Guide, Book, Reference)
+| string
+| No
+| X
+
+| `branch`
+| The branch slug of the document (e.g. `before-4.8`), in case of not branched document, the value is `notBranched`
+| string
+| No
+| X
+
+| `midpointBranch`
+| The name of the midpoint branch of the document in github (e.g. `docs/before-4.8`). Be careful, this field is not existant in documents that are not branched
+| string
+| No
+| X
+
+| `url`
+| The URL of the document
+| string
+| No
+| X
+
+| `lastModificationDate`
+| The date of the last modification of the document
+| date
+| No
+| X
+
+| `preview`
+| A short preview of the document content, it may not exist in some documents
+| string
+| No
+| X
+
+| `description`
+| A short description of the document, it may not exist in some documents
+| string
+| No
+| X
+
+| `upkeep-status`
+| The upkeep status of the document, possible options are: `green`, `orange`, `yellow`, `red`, this field may not exist in some documents
+| string
+| No
+| X
+
+| `obsolete`
+| Whether the content of the document is obsolete or not, may not exist
+| boolean
+| No
+| X
+
+| `deprecated`
+| Whether the content of the document is deprecated or not, may not exist
+| boolean
+| No
+| X
+
+| `experimental`
+| Whether the content of the document is experimental or not, may not exist
+| boolean
+| No
+| X
+
+| `planned`
+| Whether the content of the document is planned or not, may not exist
+| boolean
+| No
+| X
+
+| `outdated`
+| Whether the content of the document is outdated or not, may not exist
+| boolean
+| No
+| X
+
+| `connector-name`
+| The name of the connector associated with the document, does not exist in most of the documents
+| string
+| No
+| X
+
+| `connector-protocol`
+| The protocol of the connector associated with the document, does not exist in most of the documents
+| string
+| No
+| X
+
+| `midpoint-feature`
+| The name of the MidPoint feature associated with the document, does not exist in most of the documents
+| string
+| No
+| X
+
+| `since`
+| The version of MidPoint since which the content of the document is relevant, does not exist in most of the documents
+| string
+| No
+| X
+
+| `upkeep-note`
+| A note about the upkeep status of the document, does not exist in most of the documents
+| string
+| No
+| X
+
+|===
+
+
+
