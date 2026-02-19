@@ -8,7 +8,7 @@ Expert Search is intended for users who are familiar with the documentation stru
 Expert Search can be accessed by clicking on the `Expert Search` toggle in the search modal or by typing `qs:` in the search input field.
 
 It uses `query_string` query type of OpenSearch, with the backup option of `simple_query_string` in case of errors.
-This means that the search query syntax is the same as in the OpenSearch query string queries. For more information on the syntax, see the [OpenSearch documentation](https://docs.opensearch.org/latest/query-dsl/full-text/query-string/).
+This means that the search query syntax is the same as in the OpenSearch query string queries. For more information on the syntax, see the link:https://docs.opensearch.org/latest/query-dsl/full-text/query-string/[OpenSearch documentation].
 
 Expert search enables features like:
 
@@ -17,7 +17,12 @@ Expert search enables features like:
 * Grouping of search terms using parentheses
 * Wildcard searches using `*` and `?`
 * Fuzzy searches using `~`
+* Regular expression searches using `/yourregexpattern/`
 * And many more features of the OpenSearch query string syntax.
+
+WARNING: Default fuziness in query_string queries is 2, which means that it will match terms that are within an edit distance of 2 from the search term. This allows for some flexibility in search queries, but it can also lead to unexpected results if the search term is misspelled or if there are many similar terms in the index.
+
+WARNING: Regex patterns are applied only to the tokenized form of the content, which means that exact phrase matching is possible only if you specify the fields as `xxx.keyword` (e.g. `title.keyword`), but in this case, the search will be case-sensitive and will not allow for partial matches, also, `text` field does not have a `keyword` subfield, so multi-word regex patterns cannot be applied to the `text` field.
 
 == Difference between Expert Search and `query_string` OpenSearch query type
 
@@ -32,6 +37,8 @@ The fields and the boosting can be easily adjusted in the query.
 
 * Collapse clause used to filter out duplicate documents from different branches of the documentation.
 It does this by collapsing results that scored worse than the best scoring document, there is no multiplier for documents from branches that are not up-to-date.
+
+NOTE: Setting specific fields in the query will disable the default search fields and their boosting.
 
 === Backup query type
 
@@ -57,11 +64,11 @@ In the following table, you can find some example queries that demonstrate the u
 | `title:authentication AND keywords:oauth`
 | This query searches for documents that have the word "authentication" in the title and the word "oauth" in the keywords.
 
-| `text:(authentication OR authorization) AND NOT tags:deprecated`
+| `text:(authentication OR authorization) AND NOT deprecated:true`
 | This query searches for documents that have either "authentication" or "authorization" in the content
 
-| `text:"maintain large set of authorization"~5`
-| This query searches for documents that have the exact phrase "maintain large set of authorization" in the content, allowing for a maximum edit distance of 5.
+| `text:"midPoint is awesome"~5`
+| This query searches for documents that have the exact phrase "midPoint is awesome" in the content, allowing for a maximum edit distance of 5.
 
 | `/au[a-z]h/`
 | This query uses regular expression to search for documents that have a word that starts with "au", followed by any lowercase letter, and ends with "h" in the content (e.g. "auth").
@@ -246,5 +253,7 @@ Here is the table of all available fields:
 | X
 
 |===
+
+
 
 
