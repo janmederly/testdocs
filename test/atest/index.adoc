@@ -130,6 +130,29 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 EOS
 ----
 
+Multiple code blocks with callouts:
+
+[source,groovy]
+----
+lorem groovy dolor sit amet
+
+2nd line <1>
+
+3nd line <2>
+----
+<1> first callout
+<2> second callout
+
+[source,xml]
+----
+lorem xml dolor sit amet
+<a>
+    <b>
+    </b> <1>
+<a>
+----
+<1> one xml callout
+
 
 Boring pre-formatted block follows:
 
