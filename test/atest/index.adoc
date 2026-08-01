@@ -85,7 +85,7 @@ And xref:/faq/[migrated explicit wiki link]
 
 === Docref
 
-This tests javadoc / schemadoc links.
+These tests are for javadoc / schemadoc links.
 
 docref:/javadoc/com/evolveum/midpoint/model/api/expr/MidpointFunctions.html#getArchetype(O)[optional link text]
 
