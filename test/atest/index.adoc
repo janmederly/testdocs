@@ -83,6 +83,11 @@ Migrated autolabel wiki link: xref:/faq/[]
 
 And xref:/faq/[migrated explicit wiki link]
 
+=== Docref
+
+docref:/javadoc/com/evolveum/midpoint/model/api/expr/MidpointFunctions.html#getArchetype(O)[optional link text]
+
+docref:/schemadoc/http---midpoint-evolveum-com-xml-ns-public-common-common-3/index.html[optional link text 2 schema]
 
 === Code
 
