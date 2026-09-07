@@ -5,7 +5,7 @@
 
 == Chapter One
 
-First chapter, blah blah blah.
+First chapter, blah blah blah blah.
 
 === Basic Text
 
