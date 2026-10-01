@@ -1,7 +1,7 @@
 = About
 :page-display-order: 999
 
-Site for Evolveum public documentation and other files..
+Site for Evolveum public documentation and other files.
 This site contains majority of xref:/midpoint/[midPoint documentation].
 
 == Writing Documentation
