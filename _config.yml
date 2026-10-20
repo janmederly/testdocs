@@ -53,8 +53,8 @@ defaults:
       visibility: "system"
 
 environment:
-  searchUrl: search.evolveum.com
-  docsUrl: docs.evolveum.com
+  searchUrl: searchtest.evolveum.com
+  docsUrl: docstest.evolveum.com
   name: docs-test
   midpointRepositoryGhName: Evolveum/midpoint
   bookTag: "v2.3"
